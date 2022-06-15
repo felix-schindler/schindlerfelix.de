@@ -7,9 +7,9 @@ blog({
   avatarClass: "rounded-full",
   author: "Felix",
   links: [
+    { title: "eMail", url: "mailto:webmaster@schindlerfelix.de" },
     { title: "GitHub", url: "https://github.com/felix-schindler" },
-    { title: "GitLab", url: "https://gitlab.com/felix-schindler" },
-    { title: "Telegram", url: "https://t.me/felix_schindler" }
+    { title: "Website", url: "https://schindlerfelix.de" },
   ],
-  background: "#f9f9f9",
+  background: "#F9F9F9",
 });
