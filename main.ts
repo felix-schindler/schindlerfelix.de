@@ -1,8 +1,7 @@
-import blog from "https://deno.land/x/blog_fork@1.0.0/blog.tsx";
+import blog from "https://deno.land/x/blog@0.3.3/blog.tsx";
 
 blog({
   title: "My Blog",
-  about: "Hey I'm a 20 year old German student who loves to code. I am currently studying Computer Science and Media as a German-Chinese double degree.",
   description: "thoughts and prayers",
   avatar: "https://avatars.githubusercontent.com/u/65357346",
   avatarClass: "rounded-full",
