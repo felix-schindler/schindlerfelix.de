@@ -1,4 +1,4 @@
-import blog from "https://deno.land/x/blog@0.3.3/blog.tsx";
+import blog from "https://deno.land/x/blog@0.4.0/blog.tsx";
 
 blog({
   title: "My Blog",
@@ -9,6 +9,5 @@ blog({
   links: [
     { title: "eMail", url: "mailto:webmaster@schindlerfelix.de" },
     { title: "GitHub", url: "https://github.com/felix-schindler" }
-  ],
-  background: "#F9F9F9",
+  ]
 });
