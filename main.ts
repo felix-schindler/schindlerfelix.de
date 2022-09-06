@@ -9,5 +9,6 @@ blog({
   links: [
     { title: "eMail", url: "mailto:webmaster@schindlerfelix.de" },
     { title: "GitHub", url: "https://github.com/felix-schindler" }
-  ]
+  ],
+  style: "ol { list-style: decimal; } ul { list-style: disc }",
 });
