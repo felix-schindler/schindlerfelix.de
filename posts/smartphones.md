@@ -3,23 +3,34 @@ title: 🇩🇪 smartphones
 publish_date: 2022-09-19
 ---
 
-Phones are getting boring.
+Smartphones werden langweiliger.
 
-# When were smartphones ever exciting?
+# Wann waren Smartphones spannend?
 
-Das [iPhone 6s](https://en.wikipedia.org/wiki/IPhone_6S) und das
-[Lumia 950](https://en.wikipedia.org/wiki/Microsoft_Lumia_950) wurden beide im
-Jahr 2015 vorgestellt. Das
-[Phone(1)](https://en.wikipedia.org/wiki/Nothing_Phone_1) wurde dagegen dieses
-Jahr, 2022, vorgestellt.
+Ich finde vor allem 3 Smartphones spannend, das
+[iPhone 6s](https://de.wikipedia.org/wiki/IPhone_6S), das
+[Lumia 950](https://de.wikipedia.org/wiki/Microsoft_Lumia_950) und das
+[Phone(1)](https://en.wikipedia.org/wiki/Nothing_Phone_1).
+
+Das iPhone und das Lumia wurden beide im Jahr 2015, das Phone dagegen dieses
+Jahr vorgestellt.
 
 ## iPhone 6s
 
-Die Performance des iPhone 6s war erstaunlich, dank doppelt so viel
-Arbeitsspeicher und dem besseren Prozessor. Dazu haben mich dünne des Geräts und
-die Kamera beeindruckt. Es war Lange nicht nur in der Lage 4k-Videos, sondern
-auch Slow-Motion aufzunehmen. Viele dieser Features hatte man auch in
-HTC-Smartphones, im iPhone haben sich diese jedoch am besten angefühlt.
+Das beste Feature am iPhone 6s war für mich 3D-Touch. Dazugehörige
+Software-Details wie Peak-and-Pop waren genial und haben immer wieder Zeit
+gespart. Zusätzlich war das iPhone 6s das erste mit
+[Taptic Engine](https://de.wikipedia.org/wiki/Taptic_Engine), durch welche sich
+Vibrationen deutlich besser angefühlt haben. Auch war ich sehr von der Dünne und
+Kamera beeindruckt. Es war nicht nur in der Lage 4k-Videos, sondern auch
+Slow-Motion aufzunehmen.
+
+Leider gibt es in aktuellen iPhones keinen 3D-Touch, was ansich schon schade
+genug ist. Apple hat sich aber noch dazu entschieden, die bisherige
+3D-Touch-Fähigkeit quasi komplett für _alle_ iPhone zu deaktivieren, so sucht
+man heute unter anderem Peak-and-Pop vergeblich.
+
+> Video Link: [iPhone 6s/6s Plus - Review](https://youtu.be/-u5OQ0zqaaY)
 
 ## Lumia 950
 
@@ -32,7 +43,7 @@ Widget ähnlichen Ansichten immer _alle_ Infos auf einen Blick.
 > [Lumia 950 Review / Das beste Handy EVER?](https://youtu.be/ZmQR6KL8mb0)
 
 <details>
-	<summary><h3>Das App Problem und die dazugehörige Lösung</h3></summary>
+	<summary><h3>Das App Problem</h3></summary>
 
 #### Das Problem
 
@@ -55,7 +66,7 @@ Da Windows im neuen Windows-Store PWAs zulässt, hat man sogar einen Ort, an dem
 man viel benutzte Apps einfach und schnell findet. Mit PWAs ist man aber nicht
 an einen Store gebunden, so kann man einfach einen neuen App Store, wie zum
 Beispiel [Appscope](https://www.appsco.pe), als PWA installieren oder neue PWAs
-durch "zufall" durch
+durch "Zufall" durch
 [A2HS](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen)
 finden.
 
