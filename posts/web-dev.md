@@ -3,26 +3,66 @@ title: 🇩🇪 web dev
 publish_date: 2022-09-13
 ---
 
-What is web development, how to do it and how to chose a tech stack.
+Was ist Web Entwicklung, wie mache ich es und was für einen Tech-Stack soll ich
+verwenden?
 
 # The Basics
 
-I know, I know. Jede Woche kommt etwas neues raus und man könnte seinen
-kompletten Tech-Stack überarbeiten, dabei gibt es schon tausende Wege eine
-Webseite zu erstellen.
+HTML? CSS? JS? PHP? NodeJS? React? Was ist das eigentlich alles und was soll ich
+damit anfangen?
 
-Aber erstmal: Wie ist eine typische Anwendung aufgebaut?
+First things first: Wie ist eine typische Anwendung aufgebaut?
 
 1. Frontend
 2. Backend
-3. Database
+3. Datenbank
 
 ## Kommunikation: Frontend → Backend → Datenbank
 
 Normalerweise spricht das Frontend nicht direkt mit der Datenbank, sondern
 zuerst zu einem Backend, welches dann im "Hintergrund" mit der Datenbank redet.
 
-Warum? Vorallem Sicherheit und Funktionen.
+Warum? Sicherheit und Funktionen.
+
+## Was ist ein Frontend?
+
+Ein Frontend besteht normalerweise aus zwei Dingen
+
+1. Dem UI - das, was der Benutzer sieht
+2. Der Logik - das was passiert, wenn der Benutzer auf etwas draufklickt oder
+   ähnliches
+
+Bei Web-Entwicklung braucht man die Logik nicht immer, da einem Webserver und
+Browser schon ziemlich viele Dinge abnehmen.
+
+### Der einfachste Weg heißt HTML
+
+Um ein Frontend zu erstellen braucht man erstmal nur eine HTML Datei. In dieser
+kann man HTML-Code schreiben, welcher dir im Browser grafisch gerendert wird.
+
+HTML kann man außerdem sehr schlampig schreiben, da viele moderne Browser
+einfach hinzufügen, was man weg gelassen hat.
+
+```html
+<p>Das ist ein Text-Paragraf.</p>
+<button type="button">Ich bin ein Knopf.</button>
+```
+
+erzeugt (je nach Browser) bereits den folgenden Code:
+
+```html
+<html>
+   <head></head>
+   <body>
+      <p>Das ist ein Text-Paragraf.</p>
+   <button type="button">Ich bin ein Knopf.</button>
+   </body>
+</html>
+```
+
+und sieht (in Safari) folgendermaßen aus:
+
+![HTML Seite mit Text-Paragraf und Knopf](/img/html-sample.png)
 
 ## Was macht ein Backend?
 
@@ -78,16 +118,11 @@ Passwort für die Datenbank leakt.
 
 ## BaaS (Backend-As-A-Service)
 
-**:warning: Eigene Meinung!** Ich werde auf 3 BaaS-Systeme genauer eingehen:
+Ich werde auf 3 BaaS-Systeme genauer eingehen (_:warning: eigene Meinung_):
 
-1. PocketBase
-2. SupaBase
-3. Firebase
-
-### Video Links
-
-- [I tried 5 Firebase alternatives](https://youtu.be/SXmYUalHyYk)
-- [PocketBase... The Ultimate Side-Hustle Backend?](https://youtu.be/Wqy3PBEglXQ)
+1. [SupaBase](#supabase)
+2. [Firebase](#firebase)
+3. [PocketBase](#pocketbase)
 
 ### SupaBase
 
@@ -138,15 +173,24 @@ da dies bei der Programmierung des Backends bereits bedacht wurde.
 > In einem Satz: PocketBase ist die einfachste und beste BaaS Lösung, da sie am
 > meisten on-top liefert.
 
+### Video Links
+
+- [I tried 5 Firebase alternatives](https://youtu.be/SXmYUalHyYk)
+- [PocketBase... The Ultimate Side-Hustle Backend?](https://youtu.be/Wqy3PBEglXQ)
+
 # An ocean full of choices
 
 Nachdem das klar ist, sollte man sich eine Technologie suchen, in der man ein
-Projekt / Anwendung umsetzen möchte. Dafür gibt es genug Auswahl-Möglichkeiten
-um einen ganzen Ozean zu füllen.
+Projekt / Anwendung umsetzen möchte.
+
+Und ich weiß. Jede Woche kommt etwas neues raus und man könnte seinen kompletten
+Tech-Stack überarbeiten, dabei gibt es schon genug Wege eine Webseite zu
+erstellen, um einen Ozean damit zu füllen.
 
 ## Je einfacher, je besser.
 
-Normalerwise gillt die Faustregel was am einfachsten ist, ist die beste Lösung.
+Normalerwise gillt die Faustregel: Die Einfachste ist die beste Lösung.
+
 Falls man also schon mit einer Technologie vertraut ist, zum Beispiel
 [PHP](https://laravel.com),
 [.NET](https://dotnet.microsoft.com/en-us/apps/aspnet/apis),
@@ -159,7 +203,7 @@ Möglichkeiten, aus denen man wählen kann.
 
 Alle verlinkten Frameworks sind dafür da, um Application-Server zu
 programmieren. Diese sind schneller als "normale" Web-Server und sollten daher
-immer bevorzugt werden.
+immer bevorzugt genutzt werden.
 
 > Link zu Artikel:
 > [Application- vs Web-Server](https://www.ibm.com/cloud/learn/web-server-vs-application-server)
@@ -167,18 +211,17 @@ immer bevorzugt werden.
 ## Das benutze ich
 
 Die meiste Zeit habe ich im MVC-Pattern PHP und MySQL in meinem
-[eigenen Framework](https://github.com/felix-schindler/Router) verwendet und
-habe deshalb auch heute noch am meisten Erfahrung damit. Mit der Zeit habe ich
-PHP immer häufiger nur für's Backend genutzt und das Frontend zuerst in
-[React](https://reactjs.org) und später in [Svelte](https://svelte.dev)
-programmiert.
+[eigenen Framework](https://github.com/felix-schindler/Router) verwendet. Mit
+der Zeit habe ich PHP immer häufiger nur für's Backend genutzt und das Frontend
+zuerst in [React](https://reactjs.org) und später in
+[Svelte](https://svelte.dev) programmiert.
 
 Heute nehme für das Frontend [SvelteKit](https://kit.svelte.dev) und als Backend
 benutze ich [PocketBase](https://pocketbase.io) (und die damit verbundene
 [SQLite](https://www.sqlite.org) Datenbank). Wenn ich PocketBase **nicht**
 benutze, programmiere ich mein Backend ebenfalls in SvelteKit, da ich so alles
-an einem Fleck habe und es am übersichtlichsten bleibt. Selten weiche ich für
-Microservices auf [Deno](https://deno.land) aus.
+an einem Fleck habe und es so am übersichtlichsten bleibt. Selten weiche ich auf
+[Deno](https://deno.land) aus (wie zum Beispiel für diesen Blog).
 
 Falls ich auch eine herunterlad- und installierbare Version brauche mache ich
 aus der Seite eine [PWA](https://de.wikipedia.org/wiki/Progressive_Web_App) oder
