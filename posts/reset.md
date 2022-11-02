@@ -1,5 +1,5 @@
 ---
-title: 🇬🇧 reset
+title: reset
 publish_date: 2022-06-17
 ---
 
