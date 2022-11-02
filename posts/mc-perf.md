@@ -18,6 +18,12 @@ description.
 - [FerriteCore](https://www.curseforge.com/minecraft/mc-mods/ferritecore-fabric)
   \
   Reduces memory usage
+- [Lithium](https://www.curseforge.com/minecraft/mc-mods/lithium)
+  \
+  Optimized game physics, mob AI, block ticking, etc
+- [Starlight](https://www.curseforge.com/minecraft/mc-mods/starlight)
+  \
+  Optimized light engine with more performance and less errors
 - [LazyDFU](https://www.curseforge.com/minecraft/mc-mods/lazydfu)
   \
   Defers unnecessary initialization work so that it is only performed if
@@ -29,12 +35,6 @@ description.
 - [Clumps](https://www.curseforge.com/minecraft/mc-mods/clumps)
   \
   Groups XP orbs together and makes collecting them faster
-- [Lithium](https://www.curseforge.com/minecraft/mc-mods/lithium)
-  \
-  Optimized game physics, mob AI, block ticking, etc
-- [Starlight](https://www.curseforge.com/minecraft/mc-mods/starlight)
-  \
-  Optimized light engine with more performance and less errors
 
 ## +1
 
