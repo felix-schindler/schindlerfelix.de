@@ -1,9 +1,8 @@
-<h1>Imprint</h1>
 <div class="ac">
 	<div class="card">
+		<h1>Imprint</h1>
 		<address>
 			<p><b>Felix Schindler</b></p>
-			<p>Theodor-Veiel-Straße 63</p>
 			<p>70374 Stuttgart</p>
 		</address>
 		<hr />
