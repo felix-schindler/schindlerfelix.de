@@ -1,5 +1,16 @@
 {
-	"deno.enable": true,
+	"editor.comments.insertSpace": true,
+	"editor.tabSize": 2,
+	"editor.useTabStops": true,
 	"editor.formatOnSave": true,
-	"files.insertFinalNewline": true
+	"files.insertFinalNewline": true,
+	"svelte.plugin.svelte.format.config.singleQuote": false,
+	"svelte.plugin.svelte.format.config.printWidth": 100,
+	"svelte.plugin.svelte.format.config.svelteAllowShorthand": true,
+	"svelte.plugin.svelte.format.config.svelteBracketNewLine": false,
+	"svelte.plugin.svelte.format.config.svelteIndentScriptAndStyle": true,
+	"svelte.plugin.svelte.format.config.svelteSortOrder": "options-scripts-markup-styles",
+	"svelte.plugin.svelte.format.config.svelteStrictMode": false,
+	"svelte.plugin.svelte.format.enable": true,
+	"typescript.format.semicolons": "insert"
 }

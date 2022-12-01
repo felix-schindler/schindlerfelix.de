@@ -1,10 +1,4 @@
----
-title: Minecraft Performance Mods
-publish_date: 2022-11-02
----
-
-Here's a collection of some Minecraft Fabric performance mods with a quick
-description.
+# Minecraft Performance Mods
 
 ## Performance Mods
 

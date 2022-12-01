@@ -1,9 +1,6 @@
----
-title: reset
-publish_date: 2022-06-17
----
+# Reset
 
-# Hi, hello and welcome!
+## Hi, hello and welcome!
 
 This is the last place where you can find me as I've deleted most of my online
 presence. This includes

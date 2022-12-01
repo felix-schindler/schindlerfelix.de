@@ -1,8 +1,3 @@
----
-title: 0. How does a website work?
-publish_date: 2022-10-10
----
-
 A lot of things happen until you see your favorite website.
 
 # How does a browser work
@@ -41,7 +36,7 @@ always defined in `.html` files.
 This simple one-liner already already renders a beautiful button, when opened in
 a browser.
 
-![Simple Button saying "Button" with on white background](/img/html-button.png)
+![Simple Button saying with on white background](/img/blog/html-button.png)
 
 ### CSS
 
@@ -63,7 +58,7 @@ tag inside a HTML file.
 <button type="button">Button</button>
 ```
 
-![Simple Button saying "Button" with on black background](/img/html-button-css.png)
+![Simple Button with on black background](/img/blog/html-button-css.png)
 
 ### JavaScript
 
