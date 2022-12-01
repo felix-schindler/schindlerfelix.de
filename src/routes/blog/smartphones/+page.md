@@ -1,8 +1,3 @@
----
-title: 🇩🇪 smartphones
-publish_date: 2022-09-19
----
-
 Smartphones werden langweiliger.
 
 # Wann waren Smartphones spannend?
@@ -43,7 +38,7 @@ Widget ähnlichen Ansichten immer _alle_ Infos auf einen Blick.
 > [Lumia 950 Review / Das beste Handy EVER?](https://youtu.be/ZmQR6KL8mb0)
 
 <details>
-	<summary><h3>Das App Problem</h3></summary>
+	<summary>Das App Problem</summary>
 
 #### Das Problem
 
