@@ -1,4 +1,13 @@
-A lot of things happen until you see your favorite website.
+A lot of things happen until you see your favorite website. In this article you
+will
+
+0. Learn How does a Website work
+1. Getting startet with web dev (HTML, CSS, little bit of JS)
+2. Hot to set up a web server / host a website
+3. Configuring a domain
+4. Artichtecture of a website
+5. Choosing a tech stack (and BaaS)
+6. The Edge
 
 # How does a browser work
 

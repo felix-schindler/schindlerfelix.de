@@ -9,24 +9,24 @@
 <div class="hmf">
 	<header>
 		<nav>
-			<a href="/" class:active={path == "/"}>Home</a>
-			<a href="/about" class:active={path == "/about"}>About</a>
-			<a href="/blog" class:active={path == "/blog"}>Blog</a>
+			<a href="/" class:active={path == "/"}>🏠 Home</a>
+			<a href="/about" class:active={path == "/about"}>🧑🏻‍💻 About</a>
+			<a href="/blog" class:active={path == "/blog"}>✨ Blog</a>
+			<a href="mailto:webmaster@schindlerfelix.de">📧 Contact</a>
 		</nav>
 	</header>
 	<main>
 		<slot />
 	</main>
 	<footer>
-		<span>&copy; 2022 &middot; Felix Schindler</span>
 		<span>
-			Made in
-			<a rel="noopener noreferrer" href="https://theländ.de">
-				<mark>The Länd</mark>
+			Made with ❤️‍🔥 by <a href="/about">Felix</a> in
+			<a href="https://theländ.de" class="laend" rel="noopener noreferrer">
+				The Länd
 			</a>
 		</span>
 		<span>
-			<a href="/imprint">Imprint</a>
+			<a href="/imprint">📜 Imprint</a>
 		</span>
 	</footer>
 </div>
@@ -49,18 +49,27 @@
 			flex-wrap: wrap;
 			gap: 0.5em;
 
-			mark {
+			a.laend {
+				text-decoration: none !important;
+
 				color: yellow;
 				background-color: black;
 
 				font-weight: 600;
 				text-transform: uppercase;
-				border-radius: 0;
 				padding: 0.2em 0.4em;
+
+				transition: all 200ms;
 
 				&:hover {
 					color: black;
 					background-color: yellow;
+
+					box-shadow: 5px 5px;
+				}
+
+				&:active {
+					box-shadow: 0 0;
 				}
 			}
 		}

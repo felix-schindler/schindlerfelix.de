@@ -66,7 +66,7 @@
 
 	p {
 		margin: 0;
-		color: rgb(var(--gray-rgb));
+		color: var(--light-gray);
 	}
 
 	a {
