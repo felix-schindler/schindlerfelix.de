@@ -30,9 +30,6 @@
 						<img src="/img/tech/typescript.svg" loading="lazy" alt="" /> TypeScript
 					</span>
 					<span>
-						<img src="/img/tech/html.svg" loading="lazy" alt="" /> HTML
-					</span>
-					<span>
 						<img src="/img/tech/css.svg" loading="lazy" alt="" /> CSS
 					</span>
 				</p>
@@ -115,12 +112,12 @@
 		<h2>💼 Jobs</h2>
 		<div class="grid">
 			<div class="card">
-				<h3>🧑🏻‍💻 Software-Developer</h3>
+				<h3>🖥️ Software-Developer</h3>
 				<p>May '22 - <span class="live" /> now</p>
 				<p>TypeScript, Firebase, PocketBase, SvelteKit</p>
 			</div>
 			<div class="card">
-				<h3>🧑🏻‍💻 Web-Developer</h3>
+				<h3>👨🏻‍💻 Web-Developer</h3>
 				<p>Nov '20 - Apr '21</p>
 				<p>PHP, SQL, TypeScript, React</p>
 			</div>
@@ -185,99 +182,118 @@
 	}
 
 	div.skills {
-		width: 80%;
-		margin: 0 auto;
-		margin-top: 5em;
+		margin-top: 5em !important;
 
-		h2 {
-			text-transform: uppercase;
-		}
-
-		meter,
-		meter::-webkit-meter-bar {
-			background: rgba(var(--gray-rgb), 0.2);
-
-			height: 0.8em;
-			width: 100%;
-
-			border: 0;
-			border-radius: calc(var(--radius) * 0.5);
-		}
-
-		meter::-webkit-meter-optimum-value {
-			background: linear-gradient(
-					0deg,
-					hsla(0, 0%, 100%, 0.1),
-					rgba(0, 0, 0, 0.1)
-				),
-				linear-gradient(270deg, var(--accent), var(--accent-alt));
-			border-radius: calc(var(--radius) * 0.5);
-		}
-
-		@-moz-document url-prefix() {
-			meter::-moz-meter-bar {
-				background: linear-gradient(
-						0deg,
-						hsla(0, 0%, 100%, 0.1),
-						rgba(0, 0, 0, 0.1)
-					),
-					linear-gradient(270deg, var(--accent), var(--accent-alt));
-				border-radius: calc(var(--radius) * 0.5);
+		div.cv {
+			h2 {
+				text-decoration: underline;
+				text-decoration-thickness: 3px;
+				text-decoration-color: var(--accent);
+				text-transform: uppercase;
 			}
-		}
 
-		p.tech {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.25em;
+			div.grid > div.card {
+				width: 100%;
 
-			span {
-				padding: 0.2em 0.4em;
-				border: 1px solid rgba(var(--gray-rgb), 0.8);
-				border-radius: var(--radius);
+				h3 {
+					margin-block-end: 0;
+				}
 
-				img {
-					height: 18px;
-					width: 18px;
-					margin-right: 0.125em;
-					vertical-align: text-bottom;
+				p {
+					margin-block-start: 0.25em;
+					margin-block-end: 0;
+				}
+
+				meter,
+				meter::-webkit-meter-bar {
+					background: rgba(var(--gray-rgb), 0.2);
+
+					height: 0.8em;
+					width: 100%;
+
+					border: 0;
+					border-radius: calc(var(--radius) * 0.5);
+				}
+
+				meter::-webkit-meter-optimum-value {
+					background: linear-gradient(
+							0deg,
+							hsla(0, 0%, 100%, 0.1),
+							rgba(0, 0, 0, 0.1)
+						),
+						linear-gradient(270deg, var(--accent), var(--accent-alt));
+					border-radius: calc(var(--radius) * 0.5);
+				}
+
+				@-moz-document url-prefix() {
+					meter::-moz-meter-bar {
+						background: linear-gradient(
+								0deg,
+								hsla(0, 0%, 100%, 0.1),
+								rgba(0, 0, 0, 0.1)
+							),
+							linear-gradient(270deg, var(--accent), var(--accent-alt));
+						border-radius: calc(var(--radius) * 0.5);
+					}
+				}
+
+				p.tech {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 0.25em;
+
+					span {
+						padding: 0.2em 0.4em;
+						border: 1px solid rgba(var(--gray-rgb), 0.8);
+						border-radius: var(--radius);
+
+						img {
+							height: 18px;
+							width: 18px;
+							margin-right: 0.125em;
+							vertical-align: text-bottom;
+						}
+					}
+				}
+
+				span.live {
+					display: inline-block;
+					height: 0.75rem;
+					width: 0.75rem;
+					background-color: var(--accent);
+					border-radius: 50%;
+					-webkit-animation: blink 2s infinite;
+					animation: blink 2s infinite;
+				}
+
+				@keyframes blink {
+					0% {
+						opacity: 0;
+					}
+
+					50% {
+						opacity: 1;
+					}
+
+					to {
+						opacity: 0;
+					}
 				}
 			}
 		}
+	}
 
-		span.live {
-			display: inline-block;
-			height: 0.75rem;
-			width: 0.75rem;
-			background-color: var(--accent);
-			border-radius: 50%;
-			-webkit-animation: blink 2s infinite;
-			animation: blink 2s infinite;
-		}
-
-		@keyframes blink {
-			0% {
-				opacity: 0;
-			}
-
-			50% {
-				opacity: 1;
-			}
-
-			to {
-				opacity: 0;
-			}
+	@media (min-width: 1024px) {
+		div.skills {
+			width: 80%;
+			margin: 0 auto;
 		}
 
 		div.cv {
 			display: grid;
-			grid-template-columns: 1fr 3fr;
+			grid-template-columns: 1fr 4fr;
 			gap: 1em;
 			margin-block: 1em;
-
-			div.grid > div.card {
-				width: 100%;
-			}
 		}
 	}
 </style>
