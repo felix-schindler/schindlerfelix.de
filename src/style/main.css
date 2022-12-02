@@ -14,10 +14,11 @@ html {
 	color-scheme: light dark;
 	accent-color: var(--accent);
 
-	--accent: #ff5842;
+	--accent: #ff1010;
+	--accent-alt: #ff4040;
 	--on-accent: white;
 	--gray-rgb: 200, 200, 200;
-	--light-gray: rgb(64, 64, 64);
+	--light-gray: rgb(110, 110, 110);
 	--green-rgb: 0, 180, 0;
 
 	--sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -29,7 +30,7 @@ html {
 @media screen and (prefers-color-scheme: dark) {
 	html {
 		--gray-rgb: 120, 120, 120;
-		--light-gray: rgb(192, 192, 192);
+		--light-gray: rgb(170, 170, 170);
 	}
 }
 
