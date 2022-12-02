@@ -12,7 +12,6 @@
 			<a href="/" class:active={path == "/"}>🏠 Home</a>
 			<a href="/about" class:active={path == "/about"}>👨🏻‍💻 About</a>
 			<a href="/blog" class:active={path == "/blog"}>✨ Blog</a>
-			<a href="mailto:webmaster@schindlerfelix.de">📧 Contact</a>
 		</nav>
 	</header>
 	<main>
