@@ -8,10 +8,7 @@
 
 <div class="intro">
 	<h1>Felix Schindler</h1>
-	<p>
-		Studying <span class="mono">computer science</span> as a German-Chinese double
-		degree
-	</p>
+	<p>Studying computer science as a German-Chinese double degree</p>
 	<p>
 		<small>
 			{#key btn}
@@ -27,14 +24,6 @@
 			{/key}
 		</small>
 	</p>
-	<p class="icons">
-		<a href="https://github.com/felix-schindler" rel="noopener noreferrer">
-			<i class="bi bi-github" role="img" aria-labelledby="GitHub" />
-		</a>
-		<a href="mailto:webmaster@schindlerfelix.de">
-			<i class="bi bi-envelope" role="img" aria-labelledby="Mail" />
-		</a>
-	</p>
 </div>
 
 <style lang="scss">
@@ -46,17 +35,22 @@
 			margin-bottom: 0;
 			font-size: 12vh;
 
-			color: var(--accent);
+			color: transparent;
+			background-image: linear-gradient(
+				to bottom right,
+				var(--accent),
+				var(--accent-alt)
+			);
+			background-clip: text;
+			-webkit-background-clip: text;
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 
 		p {
 			margin-top: 1em;
 			margin-bottom: 0;
 			font-size: 4vh;
-
-			&.icons a:hover {
-				color: var(--accent);
-			}
 		}
 
 		a[role="button"] {
