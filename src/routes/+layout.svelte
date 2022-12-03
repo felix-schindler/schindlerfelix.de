@@ -48,6 +48,10 @@
 			flex-wrap: wrap;
 			gap: 0.5em;
 
+			@media (max-width: 1024px) {
+				justify-content: space-around;
+			}
+
 			a.laend {
 				text-decoration: none !important;
 

@@ -33,7 +33,7 @@
 		h1 {
 			margin-top: 1em;
 			margin-bottom: 0;
-			font-size: 12vh;
+			font-size: 10vh;
 
 			color: transparent;
 			background-image: linear-gradient(
@@ -45,12 +45,20 @@
 			-webkit-background-clip: text;
 			background-size: cover;
 			background-repeat: no-repeat;
+
+			@media (min-width: 1024px) {
+				font-size: 12vh;
+			}
 		}
 
 		p {
 			margin-top: 1em;
 			margin-bottom: 0;
-			font-size: 4vh;
+			font-size: 3vh;
+
+			@media (min-width: 1024px) {
+				font-size: 4vh;
+			}
 		}
 
 		a[role="button"] {
