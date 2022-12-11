@@ -1,6 +1,20 @@
+<script>
+	const g2 = "2Gs";
+	const og = "guinea pig and girlfriend";
+	let g = g2;
+</script>
+
 <div class="intro">
 	<h1>Felix Schindler</h1>
-	<p>Hey, I am an 20-year-old German <mark>student</mark> who loves to code.</p>
+	<p>Hey, I am a 20-year-old German <mark>student</mark> who loves to code.</p>
+	<p>
+		Based in Stuttgart; living with my
+		{#key g}
+			<abbr on:mouseenter={() => (g = og)} on:mouseleave={() => (g = g2)}>
+				{g}</abbr
+			>.
+		{/key}
+	</p>
 	<p>
 		I am currently studying <mark>computer science</mark> as a
 		<mark>German-Chinese double degree</mark> at Stuttgart Media University.
@@ -33,15 +47,51 @@
 						<img src="/img/tech/css.svg" loading="lazy" alt="" /> CSS
 					</span>
 				</p>
+				<details>
+					<summary>Technologies I've used include</summary>
+					<p class="tech">
+						<span>
+							<img src="/img/tech/node.svg" alt="" loading="lazy" /> NodeJS
+						</span>
+						<span>
+							<img src="/img/tech/deno.svg" alt="" loading="lazy" /> Deno
+						</span>
+						<span>
+							<img src="/img/tech/svelte.svg" alt="" loading="lazy" /> SvelteKit
+						</span>
+						<span>
+							<img src="/img/tech/react.svg" alt="" loading="lazy" /> React
+						</span>
+						<span>Express</span>
+						<span>EJS</span>
+						<span>Mongoose</span>
+						<span>SocketIO</span>
+					</p>
+				</details>
 				<meter min="1" max="100" value="100" />
 			</div>
 			<div class="card">
 				<p class="tech">
-					<span
-						><img src="/img/tech/java.svg" loading="lazy" alt="" /> Java</span
-					>
+					<span>
+						<img src="/img/tech/java.svg" loading="lazy" alt="" /> Java
+					</span>
 					<span><img src="/img/tech/c%23.svg" loading="lazy" alt="" /> C#</span>
+					<span>
+						<img src="/img/tech/swift.svg" loading="lazy" alt="" /> Swift
+					</span>
 				</p>
+				<details>
+					<summary>Technologies I've used include</summary>
+					<p class="tech">
+						<span>
+							<img src="/img/tech/xml.svg" alt="" loading="lazy" /> JavaFX
+						</span>
+						<span>
+							<img src="/img/tech/unity.svg" alt="" loading="lazy" /> Unity
+						</span>
+						<span>SwiftUI</span>
+					</p>
+				</details>
 				<meter min="1" max="100" value="80" />
 			</div>
 			<div class="card">
@@ -52,7 +102,7 @@
 						<img src="/img/tech/python.svg" loading="lazy" alt="" /> Python
 					</span>
 					<span>
-						<img src="/img/tech/assembly.svg" loading="lazy" alt="" /> Assembly
+						<img src="/img/tech/assembly.svg" loading="lazy" alt="" /> ASM
 					</span>
 				</p>
 				<meter min="1" max="100" value="20" />
@@ -87,11 +137,14 @@
 			<div class="card">
 				<p class="tech">
 					<span>
+						<img src="/img/tech/mongo.svg" loading="lazy" alt="" /> MongoDB
+					</span>
+					<span>
 						<img src="/img/tech/oracle.svg" loading="lazy" alt="" /> Oracle
 					</span>
 					<span>PL/SQL</span>
 				</p>
-				<meter min="1" max="100" value="70" />
+				<meter min="1" max="100" value="55" />
 			</div>
 		</div>
 	</div>
@@ -199,16 +252,41 @@
 					margin-block-end: 0;
 				}
 
+				details > p.tech > span {
+					font-weight: normal;
+				}
+
 				p {
 					margin-block-start: 0.25em;
 					margin-block-end: 0;
+
+					&.tech {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.25em;
+						margin-block-end: 0.3em;
+
+						span {
+							font-weight: 500;
+							padding: 0.2em 0.4em;
+							border: 1px solid rgba(var(--gray-rgb), 0.8);
+							border-radius: var(--radius);
+
+							img {
+								height: 18px;
+								width: 18px;
+								margin-right: 0.125em;
+								vertical-align: text-bottom;
+							}
+						}
+					}
 				}
 
 				meter,
 				meter::-webkit-meter-bar {
 					background: rgba(var(--gray-rgb), 0.2);
 
-					height: 0.8em;
+					height: 1em;
 					width: 100%;
 
 					border: 0;
@@ -233,25 +311,6 @@
 						),
 						linear-gradient(270deg, var(--accent), var(--accent-alt));
 					border-radius: calc(var(--radius) * 0.5);
-				}
-
-				p.tech {
-					display: flex;
-					flex-wrap: wrap;
-					gap: 0.25em;
-
-					span {
-						padding: 0.2em 0.4em;
-						border: 1px solid rgba(var(--gray-rgb), 0.8);
-						border-radius: var(--radius);
-
-						img {
-							height: 18px;
-							width: 18px;
-							margin-right: 0.125em;
-							vertical-align: text-bottom;
-						}
-					}
 				}
 
 				span.live {
