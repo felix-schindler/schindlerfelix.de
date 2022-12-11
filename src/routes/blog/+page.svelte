@@ -1,8 +1,5 @@
 <div>
-	<img
-		src="https://avatars.githubusercontent.com/u/65357346"
-		alt="Avatar saying <fe/ix>"
-	/>
+	<img src="https://avatars.githubusercontent.com/u/65357346" alt="<fe/ix>" />
 	<h1>My Blog</h1>
 	<p>thoughts and prayers</p>
 </div>
@@ -22,13 +19,6 @@
 				<p>
 					{new Date("2022-10-10").toLocaleDateString()} &middot; Quick introduction
 					to the web
-				</p>
-			</li>
-			<li>
-				<a href="./blog/smartphones">🇩🇪 smartphones</a>
-				<p>
-					{new Date("2022-09-19").toLocaleDateString()} &middot; Smartphones werden
-					langeweiliger.
 				</p>
 			</li>
 			<li>
