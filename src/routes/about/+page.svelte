@@ -1,4 +1,6 @@
 <script>
+	import Live from "$lib/components/Live.svelte";
+
 	const g2 = "2Gs";
 	const og = "guinea pig and girlfriend";
 	let g = g2;
@@ -11,8 +13,8 @@
 		Based in Stuttgart; living with my
 		{#key g}
 			<abbr on:mouseenter={() => (g = og)} on:mouseleave={() => (g = g2)}>
-				{g}</abbr
-			>.
+				{g}
+			</abbr>.
 		{/key}
 	</p>
 	<p>
@@ -27,10 +29,10 @@
 		</a>
 		and
 		<a href="https://gitlab.com/felix-schindler" rel="noopener noreferrer">
-			GitLab</a
-		>. <i>That's just because I don't want to host them anymore.</i> If you want
-		to know more about me, my interests or my projects, feel free to pay a visit
-		to my <a href="/blog">blog</a>.
+			GitLab
+		</a>. <i>That's just because I don't want to host them anymore.</i> If you
+		want to know more about me, my interests or my projects, feel free to pay a
+		visit to my <a href="/blog">blog</a>.
 	</p>
 </div>
 <div class="skills">
@@ -38,17 +40,18 @@
 		<h2>🧑🏻‍💻 Coding</h2>
 		<div class="grid">
 			<div class="card">
-				<p class="tech">
-					<span><img src="/img/tech/php.svg" loading="lazy" alt="" /> PHP</span>
-					<span>
-						<img src="/img/tech/typescript.svg" loading="lazy" alt="" /> TypeScript
-					</span>
-					<span>
-						<img src="/img/tech/css.svg" loading="lazy" alt="" /> CSS
-					</span>
-				</p>
 				<details>
-					<summary>Technologies I've used include</summary>
+					<summary class="tech">
+						<span>
+							<img src="/img/tech/php.svg" loading="lazy" alt="" /> PHP
+						</span>
+						<span>
+							<img src="/img/tech/typescript.svg" loading="lazy" alt="" /> TypeScript
+						</span>
+						<span>
+							<img src="/img/tech/css.svg" loading="lazy" alt="" /> CSS
+						</span>
+					</summary>
 					<p class="tech">
 						<span>
 							<img src="/img/tech/node.svg" alt="" loading="lazy" /> NodeJS
@@ -56,6 +59,11 @@
 						<span>
 							<img src="/img/tech/deno.svg" alt="" loading="lazy" /> Deno
 						</span>
+						<span>
+							<img src="/img/tech/bun.svg" alt="" loading="lazy" /> Bun
+						</span>
+					</p>
+					<p class="tech">
 						<span>
 							<img src="/img/tech/svelte.svg" alt="" loading="lazy" /> SvelteKit
 						</span>
@@ -67,21 +75,27 @@
 						<span>Mongoose</span>
 						<span>SocketIO</span>
 					</p>
+					<p class="tech">
+						<span>
+							<img src="/img/tech/bootstrap.svg" alt="" loading="lazy" /> Bootstrap
+						</span>
+					</p>
 				</details>
 				<meter min="1" max="100" value="100" />
 			</div>
 			<div class="card">
-				<p class="tech">
-					<span>
-						<img src="/img/tech/java.svg" loading="lazy" alt="" /> Java
-					</span>
-					<span><img src="/img/tech/c%23.svg" loading="lazy" alt="" /> C#</span>
-					<span>
-						<img src="/img/tech/swift.svg" loading="lazy" alt="" /> Swift
-					</span>
-				</p>
 				<details>
-					<summary>Technologies I've used include</summary>
+					<summary class="tech">
+						<span>
+							<img src="/img/tech/java.svg" loading="lazy" alt="" /> Java
+						</span>
+						<span>
+							<img src="/img/tech/c%23.svg" loading="lazy" alt="" /> C#
+						</span>
+						<span>
+							<img src="/img/tech/swift.svg" loading="lazy" alt="" /> Swift
+						</span>
+					</summary>
 					<p class="tech">
 						<span>
 							<img src="/img/tech/xml.svg" alt="" loading="lazy" /> JavaFX
@@ -126,10 +140,10 @@
 			<div class="card">
 				<p class="tech">
 					<span>
-						<img src="/img/tech/pocketbase.svg" loading="lazy" alt="" /> PocketBase
+						<img src="/img/tech/firebase.svg" loading="lazy" alt="" /> Firebase
 					</span>
 					<span>
-						<img src="/img/tech/firebase.svg" loading="lazy" alt="" /> Firebase
+						<img src="/img/tech/pocketbase.svg" loading="lazy" alt="" /> PocketBase
 					</span>
 				</p>
 				<meter min="1" max="100" value="75" />
@@ -153,7 +167,7 @@
 		<div class="grid">
 			<div class="card">
 				<h3>🧑🏻‍🎓 Hochschule der Medien</h3>
-				<p>Nov '20 - <span class="live" /> now</p>
+				<p>Nov '20 - <Live /> now</p>
 			</div>
 			<div class="card">
 				<h3>📚 Ferdinand von Steinbeis Schule</h3>
@@ -166,7 +180,7 @@
 		<div class="grid">
 			<div class="card">
 				<h3>🖥️ Software-Developer</h3>
-				<p>May '22 - <span class="live" /> now</p>
+				<p>May '22 - <Live /> now</p>
 				<p>TypeScript, Firebase, PocketBase, SvelteKit</p>
 			</div>
 			<div class="card">
@@ -252,34 +266,43 @@
 					margin-block-end: 0;
 				}
 
-				details > p.tech > span {
-					font-weight: normal;
+				details > :not(summary).tech {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 0.25em;
+
+					span {
+						font-weight: normal;
+					}
+				}
+
+				.tech {
+					&:first-child {
+						margin-bottom: 0.75em;
+					}
+
+					&:last-child {
+						margin-bottom: 0.5em;
+					}
+
+					span {
+						font-weight: 500;
+						padding: 0.2em 0.4em;
+						border: 1px solid rgba(var(--gray-rgb), 0.8);
+						border-radius: var(--radius);
+
+						img {
+							height: 18px;
+							width: 18px;
+							margin-right: 0.125em;
+							vertical-align: text-bottom;
+						}
+					}
 				}
 
 				p {
 					margin-block-start: 0.25em;
 					margin-block-end: 0;
-
-					&.tech {
-						display: flex;
-						flex-wrap: wrap;
-						gap: 0.25em;
-						margin-block-end: 0.3em;
-
-						span {
-							font-weight: 500;
-							padding: 0.2em 0.4em;
-							border: 1px solid rgba(var(--gray-rgb), 0.8);
-							border-radius: var(--radius);
-
-							img {
-								height: 18px;
-								width: 18px;
-								margin-right: 0.125em;
-								vertical-align: text-bottom;
-							}
-						}
-					}
 				}
 
 				meter,
@@ -311,30 +334,6 @@
 						),
 						linear-gradient(270deg, var(--accent), var(--accent-alt));
 					border-radius: calc(var(--radius) * 0.5);
-				}
-
-				span.live {
-					display: inline-block;
-					height: 0.75rem;
-					width: 0.75rem;
-					background-color: var(--accent);
-					border-radius: 50%;
-					-webkit-animation: blink 2s infinite;
-					animation: blink 2s infinite;
-				}
-
-				@keyframes blink {
-					0% {
-						opacity: 0;
-					}
-
-					50% {
-						opacity: 1;
-					}
-
-					to {
-						opacity: 0;
-					}
 				}
 			}
 		}
