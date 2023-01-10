@@ -106,7 +106,7 @@
 						<span>SwiftUI</span>
 					</p>
 				</details>
-				<meter min="1" max="100" value="80" />
+				<meter min="1" max="100" value="85" />
 			</div>
 			<div class="card">
 				<p class="tech">
@@ -135,7 +135,7 @@
 						<img src="/img/tech/sqlite.svg" loading="lazy" alt="" /> SQLite
 					</span>
 				</p>
-				<meter min="1" max="100" value="90" />
+				<meter min="1" max="100" value="95" />
 			</div>
 			<div class="card">
 				<p class="tech">
@@ -146,7 +146,7 @@
 						<img src="/img/tech/pocketbase.svg" loading="lazy" alt="" /> PocketBase
 					</span>
 				</p>
-				<meter min="1" max="100" value="75" />
+				<meter min="1" max="100" value="85" />
 			</div>
 			<div class="card">
 				<p class="tech">
@@ -266,11 +266,14 @@
 					margin-block-end: 0;
 				}
 
-				details > :not(summary).tech {
+				.tech {
 					display: flex;
 					flex-wrap: wrap;
+					align-items: center;
 					gap: 0.25em;
+				}
 
+				details > :not(summary).tech {
 					span {
 						font-weight: normal;
 					}
