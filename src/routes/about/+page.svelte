@@ -12,9 +12,9 @@
 	<p>
 		Based in Stuttgart; living with my
 		{#key g}
-			<abbr on:mouseenter={() => (g = og)} on:mouseleave={() => (g = g2)}>
-				{g}
-			</abbr>.
+			<abbr on:mouseenter={() => (g = og)} on:mouseleave={() => (g = g2)}
+				>{g}</abbr
+			>.
 		{/key}
 	</p>
 	<p>
@@ -182,11 +182,20 @@
 				<h3>🖥️ Software-Developer</h3>
 				<p>May '22 - <Live /> now</p>
 				<p>TypeScript, Firebase, PocketBase, SvelteKit</p>
+				<ul>
+					<li><a href="#!" class="hidden">not public</a></li>
+				</ul>
 			</div>
 			<div class="card">
 				<h3>👨🏻‍💻 Web-Developer</h3>
 				<p>Nov '20 - Apr '21</p>
 				<p>PHP, SQL, TypeScript, React</p>
+				<ul>
+					<li>
+						<a href="https://mademyday.com" rel="noreferrer">mademyday.com</a>
+					</li>
+					<li><a href="#!" class="hidden">not public</a></li>
+				</ul>
 			</div>
 			<div class="card">
 				<h3>🗞 Deliveryman</h3>
@@ -301,6 +310,15 @@
 							vertical-align: text-bottom;
 						}
 					}
+				}
+
+				ul {
+					padding-inline-start: 1.75em;
+					margin-block-start: 0.75em;
+				}
+
+				.hidden {
+					filter: blur(0.125em);
 				}
 
 				p {
