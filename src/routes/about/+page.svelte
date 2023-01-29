@@ -32,7 +32,8 @@
 			GitLab
 		</a>. <i>That's just because I don't want to host them anymore.</i> If you
 		want to know more about me, my interests or my projects, feel free to pay a
-		visit to my <a href="/blog">blog</a>.
+		visit to my <a href="/blog">blog</a>. Also pay a visit to my
+		<a href="https://schindlerflorian.de">brother</a>!
 	</p>
 </div>
 <div class="skills">
