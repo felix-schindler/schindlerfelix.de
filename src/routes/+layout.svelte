@@ -32,21 +32,20 @@
 
 <style lang="scss">
 	div.hmf {
-		& > header {
+		header {
 			display: flex;
 			justify-content: space-around;
 		}
 
-		& > main {
+		main {
 			padding: 0 1em;
 		}
 
-		& > footer {
+		footer {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
-			flex-wrap: wrap;
-			gap: 0.5em;
+			flex-direction: column-reverse;
+			gap: 0.75em;
 
 			@media (max-width: 1024px) {
 				justify-content: space-around;
