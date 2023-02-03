@@ -5,6 +5,10 @@
 </div>
 <ul>
 	<li>
+		2023
+		<p><i>No articles yet</i></p>
+	</li>
+	<li>
 		2022
 		<ul>
 			<li>
@@ -12,13 +16,6 @@
 				<p>
 					{new Date("2022-11-02").toLocaleDateString()} &middot; Collection of some
 					Minecraft Fabric performance mods
-				</p>
-			</li>
-			<li>
-				<a href="./blog/web-dev">web dev</a>
-				<p>
-					{new Date("2022-10-10").toLocaleDateString()} &middot; Quick introduction
-					to the web
 				</p>
 			</li>
 			<li>
@@ -31,7 +28,11 @@
 	</li>
 	<li>
 		2021
-		<p><i>These articles have been deleted</i></p>
+		<p><i>Articles have been deleted</i></p>
+	</li>
+	<li>
+		2020
+		<p><i>Articles have been deleted</i></p>
 	</li>
 </ul>
 
