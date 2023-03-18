@@ -10,19 +10,22 @@
 	The native GitLab client for iOS and iPadOS, made with SwiftUI.
 </p>
 
-<p>
-	Will be available for <mark class="mono">0.99€</mark> in the AppStore, because
-	I can't afford to work for free forever.
-</p>
-<p>
-	It's in early development and therefore bugs and missing features are
-	expected. Any feature requests or issues can be reported in the GitLab
-	repository.
-</p>
-<p>
-	It's open source and licensed under GNU AGPLv3. I will reserve the right to
-	make it closed-source at any point.
-</p>
+<label for="tldr">TLDR</label>
+<div id="tldr">
+	<p>
+		Will be available for <mark class="mono">0.99€</mark> in the AppStore, because
+		I can't afford to work for free forever.
+	</p>
+	<p>
+		It's in early development and therefore bugs and missing features are
+		expected. Any feature requests or issues can be reported in the GitLab
+		repository.
+	</p>
+	<p>
+		It's open source and licensed under GNU AGPLv3. I will reserve the right to
+		make it closed-source at any point.
+	</p>
+</div>
 
 <label for="links">Links</label>
 <ul id="links">
@@ -83,7 +86,8 @@
 	</li>
 </ul>
 
-<div class="grid">
+<label for="screens">Screenshots</label>
+<div class="grid" id="screens">
 	<img src="/img/tanuki/home.png" alt="" />
 	<img src="/img/tanuki/project.png" alt="" />
 	<img src="/img/tanuki/issues.png" alt="" />
@@ -112,13 +116,18 @@
 	}
 
 	label {
+		display: block;
+		margin-block-start: 2em;
+		margin-block-end: 0.25em;
+
 		cursor: auto;
 		color: var(--light-gray);
 		text-transform: uppercase;
+		font-size: smaller;
 	}
 
-	ul#links {
-		margin-block-start: 0.2em;
-		margin-block-end: 2em;
+	label + *,
+	label + div > p {
+		margin-block-start: 0;
 	}
 </style>
