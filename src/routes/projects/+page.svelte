@@ -6,8 +6,14 @@
 		<h2>Portfolio</h2>
 		<p>It's this website. It's gone through many iterations.</p>
 	</div>
-	<a href="/projects/gitlab" class="card">
+	<a href="/projects/gitlab" class="card clickable">
 		<h2>Tanuki for GitLab</h2>
-		<p>It's GitLab. But on your phone.</p>
+		<p>It's GitLab. On your phone.</p>
 	</a>
 </div>
+
+<style>
+	a.card {
+		text-decoration: none;
+	}
+</style>

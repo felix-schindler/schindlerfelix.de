@@ -2,6 +2,7 @@
 @import url("./buttons.css");
 @import url("./table.css");
 @import url("./i18n.css");
+@import url("./misc.css");
 
 /* Variables and settings */
 * {
@@ -123,6 +124,8 @@ a:hover {
 nav {
 	display: flex;
 	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
 	overflow: scroll;
 	gap: .25em;
 }
@@ -152,75 +155,6 @@ nav a:active {
 	background-color: rgba(var(--gray-rgb), .3);
 	text-decoration: none;
 }
-
-
-/* Some other tags */
-summary {
-	cursor: pointer;
-}
-
-abbr {
-	text-decoration: underline;
-	text-decoration-style: dotted;
-}
-
-mark {
-	font-size: .9em;
-	padding: .05em .2em;
-	border-radius: calc(var(--radius) / 2);
-	color: var(--on-accent);
-	background-color: var(--accent);
-}
-
-kbd {
-	font-family: var(--mono);
-	font-size: .9em;
-	padding: .05em .2em;
-	border: 1px solid rgba(var(--gray-rgb), .3);
-	border-radius: var(--radius);
-	background-color: rgba(var(--gray-rgb), .6);
-}
-
-em {
-	display: block;
-	text-align: start;
-	font-style: normal;
-
-	padding-left: 0.5em;
-	border-left: 3px solid rgb(var(--gray-rgb));
-	margin-block-start: 0.5em;
-	margin-block-end: 1em;
-}
-
-hr {
-	border-top-style: solid;
-	border-radius: var(--radius);
-}
-
-.mono {
-	font-family: var(--mono) !important;
-}
-
-/* Clickable */
-.clickable {
-	cursor: pointer;
-
-	padding: 3.2px 6.4px;
-	border-radius: var(--radius);
-}
-
-.clickable:hover:not(:disabled) {
-	background-color: rgba(var(--gray-rgb), 0.4);
-}
-
-.clickable:active:not(:disabled) {
-	background-color: rgba(var(--gray-rgb), 0.6);
-}
-
-.clickable:disabled {
-	background-color: rgba(var(--gray-rgb), 0.3);
-}
-
 
 
 /* Special things */
