@@ -91,23 +91,23 @@
 							<img src="/img/tech/java.svg" loading="lazy" alt="" /> Java
 						</span>
 						<span>
-							<img src="/img/tech/c%23.svg" loading="lazy" alt="" /> C#
+							<img src="/img/tech/swift.svg" loading="lazy" alt="" /> Swift
 						</span>
 						<span>
-							<img src="/img/tech/swift.svg" loading="lazy" alt="" /> Swift
+							<img src="/img/tech/c%23.svg" loading="lazy" alt="" /> C#
 						</span>
 					</summary>
 					<p class="tech">
+						<span>SwiftUI</span>
 						<span>
 							<img src="/img/tech/xml.svg" alt="" loading="lazy" /> JavaFX
 						</span>
 						<span>
 							<img src="/img/tech/unity.svg" alt="" loading="lazy" /> Unity
 						</span>
-						<span>SwiftUI</span>
 					</p>
 				</details>
-				<meter min="1" max="100" value="85" />
+				<meter min="1" max="100" value="92" />
 			</div>
 			<div class="card">
 				<p class="tech">
@@ -136,18 +136,18 @@
 						<img src="/img/tech/sqlite.svg" loading="lazy" alt="" /> SQLite
 					</span>
 				</p>
-				<meter min="1" max="100" value="95" />
+				<meter min="1" max="100" value="97" />
 			</div>
 			<div class="card">
 				<p class="tech">
 					<span>
-						<img src="/img/tech/firebase.svg" loading="lazy" alt="" /> Firebase
-					</span>
-					<span>
 						<img src="/img/tech/pocketbase.svg" loading="lazy" alt="" /> PocketBase
 					</span>
+					<span>
+						<img src="/img/tech/firebase.svg" loading="lazy" alt="" /> Firebase
+					</span>
 				</p>
-				<meter min="1" max="100" value="85" />
+				<meter min="1" max="100" value="90" />
 			</div>
 			<div class="card">
 				<p class="tech">
@@ -159,7 +159,7 @@
 					</span>
 					<span>PL/SQL</span>
 				</p>
-				<meter min="1" max="100" value="55" />
+				<meter min="1" max="100" value="50" />
 			</div>
 		</div>
 	</div>
