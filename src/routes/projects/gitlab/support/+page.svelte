@@ -14,6 +14,7 @@
 
 <div class="ac">
 	<form class="card" on:submit|preventDefault={sendSupport}>
+		<h2>Tanuki Support</h2>
 		<input placeholder="Title" type="text" bind:value={title} />
 		<textarea placeholder="Message" cols="30" rows="10" bind:value={msg} />
 		<input type="submit" disabled={!title || !msg} />

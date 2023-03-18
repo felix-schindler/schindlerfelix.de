@@ -11,7 +11,12 @@
 		<nav>
 			<a href="/" class:active={path == "/"}>🏠 Home</a>
 			<a href="/about" class:active={path == "/about"}>👨🏻‍💻 About</a>
-			<a href="/blog" class:active={path == "/blog"}>✨ Blog</a>
+			<a href="/blog" class:active={path.startsWith("/blog")}>✨ Blog</a>
+			{#if path.startsWith("/projects")}
+				<a href="/projects" class="active">📁 Projects</a>
+			{:else}
+				<a href="/projects">📂 Projects</a>
+			{/if}
 		</nav>
 	</header>
 	<main>
