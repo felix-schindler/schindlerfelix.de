@@ -5,7 +5,7 @@
 This app does not collect any data for itself. All the data collected is managed
 by the GitLab instance you configured yourself.
 
-To read more about the Terms and Privacy Policy you accepted while registring,
+To read more about the Terms and Privacy Policy you accepted when registering,
 go to the path `/-/users/terms` on your chosen GitLab instance.
 
 When using `gitlab.com` it would be https://gitlab.com/-/users/terms.
