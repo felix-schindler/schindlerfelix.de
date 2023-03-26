@@ -22,18 +22,20 @@
 		<mark>German-Chinese double degree</mark> at Stuttgart Media University.
 	</p>
 	<p>
-		Most of my projects aren't available to the public, tho I have some public
-		repositories on
-		<a href="https://github.com/felix-schindler" rel="noopener noreferrer">
-			GitHub
-		</a>
-		and
-		<a href="https://gitlab.com/felix-schindler" rel="noopener noreferrer">
-			GitLab
-		</a>. <i>That's just because I don't want to host them anymore.</i> If you
-		want to know more about me, my interests or my projects, feel free to pay a
-		visit to my <a href="/blog">blog</a>. Also pay a visit to my
-		<a href="https://schindlerflorian.de">brother</a>!
+		I'm coding every day, however most of my projects aren't available to the
+		public as I keep deleting them / not wanting to host them anymore.
+	</p>
+	<p>
+		You can find some of my projects on my <a href="/projects">projects page</a
+		>,
+		<a href="https://github.com/felix-schindler" rel="noopener noreferrer"
+			>GitHub</a
+		>
+		or
+		<a href="https://gitlab.com/felix-schindler" rel="noopener noreferrer"
+			>GitLab</a
+		>. Some experiments might also be documented on my <a href="/blog">blog</a>.
+		Also, pay a visit to my <a href="https://schindlerflorian.de">brother</a>!
 	</p>
 </div>
 <div class="skills">
