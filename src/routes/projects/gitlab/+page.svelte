@@ -45,6 +45,11 @@
 			</svg>
 			GitLab Repo
 		</a>
+		\
+		<a
+			href="https://gitlab.com/felix-schindler/gitlab-ios/-/milestones/2#tab-issues"
+			>Roadmap for the next version</a
+		>
 	</li>
 	<li>
 		<a href="/projects/gitlab/support#faq">
