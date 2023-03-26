@@ -31,6 +31,8 @@
 		</span>
 		<span>
 			<a href="/imprint">📜 Imprint</a>
+			|
+			<a href="https://github.com/felix-schindler/blog">Typo? Submit PR</a>
 		</span>
 	</footer>
 </div>
