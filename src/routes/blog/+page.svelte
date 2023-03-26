@@ -6,7 +6,15 @@
 <ul>
 	<li>
 		2023
-		<p><i>No articles yet</i></p>
+		<ul>
+			<li>
+				<a href="./blog/pgp">PGP / GPG and Git</a>
+				<p>
+					{new Date("2023-03-25").toLocaleDateString()} &middot; How to setup and
+					use (on Mac)
+				</p>
+			</li>
+		</ul>
 	</li>
 	<li>
 		2022
