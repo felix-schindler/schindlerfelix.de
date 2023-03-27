@@ -6,7 +6,7 @@
 		<h2>Portfolio</h2>
 		<p>It's this website. It's gone through many iterations.</p>
 	</div>
-	<a href="/projects/gitlab" class="card clickable">
+	<a href="/projects/tanuki" class="card clickable">
 		<h2>Tanuki for GitLab</h2>
 		<p>It's GitLab. On your phone.</p>
 	</a>

@@ -52,7 +52,7 @@
 		>
 	</li>
 	<li>
-		<a href="/projects/gitlab/support#faq">
+		<a href="/projects/tanuki/support#faq">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"
@@ -72,7 +72,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="/projects/gitlab/support">
+		<a href="/projects/tanuki/support">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"
@@ -89,7 +89,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="/projects/gitlab/privacy"
+		<a href="/projects/tanuki/privacy"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"
