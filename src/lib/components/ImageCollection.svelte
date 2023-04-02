@@ -16,7 +16,7 @@
 	let parallaxTitle: HTMLDivElement;
 
 	function onScroll() {
-		parallaxTitle.style.top = window.scrollY * -0.5 + "px";
+		parallaxTitle.style.top = window.scrollY * -0.9 + "px";
 	}
 </script>
 
@@ -105,8 +105,8 @@
 		}
 
 		.hero-title {
-			bottom: 63%;
-			font-size: 30vw;
+			bottom: 50%;
+			font-size: 20vw;
 		}
 	}
 
