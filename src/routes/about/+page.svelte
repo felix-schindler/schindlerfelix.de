@@ -219,7 +219,7 @@
 			</div>
 			<div class="card">
 				<h3>🇨🇳 Chinese (Mandarin)</h3>
-				<p>~700 汉子</p>
+				<p>HSK 3</p>
 			</div>
 			<div class="card">
 				<h3>🇫🇷 French</h3>
