@@ -1,18 +1,15 @@
 <script>
+	import "$lib/style/markdown.css"; // GitHub Markdown theme
+	import "$lib/style/prism-nord.css"; // Nord style for code block (prism syntax highlighting)
 	import { page } from "$app/stores";
-	import "./markdown.css"; // GitHub Markdown theme
-	import "./prism-nord.css"; // Nord style for code block (prism syntax highlighting)
 
 	let path = $page.url.pathname;
 	$: path = $page.url.pathname;
 </script>
 
-<article class="markdown-body">
-	{#if path != "/blog"}
-		<a href="/blog">&larr; Back</a>
-	{/if}
+<div class="markdown-body">
 	<slot />
-</article>
+</div>
 
 <style lang="scss">
 	.markdown-body {
@@ -26,10 +23,5 @@
 		@media (max-width: 767px) {
 			padding: 15px;
 		}
-	}
-
-	a {
-		display: block;
-		margin-block: 1em;
 	}
 </style>
