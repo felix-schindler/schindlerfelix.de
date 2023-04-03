@@ -1,0 +1,11 @@
+:lang(de) {
+	quotes: "„" "“";
+}
+
+:lang(programmer) {
+	list-style: binary;
+}
+
+:lang(zh-Hans) {
+	list-style: cjk-ideographic;
+}

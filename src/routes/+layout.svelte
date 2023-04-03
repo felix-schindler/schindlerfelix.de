@@ -1,9 +1,14 @@
 <script>
-	import "../style/main.css"; // Global styling
+	import "$lib/style/main.css"; // Global styling
 	import { page } from "$app/stores";
 
-	let path = $page.url.pathname;
+	let path;
 	$: path = $page.url.pathname;
+
+	let style;
+	$: path.includes("/photos/")
+		? (style = "padding: 0")
+		: (style = "padding: 0 1em");
 </script>
 
 <div class="hmf">
@@ -11,15 +16,12 @@
 		<nav>
 			<a href="/" class:active={path == "/"}>🏠 Home</a>
 			<a href="/about" class:active={path == "/about"}>👨🏻‍💻 About</a>
-			<a href="/blog" class:active={path.startsWith("/blog")}>📄 Blog</a>
-			{#if path.startsWith("/projects")}
-				<a href="/projects" class="active">📂 Projects</a>
-			{:else}
-				<a href="/projects">📁 Projects</a>
-			{/if}
+			<a href="/content" class:active={path.startsWith("/content")}
+				>💾 Content</a
+			>
 		</nav>
 	</header>
-	<main>
+	<main {style}>
 		<slot />
 	</main>
 	<footer>
@@ -39,11 +41,6 @@
 
 <style lang="scss">
 	div.hmf {
-		header {
-			display: flex;
-			justify-content: space-around;
-		}
-
 		main {
 			padding: 0 1em;
 		}
