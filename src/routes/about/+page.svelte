@@ -26,7 +26,8 @@
 		public as I keep deleting them / not wanting to host them anymore.
 	</p>
 	<p>
-		You can find some of my projects on my <a href="/projects">projects page</a
+		You can find some of my projects on my <a href="/content#projects"
+			>projects page</a
 		>,
 		<a href="https://github.com/felix-schindler" rel="noopener noreferrer"
 			>GitHub</a
@@ -34,8 +35,9 @@
 		or
 		<a href="https://gitlab.com/felix-schindler" rel="noopener noreferrer"
 			>GitLab</a
-		>. Some experiments might also be documented on my <a href="/blog">blog</a>.
-		Also, pay a visit to my <a href="https://schindlerflorian.de">brother</a>!
+		>. Some experiments might also be documented on my
+		<a href="/content#blog">blog</a>. Also, pay a visit to my
+		<a href="https://schindlerflorian.de">brother</a>!
 	</p>
 </div>
 <div class="skills">

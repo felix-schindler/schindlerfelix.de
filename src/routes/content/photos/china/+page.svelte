@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ImageCollection from "$lib/components/ImageCollection.svelte";
+	import Markdown from "$lib/components/Markdown.svelte";
 </script>
 
 <ImageCollection
@@ -22,10 +23,10 @@
 		},
 	]}
 >
-	<div>
+	<Markdown>
 		<h2>Sources</h2>
 		<a href="https://eliasruiz.com/china">Elias Ruiz</a>
-	</div>
+	</Markdown>
 </ImageCollection>
 
 <style>
