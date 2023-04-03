@@ -1,19 +1,18 @@
-# ![Tanuki app icon](https://gitlab.com/uploads/-/system/project/avatar/33025310/Tanuki-200kb.png) Tanuki for GitLab
-
-<p class="subtitle">Native GitLab client for iOS and iPadOS, made with SwiftUI.</p>
-
 <label for="tldr">TLDR</label>
 
 <div id="tldr">
+	<p>Will be available for <mark class="mono">0.99€</mark> in the AppStore</p>
 
-Will be available for <mark class="mono">0.99€</mark> in the AppStore
+	<p>
+		It's in early development and therefore bugs and missing features are
+		expected. Any feature requests or issues can be reported in the GitLab
+		repository.
+	</p>
 
-It's in early development and therefore bugs and missing features are expected.
-Any feature requests or issues can be reported in the GitLab repository.
-
-It's open source and licensed under GNU AGPLv3. I will reserve the right to make
-it closed source at any point.
-
+	<p>
+		It's open source and licensed under GNU AGPLv3. I will reserve the right to
+		make it closed source at any point.
+	</p>
 </div>
 
 <label for="links">Links</label>
@@ -108,17 +107,9 @@ it closed source at any point.
 </div>
 
 <style>
-	h1 img {
-		vertical-align: bottom;
-		max-height: 1.25em;
-	}
-
-	p.subtitle {
-		font-size: larger;
-	}
-
 	img {
 		border-radius: var(--radius);
+		max-width: 100%;
 	}
 
 	label {

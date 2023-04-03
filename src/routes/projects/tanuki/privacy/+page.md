@@ -1,4 +1,4 @@
-# Privacy statement
+## Privacy statement
 
 > Last updated: <time datetime="2023-03-18">18th March 2023</time>
 

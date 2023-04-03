@@ -12,14 +12,16 @@
 	}
 </script>
 
+<h2>Support</h2>
+
 <form class="card" on:submit|preventDefault={sendSupport}>
-	<h1>Support request</h1>
+	<h3>Support request</h3>
 	<input placeholder="Title" type="text" bind:value={title} />
 	<textarea placeholder="Message" cols="30" rows="10" bind:value={msg} />
 	<button type="submit" disabled={!title || !msg}>Send</button>
 </form>
 
-<h2 id="faq">FAQ</h2>
+<h3 id="faq">FAQ</h3>
 <div class="grid">
 	<div class="card">
 		<h3>Why does the app cost anything?</h3>
