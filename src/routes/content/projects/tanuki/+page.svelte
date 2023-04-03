@@ -1,7 +1,7 @@
 <label for="tldr">TLDR</label>
 
 <div id="tldr">
-	<p>Will be available for <mark class="mono">0.99€</mark> in the AppStore</p>
+	<p>Available for <mark class="mono">0.99€</mark> in the AppStore</p>
 
 	<p>
 		It's in early development and therefore bugs and missing features are
