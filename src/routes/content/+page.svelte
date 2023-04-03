@@ -9,7 +9,7 @@
 	</div>
 	<a href="/content/projects/tanuki" class="card clickable">
 		<h3>Tanuki for GitLab</h3>
-		<p>It's GitLab. On your phone.</p>
+		<p>It's GitLab. On your phone. On your ✨iPhone✨</p>
 	</a>
 </div>
 
