@@ -1,33 +1,23 @@
-<h1>
-	<img
-		src="https://gitlab.com/uploads/-/system/project/avatar/33025310/Tanuki-200kb.png"
-		alt="Tanuki app logo"
-		loading="lazy"
-	/>
-	Tanuki for GitLab
-</h1>
+# ![Tanuki app icon](https://gitlab.com/uploads/-/system/project/avatar/33025310/Tanuki-200kb.png) Tanuki for GitLab
 
-<p class="subtitle">
-	Native GitLab client for iOS and iPadOS, made with SwiftUI.
-</p>
+<p class="subtitle">Native GitLab client for iOS and iPadOS, made with SwiftUI.</p>
 
 <label for="tldr">TLDR</label>
+
 <div id="tldr">
-	<p>
-		Will be available for <mark class="mono">0.99€</mark> in the AppStore
-	</p>
-	<p>
-		It's in early development and therefore bugs and missing features are
-		expected. Any feature requests or issues can be reported in the GitLab
-		repository.
-	</p>
-	<p>
-		It's open source and licensed under GNU AGPLv3. I will reserve the right to
-		make it closed source at any point.
-	</p>
+
+Will be available for <mark class="mono">0.99€</mark> in the AppStore
+
+It's in early development and therefore bugs and missing features are expected.
+Any feature requests or issues can be reported in the GitLab repository.
+
+It's open source and licensed under GNU AGPLv3. I will reserve the right to make
+it closed source at any point.
+
 </div>
 
 <label for="links">Links</label>
+
 <ul id="links">
 	<li>
 		<a href="https://gitlab.com/felix-schindler/gitlab-ios">
@@ -52,7 +42,7 @@
 		>
 	</li>
 	<li>
-		<a href="/projects/gitlab/support#faq">
+		<a href="/content/projects/tanuki/support#faq">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"
@@ -72,7 +62,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="/projects/gitlab/support">
+		<a href="/content/projects/tanuki/support">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"
@@ -89,7 +79,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="/projects/gitlab/privacy"
+		<a href="/content/projects/tanuki/privacy"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"
@@ -109,6 +99,7 @@
 </ul>
 
 <label for="screens">Screenshots</label>
+
 <div class="grid" id="screens">
 	<img src="/img/tanuki/home.png" alt="Home" loading="lazy" />
 	<img src="/img/tanuki/project.png" alt="Project" loading="lazy" />
@@ -117,14 +108,8 @@
 </div>
 
 <style>
-	h1 {
-		display: flex;
-		align-items: center;
-		gap: 0.25em;
-		flex-wrap: wrap;
-	}
-
 	h1 img {
+		vertical-align: bottom;
 		max-height: 1.25em;
 	}
 
@@ -138,14 +123,7 @@
 	}
 
 	label {
-		display: block;
-		margin-block-start: 2em;
-		margin-block-end: 0.25em;
-
-		cursor: auto;
-		color: var(--light-gray);
-		text-transform: uppercase;
-		font-size: smaller;
+		cursor: text;
 	}
 
 	label + *,
