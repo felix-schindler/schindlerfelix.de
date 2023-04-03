@@ -46,6 +46,10 @@ hr {
 }
 
 /* Clickable */
+a.clickable:hover {
+	text-decoration: none;
+}
+
 .clickable {
 	cursor: pointer;
 
