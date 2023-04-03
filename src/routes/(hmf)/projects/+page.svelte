@@ -11,9 +11,3 @@
 		<p>It's GitLab. On your phone.</p>
 	</a>
 </div>
-
-<style>
-	a.card {
-		text-decoration: none;
-	}
-</style>
