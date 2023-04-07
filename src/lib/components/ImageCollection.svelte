@@ -73,7 +73,7 @@
 	}
 
 	.parallax-title {
-		font-family: "IBM Plex Mono", monospace;
+		font-family: var(--mono);
 		position: absolute;
 		height: 100vh;
 		width: calc(100% - 5vw);
