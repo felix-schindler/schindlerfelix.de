@@ -5,10 +5,25 @@
 <div class="grid">
 	<div class="card">
 		<h3>Portfolio</h3>
+		<p class="tech">
+			<span>
+				<img src="/img/tech/svelte.svg" alt="" loading="lazy" /> SvelteKit
+			</span>
+		</p>
 		<p>It's this website. It's gone through many iterations.</p>
 	</div>
 	<a href="/content/projects/tanuki" class="card clickable">
 		<h3>Tanuki for GitLab</h3>
+		<p class="tech">
+			<span>
+				<img src="/img/tech/swift.svg" loading="lazy" alt="" /> Swift
+			</span>
+			<span>SwiftUI</span>
+			<span>
+				<img src="/img/tech/gitlab.svg" alt="" />
+				GitLab API
+			</span>
+		</p>
 		<p>It's GitLab. On your phone. On your ✨iPhone✨</p>
 	</a>
 </div>
@@ -54,5 +69,49 @@
 	.card {
 		padding: 1em !important;
 		background-color: rgba(var(--gray-rgb), 0.2);
+	}
+
+	h3 {
+		margin-block-end: 0;
+	}
+
+	p {
+		margin-block: 0.5em;
+
+		&.tech {
+			margin-block-start: 0.25em;
+		}
+	}
+
+	.tech {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.25em;
+
+		&:first-child {
+			margin-bottom: 0.75em;
+		}
+
+		&:last-child {
+			margin-bottom: 0.5em;
+		}
+
+		span {
+			// FIXME: Why does this need to be smaller than on /about ??
+			font-size: 0.9em;
+			padding: 0.1em 0.4em;
+			// padding: 0.2em 0.4em;
+			border: 1px solid rgba(var(--gray-rgb), 0.8);
+			border-radius: var(--radius);
+
+			img {
+				height: 18px;
+				width: 18px;
+				margin-right: 0.125em;
+				vertical-align: text-bottom;
+				background-color: transparent !important; // Overwrite markdown style
+			}
+		}
 	}
 </style>
