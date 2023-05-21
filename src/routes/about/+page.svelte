@@ -103,6 +103,7 @@
 					</summary>
 					<p class="tech">
 						<span>SwiftUI</span>
+						<span>Storyboards</span>
 						<span>
 							<img src="/img/tech/xml.svg" alt="" loading="lazy" /> JavaFX
 						</span>
@@ -220,7 +221,7 @@
 				<p>B2</p>
 			</div>
 			<div class="card">
-				<h3>🇨🇳 Chinese (Mandarin)</h3>
+				<h3>🇨🇳 Chinese</h3>
 				<p>HSK 3</p>
 			</div>
 			<div class="card">
