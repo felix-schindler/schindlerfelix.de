@@ -124,6 +124,7 @@
 	<img src="/img/tanuki/project.png" alt="Project" loading="lazy" />
 	<img src="/img/tanuki/issues.png" alt="Issues" loading="lazy" />
 	<img src="/img/tanuki/branches.png" alt="Branches" loading="lazy" />
+	<img src="/img/tanuki/group.png" alt="Group" loading="lazy" />
 </div>
 
 <style>
