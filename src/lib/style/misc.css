@@ -69,15 +69,15 @@ a.clickable:hover {
 }
 
 .clickable:hover:not(:disabled) {
-	background-color: rgba(var(--gray-rgb), 0.4);
+	background-color: rgba(var(--gray-rgb), 0.4) !important;
 }
 
 .clickable:active:not(:disabled) {
-	background-color: rgba(var(--gray-rgb), 0.6);
+	background-color: rgba(var(--gray-rgb), 0.6) !important;
 }
 
 .clickable:disabled {
-	background-color: rgba(var(--gray-rgb), 0.3);
+	background-color: rgba(var(--gray-rgb), 0.3) !important;
 }
 
 /* Bootstrap icons */
