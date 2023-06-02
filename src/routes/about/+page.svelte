@@ -1,48 +1,19 @@
 <script>
+	import { t } from "$lib/translations";
 	import Live from "$lib/components/Live.svelte";
-
-	const g2 = "2Gs";
-	const og = "guinea pig and girlfriend";
-	let g = g2;
 </script>
 
 <div class="intro">
-	<h1>Felix Schindler</h1>
-	<p>Hey, I am a 20-year-old German <mark>student</mark> who loves to code.</p>
-	<p>
-		Based in Stuttgart; living with my
-		{#key g}
-			<abbr on:mouseenter={() => (g = og)} on:mouseleave={() => (g = g2)}
-				>{g}</abbr
-			>.
-		{/key}
-	</p>
-	<p>
-		I am currently studying <mark>computer science</mark> as a
-		<mark>German-Chinese double degree</mark> at Stuttgart Media University.
-	</p>
-	<p>
-		I'm coding every day, however most of my projects aren't available to the
-		public as I keep deleting them / not wanting to host them anymore.
-	</p>
-	<p>
-		You can find some of my projects on my <a href="/content#projects"
-			>projects page</a
-		>,
-		<a href="https://github.com/felix-schindler" rel="noopener noreferrer"
-			>GitHub</a
-		>
-		or
-		<a href="https://gitlab.com/felix-schindler" rel="noopener noreferrer"
-			>GitLab</a
-		>. Some experiments might also be documented on my
-		<a href="/content#blog">blog</a>. Also, pay a visit to my
-		<a href="https://schindlerflorian.de">brother</a>!
-	</p>
+	<h1>{$t("common.name.full")}</h1>
+	<p>{@html $t("about.txt.1")}</p>
+	<p>{@html $t("about.txt.2")}</p>
+	<p>{@html $t("about.txt.3")}</p>
+	<p>{@html $t("about.txt.4")}</p>
+	<p>{@html $t("about.txt.5")}</p>
 </div>
 <div class="skills">
 	<div class="cv">
-		<h2>🧑🏻‍💻 Coding</h2>
+		<h2>{$t("about.skills.coding")}</h2>
 		<div class="grid">
 			<div class="card">
 				<details>
@@ -130,7 +101,7 @@
 		</div>
 	</div>
 	<div class="cv">
-		<h2>💾 Data(base)</h2>
+		<h2>{$t("about.skills.database")}</h2>
 		<div class="grid">
 			<div class="card">
 				<p class="tech">
@@ -169,23 +140,24 @@
 		</div>
 	</div>
 	<div class="cv">
-		<h2>🎓 Education</h2>
+		<h2>{$t("about.skills.edu.heading")}</h2>
 		<div class="grid">
 			<div class="card">
-				<h3>🧑🏻‍🎓 Hochschule der Medien</h3>
-				<p>Nov '20 - <Live /> now</p>
+				<h3>{$t("about.skills.edu.university")}</h3>
+				<p>{$t("about.skills.edu.uni2")}</p>
+				<p>{$t("about.skills.edu.uni1")}</p>
 			</div>
 			<div class="card">
-				<h3>📚 Ferdinand von Steinbeis Schule</h3>
-				<p>Sep '18 - Jul '20</p>
+				<h3>{$t("about.skills.edu.school")}</h3>
+				<p>{$t("about.skills.edu.school3")}</p>
 			</div>
 		</div>
 	</div>
 	<div class="cv">
-		<h2>💼 Jobs</h2>
+		<h2>{$t("about.skills.jobs.heading")}</h2>
 		<div class="grid">
 			<div class="card">
-				<h3>🖥️ Software-Developer</h3>
+				<h3>{$t("about.skills.jobs.2")}</h3>
 				<p>May '22 - <Live /> now</p>
 				<p>TypeScript, Firebase, PocketBase, SvelteKit</p>
 				<ul>
@@ -193,7 +165,7 @@
 				</ul>
 			</div>
 			<div class="card">
-				<h3>👨🏻‍💻 Web-Developer</h3>
+				<h3>{$t("about.skills.jobs.1")}</h3>
 				<p>Nov '20 - Apr '21</p>
 				<p>PHP, SQL, TypeScript, React</p>
 				<ul>
@@ -204,28 +176,28 @@
 				</ul>
 			</div>
 			<div class="card">
-				<h3>🗞 Deliveryman</h3>
+				<h3>{$t("about.skills.jobs.0")}</h3>
 				<p>Oct '15 - Jul '20</p>
 			</div>
 		</div>
 	</div>
 	<div class="cv">
-		<h2>🗺 Languages</h2>
+		<h2>{$t("about.skills.languages.heading")}</h2>
 		<div class="grid">
 			<div class="card">
-				<h3>🇩🇪 German</h3>
-				<p>native speaker</p>
+				<h3>🇩🇪 {$t("about.skills.languages.german")}</h3>
+				<p>{$t("about.skills.languages.german_level")}</p>
 			</div>
 			<div class="card">
-				<h3>🇬🇧 English</h3>
+				<h3>🇬🇧 {$t("about.skills.languages.english")}</h3>
 				<p>B2</p>
 			</div>
 			<div class="card">
-				<h3>🇨🇳 Chinese</h3>
+				<h3>🇨🇳 {$t("about.skills.languages.chinese")}</h3>
 				<p>HSK 3</p>
 			</div>
 			<div class="card">
-				<h3>🇫🇷 French</h3>
+				<h3>🇫🇷 {$t("about.skills.languages.french")}</h3>
 				<p>B1</p>
 			</div>
 		</div>
@@ -258,7 +230,8 @@
 			font-family: var(--mono);
 		}
 
-		a {
+		// a-tags are inside the translation json
+		:global(a) {
 			color: var(--accent);
 		}
 	}

@@ -1,0 +1,19 @@
+{
+	"nav": {
+		"home": "🏠 Start",
+		"about": "👨🏻‍💻 Über",
+		"content": "💾 Inhalte"
+	},
+	"name": {
+		"full": "Felix Schindler",
+		"first": "Felix",
+		"last": "Schindler"
+	},
+	"imprint": "📜 Impressum",
+	"typo": "Tippfehler? PR einreichen",
+	"made_by": {
+		"pre_name": "Gemacht mit ❤️‍🔥 von ",
+		"pre_location": " in",
+		"after_location": ""
+	}
+}

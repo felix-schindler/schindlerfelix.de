@@ -1,28 +1,12 @@
 <script lang="ts">
-	import { fade } from "svelte/transition";
-
-	const btn_en = "more about me";
-	const btn_zh = "更多关于我";
-	let btn = btn_zh;
+	import { t } from "$lib/translations";
 </script>
 
 <div class="intro">
-	<h1>Felix Schindler</h1>
-	<p>Studying computer science as a German-Chinese double degree</p>
+	<h1>{$t("common.name.full")}</h1>
+	<p>{$t("home.study")}</p>
 	<p>
-		<small>
-			{#key btn}
-				<a
-					href="/about"
-					role="button"
-					on:mouseenter={() => (btn = btn_en)}
-					on:mouseleave={() => (btn = btn_zh)}
-					in:fade
-				>
-					{btn}
-				</a>
-			{/key}
-		</small>
+		<a href="/about" role="button">{$t("home.more")}</a>
 	</p>
 </div>
 
@@ -63,10 +47,9 @@
 
 		a[role="button"] {
 			transition: 200ms all;
+			font-size: 1.5rem;
 
 			&:hover {
-				color: black;
-				background-color: white;
 				box-shadow: 0.25em 0.25em;
 			}
 
