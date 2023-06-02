@@ -1,6 +1,7 @@
 <script>
 	import "$lib/style/main.css"; // Global styling
 	import { page } from "$app/stores";
+	import { locale, t } from "$lib/translations";
 
 	let path;
 	$: path = $page.url.pathname;
@@ -11,30 +12,41 @@
 		: (style = "padding: 0 1em");
 </script>
 
-<div class="hmf">
+<div class="hmf" lang={$locale}>
 	<header>
 		<nav>
-			<a href="/" class:active={path == "/"}>🏠 Home</a>
-			<a href="/about" class:active={path == "/about"}>👨🏻‍💻 About</a>
-			<a href="/content" class:active={path.startsWith("/content")}
-				>💾 Content</a
+			<a href="/" class:active={path == "/"}>{$t("common.nav.home")}</a>
+			<a href="/about" class:active={path == "/about"}
+				>{$t("common.nav.about")}</a
 			>
+			<a href="/content" class:active={path.startsWith("/content")}
+				>{$t("common.nav.content")}</a
+			>
+			<select bind:value={$locale}>
+				<option value="de">Deutsch</option>
+				<option value="en">English</option>
+				<!-- <option value="kr">한국어</option> -->
+				<option value="zh-Hans">简体中文</option>
+			</select>
 		</nav>
 	</header>
 	<main {style}>
 		<slot />
 	</main>
 	<footer>
+		<span
+			>{$t("common.made_by.pre_name")}<a href="/about"
+				>{$t("common.name.first")}</a
+			>{$t("common.made_by.pre_location")}
+			<a href="https://theländ.de" class="laend" rel="noopener noreferrer"
+				>The Länd</a
+			>
+			{$t("common.made_by.after_location")}</span
+		>
 		<span>
-			Made with ❤️‍🔥 by <a href="/about">Felix</a> in
-			<a href="https://theländ.de" class="laend" rel="noopener noreferrer">
-				The Länd
-			</a>
-		</span>
-		<span>
-			<a href="/imprint">📜 Imprint</a>
+			<a href="/imprint">{$t("common.imprint")}</a>
 			|
-			<a href="https://github.com/felix-schindler/blog">Typo? Submit PR</a>
+			<a href="https://github.com/felix-schindler/blog">{$t("common.typo")}</a>
 		</span>
 	</footer>
 </div>
