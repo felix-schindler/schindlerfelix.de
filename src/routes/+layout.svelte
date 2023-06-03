@@ -22,12 +22,6 @@
 			<a href="/content" class:active={path.startsWith("/content")}
 				>{$t("common.nav.content")}</a
 			>
-			<select bind:value={$locale}>
-				<option value="de">Deutsch</option>
-				<option value="en">English</option>
-				<!-- <option value="kr">한국어</option> -->
-				<option value="zh-Hans">简体中文</option>
-			</select>
 		</nav>
 	</header>
 	<main {style}>
@@ -47,6 +41,13 @@
 			<a href="/imprint">{$t("common.imprint")}</a>
 			|
 			<a href="https://github.com/felix-schindler/blog">{$t("common.typo")}</a>
+			|
+			<select bind:value={$locale}>
+				<option value="de">Deutsch</option>
+				<option value="en">English</option>
+				<!-- <option value="kr">한국어</option> -->
+				<option value="zh-Hans">简体中文</option>
+			</select>
 		</span>
 	</footer>
 </div>
