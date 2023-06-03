@@ -5,9 +5,7 @@
 <div class="intro">
 	<h1>{$t("common.name.full")}</h1>
 	<p>{$t("home.study")}</p>
-	<p>
-		<a href="/about" role="button">{$t("home.more")}</a>
-	</p>
+	<a href="/about" role="button">{$t("home.more")} ↗</a>
 </div>
 
 <style lang="scss">
@@ -36,8 +34,7 @@
 		}
 
 		p {
-			margin-top: 1em;
-			margin-bottom: 0;
+			margin-block: 1em;
 			font-size: 3vh;
 
 			@media (min-width: 1024px) {
@@ -47,7 +44,7 @@
 
 		a[role="button"] {
 			transition: 200ms all;
-			font-size: 1.5rem;
+			font-size: 2.25vh;
 
 			&:hover {
 				box-shadow: 0.25em 0.25em;
