@@ -1,0 +1,15 @@
+{
+	"heading": "内容",
+	"projects": {
+		"heading": "项目",
+		"subheading": "我总是倾向于删除我的项目。 这些我不会那么快删除：",
+		"portfolio": {
+			"heading": "文件夹",
+			"desc": "就是这个网站。 它经历了许多迭代。"
+		},
+		"tanuki": {
+			"heading": "Tanuki for GitLab",
+			"desc": "就是 GitLab。在你的手机上。 在你的 ✨iPhone✨"
+		}
+	}
+}
