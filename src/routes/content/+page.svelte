@@ -1,19 +1,22 @@
-<h1>Content</h1>
+<script>
+	import { t } from "$lib/translations";
+</script>
 
-<h2 id="projects">Projects</h2>
-<p>I always tend to delete my projects. These ones I won't delete that fast:</p>
+<h1>{$t("content.heading")}</h1>
+<h2 id="projects">{$t("content.projects.heading")}</h2>
+<p>{$t("content.projects.subheading")}</p>
 <div class="grid">
 	<div class="card">
-		<h3>Portfolio</h3>
+		<h3>{$t("content.projects.portfolio.heading")}</h3>
 		<p class="tech">
 			<span>
 				<img src="/img/tech/svelte.svg" alt="" loading="lazy" /> SvelteKit
 			</span>
 		</p>
-		<p>It's this website. It's gone through many iterations.</p>
+		<p>{$t("content.projects.portfolio.desc")}</p>
 	</div>
 	<a href="/content/projects/tanuki" class="card clickable">
-		<h3>Tanuki for GitLab</h3>
+		<h3>{$t("content.projects.tanuki.heading")}</h3>
 		<p class="tech">
 			<span>
 				<img src="/img/tech/swift.svg" loading="lazy" alt="" /> Swift
@@ -24,7 +27,7 @@
 				GitLab API
 			</span>
 		</p>
-		<p>It's GitLab. On your phone. On your ✨iPhone✨</p>
+		<p>{$t("content.projects.tanuki.desc")}</p>
 	</a>
 </div>
 

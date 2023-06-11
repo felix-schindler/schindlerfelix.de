@@ -1,0 +1,15 @@
+{
+	"heading": "Inhalte",
+	"projects": {
+		"heading": "Projekte",
+		"subheading": "Ich neige immer dazu, meine Projekte zu löschen. Diese werde ich nicht so schnell löschen:",
+		"portfolio": {
+			"heading": "Portfolio",
+			"desc": "Es ist diese Website. Sie hat viele Iterationen durchlaufen."
+		},
+		"tanuki": {
+			"heading": "Tanuki for GitLab",
+			"desc": "Es ist GitLab. Auf deinem ✨iPhone✨"
+		}
+	}
+}
