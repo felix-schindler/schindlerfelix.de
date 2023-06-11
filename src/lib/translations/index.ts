@@ -25,6 +25,14 @@ const deLoaders = [
 			await import('./de/about.json')
 		).default,
 	},
+	{
+		locale: 'de',
+		key: 'content',
+		routes: ['/content'],
+		loader: async () => (
+			await import('./de/content.json')
+		).default,
+	},
 ];
 
 const enLoaders = [
@@ -49,6 +57,14 @@ const enLoaders = [
 		routes: ['/about'],
 		loader: async () => (
 			await import('./en/about.json')
+		).default,
+	},
+	{
+		locale: 'en',
+		key: 'content',
+		routes: ['/content'],
+		loader: async () => (
+			await import('./en/content.json')
 		).default,
 	},
 ];
@@ -77,13 +93,20 @@ const zhHansLoaders = [
 			await import('./zh-Hans/about.json')
 		).default,
 	},
+	{
+		locale: 'zh-Hans',
+		key: 'content',
+		routes: ['/content'],
+		loader: async () => (
+			await import('./zh-Hans/content.json')
+		).default,
+	},
 ];
 
 const config: Config = ({
 	translations: {
 		de: { lang },
 		en: { lang },
-		// kr: { lang },
 		"zh-Hans": { lang },
 	},
 	loaders: [
