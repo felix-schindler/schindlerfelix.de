@@ -37,11 +37,9 @@
 			>
 			{$t("common.made_by.after_location")}</span
 		>
-		<span>
+		<span class="links">
 			<a href="/imprint">{$t("common.imprint")}</a>
-			|
 			<a href="https://github.com/felix-schindler/blog">{$t("common.typo")}</a>
-			|
 			<select bind:value={$locale}>
 				<option value="de">Deutsch</option>
 				<option value="en">English</option>
@@ -89,6 +87,18 @@
 
 				&:active {
 					box-shadow: 0 0;
+				}
+			}
+
+			.links {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.25em;
+				flex-wrap: wrap;
+
+				*:not(:last-child)::after {
+					content: ";";
 				}
 			}
 		}
