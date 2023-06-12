@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import ImageCollection from "$lib/components/ImageCollection.svelte";
 	import Markdown from "$lib/components/Markdown.svelte";
 </script>
