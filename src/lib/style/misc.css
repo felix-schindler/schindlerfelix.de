@@ -56,6 +56,10 @@ hr {
 	font-family: var(--mono) !important;
 }
 
+.serif {
+	font-family: var(--serif) !important;
+}
+
 /* Clickable */
 a.clickable:hover {
 	text-decoration: none;
