@@ -1,17 +1,12 @@
-<script lang="ts">
+<script>
 	import ImageCollection from "$lib/components/ImageCollection.svelte";
 	import Markdown from "$lib/components/Markdown.svelte";
-
-	// Return 50/50 random boolean
-	const randomBool = () => Math.random() > 0.5;
 </script>
 
 <ImageCollection
 	country={{
 		name: "Germany",
-		mask: randomBool()
-			? "/img/photos/germany/mask-ber.png"
-			: "/img/photos/germany/mask-stgt.png",
+		mask: "/img/photos/germany/mask-ber.png",
 		sky: "/img/photos/germany/sky.jpg",
 	}}
 	cities={[
