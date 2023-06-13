@@ -2,21 +2,15 @@
 	import "$lib/style/main.css"; // Global styling
 	import { page } from "$app/stores";
 	import { locale, t } from "$lib/translations";
-	import { onMount } from "svelte";
 
-	let path: string,
-		style: string,
-		views = 0;
+	export let data: { views: string };
+
+	let path: string, style: string;
+
 	$: path = $page.url.pathname;
 	$: path.includes("/photos/")
 		? (style = "padding: 0")
 		: (style = "padding: 0 1em");
-
-	// TODO: Move this to the `load` function
-	onMount(async () => {
-		const res = await fetch("https://blog-api.deno.dev/views");
-		views = Number(await res.text());
-	});
 </script>
 
 <div class="hmf" lang={$locale}>
@@ -40,7 +34,7 @@
 				"2023-06-12"
 			).toLocaleDateString()}`}
 		>
-			{$t("common.views")}<span class="mono">{views}</span>
+			{$t("common.views")}<span class="mono">{data.views}</span>
 		</div>
 		<div>
 			{$t("common.made_by.pre_name")}<a href="/about"
@@ -57,7 +51,6 @@
 			<select bind:value={$locale}>
 				<option value="de">Deutsch</option>
 				<option value="en">English</option>
-				<!-- <option value="kr">한국어</option> -->
 				<option value="zh-Hans">简体中文</option>
 			</select>
 		</div>
