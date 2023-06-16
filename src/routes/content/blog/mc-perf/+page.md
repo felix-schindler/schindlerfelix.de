@@ -6,13 +6,13 @@
 > [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
 > installed.
 
-- [Sodium](https://www.curseforge.com/minecraft/mc-mods/sodium)
+- [Sodium](https://modrinth.com/mod/sodium)
   \
   Better rendering engine for Minecraft
 - [FerriteCore](https://www.curseforge.com/minecraft/mc-mods/ferritecore-fabric)
   \
   Reduces memory usage
-- [Lithium](https://www.curseforge.com/minecraft/mc-mods/lithium)
+- [Lithium](https://modrinth.com/mod/lithium)
   \
   Optimized game physics, mob AI, block ticking, etc
 - [Starlight](https://www.curseforge.com/minecraft/mc-mods/starlight)
