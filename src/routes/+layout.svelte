@@ -3,8 +3,6 @@
 	import { page } from "$app/stores";
 	import { locale, t } from "$lib/translations";
 
-	export let data: { views: string };
-
 	let path: string, style: string;
 
 	$: path = $page.url.pathname;
@@ -29,22 +27,6 @@
 		<slot />
 	</main>
 	<footer>
-		<div
-			title={`${$t("common.since")} ${new Date(
-				"2023-06-12"
-			).toLocaleDateString()}`}
-		>
-			{$t("common.views")}<span class="mono">{data.views}</span>
-		</div>
-		<div>
-			{$t("common.made_by.pre_name")}<a href="/about"
-				>{$t("common.name.first")}</a
-			>{$t("common.made_by.pre_location")}
-			<a href="https://theländ.de" class="laend" rel="noopener noreferrer"
-				>The Länd</a
-			>
-			{$t("common.made_by.after_location")}
-		</div>
 		<div class="links">
 			<a href="/imprint">{$t("common.imprint")}</a>
 			<a href="https://github.com/felix-schindler/blog">{$t("common.typo")}</a>
@@ -71,30 +53,6 @@
 
 			@media (max-width: 1024px) {
 				justify-content: space-around;
-			}
-
-			a.laend {
-				text-decoration: none !important;
-
-				color: yellow;
-				background-color: black;
-
-				font-weight: 600;
-				text-transform: uppercase;
-				padding: 0.2em 0.4em;
-
-				transition: all 200ms;
-
-				&:hover {
-					color: black;
-					background-color: yellow;
-
-					box-shadow: 5px 5px;
-				}
-
-				&:active {
-					box-shadow: 0 0;
-				}
 			}
 
 			.links {

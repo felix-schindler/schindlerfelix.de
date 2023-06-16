@@ -3,15 +3,9 @@ import { loadTranslations, locale } from '$lib/translations';
 export async function load({ url }) {
 	const { pathname } = url;
 	const initLocale = locale.get() || await getDefaultLocale(); // set default if no locale already set
+	await loadTranslations(initLocale, pathname);
 
-	const [res] = await Promise.all([
-		fetch("https://blog-api.deno.dev/views"),
-		loadTranslations(initLocale, pathname),
-	]);
-
-	return {
-		views: await res.text(),
-	};
+	return {};
 }
 
 async function getDefaultLocale(): Promise<string> {
