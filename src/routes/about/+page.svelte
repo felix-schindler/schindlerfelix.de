@@ -44,6 +44,9 @@
 							<img src="/img/tech/svelte.svg" alt="" loading="lazy" /> SvelteKit
 						</span>
 						<span>
+							<img src="/img/tech/fresh.svg" alt="" loading="lazy" /> Fresh
+						</span>
+						<span>
 							<img src="/img/tech/react.svg" alt="" loading="lazy" /> React
 						</span>
 						<span>Express</span>
