@@ -29,6 +29,22 @@
 		</p>
 		<p>{$t("content.projects.tanuki.desc")}</p>
 	</a>
+	<a href="https://clicker.deno.dev" class="card clickable">
+		<h3>Clicker</h3>
+		<p class="tech">
+			<span>
+				<img src="/img/tech/deno.svg" loading="lazy" alt="" /> Deno
+			</span>
+			<span>
+				<img src="/img/tech/fresh.svg" loading="lazy" alt="" /> Fresh
+			</span>
+		</p>
+		<p>
+			Realtime counter and message board. <a
+				href="https://deno.com/deploy/docs/regions">Worldwide</a
+			>. All clients and servers are in sync
+		</p>
+	</a>
 </div>
 
 <!-- <h2 id="photos">Photos</h2>
