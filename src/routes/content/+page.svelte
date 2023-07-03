@@ -6,7 +6,7 @@
 <h2 id="projects">{$t("content.projects.heading")}</h2>
 <p>{$t("content.projects.subheading")}</p>
 <div class="grid">
-	<div class="card">
+	<a href="/" class="card clickable">
 		<h3>{$t("content.projects.portfolio.heading")}</h3>
 		<p class="tech">
 			<span>
@@ -14,7 +14,7 @@
 			</span>
 		</p>
 		<p>{$t("content.projects.portfolio.desc")}</p>
-	</div>
+	</a>
 	<a href="/content/projects/tanuki" class="card clickable">
 		<h3>{$t("content.projects.tanuki.heading")}</h3>
 		<p class="tech">
@@ -44,6 +44,21 @@
 				href="https://deno.com/deploy/docs/regions">Worldwide</a
 			>. All clients and servers are in sync
 		</p>
+	</a>
+	<a href="https://cn.schindlerfelix.de" class="card clickable">
+		<h3>China Stay</h3>
+		<p class="tech">
+			<span>
+				<img src="/img/tech/deno.svg" loading="lazy" alt="" /> Deno
+			</span>
+			<span>
+				<img src="/img/tech/fresh.svg" loading="lazy" alt="" /> Fresh
+			</span>
+			<span>
+				<img src="/img/tech/pocketbase.svg" loading="lazy" alt="" /> PocketBase</span
+			>
+		</p>
+		<p>Course of my stay in China and vocabulary list</p>
 	</a>
 </div>
 
