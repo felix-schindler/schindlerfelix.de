@@ -45,21 +45,6 @@
 			>. All clients and servers are in sync
 		</p>
 	</a>
-	<a href="https://cn.schindlerfelix.de" class="card clickable">
-		<h3>China Stay</h3>
-		<p class="tech">
-			<span>
-				<img src="/img/tech/deno.svg" loading="lazy" alt="" /> Deno
-			</span>
-			<span>
-				<img src="/img/tech/fresh.svg" loading="lazy" alt="" /> Fresh
-			</span>
-			<span>
-				<img src="/img/tech/pocketbase.svg" loading="lazy" alt="" /> PocketBase</span
-			>
-		</p>
-		<p>Course of my stay in China and vocabulary list</p>
-	</a>
 </div>
 
 <!-- <h2 id="photos">Photos</h2>
