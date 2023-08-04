@@ -2,6 +2,15 @@
 	import "$lib/style/main.css"; // Global styling
 	import { page } from "$app/stores";
 	import { locale, t } from "$lib/translations";
+	// import { onNavigate } from "$app/navigation";
+
+	// onNavigate(() => {
+	// 	if (!document.startViewTransition) return;
+
+	// 	return new Promise((fulfil) => {
+	// 		document.startViewTransition(() => new Promise(fulfil));
+	// 	});
+	// });
 
 	let path: string, style: string;
 
@@ -41,6 +50,10 @@
 
 <style lang="scss">
 	div.hmf {
+		header > nav > a {
+			view-transition-name: nav-link;
+		}
+
 		main {
 			padding: 0 1em;
 		}
