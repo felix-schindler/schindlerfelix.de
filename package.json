@@ -21,7 +21,6 @@
 	},
 	"dependencies": {
 		"mdsvex": "^0.11.0",
-		"sass": "^1.64.2",
 		"sveltekit-i18n": "^2.2.2"
 	}
 }
