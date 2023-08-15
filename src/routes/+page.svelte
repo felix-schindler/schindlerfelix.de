@@ -15,7 +15,7 @@
 		h1 {
 			margin-top: 1em;
 			margin-bottom: 0;
-			font-size: 10vh;
+			font-size: calc(1em + 10vh);
 
 			color: transparent;
 			background-image: linear-gradient(
@@ -29,22 +29,22 @@
 			background-repeat: no-repeat;
 
 			@media (min-width: 1024px) {
-				font-size: 12vh;
+				font-size: calc(1em + 12vh);
 			}
 		}
 
 		p {
 			margin-block: 1em;
-			font-size: 3vh;
+			font-size: calc(1em + 3vh);
 
 			@media (min-width: 1024px) {
-				font-size: 4vh;
+				font-size: calc(1em + 4vh);
 			}
 		}
 
 		a[role="button"] {
 			transition: 200ms all;
-			font-size: 2.25vh;
+			font-size: calc(0.9em + 1.75vh);
 
 			&:hover {
 				box-shadow: 0.25em 0.25em;
