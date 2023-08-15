@@ -165,6 +165,7 @@
 				<p>TypeScript, Firebase, PocketBase, SvelteKit</p>
 				<ul>
 					<li><a href="#!" class="hidden">not public</a></li>
+					<li><a href="#!" class="hidden">not public</a></li>
 				</ul>
 			</div>
 			<div class="card">
