@@ -72,6 +72,9 @@
 							<img src="/img/tech/swift.svg" loading="lazy" alt="" /> Swift
 						</span>
 						<span>
+							<img src="/img/tech/go.svg" loading="lazy" alt="" /> Go
+						</span>
+						<span>
 							<img src="/img/tech/c%23.svg" loading="lazy" alt="" /> C#
 						</span>
 					</summary>
