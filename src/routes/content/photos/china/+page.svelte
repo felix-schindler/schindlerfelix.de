@@ -11,21 +11,20 @@
 	}}
 	cities={[
 		{
-			name: "西安",
+			name: "西安市",
 			english: "Xi'an",
-			images: [
-				"https://source.unsplash.com/random/1",
-				"https://source.unsplash.com/random/2",
-				"https://source.unsplash.com/random/3",
-				"https://source.unsplash.com/random/4",
-				"https://source.unsplash.com/random/5",
-			],
+			images: [],
 		},
 	]}
 >
 	<Markdown>
 		<h2>Sources</h2>
-		<a href="https://eliasruiz.com/china">Elias Ruiz</a>
+		<p>
+			This is just a placeholder for now, until I start adding pictures.
+			Inspiration and pictures by <a href="https://eliasruiz.com/china"
+				>Elias Ruiz</a
+			>
+		</p>
 	</Markdown>
 </ImageCollection>
 
