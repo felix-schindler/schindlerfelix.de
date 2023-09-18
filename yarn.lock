@@ -310,9 +310,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.24.1":
-  version: 1.24.1
-  resolution: "@sveltejs/kit@npm:1.24.1"
+"@sveltejs/kit@npm:^1.25.0":
+  version: 1.25.0
+  resolution: "@sveltejs/kit@npm:1.25.0"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^2.4.1
     "@types/cookie": ^0.5.1
@@ -332,7 +332,7 @@ __metadata:
     vite: ^4.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 55ad8e13894b124e1f74bffa55b1de309197ee2d86510cfc3d0a5c6d9c67a7e00ebbc909f65c9ca136d51336863c5671080e9c083834aeba80d1d263cc30f668
+  checksum: e35821fdf7f57b9e41b87a05bd2685e1b09dec4dcad70de6ab11dea9d6026b6f8bd3ffccae9fabcb4cc98e0ac4664c1bc80879f938a786446ffd7cea2f3b46ae
   languageName: node
   linkType: hard
 
@@ -556,7 +556,7 @@ __metadata:
   resolution: "blogv3@workspace:."
   dependencies:
     "@sveltejs/adapter-auto": ^2.1.0
-    "@sveltejs/kit": ^1.24.1
+    "@sveltejs/kit": ^1.25.0
     mdsvex: ^0.11.0
     sass: ^1.66.1
     svelte: ^4.2.0
