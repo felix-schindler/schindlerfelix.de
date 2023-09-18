@@ -1,6 +1,5 @@
 <script>
 	import ImageCollection from "$lib/components/ImageCollection.svelte";
-	import Markdown from "$lib/components/Markdown.svelte";
 </script>
 
 <ImageCollection
@@ -32,30 +31,4 @@
 			],
 		},
 	]}
->
-	<Markdown>
-		<h3>Sources</h3>
-		<p>
-			Photo by <a
-				href="https://unsplash.com/@prerna_bhardwaj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-				>Prerna Bhardwaj</a
-			>
-			on
-			<a
-				href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-				>Unsplash</a
-			>
-		</p>
-		<p>
-			Photo by <a
-				href="https://unsplash.com/@oleg_mit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-				>Oleg Mitiukhin</a
-			>
-			on
-			<a
-				href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-				>Unsplash</a
-			>
-		</p>
-	</Markdown>
-</ImageCollection>
+/>

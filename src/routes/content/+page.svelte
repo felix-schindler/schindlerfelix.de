@@ -260,7 +260,7 @@
 	</div>
 </div>
 
-<!-- <h2 id="photos">Photos</h2>
+<h2 id="photos">Photos</h2>
 <p>I like taking photos, however, I stopped carrying around a big camera.</p>
 <div class="grid">
 	<a href="/content/photos/germany" class="card clickable">
@@ -269,7 +269,7 @@
 	<a href="/content/photos/china" class="card clickable">
 		<h3>China</h3>
 	</a>
-</div> -->
+</div>
 
 <h2 id="blog">Blog</h2>
 <p>thoughts and prayers</p>
