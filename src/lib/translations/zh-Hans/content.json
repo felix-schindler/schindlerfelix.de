@@ -2,6 +2,9 @@
 	"heading": "内容",
 	"projects": {
 		"heading": "项目",
+		"work": "工作",
+		"uni": "大学",
+		"school": "中学",
 		"subheading": "我总是倾向于删除我的项目。 这些我不会那么快删除：",
 		"portfolio": {
 			"heading": "文件夹",
@@ -11,5 +14,8 @@
 			"heading": "Tanuki for GitLab",
 			"desc": "就是 GitLab。在你的手机上。 在你的 ✨iPhone✨"
 		}
+	},
+	"photos": {
+		"heading": "照片"
 	}
 }

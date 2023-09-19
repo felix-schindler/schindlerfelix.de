@@ -100,7 +100,7 @@
 		>
 	</div>
 </div>
-<h3>Work</h3>
+<h3>{$t("content.projects.work")}</h3>
 <div class="grid">
 	<a href="https://mademyday.com" class="card clickable">
 		<h3>MadeMyDay</h3>
@@ -141,7 +141,7 @@
 		</ul>
 	</div>
 </div>
-<h3>University</h3>
+<h3>{$t("content.projects.uni")}</h3>
 <div class="grid">
 	<div class="card">
 		<h3>ChadGPT</h3>
@@ -234,7 +234,7 @@
 		<p>To learn the basics of HTML and CSS</p>
 	</a>
 </div>
-<h3>School</h3>
+<h3>{$t("content.projects.school")}</h3>
 <div class="grid">
 	<div class="card">
 		<h3>AFC-Mirror</h3>
@@ -262,7 +262,7 @@
 	</div>
 </div>
 
-<h2 id="photos">Photos</h2>
+<h2 id="photos">{$t("content.photos.heading")}</h2>
 <p>I like taking photos, however, I stopped carrying around a big camera.</p>
 <div class="grid">
 	<a href="/content/photos/germany" class="card clickable">
