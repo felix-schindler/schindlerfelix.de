@@ -2,6 +2,9 @@
 	"heading": "Content",
 	"projects": {
 		"heading": "Projects",
+		"work": "Work",
+		"uni": "University",
+		"school": "School",
 		"subheading": "I always tend to delete my projects. These ones I won't delete that fast:",
 		"portfolio": {
 			"heading": "Portfolio",
@@ -11,5 +14,8 @@
 			"heading": "Tanuki for GitLab",
 			"desc": "It's GitLab. On your phone. On your ✨iPhone✨"
 		}
+	},
+	"photos": {
+		"heading": "Photos"
 	}
 }
