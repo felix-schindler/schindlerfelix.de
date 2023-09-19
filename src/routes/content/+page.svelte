@@ -54,8 +54,7 @@
 			<span>Rust</span>
 		</p>
 		<p>
-			Using Deno FFI and Rust to supply password hashing functions (bcrypt and
-			argon2)
+			Password hashing functions (bcrypt and argon2) using Deno FFI and Rust
 		</p>
 	</a>
 	<a href="https://github.com/felix-schindler/Router" class="card clickable">
@@ -95,7 +94,7 @@
 		</p>
 	</a>
 	<div class="card">
-		<p>Many more unfinished projects...</p>
+		<p>Many unfinished projects...</p>
 		<small
 			>Too many to list them here. There are a few public ones on Git though</small
 		>
@@ -220,8 +219,8 @@
 			</span>
 		</p>
 		<p>
-			CLI application to learn the basics of Java and classes; Fetches an API
-			and prints the answer in a readable format.
+			CLI application which fetches an API and prints the answer in a readable
+			format. To learn the basics of Java and classes
 		</p>
 	</div>
 	<a href="https://fs146.home.hdm-stuttgart.de/webdev/" class="card clickable">
@@ -247,7 +246,7 @@
 				<img src="/img/tech/mysql.svg" alt="" /> MySQL
 			</span>
 		</p>
-		<p>To learn the basics of PHP; Online shop for smart mirrors</p>
+		<p>Online shop for smart mirrors to learn the basics of PHP and SQL</p>
 	</div>
 	<div class="card">
 		<h3>Tiny projects</h3>
@@ -256,7 +255,10 @@
 				<img src="/img/tech/c++.svg" alt="" /> C, C++
 			</span>
 		</p>
-		<p>Many smaller programs to learn the basics of C and C++</p>
+		<p>
+			Many smaller programs to learn the basics of C and C++ and also to program
+			micro controllers
+		</p>
 	</div>
 </div>
 
