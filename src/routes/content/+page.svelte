@@ -156,7 +156,7 @@
 		</p>
 	</div>
 	<div class="card">
-		<h3>Find Your Enemy</h3>
+		<h3>Find My Enemy</h3>
 		<p class="tech">
 			<span>
 				<img src="/img/tech/typescript.svg" alt="" /> TypeScript
@@ -174,6 +174,21 @@
 		<p>
 			(Primarily Mobile) Web Application to find your enemies (based on the 16
 			personalities test) and battle them via a clicker game.
+		</p>
+	</div>
+	<div class="card">
+		<h3>Xinevio Customer Platform</h3>
+		<p class="tech">
+			<span>
+				<img src="/img/tech/svelte.svg" alt="" /> SvelteKit
+			</span>
+			<span>
+				<img src="/img/tech/css.svg" alt="" /> CSS
+			</span>
+		</p>
+		<p>
+			Website to manage business presence on Chinese platforms (project only was
+			the frontend)
 		</p>
 	</div>
 	<div class="card">
