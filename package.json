@@ -21,7 +21,7 @@
 	},
 	"dependencies": {
 		"mdsvex": "^0.11.0",
-		"sass": "^1.67.0",
+		"sass": "^1.68.0",
 		"sveltekit-i18n": "^2.4.2"
 	},
 	"packageManager": "yarn@3.6.1"
