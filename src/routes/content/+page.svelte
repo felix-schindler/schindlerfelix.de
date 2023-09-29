@@ -45,7 +45,10 @@
 			>. All clients and servers are in sync
 		</p>
 	</a>
-	<a href="https://github.com/felix-schindler" class="card clickable">
+	<a
+		href="https://github.com/felix-schindler?tab=repositories&q=deno"
+		class="card clickable"
+	>
 		<h3>Deno Libraries</h3>
 		<p class="tech">
 			<span>
