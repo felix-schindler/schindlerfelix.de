@@ -2,7 +2,7 @@
 	import { t } from "$lib/translations";
 </script>
 
-<h1>{$t("content.heading")}</h1>
+<h1>{$t("content.heading")} <span>{$t("common.name.full")}</span></h1>
 <h2 id="projects">{$t("content.projects.heading")}</h2>
 <p>{$t("content.projects.subheading")}</p>
 <div class="grid">
@@ -309,6 +309,10 @@
 </div>
 
 <style lang="scss">
+	h1 > span {
+		view-transition-name: felix-schindler;
+	}
+
 	// Overwrite markdown style
 	a {
 		color: inherit !important;
