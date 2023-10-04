@@ -50,7 +50,7 @@
 
 <style lang="scss">
 	div.hmf {
-		header > nav > a.active {
+		header a.active {
 			view-transition-name: nav-link;
 		}
 

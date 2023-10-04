@@ -147,6 +147,10 @@ nav a.active {
 	font-weight: 500;
 }
 
+nav a:not(.active) {
+	margin-bottom: 2px;
+}
+
 nav a:hover {
 	background-color: rgba(var(--gray-rgb), .2);
 	text-decoration: none;
