@@ -49,6 +49,7 @@
 						<span>
 							<img src="/img/tech/react.svg" alt="" loading="lazy" /> React
 						</span>
+						<span>Hono</span>
 						<span>Express</span>
 						<span>EJS</span>
 						<span>Mongoose</span>
@@ -81,11 +82,12 @@
 					<p class="tech">
 						<span>SwiftUI</span>
 						<span>Storyboards</span>
+						<span>PocketBase</span>
 						<span>
 							<img src="/img/tech/xml.svg" alt="" loading="lazy" /> JavaFX
 						</span>
 						<span>
-							<img src="/img/tech/unity.svg" alt="" loading="lazy" /> Unity
+							<img src="/img/tech/unity.svg" alt="" loading="lazy" /> Unity 3D
 						</span>
 					</p>
 				</details>
@@ -115,6 +117,9 @@
 						<img src="/img/tech/mysql.svg" loading="lazy" alt="" /> MySQL / MariaDB
 					</span>
 					<span>
+						<img src="/img/tech/pocketbase.svg" loading="lazy" alt="" /> PocketBase
+					</span>
+					<span>
 						<img src="/img/tech/sqlite.svg" loading="lazy" alt="" /> SQLite
 					</span>
 				</p>
@@ -123,10 +128,10 @@
 			<div class="card">
 				<p class="tech">
 					<span>
-						<img src="/img/tech/pocketbase.svg" loading="lazy" alt="" /> PocketBase
+						<img src="/img/tech/firebase.svg" loading="lazy" alt="" /> Firebase
 					</span>
 					<span>
-						<img src="/img/tech/firebase.svg" loading="lazy" alt="" /> Firebase
+						<img src="/img/tech/postgres.svg" loading="lazy" alt="" /> PostgreSQL
 					</span>
 				</p>
 				<meter min="1" max="100" value="90" />
