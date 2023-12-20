@@ -3,8 +3,36 @@
 </script>
 
 <h1>{$t("content.heading")} <span>{$t("common.name.full")}</span></h1>
+
+<h2 id="blog">Blog</h2>
+<p>thoughts and prayers</p>
+<div class="grid">
+	<a href="/content/blog/pgp" class="card clickable">
+		<h3>GPG and Git</h3>
+		<p>How to setup and use (on Mac)</p>
+	</a>
+	<a href="/content/blog/mc-perf" class="card clickable">
+		<h3>Minecraft Perf Mods</h3>
+		<p>Collection of some Minecraft Fabric performance mods</p>
+	</a>
+	<a href="/content/blog/reset" class="card clickable">
+		<h3>reset</h3>
+		<p>Hi, hello and welcome!</p>
+	</a>
+</div>
+
+<!-- <h2 id="photos">{$t("content.photos.heading")}</h2>
+<p>I like taking photos, however, I stopped carrying around a big camera.</p>
+<div class="grid">
+	<a href="/content/photos/germany" class="card clickable">
+		<h3>Germany</h3>
+	</a>
+	<a href="/content/photos/china" class="card clickable">
+		<h3>China</h3>
+	</a>
+</div> -->
+
 <h2 id="projects">{$t("content.projects.heading")}</h2>
-<p>{$t("content.projects.subheading")}</p>
 <div class="grid">
 	<div class="card">
 		<h3>{$t("content.projects.portfolio.heading")}</h3>
@@ -278,34 +306,6 @@
 			micro controllers
 		</p>
 	</div>
-</div>
-
-<!-- <h2 id="photos">{$t("content.photos.heading")}</h2>
-<p>I like taking photos, however, I stopped carrying around a big camera.</p>
-<div class="grid">
-	<a href="/content/photos/germany" class="card clickable">
-		<h3>Germany</h3>
-	</a>
-	<a href="/content/photos/china" class="card clickable">
-		<h3>China</h3>
-	</a>
-</div> -->
-
-<h2 id="blog">Blog</h2>
-<p>thoughts and prayers</p>
-<div class="grid">
-	<a href="/content/blog/pgp" class="card clickable">
-		<h3>GPG and Git</h3>
-		<p>How to setup and use (on Mac)</p>
-	</a>
-	<a href="/content/blog/mc-perf" class="card clickable">
-		<h3>Minecraft Perf Mods</h3>
-		<p>Collection of some Minecraft Fabric performance mods</p>
-	</a>
-	<a href="/content/blog/reset" class="card clickable">
-		<h3>reset</h3>
-		<p>Hi, hello and welcome!</p>
-	</a>
 </div>
 
 <style lang="scss">
