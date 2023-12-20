@@ -8,6 +8,9 @@
 
 {#if !path.includes("/photos/")}
 	<Markdown>
+		{#if path !== "/content"}
+			<a href="/content#blog">&larr; Back</a>
+		{/if}
 		<slot />
 	</Markdown>
 {:else}
