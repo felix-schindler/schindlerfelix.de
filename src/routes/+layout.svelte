@@ -2,19 +2,10 @@
 	import "$lib/style/main.css"; // Global styling
 	import { page } from "$app/stores";
 	import { locale, t } from "$lib/translations";
-	import { onNavigate } from "$app/navigation";
 
 	import Instagram from "$lib/icons/Instagram.svelte";
 	import LinkedIn from "$lib/icons/LinkedIn.svelte";
 	// import Threads from "$lib/icons/Threads.svelte";
-
-	onNavigate(() => {
-		if (!document.startViewTransition) return;
-
-		return new Promise((fulfil) => {
-			document.startViewTransition(() => new Promise(fulfil));
-		});
-	});
 
 	let path: string, style: string;
 

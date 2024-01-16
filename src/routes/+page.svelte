@@ -13,8 +13,6 @@
 		text-align: center;
 
 		h1 {
-			view-transition-name: felix-schindler;
-
 			margin-top: 1em;
 			margin-bottom: 0;
 			font-size: calc(1em + 10vh);

@@ -309,10 +309,6 @@
 </div>
 
 <style lang="scss">
-	h1 > span {
-		view-transition-name: felix-schindler;
-	}
-
 	// Overwrite markdown style
 	a {
 		color: inherit !important;
