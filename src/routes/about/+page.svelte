@@ -232,8 +232,6 @@
 		}
 
 		h1 {
-			view-transition-name: felix-schindler;
-
 			text-decoration: underline;
 			letter-spacing: 1.5px;
 			text-decoration-color: var(--accent);

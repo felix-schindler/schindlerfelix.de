@@ -4,10 +4,6 @@
 @import url("./i18n.css");
 @import url("./misc.css");
 
-:root {
-	view-transition-name: none;
-}
-
 /* Variables and settings */
 * {
 	box-sizing: border-box;
