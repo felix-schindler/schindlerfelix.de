@@ -1,45 +1,107 @@
-<div class="ac">
-	<div class="card">
-		<h1>Imprint</h1>
-		<address>
-			<p><b>Felix Schindler</b></p>
-			<p>70374 Stuttgart</p>
-		</address>
-		<hr />
-		<p>
-			<svg
-				role="img"
-				aria-labelledby="Telegram"
-				xmlns="http://www.w3.org/2000/svg"
-				width="16"
-				height="16"
-				fill="currentColor"
-				viewBox="0 0 16 16"
-			>
-				<path
-					d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
-				/>
-			</svg>
-			<a
-				href="https://t.me/felix_schindler"
-				rel="noopener noreferrer"
-				title="Telegram"
-			>
-				felix_schindler
-			</a>
-		</p>
-		<p>
-			📧
-			<a href="mailto:webmaster@schindlerfelix.de" title="E-Mail">
-				webmaster@schindlerfelix.de
-			</a>
-		</p>
-	</div>
+<script>
+	import { locale } from "$lib/translations";
+</script>
+
+<div class="imprint">
+	<h1>Imprint</h1>
+	<p>Angaben gemäß § 5 TMG</p>
+	<h2>Verantwortlich für den Inhalt</h2>
+	<p><a href="/">👨🏻‍💻 Felix Schindler</a></p>
+	<h3>Adresse</h3>
+	<address>
+		Kreuzstraße<br />
+		70730 Esslingen<br />
+		Deutschland
+	</address>
+	<h3>Kontakt</h3>
+	<a
+		href="https://t.me/felix_schindler"
+		rel="noopener noreferrer"
+		title="Telegram"
+	>
+		📱 t.me/felix_schindler
+	</a>
+	<a href="mailto:webmaster@schindlerfelix.de" title="E-Mail">
+		📧 webmaster@schindlerfelix.de
+	</a>
+</div>
+<div class="data">
+	<h1>Datenschutz</h1>
+	<p>
+		Diese Datenschutzerklärung gilt für die persönliche Webseite unter
+		<code>www.schindlerfelix.de</code> und <code>schindlerfelix.de</code>.
+	</p>
+	<h2>Hoster</h2>
+	<p>
+		Die Webseite wird gehostet von Deno Deploy, einem Service von Deno Land Inc.
+	</p>
+	<address>
+		Deno Land Inc.<br />
+		251 Little Falls Dr<br />
+		Wilmington DE 19808-1674<br />
+		USA
+	</address>
+	<h2>Erfasste Daten</h2>
+
+	<h3>Cookies & Tracking</h3>
+	<p>
+		Unsere Webseite verwendet keine Cookies oder ähnliche Tracking-Technologien.
+	</p>
+
+	<h3>Datenweitergabe</h3>
+	<p>Wir geben keinerlei Daten an Dritte weiter.</p>
+
+	<h3>Externe Links</h3>
+	<p>
+		Unsere Webseite enthält Links zu externen Webseiten. Bitte beachten Sie,
+		dass diese Datenschutzerklärung ausschließlich für unsere Webseite gilt. Wir
+		haben keinen Einfluss auf die Datenschutzpraktiken externer Webseiten und
+		übernehmen keine Verantwortung für deren Inhalte oder Handlungen. Bitte
+		lesen Sie die Datenschutzerklärungen der externen Webseiten, wenn Sie diese
+		besuchen.
+	</p>
+
+	<h3>Kontakt</h3>
+	<p>
+		Wenn Sie Fragen oder Anliegen bezüglich dieser Datenschutzerklärung haben,
+		können Sie uns per E-Mail unter webmaster@schindlerfelix.de kontaktieren.
+	</p>
+
+	<h3>Änderungen der Datenschutzerklärung</h3>
+	<p>
+		Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern.
+		Aktualisierungen werden auf unserer Webseite veröffentlicht. Bitte
+		überprüfen Sie regelmäßig unsere Datenschutzerklärung, um auf dem neuesten
+		Stand zu bleiben.
+	</p>
+
+	<p>
+		Stand: {new Date("2024-01-16").toLocaleDateString($locale, {
+			day: "2-digit",
+			month: "long",
+			year: "numeric",
+		})}
+	</p>
 </div>
 
 <style lang="scss">
-	p {
-		font-style: normal;
-		margin: 0;
+	h1,
+	h2,
+	h3 {
+		margin-block-end: 0;
+	}
+
+	code {
+		font-family: var(--mono);
+	}
+
+	div.imprint {
+		p {
+			margin: 0;
+		}
+
+		a {
+			display: block;
+		}
 	}
 </style>
