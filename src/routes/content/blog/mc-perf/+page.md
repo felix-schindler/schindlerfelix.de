@@ -1,7 +1,5 @@
 # Minecraft Performance Mods
 
-## Performance Mods
-
 > You need [Fabric](https://fabricmc.net) and the
 > [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
 > installed.
