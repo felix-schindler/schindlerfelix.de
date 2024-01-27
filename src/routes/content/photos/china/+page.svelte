@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ImageCollection from "$lib/components/ImageCollection.svelte";
-	import Markdown from "$lib/components/Markdown.svelte";
 	import type { PageData } from "./$types";
 
 	export let data: PageData;
@@ -18,17 +17,7 @@
 			images: data.files.map((f) => `${baseImagePath}/${f}`),
 		},
 	]}
->
-	<Markdown>
-		<h2>Sources</h2>
-		<p>
-			This is just a placeholder for now, until I start adding pictures.
-			Inspiration and pictures by <a href="https://eliasruiz.com/china"
-				>Elias Ruiz</a
-			>
-		</p>
-	</Markdown>
-</ImageCollection>
+/>
 
 <style>
 	/* Overwrite */
