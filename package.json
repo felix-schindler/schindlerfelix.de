@@ -13,9 +13,9 @@
 	"devDependencies": {
 		"sveltekit-adapter-deno": "^0.12.1",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
-		"@sveltejs/kit": "^2.0.4",
+		"@sveltejs/kit": "2.2.0",
 		"@types/node": "^20.11.7",
-		"svelte": "^4.2.8",
+		"svelte": "^4.2.9",
 		"svelte-check": "^3.6.2",
 		"tslib": "^2.6.2",
 		"typescript": "^5.3.3",
