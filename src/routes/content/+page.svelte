@@ -21,16 +21,15 @@
 	</a>
 </div>
 
-<!-- <h2 id="photos">{$t("content.photos.heading")}</h2>
-<p>I like taking photos, however, I stopped carrying around a big camera.</p>
+<h2 id="photos">{$t("content.photos.heading")}</h2>
 <div class="grid">
-	<a href="/content/photos/germany" class="card clickable">
+	<!-- <a href="/content/photos/germany" class="card clickable">
 		<h3>Germany</h3>
-	</a>
+	</a> -->
 	<a href="/content/photos/china" class="card clickable">
 		<h3>China</h3>
 	</a>
-</div> -->
+</div>
 
 <h2 id="projects">{$t("content.projects.heading")}</h2>
 <div class="grid">
