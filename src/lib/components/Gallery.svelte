@@ -21,7 +21,7 @@
 	onMount(Draw);
 
 	function HandleClick(
-		e: MouseEvent & { currentTarget: EventTarget & HTMLImageElement }
+		e: MouseEvent & { currentTarget: EventTarget & HTMLImageElement },
 	) {
 		dispatch("click", {
 			src: e.currentTarget.src,
@@ -40,7 +40,7 @@
 
 		const images = Array.from(slotHolder.childNodes).filter(
 			// @ts-ignore
-			(child) => child.tagName === "IMG"
+			(child) => child.tagName === "IMG",
 		);
 		columns = [];
 
@@ -84,6 +84,7 @@
 		display: none;
 	}
 	#gallery {
+		margin-top: 1rem;
 		width: 100%;
 		display: grid;
 		gap: var(--gap);
