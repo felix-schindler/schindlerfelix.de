@@ -3,11 +3,12 @@ import { join } from "node:path";
 import { readdir } from "node:fs/promises";
 
 export const load: PageServerLoad = async () => {
-	// Get list of files in directory using node js
+	// @ts-ignore - If you don't use Deno, Deno isn't defined.
 	const dirname = import.meta.dirname ?? Deno.cwd();
 	const files = (
 		await readdir(join(dirname, "static", "img", "photos", "china"))
-	).filter((f) => f !== "mask.png" && f !== "sky.jpg");
+	);
+	files.sort();
 
 	return {
 		files,
