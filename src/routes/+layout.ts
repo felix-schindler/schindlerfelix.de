@@ -1,4 +1,4 @@
-import { loadTranslations, locale } from '$lib/translations';
+import { loadTranslations, locale } from "$lib/translations";
 
 export async function load({ url }) {
 	const { pathname } = url;
@@ -10,15 +10,15 @@ export async function load({ url }) {
 
 async function getDefaultLocale(): Promise<string> {
 	enum LANG {
-		DE = 'de',
-		EN = 'en',
-		ZH = 'zh',
-	};
+		DE = "de",
+		EN = "en",
+		ZH = "zh",
+	}
 
 	let defaultLocale: string = LANG.EN;
 
 	// Get from navigator (browser)
-	const { browser } = await import('$app/environment');
+	const { browser } = await import("$app/environment");
 	if (browser) {
 		const navLang = navigator.language;
 
