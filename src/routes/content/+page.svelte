@@ -4,8 +4,17 @@
 
 <h1>{$t("content.heading")} <span>{$t("common.name.full")}</span></h1>
 
-<h2 id="blog">Blog</h2>
-<p>thoughts and prayers</p>
+<h2 id="photos">{$t("content.photos.heading")}</h2>
+<div class="grid photos">
+	<a href="/content/photos/china" id="photos-china" class="card clickable">
+		<h3>China</h3>
+	</a>
+	<a href="/content/photos/germany" id="photos-germany" class="card clickable">
+		<h3>Germany</h3>
+	</a>
+</div>
+
+<h2 id="blog">Notes</h2>
 <div class="grid">
 	<a href="/content/blog/pgp" class="card clickable">
 		<h3>GPG and Git</h3>
@@ -18,16 +27,6 @@
 	<a href="/content/blog/reset" class="card clickable">
 		<h3>reset</h3>
 		<p>Hi, hello and welcome!</p>
-	</a>
-</div>
-
-<h2 id="photos">{$t("content.photos.heading")}</h2>
-<div class="grid">
-	<!-- <a href="/content/photos/germany" class="card clickable">
-		<h3>Germany</h3>
-	</a> -->
-	<a href="/content/photos/china" class="card clickable">
-		<h3>China</h3>
 	</a>
 </div>
 
@@ -67,15 +66,12 @@
 			</span>
 		</p>
 		<p>
-			Realtime counter and message board. <a
-				href="https://deno.com/deploy/docs/regions">Worldwide</a
+			Realtime counter and message board. <a href="https://deno.com/deploy/docs/regions"
+				>Worldwide</a
 			>. All clients and servers are in sync
 		</p>
 	</a>
-	<a
-		href="https://github.com/felix-schindler?tab=repositories&q=deno"
-		class="card clickable"
-	>
+	<a href="https://github.com/felix-schindler?tab=repositories&q=deno" class="card clickable">
 		<h3>Deno Libraries</h3>
 		<p class="tech">
 			<span>
@@ -83,9 +79,7 @@
 			</span>
 			<span>Rust</span>
 		</p>
-		<p>
-			Password hashing functions (bcrypt and argon2) using Deno FFI and Rust
-		</p>
+		<p>Password hashing functions (bcrypt and argon2) using Deno FFI and Rust</p>
 	</a>
 	<a href="https://github.com/felix-schindler/Router" class="card clickable">
 		<h3>Router</h3>
@@ -108,26 +102,18 @@
 		</p>
 		<p>Collected information and vocabulary of my china exchange program.</p>
 	</a>
-	<a
-		href="https://gitlab.com/felix-schindler/advanced-style"
-		class="card clickable"
-	>
+	<a href="https://gitlab.com/felix-schindler/advanced-style" class="card clickable">
 		<h3>Nimiq Style Fork</h3>
 		<p class="tech">
 			<span>
 				<img src="/img/tech/css.svg" alt="" /> CSS
 			</span>
 		</p>
-		<p>
-			Fork of the Nimiq Styles; I added auto dark mode and removed the need of
-			classes
-		</p>
+		<p>Fork of the Nimiq Styles; I added auto dark mode and removed the need of classes</p>
 	</a>
 	<div class="card">
 		<p>Many unfinished projects...</p>
-		<small
-			>Too many to list them here. There are a few public ones on Git though</small
-		>
+		<small>Too many to list them here. There are a few public ones on Git though</small>
 	</div>
 </div>
 <h3>{$t("content.projects.work")}</h3>
@@ -145,8 +131,8 @@
 			<span>SQL</span>
 		</p>
 		<p>
-			Website of a German social media presence. Just click here to look at it.
-			With auth, ads, posts, comments, etc.
+			Website of a German social media presence. Just click here to look at it. With auth, ads,
+			posts, comments, etc.
 		</p>
 	</a>
 	<div class="card">
@@ -181,9 +167,7 @@
 			</span>
 			<span>SwiftUI</span>
 		</p>
-		<p>
-			iOS app to chat with your (AI) celebrity crush and generate pick-up lines
-		</p>
+		<p>iOS app to chat with your (AI) celebrity crush and generate pick-up lines</p>
 	</div>
 	<div class="card">
 		<h3>Find My Enemy</h3>
@@ -202,8 +186,8 @@
 			</span>
 		</p>
 		<p>
-			(Primarily Mobile) Web Application to find your enemies (based on the 16
-			personalities test) and battle them via a clicker game.
+			(Primarily Mobile) Web Application to find your enemies (based on the 16 personalities test)
+			and battle them via a clicker game.
 		</p>
 	</div>
 	<div class="card">
@@ -216,10 +200,7 @@
 				<img src="/img/tech/css.svg" alt="" /> CSS
 			</span>
 		</p>
-		<p>
-			Website to manage business presence on Chinese platforms (project only was
-			the frontend)
-		</p>
+		<p>Website to manage business presence on Chinese platforms (project only was the frontend)</p>
 	</div>
 	<div class="card">
 		<h3>2D Game</h3>
@@ -237,10 +218,7 @@
 				<img src="/img/tech/mysql.svg" loading="lazy" alt="" /> MySQL
 			</span>
 		</p>
-		<p>
-			A 2D game where you can explore the world, fight enemies and collect
-			items.
-		</p>
+		<p>A 2D game where you can explore the world, fight enemies and collect items.</p>
 	</div>
 	<div class="card">
 		<h3>Budget tracker</h3>
@@ -264,8 +242,8 @@
 			</span>
 		</p>
 		<p>
-			CLI application which fetches an API and prints the answer in a readable
-			format. To learn the basics of Java and classes
+			CLI application which fetches an API and prints the answer in a readable format. To learn the
+			basics of Java and classes
 		</p>
 	</div>
 	<a href="https://fs146.home.hdm-stuttgart.de/webdev/" class="card clickable">
@@ -301,8 +279,7 @@
 			</span>
 		</p>
 		<p>
-			Many smaller programs to learn the basics of C and C++ and also to program
-			micro controllers
+			Many smaller programs to learn the basics of C and C++ and also to program micro controllers
 		</p>
 	</div>
 </div>
@@ -332,6 +309,23 @@
 		&.tech {
 			margin-block-start: 0.25em;
 		}
+	}
+
+	.grid.photos a {
+		color: white !important;
+		min-height: 300px;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	#photos-china {
+		background-image: url("/img/photos/china/IMG_7378.avif");
+	}
+
+	#photos-germany {
+		background-image: url("/img/photos/germany/berlin/5.jpeg");
 	}
 
 	.tech {
