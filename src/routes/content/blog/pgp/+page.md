@@ -1,6 +1,10 @@
-# PGP / GnuPG and Git
+# GPG and Git
+
+You can use GPG for encrypting, decrypting as well as signing messages. In combination with Git you can use it for signing git commits, tags and pushes.
 
 ## Installation
+
+This guide is for macOS. All of the following commands should also work on Linux, although you don't need to install `pinentry-mac` there.
 
 ```bash
 brew install gnupg pinentry-mac
@@ -10,6 +14,8 @@ brew install gnupg pinentry-mac
 echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 echo 'export GPG_TTY=$(tty)' >> ~/.zshrc
 ```
+
+If you're not using ZSH as your shell, you need to change the last line to your shell's config file. Common ones are `.bashrc` or `.bash_profile`.
 
 ## GPG
 
@@ -24,11 +30,12 @@ gpg --full-gen-key
 ```bash
 gpg --list-secret-keys --keyid-format long
 
-# The first line is where you get your key id
 sec   rsa4096/<THIS-IS-YOUR-KEY-ID> 2021-03-17 [SC]
 ```
 
-### Import / Export
+The first line is where you get your key id when listing your keys.
+
+### Import / Export of keys
 
 ```bash
 # Public
@@ -40,7 +47,7 @@ gpg --import --allow-secret-key-import <KEYFILE>
 gpg --armor  --export-secret-key <KEY-ID> | pbcopy
 ```
 
-## Git
+## Git config
 
 ### Global
 

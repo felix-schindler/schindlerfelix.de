@@ -1,6 +1,5 @@
-# Dot (hidden) and markdown files
+# Hidden files
 .*
-*.md
 
 # Node / SvelteKit files
 node_modules
