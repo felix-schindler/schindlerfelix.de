@@ -82,7 +82,6 @@
 
 	@media (pointer: fine) {
 		img {
-			cursor: zoom-in;
 			transition: all 0.2s ease-in-out;
 		}
 
