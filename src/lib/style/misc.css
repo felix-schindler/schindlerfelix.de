@@ -72,15 +72,12 @@ a.clickable:hover {
 	border-radius: var(--radius);
 }
 
-.clickable:hover:not(:disabled) {
+.clickable:active:not(:disabled) {
 	background-color: rgba(var(--gray-rgb), 0.4) !important;
 }
 
-.clickable:active:not(:disabled) {
-	background-color: rgba(var(--gray-rgb), 0.6) !important;
-}
-
 .clickable:disabled {
+	cursor: not-allowed;
 	background-color: rgba(var(--gray-rgb), 0.3) !important;
 }
 
