@@ -14,16 +14,10 @@
 		Deutschland
 	</address>
 	<h3>Kontakt</h3>
-	<a
-		href="https://t.me/felix_schindler"
-		rel="noopener noreferrer"
-		title="Telegram"
-	>
+	<a href="https://t.me/felix_schindler" rel="noopener noreferrer" title="Telegram">
 		📱 t.me/felix_schindler
 	</a>
-	<a href="mailto:webmaster@schindlerfelix.de" title="E-Mail">
-		📧 webmaster@schindlerfelix.de
-	</a>
+	<a href="mailto:webmaster@schindlerfelix.de" title="E-Mail"> 📧 webmaster@schindlerfelix.de </a>
 </div>
 <div class="data">
 	<h1>Datenschutz</h1>
@@ -32,9 +26,7 @@
 		<code>www.schindlerfelix.de</code> und <code>schindlerfelix.de</code>.
 	</p>
 	<h2>Hoster</h2>
-	<p>
-		Die Webseite wird gehostet von Deno Deploy, einem Service von Deno Land Inc.
-	</p>
+	<p>Die Webseite wird gehostet von Deno Deploy, einem Service von Deno Land Inc.</p>
 	<address>
 		Deno Land Inc.<br />
 		251 Little Falls Dr<br />
@@ -44,35 +36,31 @@
 	<h2>Erfasste Daten</h2>
 
 	<h3>Cookies & Tracking</h3>
-	<p>
-		Unsere Webseite verwendet keine Cookies oder ähnliche Tracking-Technologien.
-	</p>
+	<p>Unsere Webseite verwendet keine Cookies oder ähnliche Tracking-Technologien.</p>
 
 	<h3>Datenweitergabe</h3>
 	<p>Wir geben keinerlei Daten an Dritte weiter.</p>
 
 	<h3>Externe Links</h3>
 	<p>
-		Unsere Webseite enthält Links zu externen Webseiten. Bitte beachten Sie,
-		dass diese Datenschutzerklärung ausschließlich für unsere Webseite gilt. Wir
-		haben keinen Einfluss auf die Datenschutzpraktiken externer Webseiten und
-		übernehmen keine Verantwortung für deren Inhalte oder Handlungen. Bitte
-		lesen Sie die Datenschutzerklärungen der externen Webseiten, wenn Sie diese
-		besuchen.
+		Unsere Webseite enthält Links zu externen Webseiten. Bitte beachten Sie, dass diese
+		Datenschutzerklärung ausschließlich für unsere Webseite gilt. Wir haben keinen Einfluss auf die
+		Datenschutzpraktiken externer Webseiten und übernehmen keine Verantwortung für deren Inhalte
+		oder Handlungen. Bitte lesen Sie die Datenschutzerklärungen der externen Webseiten, wenn Sie
+		diese besuchen.
 	</p>
 
 	<h3>Kontakt</h3>
 	<p>
-		Wenn Sie Fragen oder Anliegen bezüglich dieser Datenschutzerklärung haben,
-		können Sie uns per E-Mail unter webmaster@schindlerfelix.de kontaktieren.
+		Wenn Sie Fragen oder Anliegen bezüglich dieser Datenschutzerklärung haben, können Sie uns per
+		E-Mail unter webmaster@schindlerfelix.de kontaktieren.
 	</p>
 
 	<h3>Änderungen der Datenschutzerklärung</h3>
 	<p>
-		Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern.
-		Aktualisierungen werden auf unserer Webseite veröffentlicht. Bitte
-		überprüfen Sie regelmäßig unsere Datenschutzerklärung, um auf dem neuesten
-		Stand zu bleiben.
+		Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern. Aktualisierungen werden
+		auf unserer Webseite veröffentlicht. Bitte überprüfen Sie regelmäßig unsere
+		Datenschutzerklärung, um auf dem neuesten Stand zu bleiben.
 	</p>
 
 	<p>

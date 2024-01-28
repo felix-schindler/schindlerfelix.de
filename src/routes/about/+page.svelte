@@ -329,21 +329,13 @@
 				}
 
 				meter::-webkit-meter-optimum-value {
-					background: linear-gradient(
-							0deg,
-							hsla(0, 0%, 100%, 0.1),
-							rgba(0, 0, 0, 0.1)
-						),
+					background: linear-gradient(0deg, hsla(0, 0%, 100%, 0.1), rgba(0, 0, 0, 0.1)),
 						linear-gradient(270deg, var(--accent), var(--accent-alt));
 					border-radius: calc(var(--radius) * 0.5);
 				}
 
 				meter::-moz-meter-bar {
-					background: linear-gradient(
-							0deg,
-							hsla(0, 0%, 100%, 0.1),
-							rgba(0, 0, 0, 0.1)
-						),
+					background: linear-gradient(0deg, hsla(0, 0%, 100%, 0.1), rgba(0, 0, 0, 0.1)),
 						linear-gradient(270deg, var(--accent), var(--accent-alt));
 					border-radius: calc(var(--radius) * 0.5);
 				}

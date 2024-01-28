@@ -26,7 +26,7 @@
 
 		const images = Array.from(slotHolder.childNodes).filter(
 			// @ts-ignore
-			(child) => child.tagName === "IMG",
+			(child) => child.tagName === "IMG"
 		);
 		columns = [];
 

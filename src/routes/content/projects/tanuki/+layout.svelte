@@ -13,9 +13,7 @@
 	Tanuki for GitLab
 </h1>
 
-<p class="subtitle">
-	Native GitLab client for iOS and iPadOS, made with SwiftUI.
-</p>
+<p class="subtitle">Native GitLab client for iOS and iPadOS, made with SwiftUI.</p>
 
 {#if path != "/content/projects/tanuki"}
 	<a href="/content/projects/tanuki">&larr; Back</a>

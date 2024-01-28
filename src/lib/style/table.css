@@ -9,32 +9,32 @@ table th {
 
 table th,
 table td {
-	padding: .5em;
+	padding: 0.5em;
 }
 
 table thead th {
-	border-bottom: 1px solid rgba(var(--gray-rgb), .4);
+	border-bottom: 1px solid rgba(var(--gray-rgb), 0.4);
 }
 
 /* rounded tr and hover effect (!only in tbody!) */
-table tbody>tr {
+table tbody > tr {
 	transition: background-color 200ms;
 }
 
-table tbody>tr>:first-child {
+table tbody > tr > :first-child {
 	border-top-left-radius: var(--radius);
 	border-bottom-left-radius: var(--radius);
 }
 
-table tbody>tr>:last-child {
+table tbody > tr > :last-child {
 	border-top-right-radius: var(--radius);
 	border-bottom-right-radius: var(--radius);
 }
 
-table tbody>tr:nth-child(2n) {
-	background-color: rgba(var(--gray-rgb), .2);
+table tbody > tr:nth-child(2n) {
+	background-color: rgba(var(--gray-rgb), 0.2);
 }
 
-table tbody>tr:hover {
-	background-color: rgba(var(--gray-rgb), .3);
+table tbody > tr:hover {
+	background-color: rgba(var(--gray-rgb), 0.3);
 }

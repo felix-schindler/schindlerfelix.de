@@ -23,10 +23,7 @@
 <svelte:window on:scroll={onScroll} />
 
 <div class="hero">
-	<div
-		class="hero-img hero-img-mask"
-		style="background-image: url('{country.mask}')"
-	/>
+	<div class="hero-img hero-img-mask" style="background-image: url('{country.mask}')" />
 	<div class="parallax-title" bind:this={parallaxTitle}>
 		<h1 class="hero-title">{country.name}</h1>
 	</div>
