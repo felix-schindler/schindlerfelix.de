@@ -15,7 +15,9 @@ a[role="button"] {
 	border-radius: var(--radius);
 	margin: 0;
 
-	transition: 200ms color, 200ms background-color;
+	transition:
+		200ms color,
+		200ms background-color;
 }
 
 button.inverse,
@@ -54,7 +56,6 @@ a[role="button"] {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-
 	button,
 	a[role="button"] {
 		color: black;
@@ -66,7 +67,6 @@ a[role="button"] {
 	a[role="button"]:hover:not(:disabled) {
 		color: white;
 	}
-
 
 	button.inverse:hover:not(:disabled),
 	a[role="button"].inverse:hover:not(:disabled) {

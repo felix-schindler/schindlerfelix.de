@@ -10,21 +10,15 @@
 	let path: string, style: string;
 
 	$: path = $page.url.pathname;
-	$: path.includes("/photos/")
-		? (style = "padding: 0")
-		: (style = "padding: 0 1em");
+	$: path.includes("/photos/") ? (style = "padding: 0") : (style = "padding: 0 1em");
 </script>
 
 <div class="hmf" lang={$locale}>
 	<header>
 		<nav>
 			<a href="/" class:active={path == "/"}>{$t("common.nav.home")}</a>
-			<a href="/about" class:active={path == "/about"}
-				>{$t("common.nav.about")}</a
-			>
-			<a href="/content" class:active={path.startsWith("/content")}
-				>{$t("common.nav.content")}</a
-			>
+			<a href="/about" class:active={path == "/about"}>{$t("common.nav.about")}</a>
+			<a href="/content" class:active={path.startsWith("/content")}>{$t("common.nav.content")}</a>
 		</nav>
 	</header>
 	<main {style}>

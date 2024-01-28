@@ -18,11 +18,7 @@
 			font-size: calc(1em + 10vh);
 
 			color: transparent;
-			background-image: linear-gradient(
-				to bottom right,
-				var(--accent),
-				var(--accent-alt)
-			);
+			background-image: linear-gradient(to bottom right, var(--accent), var(--accent-alt));
 			background-clip: text;
 			-webkit-background-clip: text;
 			background-size: cover;

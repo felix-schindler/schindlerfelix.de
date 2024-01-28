@@ -2,7 +2,7 @@ import { loadTranslations, locale } from "$lib/translations";
 
 export async function load({ url }) {
 	const { pathname } = url;
-	const initLocale = locale.get() || await getDefaultLocale(); // set default if no locale already set
+	const initLocale = locale.get() || (await getDefaultLocale()); // set default if no locale already set
 	await loadTranslations(initLocale, pathname);
 
 	return {};

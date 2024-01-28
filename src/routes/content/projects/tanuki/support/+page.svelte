@@ -26,15 +26,10 @@
 	<div class="card">
 		<h3>Why does the app cost anything?</h3>
 		<p>
-			Apple charges money for developer accounts, which you need to be able to
-			deploy apps to the App Store. <small
-				>Also, I shouldn't work for free forever.</small
-			>
+			Apple charges money for developer accounts, which you need to be able to deploy apps to the
+			App Store. <small>Also, I shouldn't work for free forever.</small>
 		</p>
-		<p>
-			I'm not a fan of monthly subscriptions, so that's why there's just the
-			one-time-cost.
-		</p>
+		<p>I'm not a fan of monthly subscriptions, so that's why there's just the one-time-cost.</p>
 	</div>
 	<div class="card">
 		<h3>How to submit a feature request?</h3>
@@ -48,15 +43,11 @@
 	</div>
 	<div class="card">
 		<h3>When will the app be feature complete?</h3>
+		<p>Feature completeness is a hard thing to achive as GitLab is a pretty big software.</p>
 		<p>
-			Feature completeness is a hard thing to achive as GitLab is a pretty big
-			software.
-		</p>
-		<p>
-			The goal for the beginning is to support the most used features by most
-			users. After that, the focus is on whatever the users suggest. When there
-			are no suggestions the app will receivice incremental updates with no
-			specific focus.
+			The goal for the beginning is to support the most used features by most users. After that, the
+			focus is on whatever the users suggest. When there are no suggestions the app will receivice
+			incremental updates with no specific focus.
 		</p>
 	</div>
 </div>
