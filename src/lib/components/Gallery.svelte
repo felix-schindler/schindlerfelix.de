@@ -1,13 +1,10 @@
 <script lang="ts">
-	import { onMount, createEventDispatcher } from "svelte";
+	import { onMount } from "svelte";
 	import { tick } from "svelte";
 
 	export let gap = 10;
 	export let maxColumnWidth = 350;
-	export let hover = true;
 	export let loading: "eager" | "lazy" = "lazy";
-
-	const dispatch = createEventDispatcher();
 
 	let slotHolder: HTMLDivElement | null = null;
 	let columns: any[] = [];
@@ -19,17 +16,6 @@
 	$: galleryStyle = `grid-template-columns: repeat(${columnCount}, 1fr); --gap: ${gap}px`;
 
 	onMount(Draw);
-
-	function HandleClick(
-		e: MouseEvent & { currentTarget: EventTarget & HTMLImageElement },
-	) {
-		dispatch("click", {
-			src: e.currentTarget.src,
-			alt: e.currentTarget.alt,
-			loading: e.currentTarget.loading,
-			class: e.currentTarget.className,
-		});
-	}
 
 	async function Draw() {
 		await tick();
@@ -65,14 +51,7 @@
 		{#each columns as column}
 			<div class="column">
 				{#each column as img}
-					<img
-						src={img.src}
-						alt={img.alt}
-						on:click={HandleClick}
-						on:keydown={() => {}}
-						class="{hover === true ? 'img-hover' : ''} {img.class}"
-						{loading}
-					/>
+					<img src={img.src} alt={img.alt} {loading} />
 				{/each}
 			</div>
 		{/each}
@@ -100,12 +79,15 @@
 	#gallery .column *:nth-child(1) {
 		margin-top: 0;
 	}
-	.img-hover {
-		opacity: 0.9;
-		transition: all 0.2s;
-	}
-	.img-hover:hover {
-		opacity: 1;
-		transform: scale(1.05);
+
+	@media (pointer: fine) {
+		img {
+			cursor: zoom-in;
+			transition: all 0.2s ease-in-out;
+		}
+
+		img:hover {
+			transform: scale(1.025);
+		}
 	}
 </style>
