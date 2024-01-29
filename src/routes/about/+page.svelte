@@ -5,10 +5,9 @@
 
 <div class="intro">
 	<h1>{$t("common.name.full")}</h1>
-	<p>{@html $t("about.txt.1")}</p>
-	<p>{@html $t("about.txt.2")}</p>
-	<p>{@html $t("about.txt.3")}</p>
-	<p>{@html $t("about.txt.4")}</p>
+	<p>{$t("about.txt.1")}</p>
+	<p>{$t("about.txt.3")}</p>
+	<p>{$t("about.txt.4")}</p>
 	<p>{@html $t("about.txt.5")}</p>
 </div>
 <div class="skills">
