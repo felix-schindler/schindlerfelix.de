@@ -22,8 +22,15 @@ const projects: Record<string, Array<Project>> = {
 			link: "https://github.com/felix-schindler/Router",
 		},
 		{
+			title: "Deno Libraries",
+			description:
+				"Password hashing functions (bcrypt and argon2) using Deno FFI",
+			technologies: ["Deno", "TypeScript", "Rust"],
+			link: "https://github.com/felix-schindler?tab=repositories&q=deno",
+		},
+		{
 			title: "Portfolio",
-			description: "This website! It's gone through many iterations...",
+			description: "It's this website. It's gone through many iterations...",
 			technologies: ["Deno", "Fresh", "TypeScript", "Tailwind"],
 			link: "/",
 		},
@@ -33,13 +40,6 @@ const projects: Record<string, Array<Project>> = {
 				"Realtime counter and message board. All servers and clients are in sync.",
 			technologies: ["Deno", "Fresh", "TypeScript", "Tailwind"],
 			link: "https://clicker.deno.dev",
-		},
-		{
-			title: "Deno Libraries",
-			description:
-				"Password hashing functions (bcrypt and argon2) using Deno FFI",
-			technologies: ["Deno", "TypeScript", "Rust"],
-			link: "https://github.com/felix-schindler?tab=repositories&q=deno",
 		},
 		{
 			title: "China Exchange",
@@ -69,12 +69,6 @@ const projects: Record<string, Array<Project>> = {
 			link: "https://mademyday.de",
 		},
 		{
-			title: "Xinevio Customer Platform",
-			description:
-				"Website to manage business presence on Chinese platforms (project only was the frontend)",
-			technologies: ["SvelteKit", "CSS"],
-		},
-		{
 			title: "Internal company website",
 			description: "Ticket-, Time-Tracking and Customer Information System",
 			technologies: ["SvelteKit", "Firebase", "Bootstrap"],
@@ -84,6 +78,12 @@ const projects: Record<string, Array<Project>> = {
 			description:
 				"System for the management and evaluation of insurance contracts",
 			technologies: ["SvelteKit", "Go", "PocketBase"],
+		},
+		{
+			title: "Xinevio Customer Platform",
+			description:
+				"Website to manage business presence on Chinese platforms (project only was the frontend)",
+			technologies: ["SvelteKit", "CSS"],
 		},
 	],
 	"University": [
@@ -99,6 +99,12 @@ const projects: Record<string, Array<Project>> = {
 			technologies: ["Java", "SQLite"],
 		},
 		{
+			title: "2D Game",
+			description:
+				"A 2D game where you can explore the world, fight enemies and collect items.",
+			technologies: ["C#", "Unity", "PHP", "MySQL"],
+		},
+		{
 			title: "Find My Enemy",
 			description:
 				"(Primarily mobile) web application to find your enemies (based on the 16 personalities test) and battle them via a clicker game.",
@@ -109,12 +115,6 @@ const projects: Record<string, Array<Project>> = {
 			description:
 				"CLI application which fetches an API and prints the answer in a readable format. To learn the basics of Java and classes.",
 			technologies: ["Java"],
-		},
-		{
-			title: "2D Game",
-			description:
-				"A 2D game where you can explore the world, fight enemies and collect items.",
-			technologies: ["C#", "Unity", "PHP", "MySQL"],
 		},
 		{
 			title: "Really simple website",
