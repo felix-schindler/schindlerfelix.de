@@ -22,11 +22,14 @@ export default function TanukiLayout(
 				</p>
 			</div>
 			<p class="my-2.5">
-				{pathname === "/projects/tanuki" ? (
-					<ButtonLink name="&larr; Back to project list" href="/projects" />
-				) : (
-					<ButtonLink name="&larr; Back to Tanuki page" href="/projects/tanuki" />
-				)}
+				{pathname === "/projects/tanuki"
+					? <ButtonLink name="&larr; Back to project list" href="/projects" />
+					: (
+						<ButtonLink
+							name="&larr; Back to Tanuki page"
+							href="/projects/tanuki"
+						/>
+					)}
 			</p>
 
 			<Component />

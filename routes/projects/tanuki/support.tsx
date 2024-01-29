@@ -27,10 +27,30 @@ export default function TanukiSupport() {
 		<div class="flex flex-col gap-5">
 			<div>
 				<h2 class="text-3xl mb-2 font-bold tracking-tight">Support</h2>
-				<form class="flex flex-col gap-2 items-end" action="mailto:contact-project+felix-schindler-gitlab-ios-33025310-issue-@incoming.gitlab.com" method="get">
-					<input type="text" name="subject" class="block text-base w-full py-1 px-2 rounded-md" placeholder="Subject" />
-					<textarea name="body" rows={5} class="block text-base w-full py-1 px-2 rounded-md" placeholder="Message"></textarea>
-					<button class="py-1 px-2 rounded-md bg-black text-white transition-transform hover:scale-90 dark:bg-white dark:text-black" type="submit">&rarr; Send</button>
+				<form
+					class="flex flex-col gap-2 items-end"
+					action="mailto:contact-project+felix-schindler-gitlab-ios-33025310-issue-@incoming.gitlab.com"
+					method="get"
+				>
+					<input
+						type="text"
+						name="subject"
+						class="block text-base w-full py-1 px-2 rounded-md"
+						placeholder="Subject"
+					/>
+					<textarea
+						name="body"
+						rows={5}
+						class="block text-base w-full py-1 px-2 rounded-md"
+						placeholder="Message"
+					>
+					</textarea>
+					<button
+						class="py-1 px-2 rounded-md bg-black text-white transition-transform hover:scale-90 dark:bg-white dark:text-black"
+						type="submit"
+					>
+						&rarr; Send
+					</button>
 				</form>
 			</div>
 			<div>
