@@ -1,8 +1,7 @@
 {
 	"txt": {
-		"1": "嘿，我是一个 21 岁的德国<mark>学生</mark>，喜欢编码。",
-		"2": "住在斯图加特",
-		"3": "我正在斯图加特媒体大学和西安理工大学学习<mark>计算机科学</mark>，获得<mark>德中双学位</mark>。",
+		"1": "嘿，我是一个 21 岁的德国学生，喜欢编码。",
+		"3": "我正在斯图加特媒体大学和西安理工大学学习计算机科学，获得德中双学位。",
 		"4": "我每天都编写代码，但是我的大部分项目都不公开，因为我一直在删除它们/不想再提供它们。",
 		"5": "你可以在我的<a href=\"/content#projects\">项目页面</a>、我的 <a href=\"https://github.com/felix-schindler\" rel=\"noopener noreferrer\">GitHub</a> 或 <a href=\"https://gitlab.com/felix-schindler\" rel=\"noopener noreferrer\">GitLab</a> 上找到一些项目。一些实验也可能记录在我的<a href=\"/content#blog\">博客</a>上。还有，去找我<a href=\"https://schindlerflorian.de\">哥哥</a>！"
 	},

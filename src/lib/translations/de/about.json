@@ -1,8 +1,7 @@
 {
 	"txt": {
-		"1": "Hey, ich bin ein 21 Jahre alter deutscher <mark>Student</mark>, der es liebt zu programmieren.",
-		"2": "Wohnend in Stuttgart",
-		"3": "Ich studiere <mark>Informatik</mark> als einen <mark>deutsch-chinesischen Doppelabschluss</mark> an der HdM Stuttgart und der TUX Xi'an.",
+		"1": "Hey, ich bin ein 21 Jahre alter deutscher Student, der es liebt zu programmieren.",
+		"3": "Ich studiere Informatik als einen deutsch-chinesischen Doppelabschluss an der HdM Stuttgart und der TUX Xi'an.",
 		"4": "Ich programmiere jeden Tag, jedoch sind meine meisten Projekte nicht öffentlich zugänglich, da ich sie immer wieder lösche / sie nicht mehr bereitstellen möchte.",
 		"5": "Du kann einige Projekte auf meiner <a href=\"/content#projects\">Projektseite</a>, meinem <a href=\"https://github.com/felix-schindler\" rel=\"noopener noreferrer\">GitHub</a> oder <a href=\"https://gitlab.com/felix-schindler\" rel=\"noopener noreferrer\">GitLab</a> finden. Manche Experimente könnten auch auf meinem <a href=\"/content#blog\">Blog</a> dokumentiert sein. Außerdem, schau bei meinem <a href=\"https://schindlerflorian.de\">Bruder</a> vorbei!"
 	},
