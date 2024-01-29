@@ -54,31 +54,31 @@ export default function Tanuki() {
 				<h2 class="text-3xl mb-2 font-bold tracking-tight">Screenshots</h2>
 				<div class="grid grid-cols-default gap-2">
 					<img
-						src="/img/tanuki/home.png"
+						src="/img/tanuki/home.avif"
 						alt="Home"
 						loading="lazy"
 						class="rounded-lg"
 					/>{" "}
 					<img
-						src="/img/tanuki/project.png"
+						src="/img/tanuki/project.avif"
 						alt="Project"
 						loading="lazy"
 						class="rounded-lg"
 					/>{" "}
 					<img
-						src="/img/tanuki/issues.png"
+						src="/img/tanuki/issues.avif"
 						alt="Issues"
 						loading="lazy"
 						class="rounded-lg"
 					/>{" "}
 					<img
-						src="/img/tanuki/branches.png"
+						src="/img/tanuki/branches.avif"
 						alt="Branches"
 						loading="lazy"
 						class="rounded-lg"
 					/>{" "}
 					<img
-						src="/img/tanuki/group.png"
+						src="/img/tanuki/group.avif"
 						alt="Group"
 						loading="lazy"
 						class="rounded-lg"
