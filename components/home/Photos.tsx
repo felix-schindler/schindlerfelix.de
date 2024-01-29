@@ -5,7 +5,7 @@ const links = {
 	},
 	Germany: {
 		href: "/photos/germany",
-		imgPath: "germany/berlin/5.jpeg",
+		imgPath: "germany/berlin/5.avif",
 	},
 } as const;
 
