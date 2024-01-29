@@ -12,8 +12,8 @@ export default async function China() {
 		<ImageCollection
 			country={{
 				name: "China",
-				mask: "/img/photos/mask.png",
-				sky: "/img/photos/sky.jpg",
+				mask: "/img/photos/mask.avif",
+				sky: "/img/photos/sky.avif",
 			}}
 			cities={[
 				{

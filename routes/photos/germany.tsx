@@ -5,8 +5,8 @@ export default function Germany() {
 		<ImageCollection
 			country={{
 				name: "Germany",
-				mask: "/img/photos/germany/mask-ber.png",
-				sky: "/img/photos/germany/sky.jpg",
+				mask: "/img/photos/germany/mask-ber.avif",
+				sky: "/img/photos/sky.avif",
 			}}
 			cities={[
 				{
