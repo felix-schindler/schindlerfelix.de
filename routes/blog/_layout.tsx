@@ -9,7 +9,9 @@ export default function NotesLayout(
 			<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
 				Notes
 			</h1>
-			<p class="my-2.5"><ButtonLink name="&larr; Back to home page" href="/#notes" /></p>
+			<p class="my-2.5">
+				<ButtonLink name="&larr; Back to home page" href="/#notes" />
+			</p>
 
 			<Component />
 		</>
