@@ -4,13 +4,19 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $_middleware from "./routes/_middleware.ts";
+import * as $blog_slug_ from "./routes/blog/[slug].tsx";
+import * as $blog_layout from "./routes/blog/_layout.tsx";
 import * as $img_world_svg from "./routes/img/world.svg.ts";
 import * as $index from "./routes/index.tsx";
 import * as $legal from "./routes/legal.tsx";
-import * as $notes_slug_ from "./routes/notes/[slug].tsx";
 import * as $photos_china from "./routes/photos/china.tsx";
 import * as $photos_germany from "./routes/photos/germany.tsx";
 import * as $projects_index from "./routes/projects/index.tsx";
+import * as $projects_tanuki_layout from "./routes/projects/tanuki/_layout.tsx";
+import * as $projects_tanuki_index from "./routes/projects/tanuki/index.tsx";
+import * as $projects_tanuki_privacy from "./routes/projects/tanuki/privacy.tsx";
+import * as $projects_tanuki_support from "./routes/projects/tanuki/support.tsx";
 import * as $Gallery from "./islands/Gallery.tsx";
 import * as $ImageCollection from "./islands/ImageCollection.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -19,13 +25,19 @@ const manifest = {
 	routes: {
 		"./routes/_404.tsx": $_404,
 		"./routes/_app.tsx": $_app,
+		"./routes/_middleware.ts": $_middleware,
+		"./routes/blog/[slug].tsx": $blog_slug_,
+		"./routes/blog/_layout.tsx": $blog_layout,
 		"./routes/img/world.svg.ts": $img_world_svg,
 		"./routes/index.tsx": $index,
 		"./routes/legal.tsx": $legal,
-		"./routes/notes/[slug].tsx": $notes_slug_,
 		"./routes/photos/china.tsx": $photos_china,
 		"./routes/photos/germany.tsx": $photos_germany,
 		"./routes/projects/index.tsx": $projects_index,
+		"./routes/projects/tanuki/_layout.tsx": $projects_tanuki_layout,
+		"./routes/projects/tanuki/index.tsx": $projects_tanuki_index,
+		"./routes/projects/tanuki/privacy.tsx": $projects_tanuki_privacy,
+		"./routes/projects/tanuki/support.tsx": $projects_tanuki_support,
 	},
 	islands: {
 		"./islands/Gallery.tsx": $Gallery,
