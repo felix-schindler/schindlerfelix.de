@@ -10,7 +10,7 @@ export const handler: Handlers = {
 
 		try {
 			const markdown = await Deno.readTextFile(
-				join(Deno.cwd(), "routes", "notes", `${slug}.md`),
+				join(Deno.cwd(), "routes", "blog", `${slug}.md`),
 			);
 			const body = render(markdown, {
 				baseUrl: "https://www.schindlerfelix.de",
