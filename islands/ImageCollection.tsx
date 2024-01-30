@@ -66,13 +66,15 @@ export default function ImageCollection(props: ImageCollectionProps) {
 					<ButtonLink name="&larr; Back to home page" href="/#photos" />
 				</p>
 				{props.cities.map((city) => (
-					<div class="mt-2.5">
+					<div class="text-center">
 						{city.name && (
-							<h2 class="text-3xl mb-2 font-bold tracking-tight">
+							<h2 class="text-5xl font-bold tracking-tight mt-5 sm:mt-10">
 								{city.name}
 							</h2>
 						)}
-						{city.english && <p>{city.english}</p>}
+						{city.english && (
+							<p class="text-2xl font-medium tracking-tight mb-2">({city.english})</p>
+						)}
 						<Gallery images={city.images} />
 					</div>
 				))}
