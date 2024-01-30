@@ -9,11 +9,6 @@ const notes = [
 		path: "pgp",
 		description: "How to setup and use (on Mac)",
 	},
-	{
-		title: "reset",
-		path: "reset",
-		description: "Hi, hello and welcome!",
-	},
 ] as const;
 
 export default function Notes() {
