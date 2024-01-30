@@ -1,11 +1,11 @@
 const links = {
 	China: {
 		href: "/photos/china",
-		imgPath: "china/IMG_7378.avif",
+		imgPath: "shanghai-thumb.avif",
 	},
 	Germany: {
 		href: "/photos/germany",
-		imgPath: "germany/berlin/5.avif",
+		imgPath: "berlin-thumb.avif",
 	},
 } as const;
 
