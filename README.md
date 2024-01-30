@@ -2,8 +2,11 @@
 
 This is the 4th iteration of my personal website. Before it was:
 
-1. Static HTML/CSS page
-2. React
-3. Static HTML/CSS/JS page
-4. SvelteKit
-5. Fresh
+0. HTML/CSS page
+1. PHP/HTML/CSS page
+2. React v1
+3. React v2
+4. SvelteKit v1
+5. Static page HTML/CSS/JS
+6. SvelteKit v2
+7. Fresh
