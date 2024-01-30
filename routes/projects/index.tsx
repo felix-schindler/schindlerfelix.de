@@ -175,7 +175,7 @@ export default function Projects() {
 
 function Project({ project }: { project: Project }) {
 	return (
-		<div class="bg-gray-200 dark:bg-gray-800 rounded-md px-2 py-1">
+		<div class="bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-3">
 			<h3 class="text-xl font-bold">
 				{project.title}
 			</h3>

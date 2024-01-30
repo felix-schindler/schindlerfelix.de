@@ -31,7 +31,7 @@ function PrettyLink({ type }: {
 		<a
 			href={href}
 			class="block text-white
-			px-4 py-2 h-64 rounded-xl
+			px-4 py-3 h-64 rounded-xl
 			bg-no-repeat bg-cover bg-center
 			transition-transform hover:scale-95"
 			style={`background-image: url('/img/photos/${imgPath}');`}
