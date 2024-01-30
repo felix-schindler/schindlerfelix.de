@@ -25,7 +25,8 @@ export default function Languages() {
 					<p class="flex flex-wrap items-center">
 						<Tech name="C#" />
 						<Tech name="C++" />
-						<Tech name="Python" icon={false} />
+						<Tech name="Python" />
+						<Tech name="Assembly" />
 					</p>
 					<p class="flex flex-wrap items-center">
 						<Tech name="NodeJS" />
@@ -43,7 +44,7 @@ export default function Languages() {
 						<Tech name="EJS" icon={false} />
 						<Tech name="Mongoose" icon={false} />
 						<Tech name="SocketIO" icon={false} />
-						<Tech name="Bootstrap" icon={false} />
+						<Tech name="Bootstrap" />
 					</p>
 				</details>
 			</div>

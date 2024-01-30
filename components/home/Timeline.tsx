@@ -21,14 +21,14 @@ const education: Array<EventOccurrence> = [
 		until: "now",
 		title: "Stuttgart Media University",
 		description: "Computer Science as a German-Chinese double degree",
-		technologies: ["Java", "C#", "NodeJS", "React", "MongoDB", "Oracle"],
+		technologies: ["Java", "C#", "TypeScript", "Unity", "NodeJS", "Deno", "SvelteKit", "React", "CSS", "Oracle", "PostgreSQL", "MongoDB"],
 	},
 	{
 		from: new Date("2018-09-01"),
 		until: "now",
 		title: "Ferdinand-von-Steinbeisschule",
 		description: "Fachhochschulreife",
-		technologies: ["C", "C++", "PHP", "MySQL", "Linux"],
+		technologies: ["C", "C++", "PHP", "CSS", "MySQL", "Linux"],
 	},
 ] as const;
 
@@ -43,6 +43,8 @@ const work: Array<EventOccurrence> = [
 			"SvelteKit",
 			"Go",
 			"PocketBase",
+			"CSS",
+			"Bootstrap",
 			"Firebase",
 			"Linux",
 		],
@@ -52,7 +54,7 @@ const work: Array<EventOccurrence> = [
 		until: new Date("2021-04-01"),
 		title: "Alwoke Interactive",
 		description: "Web-Developer",
-		technologies: ["PHP", "MySQL", "TypeScript", "React"],
+		technologies: ["PHP", "MySQL", "TypeScript", "React", "CSS", "Bootstrap"],
 	},
 	{
 		from: new Date("2015-10-01"),
