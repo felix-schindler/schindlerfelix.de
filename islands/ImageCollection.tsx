@@ -24,7 +24,6 @@ export default function ImageCollection(props: ImageCollectionProps) {
 	}
 
 	useEffect(() => {
-		console.log("CALLED");
 		globalThis.addEventListener("scroll", handleScroll);
 	}, []);
 
