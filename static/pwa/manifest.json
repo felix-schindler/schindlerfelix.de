@@ -1,0 +1,9 @@
+{
+	"name": "Felix Schindler",
+	"short_name": "Felix",
+	"theme_color": "#020617",
+	"background_color": "#FFFFFF",
+	"display": "browser",
+	"scope": "/",
+	"start_url": "/"
+}
