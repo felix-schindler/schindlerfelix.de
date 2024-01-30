@@ -6,7 +6,6 @@ import { CSS, render } from "https://deno.land/x/gfm@0.5.0/mod.ts";
 export const handler: Handlers = {
 	async GET(_req, ctx) {
 		const { slug } = ctx.params;
-		console.log({ dir: import.meta.dirname, slug });
 
 		try {
 			const markdown = await Deno.readTextFile(
