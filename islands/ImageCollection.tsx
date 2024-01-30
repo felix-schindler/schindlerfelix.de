@@ -73,7 +73,9 @@ export default function ImageCollection(props: ImageCollectionProps) {
 							</h2>
 						)}
 						{city.english && (
-							<p class="text-2xl font-medium tracking-tight mb-2">({city.english})</p>
+							<p class="text-2xl font-medium tracking-tight mb-2">
+								({city.english})
+							</p>
 						)}
 						<Gallery images={city.images} />
 					</div>
