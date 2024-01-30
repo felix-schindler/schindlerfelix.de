@@ -43,7 +43,7 @@ export default function Languages() {
 						<Tech name="PocketBase" />
 					</p>
 					<p class="flex flex-wrap items-center">
-					<Tech name="Hono" icon={false} />
+						<Tech name="Hono" icon={false} />
 						<Tech name="Express" icon={false} />
 						<Tech name="EJS" icon={false} />
 						<Tech name="Mongoose" icon={false} />
