@@ -36,8 +36,8 @@ const work: Array<EventOccurrence> = [
 	{
 		from: new Date("2022-05-01"),
 		until: "now",
-		title: "WUD",
-		description: "Position: Software Developer",
+		title: "WUD Business Solutions GmbH",
+		description: "Software Developer",
 		technologies: [
 			"TypeScript",
 			"SvelteKit",
@@ -51,14 +51,14 @@ const work: Array<EventOccurrence> = [
 		from: new Date("2020-11-01"),
 		until: new Date("2021-04-01"),
 		title: "Alwoke Interactive",
-		description: "Position: Web-Developer",
+		description: "Web-Developer",
 		technologies: ["PHP", "MySQL", "TypeScript", "React"],
 	},
 	{
 		from: new Date("2015-10-01"),
 		until: new Date("2020-07-01"),
-		title: "Makro-Medien-Dienst",
-		description: "Position: Paperboy",
+		title: "MMD Verteildienst GmbH & Co.KG",
+		description: "Paperboy",
 	},
 ] as const;
 
