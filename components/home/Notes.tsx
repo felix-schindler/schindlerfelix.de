@@ -19,7 +19,7 @@ export default function Notes() {
 				{notes.map((note) => (
 					<a
 						href={`/blog/${note.path}`}
-						class="block transition-transform hover:scale-95 bg-gray-200 dark:bg-gray-800 rounded-md px-2 py-1"
+						class="block transition-transform hover:scale-95 bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-3"
 					>
 						<h3 class="text-xl font-bold">{note.title}</h3>
 						<p>{note.description}</p>
