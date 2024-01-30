@@ -27,6 +27,7 @@ export default function Languages() {
 						<Tech name="C++" />
 						<Tech name="Python" />
 						<Tech name="Assembly" />
+						<Tech name="CSS" />
 					</p>
 					<p class="flex flex-wrap items-center">
 						<Tech name="NodeJS" />
@@ -39,11 +40,15 @@ export default function Languages() {
 						<Tech name="SvelteKit" />
 						<Tech name="Fresh" />
 						<Tech name="React" />
-						<Tech name="Hono" icon={false} />
+						<Tech name="PocketBase" />
+					</p>
+					<p class="flex flex-wrap items-center">
+					<Tech name="Hono" icon={false} />
 						<Tech name="Express" icon={false} />
 						<Tech name="EJS" icon={false} />
 						<Tech name="Mongoose" icon={false} />
-						<Tech name="SocketIO" icon={false} />
+						<Tech name="Web Sockets" icon={false} />
+						<Tech name="Tailwind" />
 						<Tech name="Bootstrap" />
 					</p>
 				</details>
