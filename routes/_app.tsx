@@ -84,18 +84,25 @@ export default function Layout(
 				>
 					<Component />
 				</main>
-				<footer class="mt-1 p-4">
-					<div class="text-center">
+				<footer class="mt-1 p-4 text-center">
+					<div>
+						<span>
+							&copy; 2019-{new Date().getUTCFullYear()}{" "}
+							Felix Schindler &middot;{" "}
+						</span>
 						<Link
 							href="/legal"
 							name="Impressum & Datenschutz"
 						/>
 					</div>
-					<p class="text-center" lang="en">
+					<p lang="en">
 						Made in{" "}
-						<span class="text-sm py-1 px-1.5 uppercase font-bold bg-black text-yellow-bright select-none">
+						<a
+							href="https://www.thelaend.de/"
+							class="inline-block text-sm py-1 px-1.5 uppercase font-bold bg-black text-yellow-bright select-none transition-transform hover:scale-95"
+						>
 							The Länd
-						</span>
+						</a>
 					</p>
 				</footer>
 			</body>
