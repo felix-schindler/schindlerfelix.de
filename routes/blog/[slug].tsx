@@ -1,7 +1,10 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { join } from "$std/path/join.ts";
 import { Head } from "$fresh/runtime.ts";
-import { CSS, render } from "https://deno.land/x/gfm@0.5.0/mod.ts";
+import { CSS, render } from "gfm";
+
+// Additional syntax highlighting
+import "prism/prism-bash?no-check";
 
 export const handler: Handlers = {
 	async GET(_req, ctx) {
@@ -15,9 +18,9 @@ export const handler: Handlers = {
 				baseUrl: "https://www.schindlerfelix.de",
 			});
 
-			return ctx.render({ slug, body });
+			return await ctx.render({ slug, body });
 		} catch {
-			return await ctx.next();
+			return await ctx.renderNotFound();
 		}
 	},
 };
@@ -30,13 +33,22 @@ export default function NotesHandler(
 	return (
 		<>
 			<Head>
-				<title>{slug} &middot; Notes</title>
+				<title>{encodeURIComponent(slug)} &middot; Notes</title>
 				<style dangerouslySetInnerHTML={{ __html: CSS }} />
 				<style
 					dangerouslySetInnerHTML={{
 						__html: `
 					.markdown-body {
 						--color-canvas-default: transparent !important;
+					}
+
+					.markdown-body ul {
+						list-style: disc;
+					}
+
+					.markdown-body pre {
+						white-space: pre-wrap;
+						word-wrap: break-word;
 					}
 				`,
 					}}
