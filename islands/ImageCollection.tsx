@@ -68,7 +68,11 @@ export default function ImageCollection(props: ImageCollectionProps) {
 				{props.cities.map((city) => (
 					<div class="text-center">
 						{city.name && (
-							<h2 class={`text-5xl font-bold tracking-tight mt-5 sm:mt-10 ${city.english ? "" : "mb-2"}`}>
+							<h2
+								class={`text-5xl font-bold tracking-tight mt-5 sm:mt-10 ${
+									city.english ? "" : "mb-2"
+								}`}
+							>
 								{city.name}
 							</h2>
 						)}
