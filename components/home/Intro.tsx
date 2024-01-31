@@ -55,7 +55,7 @@ const socials = {
 		color: "orange-500",
 	},
 	linkedin: {
-		href: "https://www.linkedin.com/in/felix-schindler-0bb3952a6",
+		href: "https://www.linkedin.com/in/felix-schindler-vhwjpzf1z0fi73a",
 		icon: <IconLinkedin size={28} />,
 		color: "blue-500",
 	},
