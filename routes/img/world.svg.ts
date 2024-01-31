@@ -27,66 +27,30 @@ const path = geoPath(projection);
 type Region = {
 	name: string;
 	coords: [number, number];
+	multiply: number; // 0.6 for latin; 0.65 for mixed; 1 for chinese characters
 };
 
-const regions: Record<string, Region> = {
+const regions: Record<"stuttgart" | "xian" | "shanghai", Region> = {
 	stuttgart: {
 		name: "Stuttgart",
 		coords: [9.1770, 48.7823],
+		multiply: 0.6,
 	},
 	xian: {
 		name: "西安（Xi'an） ",
 		coords: [108.9402, 34.3416],
+		multiply: 0.65,
 	},
 	shanghai: {
-		name: "上海（Shanghai） ",
+		name: "上海（Shanghai）",
 		coords: [121.4737, 31.2304],
+		multiply: 0.7,
 	},
 } as const;
 
-function render(region?: Region, isDark?: boolean) {
-	if (!region) {
-		return `<?xml version="1.0" encoding="UTF-8"?>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80">
-				<style>
-					${
-			isDark
-				? `
-						text {
-							fill: white;
-						}
-					`
-				: ""
-		}
-
-					.small {
-						font: italic 13px sans-serif;
-					}
-					.heavy {
-						font: bold 30px sans-serif;
-					}
-
-					/* Note that the color of the text is set with the    *
-						* fill property, the color property is for HTML only */
-					.Rrrrr {
-						font: italic 40px serif;
-						fill: red;
-					}
-				</style>
-
-				<text x="20" y="35" class="small">This</text>
-				<text x="40" y="35" class="heavy">did</text>
-				<text x="55" y="55" class="small">not</text>
-				<text x="65" y="55" class="Rrrrr">work!</text>
-			</svg>
-		`;
-	}
-
-	const city = region.name;
-	const coords = region.coords;
-
+function render(region: Region, isDark?: boolean) {
+	const { coords } = region;
 	projection.rotate([-coords[0] - 30, -coords[1] * (30 / 90), 0]);
-
 	const dot = projection(coords);
 
 	return `<?xml version="1.0" encoding="UTF-8"?>
@@ -145,7 +109,7 @@ function render(region?: Region, isDark?: boolean) {
       <g transform="translate(${dot[0]},${dot[1]})">
         <circle r="15" class="dot"/>
         <rect x="40" y="-32.5" width="${
-				font_size * 0.6 * city.length + 40
+				font_size * region.multiply * region.name.length + 40
 			}" height="60" rx="10" class="highlight" />
         <polygon points="25,0 40,-10 40,10" class="highlight" />
         <text
@@ -155,7 +119,7 @@ function render(region?: Region, isDark?: boolean) {
           alignment-baseline="middle"
           dominant-baseline="middle"
           style="font-family: 'Courier', 'Courier New'; font-size: ${font_size}px; text-transform: uppercase; font-weight: bold"
-        >${city}</text>
+        >${region.name}</text>
       </g>`
 			: ""
 	}
