@@ -1,8 +1,10 @@
-import type { PageProps } from "$fresh/server.ts";
 import { Link } from "@/components/utils.tsx";
+import { State } from "@/core/types.ts";
+import translations from "@/core/i18n/footer.json" with { type: "json" };
+import type { PageProps } from "$fresh/server.ts";
 
 export default function Layout(
-	props: PageProps,
+	props: PageProps<never, State>,
 ) {
 	const { Component } = props;
 	const { pathname } = props.url;
@@ -25,16 +27,12 @@ export default function Layout(
 	}
 
 	return (
-		<html lang="en">
+		<html lang={props.state.language}>
 			<head>
 				<meta charSet="utf-8" />
 
 				{/* SEO 🤖 */}
 				<title>{getTitle(pathname)}</title>
-				<meta
-					name="description"
-					content="Personal website of Felix Schindler"
-				/>
 				<meta name="author" content="Felix Schindler" />
 
 				{/* Look and feel ✨ */}
@@ -87,22 +85,41 @@ export default function Layout(
 				<footer class="mt-1 p-4 text-center">
 					<div>
 						<span>
-							&copy; 2019-{new Date().getUTCFullYear()}{" "}
-							Felix Schindler &middot;{" "}
-						</span>
+							&copy; Felix Schindler 2019-{new Date().getUTCFullYear()} &middot;
+						</span>{" "}
 						<Link
 							href="/legal"
-							name="Impressum & Datenschutz"
+							name={translations[props.state.language].imprint}
 						/>
 					</div>
 					<p lang="en">
 						Made in{" "}
 						<a
 							href="https://www.thelaend.de/"
-							class="inline-block text-sm py-1 px-1.5 uppercase font-bold bg-black text-yellow-bright select-none transition-transform hover:scale-95"
+							class="inline-block text-sm py-1 px-1.5 uppercase font-bold bg-black text-yellow-bright select-none transition-transform hover:scale-95 dark:bg-yellow-bright dark:text-black"
 						>
 							The Länd
-						</a>
+						</a>{" "}
+						&middot;{" "}
+						<span class="inline-flex flex-wrap gap-2">
+							{[{
+								name: "English",
+								short: "en",
+							}, {
+								name: "Deutsch",
+								short: "de",
+							}, {
+								name: "简体中文",
+								short: "zh",
+							}].map((language) => (
+								<a
+									href={`${props.url.pathname}?lang=${language.short}`}
+									class="inline-block py-1 px-1.5 rounded-lg bg-black text-white dark:bg-white dark:text-black transition-transform hover:scale-95"
+								>
+									{language.name}
+								</a>
+							))}
+						</span>
 					</p>
 				</footer>
 			</body>

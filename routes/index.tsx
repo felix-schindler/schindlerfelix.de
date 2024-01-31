@@ -6,15 +6,19 @@ import {
 	Photos,
 	Timeline,
 } from "@/components/home/mod.tsx";
+import type { PageProps } from "$fresh/server.ts";
+import type { State } from "@/core/types.ts";
 
-export default function Home() {
+export default function Home(props: PageProps<never, State>) {
+	const { language } = props.state;
+
 	return (
 		<div class="flex flex-col gap-5">
-			<Intro />
-			<About />
-			<Languages />
-			<Timeline />
-			<Photos />
+			<Intro lang={language} />
+			<About lang={language} />
+			<Languages lang={language} />
+			<Timeline lang={language} />
+			<Photos lang={language} />
 			<Notes />
 		</div>
 	);

@@ -18,7 +18,7 @@ const notes = [
 
 export default function Notes() {
 	return (
-		<div>
+		<div lang="en">
 			<h2 id="notes" class="text-3xl mb-2 font-bold tracking-tight">Notes</h2>
 			<div class="grid grid-cols-default gap-2">
 				{notes.map((note) => (

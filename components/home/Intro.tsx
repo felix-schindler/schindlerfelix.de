@@ -3,11 +3,14 @@ import IconGitlab from "icons/brand-gitlab.tsx";
 import IconLinkedin from "icons/brand-linkedin.tsx";
 import IconInstagram from "icons/brand-instagram.tsx";
 
-export default function Intro() {
+import translations from "@/core/i18n/home/intro.json" with { type: "json" };
+import type { AllowedLanguage } from "@/core/types.ts";
+
+export default function Intro({ lang }: { lang: AllowedLanguage }) {
 	return (
 		<>
 			<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
-				Felix Schindler
+				{translations[lang].name}
 			</h1>
 			<div class="sm:flex sm:items-center">
 				<picture class="w-full" alt="Globe marking the region Xi'an, China">
@@ -19,15 +22,11 @@ export default function Intro() {
 				</picture>
 
 				<div class="text-center text-lg">
-					<p>
-						studying <b>Computer Science</b>{" "}
-						as a German-Chinese double degree at{" "}
-						<b>Stuttgart Media University</b> and{" "}
-						<b>Xi'an University of Technology</b>
-					</p>
-					<p class="mt-2">
-						currently based in <b>Xi'an, China</b>
-					</p>
+					<p dangerouslySetInnerHTML={{ __html: translations[lang].study }} />
+					<p
+						class="mt-2"
+						dangerouslySetInnerHTML={{ __html: translations[lang].based }}
+					/>
 
 					<div class="flex flex-wrap justify-center gap-1 mt-3">
 						{/* This needs to be done because otherwise Tailwind won't know which colors to include in the css */}

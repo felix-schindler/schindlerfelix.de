@@ -1,4 +1,10 @@
 import { ButtonLink, Tech } from "@/components/utils.tsx";
+import translations from "@/core/i18n/projects/project-list.json" with {
+	type: "json",
+};
+
+import type { PageProps } from "$fresh/server.ts";
+import type { State } from "@/core/types.ts";
 
 type Project = {
 	title: string;
@@ -7,158 +13,147 @@ type Project = {
 	link?: string;
 };
 
-const projects: Record<string, Array<Project>> = {
-	"Personal": [
-		{
-			title: "Tanuki for GitLab",
-			description: "Native GitLab App for iOS",
-			technologies: ["Swift"],
-			link: "/projects/tanuki",
-		},
-		{
-			title: "Router",
-			description: "My own MVC framework for PHP",
-			technologies: ["PHP"],
-			link: "https://github.com/felix-schindler/Router",
-		},
-		{
-			title: "Deno Libraries",
-			description:
-				"Password hashing functions (bcrypt and argon2) using Deno FFI",
-			technologies: ["Deno", "TypeScript", "Rust"],
-			link: "https://github.com/felix-schindler?tab=repositories&q=deno",
-		},
-		{
-			title: "Portfolio",
-			description: "It's this website. It's gone through many iterations...",
-			technologies: ["Deno", "Fresh", "TypeScript", "Tailwind"],
-			link: "/",
-		},
-		{
-			title: "Clicker",
-			description:
-				"Realtime counter and message board. All servers and clients are in sync.",
-			technologies: ["Deno", "Fresh", "TypeScript", "Tailwind"],
-			link: "https://clicker.deno.dev",
-		},
-		{
-			title: "China Exchange",
-			description: "A website for a student exchange program to China",
-			technologies: ["Deno", "Fresh", "TypeScript", "Tailwind"],
-			link: "https://cn.schindlerfelix.de/",
-		},
-		{
-			title: "Nimiq Style Fork",
-			description:
-				"Fork of the Nimiq Styles; I added (automatic) dark mode and removed the need of classes",
-			technologies: ["CSS"],
-			link: "https://gitlab.com/felix-schindler/advanced-style",
-		},
-		{
-			title: "Many unfinished projects...",
-			description:
-				"Too many to list them here. There are a few public ones on Git though",
-		},
-	],
-	"Work for companies": [
-		{
-			title: "Made My Day",
-			description:
-				"Website of a German social media presence. Just click here to look at it. With auth, ads, posts, comments, etc.",
-			technologies: ["PHP", "React", "CSS", "MySQL"],
-			link: "https://mademyday.de",
-		},
-		{
-			title: "Internal company website",
-			description: "Ticket-, Time-Tracking and Customer Information System",
-			technologies: ["SvelteKit", "Firebase", "Bootstrap"],
-		},
-		{
-			title: "Customer project",
-			description:
-				"System for the management and evaluation of insurance contracts",
-			technologies: ["SvelteKit", "Go", "PocketBase"],
-		},
-		{
-			title: "Xinevio Customer Platform",
-			description:
-				"Website to manage business presence on Chinese platforms (project only was the frontend)",
-			technologies: ["SvelteKit", "CSS"],
-		},
-	],
-	"University": [
-		{
-			title: "ChadGPT",
-			description:
-				"iOS app to chat with your (AI) celebrity crush and generate pick-up lines",
-			technologies: ["Swift"],
-		},
-		{
-			title: "Budget tracker",
-			description: "Desktop App for tracking your budget (locally, offline)",
-			technologies: ["Java", "SQLite"],
-		},
-		{
-			title: "2D Game",
-			description:
-				"A 2D game where you can explore the world, fight enemies and collect items.",
-			technologies: ["C#", "Unity", "PHP", "MySQL"],
-		},
-		{
-			title: "Find My Enemy",
-			description:
-				"(Primarily mobile) web application to find your enemies (based on the 16 personalities test) and battle them via a clicker game.",
-			technologies: ["TypeScript", "SvelteKit", "Deno", "PostgreSQL"],
-		},
-		{
-			title: "Weather App",
-			description:
-				"CLI application which fetches an API and prints the answer in a readable format. To learn the basics of Java and classes.",
-			technologies: ["Java"],
-		},
-		{
-			title: "Really simple website",
-			description: "To learn the basics of HTML and CSS",
-			technologies: ["CSS"],
-			link: "https://fs146.home.hdm-stuttgart.de/webdev/",
-		},
-	],
-	"School": [
-		{
-			title: "AFC-Mirror",
-			description:
-				"Online shop for smart mirrors to learn the basics of PHP and SQL",
-			technologies: ["PHP", "MySQL"],
-		},
-		{
-			title: "Small school projects",
-			description:
-				"Many smaller programs to learn the basics of C and C++ and also to program micro controllers",
-			technologies: ["C", "C++"],
-		},
-	],
-} as const;
+export default function Projects(props: PageProps<never, State>) {
+	const lang = props.state.language;
 
-export default function Projects() {
+	const projects: Record<string, Array<Project>> = {
+		"Personal": [
+			{
+				title: translations[lang].tanuki.title,
+				description: translations[lang].tanuki.description,
+				technologies: ["Swift"],
+				link: "/projects/tanuki",
+			},
+			{
+				title: translations[lang].router.title,
+				description: translations[lang].router.description,
+				technologies: ["PHP"],
+				link: "https://github.com/felix-schindler/Router",
+			},
+			{
+				title: translations[lang].deno_libs.title,
+				description: translations[lang].deno_libs.description,
+				technologies: ["Deno", "TypeScript", "Rust"],
+				link: "https://github.com/felix-schindler?tab=repositories&q=deno",
+			},
+			{
+				title: translations[lang].portfolio.title,
+				description: translations[lang].portfolio.description,
+				technologies: ["Deno", "Fresh", "TypeScript", "Tailwind"],
+				link: "/",
+			},
+			{
+				title: translations[lang].clicker.title,
+				description: translations[lang].clicker.description,
+				technologies: ["Deno", "Fresh", "TypeScript", "Tailwind"],
+				link: "https://clicker.deno.dev",
+			},
+			{
+				title: translations[lang].china_exchange.title,
+				description: translations[lang].china_exchange.description,
+				technologies: ["Deno", "Fresh", "TypeScript", "Tailwind"],
+				link: "https://cn.schindlerfelix.de/",
+			},
+			{
+				title: translations[lang].nimiq_style_fork.title,
+				description: translations[lang].nimiq_style_fork.description,
+				technologies: ["CSS"],
+				link: "https://gitlab.com/felix-schindler/advanced-style",
+			},
+			{
+				title: translations[lang].unfinished.title,
+				description: translations[lang].unfinished.description,
+			},
+		],
+		"Work for companies": [
+			{
+				title: translations[lang].made_my_day.title,
+				description: translations[lang].made_my_day.description,
+				technologies: ["PHP", "React", "CSS", "MySQL"],
+				link: "https://mademyday.de",
+			},
+			{
+				title: translations[lang].ticket_tracker.title,
+				description: translations[lang].ticket_tracker.description,
+				technologies: ["SvelteKit", "Firebase", "Bootstrap"],
+			},
+			{
+				title: translations[lang].insurance.title,
+				description: translations[lang].insurance.description,
+				technologies: ["SvelteKit", "Go", "PocketBase"],
+			},
+			{
+				title: translations[lang].xinevio.title,
+				description: translations[lang].xinevio.description,
+				technologies: ["SvelteKit", "CSS"],
+			},
+		],
+		"University": [
+			{
+				title: translations[lang].chadgpt.title,
+				description: translations[lang].chadgpt.description,
+				technologies: ["Swift"],
+			},
+			{
+				title: translations[lang].budget_tracker.title,
+				description: translations[lang].budget_tracker.description,
+				technologies: ["Java", "SQLite"],
+			},
+			{
+				title: translations[lang].d2_game.title,
+				description: translations[lang].d2_game.description,
+				technologies: ["C#", "Unity", "PHP", "MySQL"],
+			},
+			{
+				title: translations[lang].find_my_enemy.title,
+				description: translations[lang].find_my_enemy.description,
+				technologies: ["TypeScript", "SvelteKit", "Deno", "PostgreSQL"],
+			},
+			{
+				title: translations[lang].weather_app_cli.title,
+				description: translations[lang].weather_app_cli.description,
+				technologies: ["Java"],
+			},
+			{
+				title: translations[lang].simple_web_hdm.title,
+				description: translations[lang].simple_web_hdm.description,
+				technologies: ["CSS"],
+				link: "https://fs146.home.hdm-stuttgart.de/webdev/",
+			},
+		],
+		"School": [
+			{
+				title: translations[lang].afc_mirror.title,
+				description: translations[lang].afc_mirror.description,
+				technologies: ["PHP", "MySQL", "CSS"],
+			},
+			{
+				title: translations[lang].small_school_projects.title,
+				description: translations[lang].small_school_projects.description,
+				technologies: ["C", "C++"],
+			},
+		],
+	} as const;
+
 	return (
 		<>
 			<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
 				Project List
 			</h1>
 			<p class="my-2.5">
-				<ButtonLink name="&larr; Back to home page" href="/" />
+				<ButtonLink name={`← ${translations[lang].back_to_home}`} href="/" />
 			</p>
 			{Object.entries(projects).map(([title, projects]) => (
 				<>
 					<h2 class="text-3xl mt-3 mb-2 font-bold tracking-tight">{title}</h2>
 					<ul class="grid grid-cols-default gap-2">
 						{projects.map((project) => (
-							<li>
+							<li class="block">
 								{project.link !== undefined
 									? (
 										<a
 											href={project.link}
-											class="block transition-transform hover:scale-95"
+											class="block h-full transition-transform hover:scale-95"
 										>
 											<Project project={project} />
 										</a>
@@ -175,11 +170,13 @@ export default function Projects() {
 
 function Project({ project }: { project: Project }) {
 	return (
-		<div class="bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-3">
-			<h3 class="text-xl font-bold">
-				{project.title}
-			</h3>
-			<p>{project.description}</p>
+		<div class="h-full bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-3">
+			<div>
+				<h3 class="text-xl font-bold">
+					{project.title}
+				</h3>
+				<p>{project.description}</p>
+			</div>
 			<ul class="mt-2">
 				{project.technologies &&
 					project.technologies.map((technology) => (
