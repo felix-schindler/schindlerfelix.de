@@ -50,8 +50,11 @@ export default async function China() {
 		const imageFiles = await Array.fromAsync(
 			Deno.readDir(join(Deno.cwd(), "static", baseImagePath, city)),
 		);
-		const fileNames = imageFiles.map((f) => f.name);
-		files[city] = fileNames.toSorted();
+
+		files[city] = imageFiles
+			.filter((f) => f.isFile && f.name.endsWith(".avif"))
+			.map((f) => f.name)
+			.toSorted();
 	}
 
 	return (
