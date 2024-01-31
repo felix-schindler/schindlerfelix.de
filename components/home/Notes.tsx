@@ -1,5 +1,10 @@
 const notes = [
 	{
+		title: "Image Magick",
+		path: "img-magick",
+		description: "How to setup and use (on Mac)",
+	},
+	{
 		title: "Minecraft Perf Mods",
 		path: "mc-perf",
 		description: "Collection of some Minecraft Fabric performance mods",
