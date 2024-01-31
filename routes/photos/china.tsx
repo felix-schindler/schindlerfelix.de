@@ -24,7 +24,7 @@ function getEnglishName(placeName: string): { name: string; english?: string } {
 			english = "Oriental Land";
 			break;
 		case "青浦区":
-			english = "Qingpu District";
+			english = "Qingpu District, Shanghai";
 			break;
 		case "杭州":
 			english = "Hangzhou";
