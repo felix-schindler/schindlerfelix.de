@@ -1,32 +1,36 @@
-const links = {
-	China: {
-		href: "/photos/china",
-		imgPath: "shanghai-thumb.avif",
-	},
-	Germany: {
-		href: "/photos/germany",
-		imgPath: "berlin-thumb.avif",
-	},
-} as const;
+import translations from "@/core/i18n/home/photos.json" with { type: "json" };
+import type { AllowedLanguage } from "@/core/types.ts";
 
-export default function Photos() {
+export default function Photos({ lang }: { lang: AllowedLanguage }) {
 	return (
 		<div>
-			<h2 id="photos" class="text-3xl mb-2 font-bold tracking-tight">Photos</h2>
+			<h2 id="photos" class="text-3xl mb-2 font-bold tracking-tight">
+				{translations[lang].heading}
+			</h2>
 			<div class="grid grid-cols-default gap-2">
-				{Object.keys(links).map((type) => (
-					<PrettyLink type={type as keyof typeof links} />
-				))}
+				<PrettyLink
+					name={translations[lang].china}
+					englishName={translations.en.germany}
+					href="/photos/china"
+					imgPath="shanghai-thumb.avif"
+				/>
+				<PrettyLink
+					name={translations[lang].germany}
+					englishName={translations.en.germany}
+					href="/photos/germany"
+					imgPath="berlin-thumb.avif"
+				/>
 			</div>
 		</div>
 	);
 }
 
-function PrettyLink({ type }: {
-	type: keyof typeof links;
+function PrettyLink({ name, englishName, href, imgPath }: {
+	name: string;
+	englishName: string;
+	href: string;
+	imgPath: string;
 }) {
-	const { href, imgPath } = links[type];
-
 	return (
 		<a
 			href={href}
@@ -38,9 +42,11 @@ function PrettyLink({ type }: {
 		>
 			<h3
 				class="text-xl font-bold"
-				style={{ "view-transition-name": `photos-${type.toLowerCase()}` }}
+				style={{
+					"view-transition-name": `photos-${englishName.toLowerCase()}`,
+				}}
 			>
-				{type}
+				{name}
 			</h3>
 		</a>
 	);

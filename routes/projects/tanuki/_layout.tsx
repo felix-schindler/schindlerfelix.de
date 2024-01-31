@@ -1,5 +1,5 @@
-import { PageProps } from "$fresh/server.ts";
 import { ButtonLink } from "@/components/utils.tsx";
+import type { PageProps } from "$fresh/server.ts";
 
 export default function TanukiLayout(
 	{ Component, url }: PageProps,
@@ -8,7 +8,7 @@ export default function TanukiLayout(
 
 	return (
 		<>
-			<div class="text-center">
+			<div class="text-center" lang="en">
 				<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter flex flex-wrap justify-center gap-5">
 					<img
 						src="https://gitlab.com/uploads/-/system/project/avatar/33025310/Tanuki-200kb.png"

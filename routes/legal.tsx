@@ -1,11 +1,21 @@
 import { Link } from "@/components/utils.tsx";
 import { fmt } from "@/core/utils.ts";
+import type { State } from "@/core/types.ts";
+import type { PageProps } from "$fresh/server.ts";
 
-export default function LegalPage() {
+const back_to_home = {
+	en: "Back to home page",
+	de: "Zurück zur Startseite",
+	zh: "返回主页",
+} as const;
+
+export default function LegalPage(props: PageProps<never, State>) {
+	const lang = props.state.language;
+
 	return (
 		<>
 			<div class="flex flex-col gap-2 mb-5">
-				<Link name="&larr; Back to home page" href="/" />
+				<Link name={`← ${back_to_home[lang]}`} href="/" />
 				<h1 class="text-3xl mb-2 font-bold tracking-tight">Impressum</h1>
 				<h2 class="text-2xl">Verantwortlich für den Inhalt</h2>
 				<Link

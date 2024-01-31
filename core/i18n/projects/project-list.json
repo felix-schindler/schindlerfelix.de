@@ -1,0 +1,251 @@
+{
+	"en": {
+		"back_to_home": "Back to home page",
+		"tanuki": {
+			"title": "Tanuki for GitLab",
+			"description": "Native GitLab App for iOS"
+		},
+		"router": {
+			"title": "Router",
+			"description": "My own MVC framework for PHP"
+		},
+		"deno_libs": {
+			"title": "Deno Libraries",
+			"description": "Password hashing functions (bcrypt and argon2) using Deno FFI"
+		},
+		"portfolio": {
+			"title": "Portfolio",
+			"description": "It's this website. It's gone through many iterations..."
+		},
+		"clicker": {
+			"title": "Clicker",
+			"description": "Realtime counter and message board. All servers and clients are in sync."
+		},
+		"china_exchange": {
+			"title": "China Exchange",
+			"description": "A website for a student exchange program to China"
+		},
+		"nimiq_style_fork": {
+			"title": "Nimiq Style Fork",
+			"description": "Fork of the Nimiq Styles; I added (automatic) dark mode and removed the need of classes"
+		},
+		"unfinished": {
+			"title": "Many unfinished projects...",
+			"description": "Too many to list them here. There are a few public ones on Git though"
+		},
+		"made_my_day": {
+			"title": "Made My Day",
+			"description": "Website of a German social media presence. Just click here to look at it. With auth, ads, posts, comments, etc."
+		},
+		"ticket_tracker": {
+			"title": "Internal company website",
+			"description": "Ticket-, Time-Tracking and Customer Information System"
+		},
+		"insurance": {
+			"title": "Customer project",
+			"description": "System for the management and evaluation of insurance contracts"
+		},
+		"xinevio": {
+			"title": "Xinevio Customer Platform",
+			"description": "Website to manage business presence on Chinese platforms (project only was the frontend)"
+		},
+		"chadgpt": {
+			"title": "ChadGPT",
+			"description": "iOS app to chat with your (AI) celebrity crush and generate pick-up lines"
+		},
+		"budget_tracker": {
+			"title": "Budget tracker",
+			"description": "Desktop App for tracking your budget (locally, offline)"
+		},
+		"d2_game": {
+			"title": "2D Game",
+			"description": "A 2D game where you can explore the world, fight enemies and collect items."
+		},
+		"find_my_enemy": {
+			"title": "Find My Enemy",
+			"description": "(Primarily mobile) web application to find your enemies (based on the 16 personalities test) and battle them via a clicker game."
+		},
+		"weather_app_cli": {
+			"title": "Weather App",
+			"description": "CLI application which fetches an API and prints the answer in a readable format. To learn the basics of Java and classes."
+		},
+		"simple_web_hdm": {
+			"title": "Really simple website",
+			"description": "To learn the basics of HTML and CSS"
+		},
+		"afc_mirror": {
+			"title": "AFC-Mirror",
+			"description": "Online shop for smart mirrors to learn the basics of PHP and SQL"
+		},
+		"small_school_projects": {
+			"title": "Small school projects",
+			"description": "Many smaller programs to learn the basics of C and C++ and also to program micro controllers"
+		}
+	},
+	"de": {
+		"back_to_home": "Zurück zur Startseite",
+		"tanuki": {
+			"title": "Tanuki for GitLab",
+			"description": "Native GitLab App for iOS"
+		},
+		"router": {
+			"title": "Router",
+			"description": "Mein eigenes MVC-Framework für PHP"
+		},
+		"deno_libs": {
+			"title": "Deno-Bibliotheken",
+			"description": "Passwort-Hashing-Funktionen (bcrypt und argon2) unter Verwendung von Deno FFI"
+		},
+		"portfolio": {
+			"title": "Portfolio",
+			"description": "Das ist diese Website. Sie hat viele Iterationen durchlaufen..."
+		},
+		"clicker": {
+			"title": "Clicker",
+			"description": "Echtzeit-Zähler und Pinnwand. Alle Server und Clients sind synchronisiert."
+		},
+		"china_exchange": {
+			"title": "China-Austausch",
+			"description": "Eine Website für ein Studentenaustauschprogramm nach China"
+		},
+		"nimiq_style_fork": {
+			"title": "Nimiq Style Fork",
+			"description": "Fork der Nimiq Styles; Ich habe (automatischen) Dunkelmodus hinzugefügt und die Notwendigkeit von Klassen entfernt"
+		},
+		"unfinished": {
+			"title": "Viele unvollendete Projekte...",
+			"description": "Zu viele, um sie hier aufzulisten. Es gibt jedoch einige öffentliche auf Git"
+		},
+		"made_my_day": {
+			"title": "Made My Day",
+			"description": "Website einer deutschen Social-Media-Präsenz. Einfach hier klicken, um sie anzusehen. Mit Authentifizierung, Anzeigen, Beiträgen, Kommentaren, usw."
+		},
+		"ticket_tracker": {
+			"title": "Interne Firmenwebsite",
+			"description": "Ticket-, Zeiterfassungs- und Kundeninformationssystem"
+		},
+		"insurance": {
+			"title": "Kundenprojekt",
+			"description": "System zur Verwaltung und Auswertung von Versicherungsverträgen"
+		},
+		"xinevio": {
+			"title": "Xinevio Kundenplattform",
+			"description": "Website zur Verwaltung der Geschäftspräsenz auf chinesischen Plattformen (nur das Frontend war Teil des Projekts)"
+		},
+		"chadgpt": {
+			"title": "ChadGPT",
+			"description": "iOS-App zum Chatten mit deinem (KI-) Promi-Schwarm und zum Generieren von Anmachsprüchen"
+		},
+		"budget_tracker": {
+			"title": "Budget-Tracker",
+			"description": "Desktop-App zur Verfolgung deines Budgets (lokal, offline)"
+		},
+		"d2_game": {
+			"title": "2D-Spiel",
+			"description": "Ein 2D-Spiel, in dem du die Welt erkunden, gegen Feinde kämpfen und Gegenstände sammeln kannst."
+		},
+		"find_my_enemy": {
+			"title": "Find My Enemy",
+			"description": "(Hauptsächlich mobile) Webanwendung zum Finden deiner Feinde (basierend auf dem 16-Persönlichkeiten-Test) und zum Bekämpfen über ein Clicker-Spiel."
+		},
+		"weather_app_cli": {
+			"title": "Wetter-App",
+			"description": "CLI-Anwendung, die eine API abruft und die Antwort in einem lesbaren Format ausgibt. Um die Grundlagen von Java und Klassen zu lernen."
+		},
+		"simple_web_hdm": {
+			"title": "Wirklich einfache Website",
+			"description": "Um die Grundlagen von HTML und CSS zu lernen"
+		},
+		"afc_mirror": {
+			"title": "AFC-Mirror",
+			"description": "Online-Shop für Smart Mirrors, um die Grundlagen von PHP und SQL zu lernen"
+		},
+		"small_school_projects": {
+			"title": "Kleine Schulprojekte",
+			"description": "Viele kleinere Programme, um die Grundlagen von C und C++ zu lernen und auch um Mikrocontroller zu programmieren"
+		}
+	},
+	"zh": {
+		"back_to_home": "返回主页",
+		"tanuki": {
+			"title": "Tanuki for GitLab",
+			"description": "iOS 的本地 GitLab 应用"
+		},
+		"router": {
+			"title": "路由器",
+			"description": "我自己的 PHP MVC 框架"
+		},
+		"deno_libs": {
+			"title": "Deno 库",
+			"description": "使用 Deno FFI 实现的密码哈希函数（bcrypt 和 argon2）"
+		},
+		"portfolio": {
+			"title": "作品集",
+			"description": "就是这个网站。经历了许多次迭代……"
+		},
+		"clicker": {
+			"title": "点击器",
+			"description": "实时计数器和留言板。所有服务器和客户端都同步。"
+		},
+		"china_exchange": {
+			"title": "中国交流",
+			"description": "一个用于学生交流计划的网站"
+		},
+		"nimiq_style_fork": {
+			"title": "Nimiq 风格分支",
+			"description": "Nimiq Styles 的分支；我添加了（自动）深色模式并移除了对类的需求"
+		},
+		"unfinished": {
+			"title": "许多未完成的项目...",
+			"description": "太多了，无法在这里列出。但在 Git 上有一些公开的。"
+		},
+		"made_my_day": {
+			"title": "Made My Day",
+			"description": "德国社交媒体存在的网站。单击此处查看。带有身份验证、广告、帖子、评论等功能。"
+		},
+		"ticket_tracker": {
+			"title": "公司内部网站",
+			"description": "工单、时间跟踪和客户信息系统"
+		},
+		"insurance": {
+			"title": "客户项目",
+			"description": "用于管理和评估保险合同的系统"
+		},
+		"xinevio": {
+			"title": "Xinevio 客户平台",
+			"description": "用于管理在中国平台上的业务存在的网站（该项目仅涉及前端）"
+		},
+		"chadgpt": {
+			"title": "ChadGPT",
+			"description": "与你的（AI）明星偶像聊天并生成搭讪台词的 iOS 应用"
+		},
+		"budget_tracker": {
+			"title": "预算跟踪器",
+			"description": "用于跟踪预算的桌面应用程序（本地、离线）"
+		},
+		"d2_game": {
+			"title": "2D 游戏",
+			"description": "一个二维游戏，你可以在其中探索世界、与敌人战斗并收集物品。"
+		},
+		"find_my_enemy": {
+			"title": "寻找我的敌人",
+			"description": "（主要是移动端）基于 16 种人格测试找到你的敌人并通过点击器游戏与他们战斗的 Web 应用程序。"
+		},
+		"weather_app_cli": {
+			"title": "天气应用",
+			"description": "通过 CLI 获取 API 并以可读格式打印答案的应用程序。用于学习 Java 和类的基础知识。"
+		},
+		"simple_web_hdm": {
+			"title": "真的简单的网站",
+			"description": "用于学习 HTML 和 CSS 的基础知识"
+		},
+		"afc_mirror": {
+			"title": "AFC-Mirror",
+			"description": "智能镜的在线商店，用于学习 PHP 和 SQL 的基础知识"
+		},
+		"small_school_projects": {
+			"title": "小学项目",
+			"description": "许多较小的程序，用于学习 C 和 C++ 的基础知识，也用于编程微控制器"
+		}
+	}
+}

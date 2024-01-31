@@ -1,0 +1,23 @@
+{
+	"en": {
+		"back_to_home": "Back to home page",
+		"not_found": {
+			"short": "Page not found",
+			"long": "The page you were looking for doesn't exist."
+		}
+	},
+	"de": {
+		"back_to_home": "Zurück zur Startseite",
+		"not_found": {
+			"short": "Seite nicht gefunden",
+			"long": "Die Seite nach der du gesucht hast gibt es nicht."
+		}
+	},
+	"zh": {
+		"back_to_home": "返回主页",
+		"not_found": {
+			"short": "找不到页面",
+			"long": "你要查找的页面不存在。"
+		}
+	}
+}

@@ -1,20 +1,29 @@
 import { Head } from "$fresh/runtime.ts";
 import { ButtonLink } from "@/components/utils.tsx";
 
-export default function Error404() {
+import translations from "@/core/i18n/404.json" with { type: "json" };
+import type { State } from "@/core/types.ts";
+import type { PageProps } from "$fresh/server.ts";
+
+export default function Error404(props: PageProps<never, State>) {
+	const lang = props.state.language;
+
 	return (
 		<>
 			<Head>
-				<title>404 - Page not found</title>
+				<title>404 - {translations[lang].not_found.short}</title>
 			</Head>
 			<div class="h-full grid place-items-center">
 				<div class="text-center">
 					<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter">
-						404 - Page not found
+						404 - {translations[lang].not_found.short}
 					</h1>
-					<p class="mt-5">The page you were looking for doesn't exist.</p>
+					<p class="mt-5">{translations[lang].not_found.long}</p>
 					<p class="mt-5">
-						<ButtonLink name="&larr; Back to home page" href="/" />
+						<ButtonLink
+							name={`← ${translations[lang].back_to_home}`}
+							href="/"
+						/>
 					</p>
 				</div>
 			</div>

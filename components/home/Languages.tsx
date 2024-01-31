@@ -1,10 +1,17 @@
 import { Tech } from "@/components/utils.tsx";
 
-export default function Languages() {
+import translations from "@/core/i18n/home/languages.json" with {
+	type: "json",
+};
+import type { AllowedLanguage } from "@/core/types.ts";
+
+export default function Languages({ lang }: { lang: AllowedLanguage }) {
 	return (
 		<>
 			<div>
-				<h2 class="text-3xl mb-2 font-bold tracking-tight">Languages</h2>
+				<h2 class="text-3xl mb-2 font-bold tracking-tight">
+					{translations[lang].programming_lang}
+				</h2>
 				<p>
 					<Tech name="TypeScript" />
 					<Tech name="Swift" />
@@ -21,7 +28,9 @@ export default function Languages() {
 					<Tech name="Oracle" />
 				</p>
 				<details>
-					<summary class="cursor-pointer">More technologies I've used</summary>
+					<summary class="cursor-pointer">
+						{translations[lang].more_tech}
+					</summary>
 					<p class="flex flex-wrap items-center">
 						<Tech name="C#" />
 						<Tech name="C++" />
@@ -54,12 +63,14 @@ export default function Languages() {
 				</details>
 			</div>
 			<div>
-				<h2 class="text-3xl mb-2 font-bold tracking-tight">Human Languages</h2>
+				<h2 class="text-3xl mb-2 font-bold tracking-tight">
+					{translations[lang].human_lang.heading}
+				</h2>
 				<p>
-					<Tech name="German (native)" icon="🇩🇪" />
-					<Tech name="English (B2)" icon="🇬🇧" />
-					<Tech name="Chinese (B1)" icon="🇨🇳" />
-					<Tech name="French (B1)" icon="🇫🇷" />
+					<Tech name={translations[lang].human_lang.german} icon="🇩🇪" />
+					<Tech name={translations[lang].human_lang.english} icon="🇬🇧" />
+					<Tech name={translations[lang].human_lang.chinese} icon="🇨🇳" />
+					<Tech name={translations[lang].human_lang.french} icon="🇫🇷" />
 				</p>
 			</div>
 		</>

@@ -1,0 +1,26 @@
+{
+	"en": {
+		"heading": "About",
+		"txt": {
+			"_1": "I'm {:age} years old and interested in Programming, mainly Fullstack Web Development.",
+			"_2": "If you're just interested in my past projects, you can take a look at my",
+			"project_list": "Projects List"
+		}
+	},
+	"de": {
+		"heading": "Über mich",
+		"txt": {
+			"_1": "Ich bin {:age} Jahre alt und interessiere mich für's Programmieren, hauptsächlich Fullstack Web Entwicklung.",
+			"_2": "Wenn du dich für meine vergangenen Projekte interessierst, kann du einen Blick auf meine Projektliste werfen.",
+			"project_list": "Projekt Liste"
+		}
+	},
+	"zh": {
+		"heading": "关于我",
+		"txt": {
+			"_1": "我今年 {:age} 岁，对编程感兴趣，主要是全栈web开发。",
+			"_2": "如果你只是对我过去的项目感兴趣，你可以看看我的",
+			"project_list": "项目列表"
+		}
+	}
+}

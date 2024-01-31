@@ -26,6 +26,4 @@ export const fmt = {
 		month: "long",
 		day: "numeric",
 	}).format,
-	month: new Intl.DateTimeFormat(undefined, { month: "long", year: "numeric" })
-		.format,
 };
