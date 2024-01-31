@@ -48,7 +48,7 @@ const regions: Record<"stuttgart" | "xian" | "shanghai", Region> = {
 	},
 } as const;
 
-function render(region: Region, isDark?: boolean) {
+function render(region: Region, isDark: boolean) {
 	const { coords } = region;
 	projection.rotate([-coords[0] - 30, -coords[1] * (30 / 90), 0]);
 	const dot = projection(coords);
