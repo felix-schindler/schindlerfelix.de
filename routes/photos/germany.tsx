@@ -1,6 +1,29 @@
+import { join } from "$std/path/join.ts";
 import ImageCollection from "@/islands/ImageCollection.tsx";
 
-export default function Germany() {
+const baseImagePath = join("img", "photos", "germany");
+
+export default async function Germany() {
+	const files: Record<string, Array<string>> = {};
+	const baseDirEntries = Deno.readDir(
+		join(Deno.cwd(), "static", baseImagePath),
+	);
+	const directories = (await Array.fromAsync(baseDirEntries))
+		.filter((e) => e.isDirectory)
+		.map((e) => e.name)
+		.toSorted();
+
+	for (const city of directories) {
+		const imageFiles = await Array.fromAsync(
+			Deno.readDir(join(Deno.cwd(), "static", baseImagePath, city)),
+		);
+
+		files[city] = imageFiles
+			.filter((f) => f.isFile && f.name.endsWith(".avif"))
+			.map((f) => f.name)
+			.toSorted();
+	}
+
 	return (
 		<ImageCollection
 			country={{
@@ -9,27 +32,10 @@ export default function Germany() {
 				sky: "/img/photos/sky.avif",
 			}}
 			cities={[
-				{
-					name: "Stuttgart",
-					images: [
-						"/img/photos/germany/stgt/1.avif",
-						"/img/photos/germany/stgt/2.avif",
-						"/img/photos/germany/stgt/3.avif",
-						"/img/photos/germany/stgt/4.avif",
-						"/img/photos/germany/stgt/5.avif",
-					],
-				},
-				{
-					name: "Berlin",
-					images: [
-						"/img/photos/germany/berlin/1.avif",
-						"/img/photos/germany/berlin/2.avif",
-						"/img/photos/germany/berlin/3.avif",
-						"/img/photos/germany/berlin/4.avif",
-						"/img/photos/germany/berlin/5.avif",
-						"/img/photos/germany/berlin/6.avif",
-					],
-				},
+				...Object.entries(files).map(([city, files]) => ({
+					name: city.charAt(0).toUpperCase() + city.slice(1),
+					images: files.map((f) => "/" + join(baseImagePath, city, f)),
+				})),
 			]}
 		/>
 	);
