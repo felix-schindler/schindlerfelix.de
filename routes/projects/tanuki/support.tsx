@@ -35,13 +35,13 @@ export default function TanukiSupport() {
 					<input
 						type="text"
 						name="subject"
-						class="block text-base w-full py-1 px-2 rounded-md"
+						class="block text-base w-full py-1 px-2 rounded-md bg-slate-200 dark:bg-slate-700"
 						placeholder="Subject"
 					/>
 					<textarea
 						name="body"
 						rows={5}
-						class="block text-base w-full py-1 px-2 rounded-md"
+						class="block text-base w-full py-1 px-2 rounded-md bg-slate-200 dark:bg-slate-700"
 						placeholder="Message"
 					>
 					</textarea>
