@@ -4,9 +4,10 @@ import { feature } from "https://esm.sh/topojson-client@3.1.0";
 import { geoSatellite } from "https://esm.sh/d3-geo-projection@4.0.0";
 import { geoPath } from "https://esm.sh/d3-geo@3.1.0";
 
-import { tw } from "@/core/utils.ts";
+import { tw } from "@/core/colors.ts";
 import topology from "@/core/land-110m.json" with { type: "json" };
-import { AllowedLanguage } from "@/core/types.ts";
+import { isAllowedLanguage } from "@/core/i18n/mod.ts";
+import type { AllowedLanguage } from "@/core/types.ts";
 
 const land = feature(topology, topology.objects.land);
 
@@ -31,7 +32,6 @@ type Region = {
 	multiply: number; // 0.6 for latin; 0.65 for mixed; 1 for chinese characters
 };
 
-const ALLOWED_LANGUAGES: Array<AllowedLanguage> = ["en", "de", "zh"];
 const regions: Record<
 	AllowedLanguage,
 	Record<"stuttgart" | "xian" | "shanghai", Region>
@@ -90,7 +90,7 @@ const regions: Record<
 } as const;
 
 function render(region: Region, isDark: boolean) {
-	const { coords } = region;
+	const coords = region.coords;
 	projection.rotate([-coords[0] - 30, -coords[1] * (30 / 90), 0]);
 	const dot = projection(coords);
 
@@ -169,15 +169,13 @@ function render(region: Region, isDark: boolean) {
 }
 
 export const handler: Handlers = {
-	GET(req) {
-		const { searchParams } = new URL(req.url);
+	GET(_req, ctx) {
+		const searchParams = ctx.url.searchParams;
 
 		// Get values from params
 		const isDark = searchParams.has("dark");
-		let lang = searchParams.get("lang") ?? "";
-		if (!ALLOWED_LANGUAGES.includes(lang as AllowedLanguage)) {
-			lang = "en";
-		}
+		let lang = searchParams.get("lang") ?? "en";
+		if (!isAllowedLanguage(lang)) lang = "en";
 		const region = regions[lang as AllowedLanguage].xian;
 
 		// Generate SVG

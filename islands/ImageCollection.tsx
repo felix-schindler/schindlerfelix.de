@@ -1,7 +1,10 @@
 import { useEffect } from "preact/hooks";
-import { ButtonLink } from "@/components/utils.tsx";
+
+import { ButtonLink } from "@/components/mod.tsx";
+import { back_to_home } from "@/core/i18n/mod.ts";
 import Gallery from "@/islands/Gallery.tsx";
-import { AllowedLanguage } from "@/core/types.ts";
+
+import type { AllowedLanguage } from "@/core/types.ts";
 
 type ImageCollectionProps = {
 	country: {
@@ -17,22 +20,14 @@ type ImageCollectionProps = {
 	lang: AllowedLanguage;
 };
 
-const back_to_home = {
-	en: "Back to home page",
-	de: "Zurück zur Startseite",
-	zh: "返回主页",
-} as const;
-
 export default function ImageCollection(props: ImageCollectionProps) {
-	const { country, lang } = props;
-
-	function handleScroll() {
-		// @ts-expect-error - This is defined lol
-		globalThis.parallaxTitle.style.top = globalThis.scrollY * -0.9 + "px";
-	}
+	const country = props.country;
 
 	useEffect(() => {
-		globalThis.addEventListener("scroll", handleScroll);
+		globalThis.addEventListener("scroll", () => {
+			// @ts-expect-error - This is defined by the magic of old-school JS
+			globalThis.parallaxTitle.style.top = globalThis.scrollY * -0.9 + "px";
+		});
 	}, []);
 
 	return (
@@ -71,7 +66,7 @@ export default function ImageCollection(props: ImageCollectionProps) {
 
 			<div class="mx-auto px-2.5 md:px-0 md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg">
 				<p class="mt-2.5">
-					<ButtonLink name={`← ${back_to_home[lang]}`} href="/#photos" />
+					<ButtonLink name={`← ${back_to_home[props.lang]}`} href="/#photos" />
 				</p>
 				{props.cities.map((city) => (
 					<div class="text-center">

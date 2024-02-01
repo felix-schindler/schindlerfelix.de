@@ -1,4 +1,4 @@
-import { ButtonLink, Tech } from "@/components/utils.tsx";
+import { ButtonLink, Tech } from "@/components/mod.tsx";
 import translations from "@/core/i18n/projects/project-list.json" with {
 	type: "json",
 };

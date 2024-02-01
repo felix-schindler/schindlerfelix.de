@@ -1,39 +1,50 @@
 import { FreshContext } from "$fresh/server.ts";
-import { State } from "@/core/types.ts";
-import type { AllowedLanguage } from "@/core/types.ts";
 import { getCookies, setCookie } from "$std/http/cookie.ts";
 
-const ALLOWED_LANGUAGES: Array<AllowedLanguage> = ["en", "de", "zh"];
+import { isAllowedLanguage } from "@/core/i18n/mod.ts";
+import type { AllowedLanguage, State } from "@/core/types.ts";
 
 export async function handler(
 	req: Request,
 	ctx: FreshContext<State>,
 ): Promise<Response> {
-	const currentUrl = new URL(req.url);
-	const { pathname, searchParams } = currentUrl;
+	// Get current URL and pathname
+	const currentUrl = ctx.url;
+	const pathname = currentUrl.pathname;
 
+	// Redirect old URLs
 	if (pathname.startsWith("/content")) {
 		currentUrl.pathname = pathname.replace("/content", "");
 		return Response.redirect(currentUrl, 302);
 	}
 
+	// Ignore static files
+	const fileExt = pathname.split(".").pop();
+	switch (fileExt) {
+		case "js":
+		case "css":
+		case "json":
+		case "avif":
+		case "ico":
+		case "svg":
+		case "txt":
+			return await ctx.next();
+	}
+
+	// #region i18n
 	// Set default language
 	ctx.state.language = "en";
 
 	// Get browser lang from URL or headers
-	const customLang = searchParams.get("lang") ?? getCookies(req.headers).lang;
-	if (
-		customLang !== undefined &&
-		ALLOWED_LANGUAGES.includes(customLang as AllowedLanguage)
-	) {
-		// Get language from URL
-		ctx.state.language = customLang as AllowedLanguage;
+	const customLangURL = currentUrl.searchParams.get("lang");
+	if (customLangURL !== null && isAllowedLanguage(customLangURL)) {
+		console.log(pathname, "Set from URL", customLangURL);
 
 		// Save custom language to cookies
 		const res = await ctx.next();
 		setCookie(res.headers, {
 			name: "lang",
-			value: customLang,
+			value: customLangURL,
 			path: "/",
 			secure: false,
 			httpOnly: true,
@@ -41,19 +52,21 @@ export async function handler(
 		});
 		return res;
 	} else {
-		// Get language from request
-		const languages = req.headers.get("accept-language")?.split(",");
-		if (languages !== undefined && languages.length > 0) {
-			for (const language of languages) {
-				const lang = language.split(";")[0].split("-")[0];
-				// @ts-ignore We're looking if this 2-letter language is included
-				if (ALLOWED_LANGUAGES.includes(lang)) {
-					ctx.state.language = lang as AllowedLanguage;
-					break;
-				}
+		const customLangCookie = getCookies(req.headers).lang;
+		if (customLangCookie !== undefined && isAllowedLanguage(customLangCookie)) {
+			console.log(pathname, "Set from cookie", customLangCookie);
+			ctx.state.language = customLangCookie as AllowedLanguage;
+		} else {
+			// Get language from request
+			const languages = req.headers.get("accept-language");
+			const langMatch = languages?.match(/([a-zA-Z]{2})(?:-[a-zA-Z]{2})?/);
+			if (langMatch && isAllowedLanguage(langMatch[1])) {
+				console.log(pathname, "Set from header (regex)", langMatch[1]);
+				ctx.state.language = langMatch[1] as AllowedLanguage;
 			}
 		}
-
-		return await ctx.next();
 	}
+	// #endregion i18n
+
+	return await ctx.next();
 }
