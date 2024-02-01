@@ -1,0 +1,56 @@
+{
+	"en": {
+		"back_to_home": "Back to home page",
+		"notes": {
+			"heading": "Notes",
+			"img_magick": {
+				"title": "Image Magick",
+				"description": "How to setup and use the best image tool on earth"
+			},
+			"mc_perf": {
+				"title": "Minecraft Performance Mods",
+				"description": "Collection of some Minecraft Fabric performance mods"
+			},
+			"gpg_git": {
+				"title": "GPG and Git",
+				"description": "How to setup and use gpg, git and signed commits"
+			}
+		}
+	},
+	"de": {
+		"back_to_home": "Zurück zur Startseite",
+		"notes": {
+			"heading": "Notizen",
+			"img_magick": {
+				"title": "Image Magick",
+				"description": "Konfiguration und Benutzung des besten Bildbearbeitungstools der Welt"
+			},
+			"mc_perf": {
+				"title": "Minecraft Performance Mods",
+				"description": "Sammlung einiger Minecraft Fabric Performance Mods"
+			},
+			"gpg_git": {
+				"title": "GPG und Git",
+				"description": "Konfiguration und Benutzung von gpg, git und signierten Commits"
+			}
+		}
+	},
+	"zh": {
+		"back_to_home": "返回主页",
+		"notes": {
+			"heading": "笔记",
+			"img_magick": {
+				"title": "Image Magick",
+				"description": "如何配置和使用最好的图像处理工具"
+			},
+			"mc_perf": {
+				"title": "《我的世界》性能模型",
+				"description": "一些Minecraft Fabric性能模组的集合"
+			},
+			"gpg_git": {
+				"title": "GPG 和 Git",
+				"description": "如何配置和使用gpg、git和签名提交"
+			}
+		}
+	}
+}
