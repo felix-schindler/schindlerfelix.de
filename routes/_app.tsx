@@ -92,14 +92,16 @@ export default function Layout(
 							name={translations[props.state.language].imprint}
 						/>
 					</div>
-					<p lang="en">
-						Made in{" "}
-						<a
-							href="https://www.thelaend.de/"
-							class="inline-block text-sm py-1 px-1.5 uppercase font-bold bg-black text-yellow-bright select-none transition-transform hover:scale-95 dark:bg-yellow-bright dark:text-black"
-						>
-							The Länd
-						</a>{" "}
+					<p>
+						<span lang="en">
+							Made in{" "}
+							<a
+								href="https://www.thelaend.de/"
+								class="inline-block text-sm py-1 px-1.5 uppercase font-bold bg-black text-yellow-bright select-none transition-transform hover:scale-95 dark:bg-yellow-bright dark:text-black"
+							>
+								The Länd
+							</a>
+						</span>{" "}
 						&middot;{" "}
 						<span class="inline-flex flex-wrap gap-2">
 							{[{
@@ -113,6 +115,7 @@ export default function Layout(
 								short: "zh",
 							}].map((language) => (
 								<a
+									lang={language.short}
 									href={`${props.url.pathname}?lang=${language.short}`}
 									class="inline-block py-1 px-2 rounded-lg bg-black text-white dark:bg-white dark:text-black transition-transform hover:scale-95"
 								>
