@@ -31,7 +31,14 @@ export async function handler(
 
 		// Save custom language to cookies
 		const res = await ctx.next();
-		setCookie(res.headers, { name: "lang", value: customLang, path: "/", secure: false, httpOnly: true, sameSite: "Strict" });
+		setCookie(res.headers, {
+			name: "lang",
+			value: customLang,
+			path: "/",
+			secure: false,
+			httpOnly: true,
+			sameSite: "Strict",
+		});
 		return res;
 	} else {
 		// Get language from request
