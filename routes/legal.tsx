@@ -3,15 +3,23 @@ import { back_to_home } from "@/core/i18n/mod.ts";
 import type { State } from "@/core/types.ts";
 import type { PageProps } from "$fresh/server.ts";
 
+const not_avail = {
+	en: "Sorry, but this legal page is not available in English.",
+	zh: "抱歉，此法律页面不提供中文。",
+} as const;
+
 export default function LegalPage(props: PageProps<never, State>) {
 	const lang = props.state.language;
 
 	return (
 		<>
-			<div class="flex flex-col gap-2 mb-5">
-				<p>
-					<ButtonLink name={`← ${back_to_home[lang]}`} href="/" />
-				</p>
+			<div class="flex flex-col gap-2 mb-5" lang="de">
+				<div lang={lang}>
+					<p>
+						<ButtonLink name={`← ${back_to_home[lang]}`} href="/" />
+					</p>
+					{lang !== "de" && <em class="block mt-1">{not_avail[lang]}</em>}
+				</div>
 				<h1 class="text-3xl mb-2 font-bold tracking-tight">Impressum</h1>
 				<h2 class="text-2xl">Verantwortlich für den Inhalt</h2>
 				<Link
@@ -64,8 +72,20 @@ export default function LegalPage(props: PageProps<never, State>) {
 				</p>
 				<h2 class="text-2xl">Cookies & Tracking</h2>
 				<p>
-					Unsere Webseite verwendet keine Cookies oder ähnliche
-					Tracking-Technologien.
+					Diese Webseite verwendet genau einen Cookie. Dieser wird nicht für
+					Tracking oder ähnliche Zwecke verwendet, sondern lediglich um die
+					gewählte Sprache zu speichern. Dieser wird nur gesetzt, wenn eine
+					andere Sprache als die Standardsprache gewählt wird, wodurch die
+					Webseite auch ohne Cookies funktioniert.
+					<ul class="list-inside list-disc">
+						<li>
+							<b>lang</b>: Cookie der die gewählte Sprache speichert
+						</li>
+					</ul>
+				</p>
+				<p>
+					Unsere Webseite verwendet bis auf den gerade genannten keine Cookies
+					oder ähnliche Tracking-Technologien.
 				</p>
 				<h2 class="text-2xl">Datenweitergabe</h2>
 				<p>Wir geben keinerlei Daten an Dritte weiter.</p>
@@ -98,7 +118,7 @@ export default function LegalPage(props: PageProps<never, State>) {
 				</p>
 				<p>
 					Stand:{" "}
-					{new Date("2024-01-29T13:00:42.992Z").toLocaleDateString(lang, {
+					{new Date("2024-02-01T13:00:43.494Z").toLocaleDateString(lang, {
 						year: "numeric",
 						month: "long",
 						day: "numeric",
