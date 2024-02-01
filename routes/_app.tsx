@@ -82,8 +82,8 @@ export default function Layout(
 				>
 					<Component />
 				</main>
-				<footer class="mt-1 p-4 text-center">
-					<div>
+				<footer class="p-4 text-center">
+					<p class="mb-1">
 						<span>
 							&copy; Felix Schindler 2019-{new Date().getUTCFullYear()} &middot;
 						</span>{" "}
@@ -91,8 +91,8 @@ export default function Layout(
 							href="/legal"
 							name={translations[props.state.language].imprint}
 						/>
-					</div>
-					<p>
+					</p>
+					<p class="flex flex-col sm:flex-row gap-1 items-center justify-center">
 						<span lang="en">
 							Made in{" "}
 							<a
@@ -102,7 +102,7 @@ export default function Layout(
 								The Länd
 							</a>
 						</span>{" "}
-						&middot;{" "}
+						<span class="hidden sm:inline">&middot;</span>{" "}
 						<span class="inline-flex flex-wrap gap-2">
 							{[{
 								name: "English",
