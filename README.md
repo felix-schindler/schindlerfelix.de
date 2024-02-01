@@ -1,6 +1,6 @@
 # My personal website
 
-This is the 4th iteration of my personal website. Before it was:
+This is the 8th iteration of my personal website. Before it was:
 
 0. HTML/CSS page
 1. PHP/HTML/CSS page
