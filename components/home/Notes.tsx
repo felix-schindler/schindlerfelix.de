@@ -23,7 +23,7 @@ export default function Notes({ lang }: { lang: AllowedLanguage }) {
 	return (
 		<div lang="en">
 			<h2 id="notes" class="text-3xl mb-2 font-bold tracking-tight">
-				{translations[lang].notes}
+				{translations[lang].notes.heading}
 			</h2>
 			<div class="grid grid-cols-default gap-2">
 				{notes.map((note) => (
