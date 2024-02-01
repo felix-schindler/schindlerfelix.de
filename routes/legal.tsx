@@ -1,13 +1,7 @@
-import { ButtonLink, Link } from "@/components/utils.tsx";
-import { fmt } from "@/core/utils.ts";
+import { ButtonLink, Link } from "@/components/mod.tsx";
+import { back_to_home } from "@/core/i18n/mod.ts";
 import type { State } from "@/core/types.ts";
 import type { PageProps } from "$fresh/server.ts";
-
-const back_to_home = {
-	en: "Back to home page",
-	de: "Zurück zur Startseite",
-	zh: "返回主页",
-} as const;
 
 export default function LegalPage(props: PageProps<never, State>) {
 	const lang = props.state.language;
@@ -103,7 +97,12 @@ export default function LegalPage(props: PageProps<never, State>) {
 					neuesten Stand zu bleiben.
 				</p>
 				<p>
-					Stand: {fmt.fullDate(new Date("2024-01-29T13:00:42.992Z"))}
+					Stand:{" "}
+					{new Date("2024-01-29T13:00:42.992Z").toLocaleDateString(lang, {
+						year: "numeric",
+						month: "long",
+						day: "numeric",
+					})}
 				</p>
 
 				<h1 class="text-3xl font-bold">Quellenangaben</h1>
