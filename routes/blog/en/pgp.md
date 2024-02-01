@@ -6,7 +6,7 @@ combination with Git you can use it for signing git commits, tags and pushes.
 ## Installation
 
 This guide is for macOS. All of the following commands should also work on
-Linux, although you don't need to install `pinentry-mac` there.
+Linux, although you **don't** need to install `pinentry-mac` there.
 
 ```bash
 $ brew install gnupg pinentry-mac

@@ -10,7 +10,7 @@ import type { PageProps } from "$fresh/server.ts";
 import type { State } from "@/core/types.ts";
 
 export default function Home(props: PageProps<never, State>) {
-	const { language } = props.state;
+	const language = props.state.language;
 
 	return (
 		<div class="flex flex-col gap-5">
@@ -19,7 +19,7 @@ export default function Home(props: PageProps<never, State>) {
 			<Languages lang={language} />
 			<Timeline lang={language} />
 			<Photos lang={language} />
-			<Notes />
+			<Notes lang={language} />
 		</div>
 	);
 }

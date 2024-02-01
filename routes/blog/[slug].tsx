@@ -2,23 +2,33 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { join } from "$std/path/join.ts";
 import { Head } from "$fresh/runtime.ts";
 import { CSS, render } from "gfm";
+import translations from "@/core/i18n/notes.json" with { type: "json" };
+import type { AllowedLanguage, State } from "@/core/types.ts";
 
 // Additional syntax highlighting
 import "prism/prism-bash?no-check";
+import { ButtonLink } from "@/components/utils.tsx";
 
-export const handler: Handlers = {
+type BlogProps = {
+	lang: AllowedLanguage;
+	slug: string;
+	body: string;
+};
+
+export const handler: Handlers<BlogProps, State> = {
 	async GET(_req, ctx) {
-		const { slug } = ctx.params;
+		const slug = ctx.params.slug;
+		const lang = ctx.state.language;
 
 		try {
 			const markdown = await Deno.readTextFile(
-				join(Deno.cwd(), "routes", "blog", `${slug}.md`),
+				join(Deno.cwd(), "routes", "blog", lang, `${slug}.md`),
 			);
 			const body = render(markdown, {
 				baseUrl: "https://www.schindlerfelix.de",
 			});
 
-			return await ctx.render({ slug, body });
+			return await ctx.render({ lang, slug, body });
 		} catch {
 			return await ctx.renderNotFound();
 		}
@@ -26,9 +36,9 @@ export const handler: Handlers = {
 };
 
 export default function NotesHandler(
-	props: PageProps<{ slug: string; body: string }>,
+	props: PageProps<BlogProps, State>,
 ) {
-	const { slug, body } = props.data;
+	const { lang, slug, body } = props.data;
 
 	return (
 		<>
@@ -54,13 +64,25 @@ export default function NotesHandler(
 					}}
 				/>
 			</Head>
-			<main
-				data-color-mode="auto"
-				data-light-theme="light"
-				data-dark-theme="dark"
-				class="markdown-body"
-				dangerouslySetInnerHTML={{ __html: body }}
-			/>
+			<div>
+				<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
+					{translations[lang].notes.heading}
+				</h1>
+				<p class="my-2.5">
+					<ButtonLink
+						name={`← ${translations[lang].back_to_home}`}
+						href="/#notes"
+					/>
+				</p>
+
+				<main
+					data-color-mode="auto"
+					data-light-theme="light"
+					data-dark-theme="dark"
+					class="markdown-body"
+					dangerouslySetInnerHTML={{ __html: body }}
+				/>
+			</div>
 		</>
 	);
 }
