@@ -65,8 +65,8 @@ export const handler: Handlers<PhotoProps, State> = {
 		}
 
 		return ctx.render({ files });
-	}
-}
+	},
+};
 
 export default function China(props: PageProps<PhotoProps, State>) {
 	return (

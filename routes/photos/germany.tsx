@@ -32,8 +32,8 @@ export const handler: Handlers<PhotoProps, State> = {
 		}
 
 		return ctx.render({ files });
-	}
-}
+	},
+};
 
 export default function Germany(props: PageProps<PhotoProps, State>) {
 	return (

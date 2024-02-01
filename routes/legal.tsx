@@ -15,7 +15,9 @@ export default function LegalPage(props: PageProps<never, State>) {
 	return (
 		<>
 			<div class="flex flex-col gap-2 mb-5">
-				<p><ButtonLink name={`← ${back_to_home[lang]}`} href="/" /></p>
+				<p>
+					<ButtonLink name={`← ${back_to_home[lang]}`} href="/" />
+				</p>
 				<h1 class="text-3xl mb-2 font-bold tracking-tight">Impressum</h1>
 				<h2 class="text-2xl">Verantwortlich für den Inhalt</h2>
 				<Link
