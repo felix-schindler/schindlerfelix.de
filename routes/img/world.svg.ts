@@ -6,6 +6,7 @@ import { geoPath } from "https://esm.sh/d3-geo@3.1.0";
 
 import { tw } from "@/core/utils.ts";
 import topology from "@/core/land-110m.json" with { type: "json" };
+import { AllowedLanguage } from "@/core/types.ts";
 
 const land = feature(topology, topology.objects.land);
 
@@ -30,21 +31,61 @@ type Region = {
 	multiply: number; // 0.6 for latin; 0.65 for mixed; 1 for chinese characters
 };
 
-const regions: Record<"stuttgart" | "xian" | "shanghai", Region> = {
-	stuttgart: {
-		name: "Stuttgart",
-		coords: [9.1770, 48.7823],
-		multiply: 0.6,
+const ALLOWED_LANGUAGES: Array<AllowedLanguage> = ["en", "de", "zh"];
+const regions: Record<
+	AllowedLanguage,
+	Record<"stuttgart" | "xian" | "shanghai", Region>
+> = {
+	en: {
+		stuttgart: {
+			name: "Stuttgart",
+			coords: [9.1770, 48.7823],
+			multiply: 0.6,
+		},
+		shanghai: {
+			name: "上海（Shanghai）",
+			coords: [121.4737, 31.2304],
+			multiply: 0.7,
+		},
+		xian: {
+			name: "西安（Xi'an） ",
+			coords: [108.9402, 34.3416],
+			multiply: 0.65,
+		},
 	},
-	xian: {
-		name: "西安（Xi'an） ",
-		coords: [108.9402, 34.3416],
-		multiply: 0.65,
+	de: {
+		stuttgart: {
+			name: "Stuttgart",
+			coords: [9.1770, 48.7823],
+			multiply: 0.6,
+		},
+		shanghai: {
+			name: "上海（Shanghai）",
+			coords: [121.4737, 31.2304],
+			multiply: 0.7,
+		},
+		xian: {
+			name: "西安（Xi'an） ",
+			coords: [108.9402, 34.3416],
+			multiply: 0.65,
+		},
 	},
-	shanghai: {
-		name: "上海（Shanghai）",
-		coords: [121.4737, 31.2304],
-		multiply: 0.7,
+	zh: {
+		stuttgart: {
+			name: "斯图加特",
+			coords: [9.1770, 48.7823],
+			multiply: 1,
+		},
+		shanghai: {
+			name: "上海",
+			coords: [121.4737, 31.2304],
+			multiply: 1,
+		},
+		xian: {
+			name: "西安",
+			coords: [108.9402, 34.3416],
+			multiply: 1,
+		},
 	},
 } as const;
 
@@ -133,7 +174,11 @@ export const handler: Handlers = {
 
 		// Get values from params
 		const isDark = searchParams.has("dark");
-		const region = regions.xian;
+		let lang = searchParams.get("lang") ?? "";
+		if (!ALLOWED_LANGUAGES.includes(lang as AllowedLanguage)) {
+			lang = "en";
+		}
+		const region = regions[lang as AllowedLanguage].xian;
 
 		// Generate SVG
 		const svg = render(region, isDark).replace(
