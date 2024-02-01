@@ -1,4 +1,4 @@
-import { ButtonLink } from "@/components/utils.tsx";
+import { ButtonLink } from "@/components/mod.tsx";
 
 import translations from "@/core/i18n/home/about.json" with { type: "json" };
 import type { AllowedLanguage } from "@/core/types.ts";

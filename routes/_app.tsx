@@ -1,13 +1,12 @@
-import { Link } from "@/components/utils.tsx";
-import { State } from "@/core/types.ts";
+import { Link } from "@/components/mod.tsx";
 import translations from "@/core/i18n/footer.json" with { type: "json" };
+import type { State } from "@/core/types.ts";
 import type { PageProps } from "$fresh/server.ts";
 
 export default function Layout(
 	props: PageProps<never, State>,
 ) {
-	const { Component } = props;
-	const { pathname } = props.url;
+	const pathname = props.url.pathname;
 
 	function getTitle(path: string): string {
 		if (path.startsWith("/photos")) {
@@ -80,7 +79,7 @@ export default function Layout(
 							: ""
 					}`}
 				>
-					<Component />
+					<props.Component />
 				</main>
 				<footer class="p-4 text-center">
 					<p class="mb-1">

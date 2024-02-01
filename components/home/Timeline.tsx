@@ -1,4 +1,4 @@
-import { Tech } from "@/components/utils.tsx";
+import { Tech } from "@/components/mod.tsx";
 import translations from "@/core/i18n/home/timeline.json" with { type: "json" };
 import type { AllowedLanguage } from "@/core/types.ts";
 
@@ -79,8 +79,10 @@ export default function Timeline({ lang }: { lang: AllowedLanguage }) {
 		},
 	] as const;
 
-	const fmt_month =
-		new Intl.DateTimeFormat(lang, { month: "long", year: "numeric" }).format;
+	const fmt_month = new Intl.DateTimeFormat(
+		lang,
+		{ month: "long", year: "numeric" },
+	).format;
 
 	return (
 		<div>

@@ -1,4 +1,4 @@
-import { Tech } from "@/components/utils.tsx";
+import { Tech } from "@/components/mod.tsx";
 
 import translations from "@/core/i18n/home/languages.json" with {
 	type: "json",

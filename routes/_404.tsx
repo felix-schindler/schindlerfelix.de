@@ -1,9 +1,9 @@
 import { Head } from "$fresh/runtime.ts";
-import { ButtonLink } from "@/components/utils.tsx";
+import type { PageProps } from "$fresh/server.ts";
 
 import translations from "@/core/i18n/404.json" with { type: "json" };
+import { ButtonLink } from "@/components/mod.tsx";
 import type { State } from "@/core/types.ts";
-import type { PageProps } from "$fresh/server.ts";
 
 export default function Error404(props: PageProps<never, State>) {
 	const lang = props.state.language;
