@@ -1,6 +1,7 @@
 import { useEffect } from "preact/hooks";
 import { ButtonLink } from "@/components/utils.tsx";
 import Gallery from "@/islands/Gallery.tsx";
+import { AllowedLanguage } from "@/core/types.ts";
 
 type ImageCollectionProps = {
 	country: {
@@ -13,10 +14,17 @@ type ImageCollectionProps = {
 		english?: string;
 		images: string[];
 	}>;
+	lang: AllowedLanguage;
 };
 
+const back_to_home = {
+	en: "Back to home page",
+	de: "Zurück zur Startseite",
+	zh: "返回主页",
+} as const;
+
 export default function ImageCollection(props: ImageCollectionProps) {
-	const { country } = props;
+	const { country, lang } = props;
 
 	function handleScroll() {
 		// @ts-expect-error - This is defined lol
@@ -63,7 +71,7 @@ export default function ImageCollection(props: ImageCollectionProps) {
 
 			<div class="mx-auto px-2.5 md:px-0 md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg">
 				<p class="mt-2.5">
-					<ButtonLink name="&larr; Back to home page" href="/#photos" />
+					<ButtonLink name={`← ${back_to_home[lang]}`} href="/#photos" />
 				</p>
 				{props.cities.map((city) => (
 					<div class="text-center">
