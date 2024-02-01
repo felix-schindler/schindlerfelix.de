@@ -16,8 +16,23 @@ type Project = {
 export default function Projects(props: PageProps<never, State>) {
 	const lang = props.state.language;
 
+	function getLocalizedTitle(title: string): string {
+		switch (title) {
+			case "personal":
+				return translations[lang].personal;
+			case "work":
+				return translations[lang].work;
+			case "university":
+				return translations[lang].uni;
+			case "school":
+				return translations[lang].school;
+		}
+
+		return title;
+	}
+
 	const projects: Record<string, Array<Project>> = {
-		"Personal": [
+		personal: [
 			{
 				title: translations[lang].tanuki.title,
 				description: translations[lang].tanuki.description,
@@ -65,7 +80,7 @@ export default function Projects(props: PageProps<never, State>) {
 				description: translations[lang].unfinished.description,
 			},
 		],
-		"Work for companies": [
+		work: [
 			{
 				title: translations[lang].made_my_day.title,
 				description: translations[lang].made_my_day.description,
@@ -88,7 +103,7 @@ export default function Projects(props: PageProps<never, State>) {
 				technologies: ["SvelteKit", "CSS"],
 			},
 		],
-		"University": [
+		university: [
 			{
 				title: translations[lang].chadgpt.title,
 				description: translations[lang].chadgpt.description,
@@ -121,7 +136,7 @@ export default function Projects(props: PageProps<never, State>) {
 				link: "https://fs146.home.hdm-stuttgart.de/webdev/",
 			},
 		],
-		"School": [
+		school: [
 			{
 				title: translations[lang].afc_mirror.title,
 				description: translations[lang].afc_mirror.description,
@@ -138,14 +153,16 @@ export default function Projects(props: PageProps<never, State>) {
 	return (
 		<>
 			<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
-				Project List
+				{translations[lang].heading}
 			</h1>
 			<p class="my-2.5">
 				<ButtonLink name={`← ${translations[lang].back_to_home}`} href="/" />
 			</p>
 			{Object.entries(projects).map(([title, projects]) => (
 				<>
-					<h2 class="text-3xl mt-3 mb-2 font-bold tracking-tight">{title}</h2>
+					<h2 class="text-3xl mt-3 mb-2 font-bold tracking-tight">
+						{getLocalizedTitle(title)}
+					</h2>
 					<ul class="grid grid-cols-default gap-2">
 						{projects.map((project) => (
 							<li class="block">
