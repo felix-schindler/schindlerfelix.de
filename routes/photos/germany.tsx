@@ -31,7 +31,7 @@ export const handler: Handlers<PhotoProps, State> = {
 				.toSorted();
 		}
 
-		return ctx.render({ files });
+		return await ctx.render({ files });
 	},
 };
 
