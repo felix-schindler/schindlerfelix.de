@@ -1,6 +1,11 @@
 {
 	"en": {
+		"heading": "Project List",
 		"back_to_home": "Back to home page",
+		"personal": "Personal",
+		"work": "Work for companies",
+		"uni": "University",
+		"school": "School",
 		"tanuki": {
 			"title": "Tanuki for GitLab",
 			"description": "Native GitLab App for iOS"
@@ -83,7 +88,12 @@
 		}
 	},
 	"de": {
+		"heading": "Projekt Liste",
 		"back_to_home": "Zurück zur Startseite",
+		"personal": "Persönliche",
+		"work": "Arbeit für Firmen",
+		"uni": "Universität",
+		"school": "Schule",
 		"tanuki": {
 			"title": "Tanuki for GitLab",
 			"description": "Native GitLab App for iOS"
@@ -166,7 +176,12 @@
 		}
 	},
 	"zh": {
+		"heading": "项目列表",
 		"back_to_home": "返回主页",
+		"personal": "个人",
+		"work": "公司工作",
+		"uni": "大学",
+		"school": "学校",
 		"tanuki": {
 			"title": "Tanuki for GitLab",
 			"description": "iOS 的本地 GitLab 应用"
