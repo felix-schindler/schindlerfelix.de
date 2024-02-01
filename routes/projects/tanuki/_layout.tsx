@@ -1,10 +1,10 @@
-import { ButtonLink } from "@/components/utils.tsx";
+import { ButtonLink } from "@/components/mod.tsx";
 import type { PageProps } from "$fresh/server.ts";
 
 export default function TanukiLayout(
 	{ Component, url }: PageProps,
 ) {
-	const { pathname } = url;
+	const pathname = url.pathname;
 
 	return (
 		<>

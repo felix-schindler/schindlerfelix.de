@@ -68,15 +68,13 @@ const socials = {
 function SocialLink(
 	{ type }: { type: "github" | "gitlab" | "linkedin" | "instagram" },
 ) {
-	const { href, icon, color } = socials[type];
-
 	return (
 		<a
-			href={href}
+			href={socials[type].href}
 			class={"flex items-center justify-center w-12 h-12 rounded-md transition-transform duration-200 hover:scale-90" +
-				` bg-${color} text-white`}
+				` bg-${socials[type].color} text-white`}
 		>
-			{icon}
+			{socials[type].icon}
 		</a>
 	);
 }

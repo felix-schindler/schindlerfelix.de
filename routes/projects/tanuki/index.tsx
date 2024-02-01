@@ -1,4 +1,4 @@
-import { Link } from "@/components/utils.tsx";
+import { Link } from "@/components/mod.tsx";
 
 export default function Tanuki() {
 	return (

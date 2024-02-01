@@ -2,12 +2,13 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { join } from "$std/path/join.ts";
 import { Head } from "$fresh/runtime.ts";
 import { CSS, render } from "gfm";
+
+import { ButtonLink } from "@/components/mod.tsx";
 import translations from "@/core/i18n/notes.json" with { type: "json" };
 import type { AllowedLanguage, State } from "@/core/types.ts";
 
 // Additional syntax highlighting
 import "prism/prism-bash?no-check";
-import { ButtonLink } from "@/components/utils.tsx";
 
 type BlogProps = {
 	lang: AllowedLanguage;
@@ -38,12 +39,15 @@ export const handler: Handlers<BlogProps, State> = {
 export default function NotesHandler(
 	props: PageProps<BlogProps, State>,
 ) {
-	const { lang, slug, body } = props.data;
+	const lang = props.data.lang;
 
 	return (
 		<>
 			<Head>
-				<title>{encodeURIComponent(slug)} &middot; Notes</title>
+				<title>
+					{encodeURIComponent(props.data.slug)} &middot;{" "}
+					{translations[lang].notes.heading}
+				</title>
 				<style dangerouslySetInnerHTML={{ __html: CSS }} />
 				<style
 					dangerouslySetInnerHTML={{
@@ -80,7 +84,7 @@ export default function NotesHandler(
 					data-light-theme="light"
 					data-dark-theme="dark"
 					class="markdown-body"
-					dangerouslySetInnerHTML={{ __html: body }}
+					dangerouslySetInnerHTML={{ __html: props.data.body }}
 				/>
 			</div>
 		</>
