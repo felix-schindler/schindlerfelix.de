@@ -1,4 +1,4 @@
-import { Link } from "@/components/utils.tsx";
+import { ButtonLink, Link } from "@/components/utils.tsx";
 import { fmt } from "@/core/utils.ts";
 import type { State } from "@/core/types.ts";
 import type { PageProps } from "$fresh/server.ts";
@@ -15,7 +15,7 @@ export default function LegalPage(props: PageProps<never, State>) {
 	return (
 		<>
 			<div class="flex flex-col gap-2 mb-5">
-				<Link name={`← ${back_to_home[lang]}`} href="/" />
+				<p><ButtonLink name={`← ${back_to_home[lang]}`} href="/" /></p>
 				<h1 class="text-3xl mb-2 font-bold tracking-tight">Impressum</h1>
 				<h2 class="text-2xl">Verantwortlich für den Inhalt</h2>
 				<Link
