@@ -21,7 +21,7 @@ export default function Notes({ lang }: { lang: AllowedLanguage }) {
 	] as const;
 
 	return (
-		<div lang="en">
+		<div>
 			<h2 id="notes" class="text-3xl mb-2 font-bold tracking-tight">
 				{translations[lang].notes.heading}
 			</h2>
