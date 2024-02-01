@@ -114,7 +114,7 @@ export default function Layout(
 							}].map((language) => (
 								<a
 									href={`${props.url.pathname}?lang=${language.short}`}
-									class="inline-block py-1 px-1.5 rounded-lg bg-black text-white dark:bg-white dark:text-black transition-transform hover:scale-95"
+									class="inline-block py-1 px-2 rounded-lg bg-black text-white dark:bg-white dark:text-black transition-transform hover:scale-95"
 								>
 									{language.name}
 								</a>
