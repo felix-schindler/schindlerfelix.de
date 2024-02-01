@@ -44,7 +44,10 @@ export default function NotesHandler(
 	return (
 		<>
 			<Head>
-				<title>{encodeURIComponent(props.data.slug)} &middot; {translations[lang].notes.heading}</title>
+				<title>
+					{encodeURIComponent(props.data.slug)} &middot;{" "}
+					{translations[lang].notes.heading}
+				</title>
 				<style dangerouslySetInnerHTML={{ __html: CSS }} />
 				<style
 					dangerouslySetInnerHTML={{
