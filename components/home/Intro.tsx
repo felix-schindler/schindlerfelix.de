@@ -15,10 +15,10 @@ export default function Intro({ lang }: { lang: AllowedLanguage }) {
 			<div class="sm:flex sm:items-center">
 				<picture class="w-full" alt="Globe marking the region Xi'an, China">
 					<source
-						srcset="/img/world.svg?dark=true"
+						srcset={`/img/world.svg?dark=true&lang=${lang}`}
 						media="(prefers-color-scheme: dark)"
 					/>
-					<img src="/img/world.svg" />
+					<img src={`/img/world.svg?lang=${lang}`} />
 				</picture>
 
 				<div class="text-center text-lg">
