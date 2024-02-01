@@ -38,7 +38,7 @@ export async function handler(
 	// Get browser lang from URL or headers
 	const customLangURL = currentUrl.searchParams.get("lang");
 	if (customLangURL !== null && isAllowedLanguage(customLangURL)) {
-		console.log(pathname, "Set from URL", customLangURL);
+		ctx.state.language = customLangURL;
 
 		// Save custom language to cookies
 		const res = await ctx.next();
@@ -54,14 +54,12 @@ export async function handler(
 	} else {
 		const customLangCookie = getCookies(req.headers).lang;
 		if (customLangCookie !== undefined && isAllowedLanguage(customLangCookie)) {
-			console.log(pathname, "Set from cookie", customLangCookie);
 			ctx.state.language = customLangCookie as AllowedLanguage;
 		} else {
 			// Get language from request
 			const languages = req.headers.get("accept-language");
 			const langMatch = languages?.match(/([a-zA-Z]{2})(?:-[a-zA-Z]{2})?/);
 			if (langMatch && isAllowedLanguage(langMatch[1])) {
-				console.log(pathname, "Set from header (regex)", langMatch[1]);
 				ctx.state.language = langMatch[1] as AllowedLanguage;
 			}
 		}
