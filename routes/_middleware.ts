@@ -19,16 +19,9 @@ export async function handler(
 	}
 
 	// Ignore static files
-	const fileExt = pathname.split(".").pop();
-	switch (fileExt) {
-		case "js":
-		case "css":
-		case "json":
-		case "avif":
-		case "ico":
-		case "svg":
-		case "txt":
-			return await ctx.next();
+	const hasFileExt = pathname.includes(".");
+	if (hasFileExt) {
+		return await ctx.next();
 	}
 
 	// #region i18n
