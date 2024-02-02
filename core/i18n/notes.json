@@ -18,6 +18,11 @@
 					"title": "GPG and Git",
 					"description": "How to setup and use gpg, git and signed commits",
 					"path": "pgp"
+				},
+				{
+					"title": "Linux",
+					"description": "All commands you need to get started",
+					"path": "linux"
 				}
 			]
 		}
@@ -41,6 +46,11 @@
 					"title": "GPG und Git",
 					"description": "Konfiguration und Benutzung von gpg, git und signierten Commits",
 					"path": "pgp"
+				},
+				{
+					"title": "Linux",
+					"description": "Alle Befehle, die du zum Einstieg benötigst",
+					"path": "linux"
 				}
 			]
 		}
@@ -64,6 +74,11 @@
 					"title": "GPG 和 Git",
 					"description": "如何配置和使用gpg、git和签名提交",
 					"path": "pgp"
+				},
+				{
+					"title": "Linux",
+					"description": "你需要开始的所有命令",
+					"path": "linux"
 				}
 			]
 		}
