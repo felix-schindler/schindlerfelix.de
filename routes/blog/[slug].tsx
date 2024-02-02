@@ -18,7 +18,8 @@ type BlogProps = {
 
 export const handler: Handlers<BlogProps, State> = {
 	async GET(_req, ctx) {
-		const slug = ctx.params.slug;
+		// Encode the slug to prevent directory traversal
+		const slug = encodeURIComponent(ctx.params.slug);
 		const lang = ctx.state.language;
 
 		try {
