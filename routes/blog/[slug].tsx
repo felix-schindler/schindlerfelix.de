@@ -54,6 +54,10 @@ export default function NotesHandler(
 					dangerouslySetInnerHTML={{
 						__html: `
 					.markdown-body {
+						max-width: calc(100vw - 2rem);
+					}
+
+					.markdown-body {
 						--color-canvas-default: transparent !important;
 					}
 
