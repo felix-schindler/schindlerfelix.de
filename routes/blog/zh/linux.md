@@ -100,7 +100,7 @@ $ df -h
 是一個快速且多功能的文件複製工具。它非常適合備份，但你也可以使用它來部署網站等。選項僅為我的個人偏好，你可以根據自己的需求進行調整。
 
 ```bash
-$ rsync -avhrz --delete build/ felix@123.123.123.123:/var/www/DOMAIN/
+$ rsync -avhrz --delete build/ felix@123.123.123.123:/srv/DOMAIN/
 ```
 
 ## Updates

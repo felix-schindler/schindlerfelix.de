@@ -108,7 +108,7 @@ deployen. Die Optionen sind nur meine persönliche Präferenz, du kannst sie an
 deine Bedürfnisse anpassen.
 
 ```bash
-$ rsync -avhrz --delete build/ felix@123.123.123.123:/var/www/DOMAIN/
+$ rsync -avhrz --delete build/ felix@123.123.123.123:/srv/DOMAIN/
 ```
 
 ## Updates

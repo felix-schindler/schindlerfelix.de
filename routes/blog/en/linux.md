@@ -106,7 +106,7 @@ you can also use it to deploy websites and much more. The options are just my
 personal preference, you can adjust them to your needs.
 
 ```bash
-$ rsync -avhrz --delete build/ felix@123.123.123.123:/var/www/DOMAIN/
+$ rsync -avhrz --delete build/ felix@123.123.123.123:/srv/DOMAIN/
 ```
 
 ## Updates
