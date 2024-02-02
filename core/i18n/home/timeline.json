@@ -10,6 +10,8 @@
 		"jobs": {
 			"heading": "Jobs",
 			"software_dev": "Software Developer",
+			"heidelberg": "Heidelberg Graphic Equipment Shanghai Co., Ltd.",
+			"intern": "student intern",
 			"web_dev": "Web Developer",
 			"paperboy": "Paperboy"
 		},
@@ -27,6 +29,8 @@
 		"jobs": {
 			"heading": "Jobs",
 			"software_dev": "Software-Entwickler",
+			"heidelberg": "Heidelberger Druckmaschinen AG Schanghai",
+			"intern": "studentischer Praktikant",
 			"web_dev": "Web-Entwickler",
 			"paperboy": "Zusteller"
 		},
@@ -44,6 +48,8 @@
 		"jobs": {
 			"heading": "工作",
 			"software_dev": "软件开发人员",
+			"heidelberg": "海德堡印刷设备（上海）有限公司",
+			"intern": "学生实习生",
 			"web_dev": "Web开发人员",
 			"paperboy": "报童"
 		},

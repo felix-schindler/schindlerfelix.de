@@ -65,6 +65,16 @@ export default function Timeline({ lang }: { lang: AllowedLanguage }) {
 			],
 		},
 		{
+			from: new Date("2023-11-15"),
+			until: new Date("2024-01-07"),
+			title: translations[lang].jobs.heidelberg,
+			description: translations[lang].jobs.intern,
+			technologies: [
+				"JavaScript",
+				"CSS",
+			],
+		},
+		{
 			from: new Date("2020-11-01"),
 			until: new Date("2021-04-01"),
 			title: "Alwoke Interactive",
@@ -95,7 +105,7 @@ export default function Timeline({ lang }: { lang: AllowedLanguage }) {
 				{translations[lang].education.heading}
 			</h3>
 			<div class="flex flex-wrap sm:flex-nowrap">
-				<ol class="relative border-e border-gray-200 dark:border-gray-700">
+				<ol class="mt-24 relative border-e border-gray-200 dark:border-gray-700">
 					{education.map((item) => (
 						<li class="text-end mb-5 sm:mb-10 me-4">
 							<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -end-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
@@ -117,7 +127,7 @@ export default function Timeline({ lang }: { lang: AllowedLanguage }) {
 				<h3 class="block sm:hidden text-3xl mb-2 font-bold tracking-tight">
 					{translations[lang].jobs.heading}
 				</h3>
-				<ol class="sm:mt-10 relative border-s border-gray-200 dark:border-gray-700">
+				<ol class="relative border-s border-gray-200 dark:border-gray-700">
 					{work.map((item) => (
 						<li class="mb-5 sm:mb-10 ms-4">
 							<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
