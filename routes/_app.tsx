@@ -7,6 +7,7 @@ export default function Layout(
 	props: PageProps<never, State>,
 ) {
 	const pathname = props.url.pathname;
+	const lang = props.state?.language ?? "en";
 
 	function getTitle(path: string): string {
 		if (path.startsWith("/photos")) {
@@ -26,7 +27,7 @@ export default function Layout(
 	}
 
 	return (
-		<html lang={props.state.language}>
+		<html lang={lang}>
 			<head>
 				<meta charSet="utf-8" />
 
@@ -88,7 +89,7 @@ export default function Layout(
 						</span>{" "}
 						<Link
 							href="/legal"
-							name={translations[props.state.language].imprint}
+							name={translations[lang].imprint}
 						/>
 					</p>
 					<p class="flex flex-col sm:flex-row gap-1 items-center justify-center">
