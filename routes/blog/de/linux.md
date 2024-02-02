@@ -128,9 +128,9 @@ $ sudo apt autoremove
 
 ## Installieren von gängigen Paketen, basierend auf meinen Bedürfnissen
 
-Bitte kopiere und füge diese Liste nicht einfach blind ein. Installiere
-nur das, was _du_ benötigst. Anstatt all diese Dinge manuell zu
-installieren, kannst du auch einfach Docker installieren.
+Bitte kopiere und füge diese Liste nicht einfach blind ein. Installiere nur das,
+was _du_ benötigst. Anstatt all diese Dinge manuell zu installieren, kannst du
+auch einfach Docker installieren.
 
 ### Webserver - Caddy
 
