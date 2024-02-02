@@ -9,7 +9,7 @@ export default function Languages({ lang }: { lang: AllowedLanguage }) {
 	return (
 		<>
 			<div>
-				<h2 class="text-3xl mb-2 font-bold tracking-tight">
+				<h2 class="mb-2 text-3xl font-bold tracking-tight">
 					{translations[lang].programming_lang}
 				</h2>
 				<p>
@@ -19,13 +19,10 @@ export default function Languages({ lang }: { lang: AllowedLanguage }) {
 					<Tech name="PHP" />
 					<Tech name="Go" />
 				</p>
-				<p>
-					<Tech name="MySQL" />
-					<Tech name="SQLite" />
-					<Tech name="Firebase" />
-					<Tech name="PostgreSQL" />
-					<Tech name="MongoDB" />
-					<Tech name="Oracle" />
+				<p class="flex flex-wrap items-center">
+					<Tech name="Docker" />
+					<Tech name="SQL" />
+					<Tech name="NoSQL" icon={false} />
 				</p>
 				<details>
 					<summary class="cursor-pointer">
@@ -35,8 +32,24 @@ export default function Languages({ lang }: { lang: AllowedLanguage }) {
 						<Tech name="C#" />
 						<Tech name="C++" />
 						<Tech name="Python" />
-						<Tech name="Assembly" />
 						<Tech name="CSS" />
+					</p>
+					<p class="flex flex-wrap items-center">
+						<Tech name="MySQL" />
+						<Tech name="SQLite" />
+						<Tech name="PostgreSQL" />
+						<Tech name="Oracle" />
+					</p>
+					<p class="flex flex-wrap items-center">
+						<Tech name="Firebase" />
+						<Tech name="PocketBase" />
+						<Tech name="MongoDB" />
+						<Tech name="Mongoose" icon={false} />
+					</p>
+					<p class="flex flex-wrap items-center">
+						<Tech name="Linux" />
+						<Tech name="Web Servers" icon={false} />
+						<Tech name="Web Sockets" icon={false} />
 					</p>
 					<p class="flex flex-wrap items-center">
 						<Tech name="NodeJS" />
@@ -49,21 +62,13 @@ export default function Languages({ lang }: { lang: AllowedLanguage }) {
 						<Tech name="SvelteKit" />
 						<Tech name="Fresh" />
 						<Tech name="React" />
-						<Tech name="PocketBase" />
-					</p>
-					<p class="flex flex-wrap items-center">
-						<Tech name="Hono" icon={false} />
-						<Tech name="Express" icon={false} />
-						<Tech name="EJS" icon={false} />
-						<Tech name="Mongoose" icon={false} />
-						<Tech name="Web Sockets" icon={false} />
 						<Tech name="Tailwind" />
 						<Tech name="Bootstrap" />
 					</p>
 				</details>
 			</div>
 			<div>
-				<h2 class="text-3xl mb-2 font-bold tracking-tight">
+				<h2 class="mb-2 text-3xl font-bold tracking-tight">
 					{translations[lang].human_lang.heading}
 				</h2>
 				<p>
