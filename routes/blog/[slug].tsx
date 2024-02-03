@@ -9,6 +9,7 @@ import type { AllowedLanguage, State } from "@/core/types.ts";
 
 // Additional syntax highlighting
 import "prism/prism-bash?no-check";
+import "prism/prism-nginx?no-check";
 
 type BlogProps = {
 	lang: AllowedLanguage;
