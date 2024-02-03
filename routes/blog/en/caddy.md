@@ -5,8 +5,8 @@ server that is easy to use and configure. I also like it because of it's support
 for automatic HTTPS and HTTP/3. Both of these things are enabled by default.
 
 Of course, when you only run a single service on your whole server you don't
-need a web server like Caddy, Nginx or Apache2. Instead, you can just run
-your application directly. PocketBase for example even supports automatic HTTPS.
+need a web server like Caddy, Nginx or Apache2. Instead, you can just run your
+application directly. PocketBase for example even supports automatic HTTPS.
 
 ## Global settings
 
@@ -73,7 +73,8 @@ project.schindlerfelix.de {
 
 ## Feeling ✨fancy✨
 
-Of course you can do a lot more with Caddy. I like playing with headers for example.
+Of course you can do a lot more with Caddy. I like playing with headers for
+example.
 
 ```nginx
 # HSTS
