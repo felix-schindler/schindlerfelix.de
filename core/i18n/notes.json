@@ -23,6 +23,11 @@
 					"title": "Linux",
 					"description": "All commands you need to get started",
 					"path": "linux"
+				},
+				{
+					"title": "Caddy Web Server",
+					"description": "Setup for some of my favorite tech stacks",
+					"path": "caddy"
 				}
 			]
 		}
@@ -51,6 +56,11 @@
 					"title": "Linux",
 					"description": "Alle Befehle, die du zum Einstieg benötigst",
 					"path": "linux"
+				},
+				{
+					"title": "Caddy Web Server",
+					"description": "Setup für einige meiner Lieblingstechnologiestacks",
+					"path": "caddy"
 				}
 			]
 		}
@@ -79,6 +89,11 @@
 					"title": "Linux",
 					"description": "你需要开始的所有命令",
 					"path": "linux"
+				},
+				{
+					"title": "Caddy Web 服务器",
+					"description": "一些我最喜欢的技术堆栈的设置",
+					"path": "caddy"
 				}
 			]
 		}
