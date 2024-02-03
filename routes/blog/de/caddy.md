@@ -74,7 +74,8 @@ project.schindlerfelix.de {
 
 ## Zusätzliche Konfigurationen
 
-Natürlich kannst du mit Caddy noch viel mehr machen. Ich spiele zum Beispiel gerne mit Headern.
+Natürlich kannst du mit Caddy noch viel mehr machen. Ich spiele zum Beispiel
+gerne mit Headern.
 
 ```nginx
 # HSTS
