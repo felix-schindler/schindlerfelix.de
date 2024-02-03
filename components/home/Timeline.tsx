@@ -105,7 +105,7 @@ export default function Timeline({ lang }: { lang: AllowedLanguage }) {
 				{translations[lang].education.heading}
 			</h3>
 			<div class="flex flex-wrap sm:flex-nowrap">
-				<ol class="mt-24 relative border-e border-gray-200 dark:border-gray-700">
+				<ol class="sm:mt-24 relative border-e border-gray-200 dark:border-gray-700">
 					{education.map((item) => (
 						<li class="text-end mb-5 sm:mb-10 me-4">
 							<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -end-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
