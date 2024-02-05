@@ -43,6 +43,18 @@ project.schindlerfelix.de {
 }
 ```
 
+### PHP mit [Router](https://github.com/felix-schindler/Router)
+
+```nginx
+project.schindlerfelix.de {
+	root * /srv/project
+	encode gzip zstd
+	php_fastcgi unix//run/php/php8.3-fpm.sock
+	try_files {path} /index.php
+	file_server
+}
+```
+
 ## SPA
 
 ```nginx
