@@ -82,7 +82,7 @@ gerne mit Headern.
 header Strict-Transport-Security max-age=63072000
 
 # FLoC-Tracking deaktivieren
-Permissions-Policy interest-cohort=()
+header Permissions-Policy interest-cohort=()
 
 # Cache, z. B. für statische Dateien
 header /static/* Cache-Control max-age=31536000

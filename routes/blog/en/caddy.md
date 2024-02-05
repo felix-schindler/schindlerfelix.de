@@ -81,7 +81,7 @@ example.
 header Strict-Transport-Security max-age=63072000
 
 # disable FLoC tracking
-Permissions-Policy interest-cohort=()
+header Permissions-Policy interest-cohort=()
 
 # Cache e. g. for static files
 header /static/* Cache-Control max-age=31536000

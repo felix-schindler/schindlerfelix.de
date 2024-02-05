@@ -76,7 +76,7 @@ project.schindlerfelix.de {
 header Strict-Transport-Security max-age=63072000
 
 # 禁用 FLoC 跟踪
-Permissions-Policy interest-cohort=()
+header Permissions-Policy interest-cohort=()
 
 # 缓存，例如静态文件
 header /static/* Cache-Control max-age=31536000
