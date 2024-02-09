@@ -10,7 +10,7 @@ export default function Photos({ lang }: { lang: AllowedLanguage }) {
 			<div class="grid grid-cols-default gap-2">
 				<PrettyLink
 					name={translations[lang].china}
-					englishName={translations.en.germany}
+					englishName={translations.en.china}
 					href="/photos/china"
 					imgPath="shanghai-thumb.avif"
 				/>
