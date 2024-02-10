@@ -1,0 +1,98 @@
+{
+	"en": {
+		"support": "Support",
+		"faq": "FAQ",
+		"form": {
+			"subject": "Subject",
+			"message": "Message",
+			"send": "Send"
+		},
+		"questions": [
+			{
+				"title": "Why does the app cost anything?",
+				"answers": [
+					"Apple charges money for developer accounts, which you need to be able to deploy apps to the App Store. Also, I shouldn't work for free forever.",
+					"I'm not a fan of monthly subscriptions, so that's why there's just the one-time-cost."
+				]
+			},
+			{
+				"title": "How to submit a feature request?",
+				"answers": [
+					"Just fill in the form above and send the email, or head over to the repo and open an issue yourself.",
+					"You can also just open a merge request if you'd like!"
+				]
+			},
+			{
+				"title": "When will the app be feature complete?",
+				"answers": [
+					"Feature completeness is a hard thing to achive as GitLab is a pretty big software.",
+					"The goal for the beginning is to support the most used features by most users. After that, the focus is on whatever the users suggest. When there are no suggestions the app will receivice incremental updates with no specific focus."
+				]
+			}
+		]
+	},
+	"de": {
+		"support": "Support",
+		"faq": "FAQ",
+		"form": {
+			"subject": "Betreff",
+			"message": "Nachricht",
+			"send": "Senden"
+		},
+		"questions": [
+			{
+				"title": "Warum kostet die App etwas?",
+				"answers": [
+					"Apple verlangt Geld für Entwicklerkontos, welches notwendig ist um Apps im App Store zu veröffentlichen. Außerdem sollte ich nicht für immer umsonst arbeiten.",
+					"Ich bin kein Fan von monatlichen Abos, deshalb gibt es nur die einmalige Kosten."
+				]
+			},
+			{
+				"title": "Wie kann ich ein Feature vorschlagen?",
+				"answers": [
+					"Einfach das Formular oben ausfüllen und die Email abschicken, oder direkt im Repo ein Issue öffnen.",
+					"Du kannst auch einfach ein Merge Request öffnen!"
+				]
+			},
+			{
+				"title": "Wann ist die App fertig?",
+				"answers": [
+					"Feature Vollständigkeit ist schwer zu erreichen, da GitLab eine sehr große Software ist.",
+					"Das Ziel ist zu Beginn die meist genutzten Features zu unterstützen. Danach wird der Fokus auf das legen, was die Nutzer vorschlagen. Wenn es keine Vorschläge gibt, wird die App inkrementelle Updates ohne speziellen Fokus erhalten."
+				]
+			}
+		]
+	},
+	"zh": {
+		"support": "支持",
+		"faq": "常见问题",
+		"form": {
+			"subject": "主题",
+			"message": "消息",
+			"send": "发送"
+		},
+		"questions": [
+			{
+				"title": "为什么应用程序要收费？",
+				"answers": [
+					"Apple收费开发者账户，这是您需要能够将应用程序部署到App Store的原因。此外，我不应该永远免费工作。",
+					"我不喜欢每月订阅，所以只有一次性费用。"
+				]
+			},
+			{
+				"title": "如何提交功能请求？",
+				"answers": [
+					"只需填写上面的表格并发送电子邮件，或转到存储库并自己打开问题。",
+					"您也可以打开合并请求！"
+				]
+			},
+			{
+				"title": "应用程序何时才能完成？",
+				"answers": [
+					"功能完整性是一件难以实现的事情，因为GitLab是一个非常庞大的软件。",
+					"最初的目标是支持大多数用户使用的最常用功能。之后，重点是用户建议的任何内容。当没有建议时，应用程序将获得无特定重点的增量更新。"
+				]
+			}
+		]
+	}
+}

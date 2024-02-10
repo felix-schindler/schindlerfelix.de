@@ -1,3 +1,7 @@
+import translations from "@/core/i18n/projects/tanuki/layout.json" with {
+	type: "json",
+};
+
 import type { PageProps } from "$fresh/server.ts";
 import type { State } from "@/core/types.ts";
 
@@ -26,10 +30,10 @@ export default function TanukiLayout(props: PageProps<never, State>) {
 						alt="Tanuki app icon"
 						class="align-bottom h-16 w-16 rounded-xl"
 					/>
-					Tanuki for GitLab
+					{translations[lang].heading}
 				</h1>
 				<p class="text-lg mt-1">
-					Native GitLab client for iOS and iPadOS, made with SwiftUI
+					{translations[lang].desc}
 				</p>
 				<p class="flex items-center justify-center gap-2 my-2.5">
 					<a
