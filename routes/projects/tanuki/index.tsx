@@ -120,6 +120,12 @@ export default function Tanuki(props: PageProps<never, State>) {
 						loading="lazy"
 						class="rounded-lg"
 					/>
+					<img
+						src="/img/tanuki/file.avif"
+						alt="Group"
+						loading="lazy"
+						class="rounded-lg"
+					/>
 				</div>
 			</div>
 		</div>
