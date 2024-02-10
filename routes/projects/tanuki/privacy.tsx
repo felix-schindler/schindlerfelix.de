@@ -18,7 +18,7 @@ export default function TanukiPrivacy() {
 			</p>
 			<p>
 				When using <code>gitlab.com</code>{" "}
-				it would be https://gitlab.com/-/users/terms.
+				it would be <code>https://gitlab.com/-/users/terms</code>.
 			</p>
 		</div>
 	);
