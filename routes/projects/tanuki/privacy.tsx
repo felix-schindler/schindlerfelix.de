@@ -1,25 +1,33 @@
-export default function TanukiPrivacy() {
+import translations from "@/core/i18n/projects/tanuki/privacy.json" with {
+	type: "json",
+};
+
+import type { PageProps } from "$fresh/server.ts";
+import type { State } from "@/core/types.ts";
+
+const LAST_UPDATED = {
+	original: new Date("2023-03-18"),
+	translations: new Date("2024-02-10"),
+};
+
+export default function TanukiPrivacy(props: PageProps<never, State>) {
+	const lang = props.state.language;
+	const dateFmt = new Intl.DateTimeFormat(lang, { dateStyle: "long" }).format;
+
 	return (
 		<div class="flex flex-col gap-2.5">
-			<h2 class="text-3xl mb-2 font-bold tracking-tight">Privacy statement</h2>
-			<p>
-				<em>
-					Last updated: <time datetime="2023-03-18">18th March 2023</time>
-				</em>
-			</p>
-			<p>
-				This app does not collect any data for itself. All the data collected is
-				managed by the GitLab instance you configured yourself.
-			</p>
-			<p>
-				To read more about the Terms and Privacy Policy you accepted when
-				registering, go to the path <code>/-/users/terms</code>{" "}
-				on your chosen GitLab instance.
-			</p>
-			<p>
-				When using <code>gitlab.com</code> it would be{" "}
-				<code>https://gitlab.com/-/users/terms</code>.
-			</p>
+			<h2 class="text-3xl mb-2 font-bold tracking-tight">
+				{translations[lang].heading}
+			</h2>
+			<em class="block">
+				{translations[lang].last_updated.replace(
+					"{:original_date}",
+					dateFmt(LAST_UPDATED.original),
+				).replace("{:translations_date}", dateFmt(LAST_UPDATED.translations))}
+			</em>
+			<p>{translations[lang].txt._1}</p>
+			<p>{translations[lang].txt._2}</p>
+			<p>{translations[lang].txt._3}</p>
 		</div>
 	);
 }

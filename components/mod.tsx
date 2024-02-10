@@ -27,7 +27,7 @@ export function ButtonLink({ href, name }: {
 	return (
 		<a
 			href={href}
-			class="inline-block py-1 px-2 rounded-md bg-black text-white transition-transform hover:scale-90 dark:bg-white dark:text-black"
+			class="inline-block py-1 px-2 rounded-md bg-black text-white transition-transform hover:scale-95 dark:bg-white dark:text-black"
 		>
 			{name}
 		</a>

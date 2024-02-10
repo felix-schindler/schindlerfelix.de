@@ -1,0 +1,47 @@
+{
+	"en": {
+		"tldr": {
+			"heading": "TLDR;",
+			"pricing": "Available for {:price} on the App Store",
+			"disclaimer": "The app in early development and therefore bugs and missing features are expected. Any feature requests or issues can be reported in the GitLab repository.",
+			"open": "It's open source and licensed under GNU AGPLv3. I will reserve the right to make it closed source at any point."
+		},
+		"links": {
+			"heading": "Links",
+			"gitlab_repo": "GitLab repository",
+			"support_faq": "Support & FAQ",
+			"privacy": "Privacy Statement"
+		},
+		"screenshots": "Screenshots"
+	},
+	"de": {
+		"tldr": {
+			"heading": "Zusammenfassung",
+			"pricing": "Erhältlich für {:price} im App Store",
+			"disclaimer": "Die App befindet sich in der frühen Entwicklung, daher sind Fehler und fehlende Funktionen zu erwarten. Alle Funktionsanfragen oder Probleme können im GitLab-Repository gemeldet werden.",
+			"open": "Die App ist Open Source und unter GNU AGPLv3 lizenziert. Ich behalte mir das Recht vor, es jederzeit in Closed Source umzuwandeln."
+		},
+		"links": {
+			"heading": "Links",
+			"gitlab_repo": "GitLab-Repository",
+			"support_faq": "Support & FAQ",
+			"privacy": "Datenschutzerklärung"
+		},
+		"screenshots": "Screenshots"
+	},
+	"zh": {
+		"tldr": {
+			"heading": "太长不看",
+			"pricing": "在App Store上售价{:price}",
+			"disclaimer": "它处于早期开发阶段，因此可能会出现错误和缺少的功能。任何功能请求或问题都可以在GitLab存储库中报告。",
+			"open": "它是开源的，根据GNU AGPLv3许可。我保留随时将其变为专有软件的权利。"
+		},
+		"links": {
+			"heading": "链接",
+			"gitlab_repo": "极狐存储库",
+			"support_faq": "支持和常见问题",
+			"privacy": "隐私声明"
+		},
+		"screenshots": "截图"
+	}
+}
