@@ -1,12 +1,32 @@
-import { Link } from "@/components/mod.tsx";
+import IconBrandGitlab from "icons/brand-gitlab.tsx";
+import IconMessageQuestion from "icons/message-question.tsx";
+import IconFileText from "icons/file-text.tsx";
 
-export default function Tanuki() {
+import type { PageProps } from "$fresh/server.ts";
+import type { State } from "@/core/types.ts";
+
+export default function Tanuki(props: PageProps<never, State>) {
+	const lang = props.state.language;
+	let price: string;
+
+	switch (lang) {
+		case "de":
+			price = "0,99 €";
+			break;
+		case "en":
+			price = "$0.99";
+			break;
+		case "zh":
+			price = "¥8.00";
+			break;
+	}
+
 	return (
 		<div class="flex flex-col gap-5">
 			<div>
 				<h2 class="text-3xl mb-2 font-bold tracking-tight">TLDR;</h2>
 				<p class="mb-1">
-					Available for <mark class="font-mono">0.99€</mark> in the App Store
+					Available for {price} in the App Store
 				</p>
 				<p class="mb-1">
 					It's in early development and therefore bugs and missing features are
@@ -20,35 +40,35 @@ export default function Tanuki() {
 			</div>
 			<div>
 				<h2 class="text-3xl mb-2 font-bold tracking-tight">Links</h2>
-				<ol class="list-inside list-disc">
+				<ul class="flex flex-wrap gap-2 items-center">
 					<li>
-						<Link
-							name="App Store"
-							href="https://apps.apple.com/us/app/tanuki-for-gitlab/id6446419487"
-						/>
-					</li>
-					<li>
-						<Link
-							name="GitLab Repo"
+						<a
 							href="https://gitlab.com/felix-schindler/gitlab-ios"
-						/>
+							class="flex items-center gap-1 py-2 px-4 rounded-md border border-orange-500 transition-transform duration-200 hover:scale-95"
+						>
+							<IconBrandGitlab color="rgb(249, 115, 22)" />
+							<span>GitLab Repository</span>
+						</a>
 					</li>
 					<li>
-						<Link
-							name="Roadmap for next version"
-							href="https://gitlab.com/felix-schindler/gitlab-ios/-/milestones/3#tab-issues"
-						/>
+						<a
+							href="/projects/tanuki/support"
+							class="flex items-center gap-1 py-2 px-4 rounded-md border border-black dark:border-white transition-transform duration-200 hover:scale-95"
+						>
+							<IconMessageQuestion />
+							<span>Support & FAQ</span>
+						</a>
 					</li>
 					<li>
-						<Link name="FAQ" href="/projects/tanuki/support#faq" />
+						<a
+							href="/projects/tanuki/privacy"
+							class="flex items-center gap-1 py-2 px-4 rounded-md border border-black dark:border-white transition-transform duration-200 hover:scale-95"
+						>
+							<IconFileText />
+							<span>Privacy Statement</span>
+						</a>
 					</li>
-					<li>
-						<Link name="Support" href="/projects/tanuki/support" />
-					</li>
-					<li>
-						<Link name="Privacy Statement" href="/projects/tanuki/privacy" />
-					</li>
-				</ol>
+				</ul>
 			</div>
 			<div>
 				<h2 class="text-3xl mb-2 font-bold tracking-tight">Screenshots</h2>

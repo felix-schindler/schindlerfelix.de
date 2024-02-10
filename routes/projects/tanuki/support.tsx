@@ -55,7 +55,7 @@ export default function TanukiSupport() {
 			</div>
 			<div>
 				<h2 id="faq" class="text-3xl mb-2 font-bold tracking-tight">FAQ</h2>
-				<div className="grid grid-cols-default gap-2">
+				<div class="grid grid-cols-default gap-2">
 					{questions.map((question) => (
 						<div class="py-1 px-2 rounded-md bg-gray-200 dark:bg-gray-800">
 							<h3 class="text-xl font-bold mb-2">{question.title}</h3>
