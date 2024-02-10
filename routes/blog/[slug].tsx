@@ -13,7 +13,7 @@ import "prism/prism-nginx?no-check";
 
 type BlogProps = {
 	lang: AllowedLanguage;
-	slug: string;
+	title: string;
 	body: string;
 };
 
@@ -27,11 +27,12 @@ export const handler: Handlers<BlogProps, State> = {
 			const markdown = await Deno.readTextFile(
 				join(Deno.cwd(), "routes", "blog", lang, `${slug}.md`),
 			);
+			const title = markdown.split("\n")[0].split("# ")[1];
 			const body = render(markdown, {
 				baseUrl: "https://www.schindlerfelix.de",
 			});
 
-			return await ctx.render({ lang, slug, body });
+			return await ctx.render({ lang, title, body });
 		} catch {
 			return await ctx.renderNotFound();
 		}
@@ -47,7 +48,7 @@ export default function NotesHandler(
 		<>
 			<Head>
 				<title>
-					{encodeURIComponent(props.data.slug)} &middot;{" "}
+					{props.data.title} &middot;{" "}
 					{translations[lang].notes.heading}
 				</title>
 				<style dangerouslySetInnerHTML={{ __html: CSS }} />
