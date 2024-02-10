@@ -22,7 +22,7 @@ export default function TanukiLayout(props: PageProps<never, State>) {
 	}
 
 	return (
-		<div lang="en">
+		<>
 			<div class="text-center">
 				<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter flex flex-wrap justify-center gap-5">
 					<img
@@ -52,6 +52,6 @@ export default function TanukiLayout(props: PageProps<never, State>) {
 			</div>
 
 			<props.Component />
-		</div>
+		</>
 	);
 }
