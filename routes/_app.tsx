@@ -10,17 +10,19 @@ export default function Layout(
 	const lang = props.state?.language ?? "en";
 
 	function getTitle(path: string): string {
-		if (path.startsWith("/photos")) {
-			return "Photos";
-		} else if (path.startsWith("/projects")) {
-			return "Projects";
-		}
-
 		switch (path) {
 			case "/":
 				return "Home";
 			case "/legal":
 				return "Legal";
+			case "/projects":
+				return "Projects";
+			case "/projects/tanuki":
+				return "Tanuki · Projects";
+			case "/photos/china":
+				return "China · Photos";
+			case "/photos/germany":
+				return "Germany · Photos";
 			default:
 				return "Felix Schindler";
 		}
