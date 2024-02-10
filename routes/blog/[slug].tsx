@@ -48,8 +48,7 @@ export default function NotesHandler(
 		<>
 			<Head>
 				<title>
-					{props.data.title} &middot;{" "}
-					{translations[lang].notes.heading}
+					{props.data.title} &middot; {translations[lang].notes.heading}
 				</title>
 				<style dangerouslySetInnerHTML={{ __html: CSS }} />
 				<style
