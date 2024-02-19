@@ -1,9 +1,55 @@
 import { join } from "$std/path/join.ts";
 import ImageCollection from "@/islands/ImageCollection.tsx";
 import type { Handlers, PageProps } from "$fresh/server.ts";
-import type { State } from "@/core/types.ts";
+import type { AllowedLanguage, State } from "@/core/types.ts";
 
-const baseImagePath = join("img", "photos", "germany");
+const baseImagePath = join("img", "photos", "korea");
+
+function getLocalceName(
+	lang: AllowedLanguage,
+	placeName: string,
+): { name: string; translation?: string } {
+	const name = placeName.split(" ")[1];
+	let translation = undefined;
+
+	if (lang === "zh") {
+		switch (name) {
+			case "서울":
+				translation = "首尔";
+				break;
+			case "제주도":
+				translation = "济州岛";
+				break;
+			case "인천":
+				translation = "仁川";
+				break;
+			case "속초":
+				translation = "束草";
+				break;
+			default:
+				translation = undefined;
+		}
+	} else {
+		switch (name) {
+			case "서울":
+				translation = "Seoul";
+				break;
+			case "제주도":
+				translation = "Jeju Island";
+				break;
+			case "인천":
+				translation = "Incheon";
+				break;
+			case "속초":
+				translation = "Sokcho";
+				break;
+			default:
+				translation = undefined;
+		}
+	}
+
+	return { name, translation };
+}
 
 type PhotoProps = {
 	files: Record<string, Array<string>>;
@@ -35,17 +81,19 @@ export const handler: Handlers<PhotoProps, State> = {
 	},
 };
 
-export default function Germany(props: PageProps<PhotoProps, State>) {
+export default function China(props: PageProps<PhotoProps, State>) {
+	const lang = props.state.language;
+
 	return (
 		<ImageCollection
 			country={{
-				name: "Germany",
-				mask: "/img/photos/germany/mask.avif",
+				name: "China",
+				mask: "/img/photos/korea/mask.avif",
 				sky: "/img/photos/sky.avif",
 			}}
 			cities={[
 				...Object.entries(props.data.files).map(([city, files]) => ({
-					name: city.charAt(0).toUpperCase() + city.slice(1),
+					...getLocalceName(lang, city),
 					images: files.map((f) => "/" + join(baseImagePath, city, f)),
 				})),
 			]}

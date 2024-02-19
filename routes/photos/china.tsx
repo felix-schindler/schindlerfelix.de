@@ -73,7 +73,7 @@ export default function China(props: PageProps<PhotoProps, State>) {
 		<ImageCollection
 			country={{
 				name: "China",
-				mask: "/img/photos/mask.avif",
+				mask: "/img/photos/china/mask.avif",
 				sky: "/img/photos/sky.avif",
 			}}
 			cities={[
