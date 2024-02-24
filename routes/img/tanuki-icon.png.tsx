@@ -1,6 +1,7 @@
 import { Handlers } from "$fresh/server.ts";
 
-const AVATAR_URL = "https://gitlab.com/uploads/-/system/project/avatar/33025310/Tanuki-200kb.png";
+const AVATAR_URL =
+	"https://gitlab.com/uploads/-/system/project/avatar/33025310/Tanuki-200kb.png";
 
 export const handler: Handlers = {
 	async GET() {
@@ -18,5 +19,5 @@ export const handler: Handlers = {
 				"Cache-Control": "public, max-age=604800, immutable",
 			},
 		});
-	}
-}
+	},
+};
