@@ -5,19 +5,23 @@ const AVATAR_URL =
 
 export const handler: Handlers = {
 	async GET() {
-		const res = await fetch(AVATAR_URL);
+		try {
+			const res = await fetch(AVATAR_URL);
 
-		if (!res.ok) {
+			if (!res.ok) {
+				throw new Error();
+			}
+
+			// Reply with the image and 7 days cache
+			return new Response(res.body, {
+				status: 200,
+				headers: {
+					"Content-Type": "image/png",
+					"Cache-Control": "public, max-age=604800, immutable",
+				},
+			});
+		} catch {
 			return new Response(null, { status: 500 });
 		}
-
-		// Reply with the image and 7 days cache
-		return new Response(res.body, {
-			status: 200,
-			headers: {
-				"Content-Type": "image/png",
-				"Cache-Control": "public, max-age=604800, immutable",
-			},
-		});
 	},
 };
