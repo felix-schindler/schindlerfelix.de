@@ -49,7 +49,7 @@ export default function Tanuki(props: PageProps<never, State>) {
 				<ul class="flex flex-wrap gap-2 items-center">
 					<li>
 						<a
-							href="/img/tanuki-icon.png"
+							href="https://gitlab.com/felix-schindler/gitlab-ios"
 							class="flex items-center gap-1 py-2 px-4 rounded-md border border-orange-500 transition-transform hover:scale-95"
 						>
 							<IconBrandGitlab color="rgb(249, 115, 22)" />

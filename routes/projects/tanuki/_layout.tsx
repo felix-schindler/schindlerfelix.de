@@ -26,7 +26,7 @@ export default function TanukiLayout(props: PageProps<never, State>) {
 			<div class="text-center">
 				<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter flex flex-wrap justify-center gap-5">
 					<img
-						src="https://gitlab.com/uploads/-/system/project/avatar/33025310/Tanuki-200kb.png"
+						src="/img/tanuki-icon.png"
 						alt="Tanuki app icon"
 						class="align-bottom h-16 w-16 rounded-xl"
 					/>
