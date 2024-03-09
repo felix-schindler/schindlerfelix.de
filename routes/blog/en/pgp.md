@@ -13,7 +13,8 @@ $ brew install gnupg pinentry-mac
 ```
 
 ```bash
-$ echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+$ touch ~/.gnupg/gpg-agent.conf
+$ echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 $ echo 'export GPG_TTY=$(tty)' >> ~/.zshrc
 ```
 
