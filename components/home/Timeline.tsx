@@ -17,6 +17,7 @@ export default function Timeline({ lang }: { lang: AllowedLanguage }) {
 			until: "now",
 			title: translations[lang].education.xut,
 			description: translations[lang].education.major,
+			technologies: ["C#", "Unity", "JavaScript", "CSS"],
 		},
 		{
 			from: new Date("2020-08-01"),

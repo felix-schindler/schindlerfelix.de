@@ -109,13 +109,13 @@ export default function Layout(
 						<span class="hidden sm:inline">&middot;</span>{" "}
 						<span class="inline-flex flex-wrap gap-2">
 							{[{
-								name: "English",
+								name: translations[lang].english,
 								short: "en",
 							}, {
-								name: "Deutsch",
+								name: translations[lang].german,
 								short: "de",
 							}, {
-								name: "简体中文",
+								name: translations[lang].chinese,
 								short: "zh",
 							}].map((language) => (
 								<a

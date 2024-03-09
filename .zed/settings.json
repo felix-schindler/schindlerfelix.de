@@ -1,0 +1,6 @@
+{
+	"hard_tabs": true,
+	"deno": {
+		"enable": true
+	}
+}

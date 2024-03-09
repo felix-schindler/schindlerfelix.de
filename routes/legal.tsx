@@ -13,14 +13,14 @@ export default function LegalPage(props: PageProps<never, State>) {
 
 	return (
 		<>
-			<div class="flex flex-col gap-2 mb-5" lang="de">
+			<div class="mb-5 flex flex-col gap-2" lang="de">
 				<div lang={lang}>
 					<p>
 						<ButtonLink name={`← ${back_to_home[lang]}`} href="/" />
 					</p>
-					{lang !== "de" && <em class="block mt-1">{not_avail[lang]}</em>}
+					{lang !== "de" && <em class="mt-1 block">{not_avail[lang]}</em>}
 				</div>
-				<h1 class="text-3xl mb-2 font-bold tracking-tight">Impressum</h1>
+				<h1 class="mb-2 text-3xl font-bold tracking-tight">Impressum</h1>
 				<h2 class="text-2xl">Verantwortlich für den Inhalt</h2>
 				<Link
 					href="https://www.schindlerfelix.de"
@@ -29,8 +29,10 @@ export default function LegalPage(props: PageProps<never, State>) {
 				/>
 				<h2 class="text-xl">Adresse</h2>
 				<address>
-					Kreuzstraße<br />
-					73730 Esslingen<br />
+					Kreuzstraße
+					<br />
+					73730 Esslingen
+					<br />
 					Deutschland
 				</address>
 				<h2 class="text-xl">Kontakt</h2>
@@ -40,13 +42,13 @@ export default function LegalPage(props: PageProps<never, State>) {
 					secondary
 				/>
 				<Link
-					href="https://t.me/felix_schindler"
-					name="📱 t.me/felix_schindler"
+					href="https://signal.me/#eu/N9BzUA8QKxRd4Vq4xd0NDUdqqxZPRm-eqw8YX9uJTfC9MxkvHXFEHJq3lAAqYEKF"
+					name="📱 Signal"
 					secondary
 				/>
 			</div>
 			<div class="flex flex-col gap-2">
-				<h1 class="text-3xl mb-2 font-bold tracking-tight">Datenschutz</h1>
+				<h1 class="mb-2 text-3xl font-bold tracking-tight">Datenschutz</h1>
 				<p>
 					Diese Datenschutzerklärung gilt für die informative Webseite unter
 					{" "}
@@ -59,9 +61,12 @@ export default function LegalPage(props: PageProps<never, State>) {
 						Land Inc.
 					</p>
 					<address>
-						Deno Land Inc.<br />
-						251 Little Falls Dr<br />
-						Wilmington DE 19808-1674<br />
+						Deno Land Inc.
+						<br />
+						251 Little Falls Dr
+						<br />
+						Wilmington DE 19808-1674
+						<br />
 						USA
 					</address>
 				</p>

@@ -7,6 +7,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $_middleware from "./routes/_middleware.ts";
 import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $img_app_store_svg_index from "./routes/img/app_store.svg/index.ts";
+import * as $img_tanuki_icon_png from "./routes/img/tanuki-icon.png.tsx";
 import * as $img_world_svg from "./routes/img/world.svg.ts";
 import * as $index from "./routes/index.tsx";
 import * as $legal from "./routes/legal.tsx";
@@ -18,8 +19,7 @@ import * as $projects_tanuki_layout from "./routes/projects/tanuki/_layout.tsx";
 import * as $projects_tanuki_index from "./routes/projects/tanuki/index.tsx";
 import * as $projects_tanuki_privacy from "./routes/projects/tanuki/privacy.tsx";
 import * as $projects_tanuki_support from "./routes/projects/tanuki/support.tsx";
-import * as $Gallery from "./islands/Gallery.tsx";
-import * as $ImageCollection from "./islands/ImageCollection.tsx";
+import * as $Parallex from "./islands/Parallex.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -29,6 +29,7 @@ const manifest = {
 		"./routes/_middleware.ts": $_middleware,
 		"./routes/blog/[slug].tsx": $blog_slug_,
 		"./routes/img/app_store.svg/index.ts": $img_app_store_svg_index,
+		"./routes/img/tanuki-icon.png.tsx": $img_tanuki_icon_png,
 		"./routes/img/world.svg.ts": $img_world_svg,
 		"./routes/index.tsx": $index,
 		"./routes/legal.tsx": $legal,
@@ -42,8 +43,7 @@ const manifest = {
 		"./routes/projects/tanuki/support.tsx": $projects_tanuki_support,
 	},
 	islands: {
-		"./islands/Gallery.tsx": $Gallery,
-		"./islands/ImageCollection.tsx": $ImageCollection,
+		"./islands/Parallex.tsx": $Parallex,
 	},
 	baseUrl: import.meta.url,
 } satisfies Manifest;
