@@ -1,5 +1,8 @@
 import { join } from "$std/path/join.ts";
-import ImageCollection from "@/islands/ImageCollection.tsx";
+
+import ImageCollection from "@/components/ImageCollection.tsx";
+import Parallax from "@/islands/Parallex.tsx";
+
 import type { Handlers, PageProps } from "$fresh/server.ts";
 import type { State } from "@/core/types.ts";
 
@@ -37,19 +40,23 @@ export const handler: Handlers<PhotoProps, State> = {
 
 export default function Germany(props: PageProps<PhotoProps, State>) {
 	return (
-		<ImageCollection
-			country={{
-				name: "Germany",
-				mask: "/img/photos/germany/mask-ber.avif",
-				sky: "/img/photos/sky.avif",
-			}}
-			cities={[
-				...Object.entries(props.data.files).map(([city, files]) => ({
-					name: city.charAt(0).toUpperCase() + city.slice(1),
-					images: files.map((f) => "/" + join(baseImagePath, city, f)),
-				})),
-			]}
-			lang={props.state.language}
-		/>
+		<>
+			<Parallax
+				country={{
+					name: "Germany",
+					mask: "/img/photos/germany/mask-ber.avif",
+					sky: "/img/photos/sky.avif",
+				}}
+			/>
+			<ImageCollection
+				cities={[
+					...Object.entries(props.data.files).map(([city, files]) => ({
+						name: city.charAt(0).toUpperCase() + city.slice(1),
+						images: files.map((f) => "/" + join(baseImagePath, city, f)),
+					})),
+				]}
+				lang={props.state.language}
+			/>
+		</>
 	);
 }
