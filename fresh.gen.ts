@@ -18,8 +18,7 @@ import * as $projects_tanuki_layout from "./routes/projects/tanuki/_layout.tsx";
 import * as $projects_tanuki_index from "./routes/projects/tanuki/index.tsx";
 import * as $projects_tanuki_privacy from "./routes/projects/tanuki/privacy.tsx";
 import * as $projects_tanuki_support from "./routes/projects/tanuki/support.tsx";
-import * as $Gallery from "./islands/Gallery.tsx";
-import * as $ImageCollection from "./islands/ImageCollection.tsx";
+import * as $Parallex from "./islands/Parallex.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -42,8 +41,7 @@ const manifest = {
 		"./routes/projects/tanuki/support.tsx": $projects_tanuki_support,
 	},
 	islands: {
-		"./islands/Gallery.tsx": $Gallery,
-		"./islands/ImageCollection.tsx": $ImageCollection,
+		"./islands/Parallex.tsx": $Parallex,
 	},
 	baseUrl: import.meta.url,
 } satisfies Manifest;
