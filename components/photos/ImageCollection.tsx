@@ -6,7 +6,7 @@ import type { AllowedLanguage } from "@/core/types.ts";
 type ImageCollectionProps = {
 	cities: Array<{
 		name?: string;
-		english?: string;
+		translation?: string;
 		images: string[];
 	}>;
 	lang: AllowedLanguage;
@@ -23,15 +23,15 @@ export default function ImageCollection(props: ImageCollectionProps) {
 					{city.name && (
 						<h2
 							class={`text-5xl font-bold tracking-tight mt-5 sm:mt-10 ${
-								city.english ? "" : "mb-2"
+								city.translation ? "" : "mb-2"
 							}`}
 						>
 							{city.name}
 						</h2>
 					)}
-					{city.english && (
+					{city.translation && (
 						<p class="text-2xl font-medium tracking-tight mb-2">
-							({city.english})
+							{city.translation}
 						</p>
 					)}
 					<div class="flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-2.5">

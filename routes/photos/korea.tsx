@@ -1,5 +1,9 @@
 import { join } from "$std/path/join.ts";
-import ImageCollection from "@/islands/ImageCollection.tsx";
+
+import ImageCollection from "@/components/photos/ImageCollection.tsx";
+import Parallax from "@/components/photos/Parallex.tsx";
+import ScrollEffect from "@/islands/ScrollEffect.tsx";
+
 import type { Handlers, PageProps } from "$fresh/server.ts";
 import type { AllowedLanguage, State } from "@/core/types.ts";
 
@@ -81,23 +85,29 @@ export const handler: Handlers<PhotoProps, State> = {
 	},
 };
 
-export default function China(props: PageProps<PhotoProps, State>) {
+export default function Korea(props: PageProps<PhotoProps, State>) {
 	const lang = props.state.language;
 
 	return (
-		<ImageCollection
-			country={{
-				name: "China",
-				mask: "/img/photos/korea/mask.avif",
-				sky: "/img/photos/sky.avif",
-			}}
-			cities={[
-				...Object.entries(props.data.files).map(([city, files]) => ({
-					...getLocalceName(lang, city),
-					images: files.map((f) => "/" + join(baseImagePath, city, f)),
-				})),
-			]}
-			lang={props.state.language}
-		/>
+		<>
+			<ScrollEffect />
+			<Parallax
+				country={{
+					name: "Korea",
+					mask: "/img/photos/korea/mask.avif",
+					sky: "/img/photos/sky.avif",
+					bottom: "50",
+				}}
+			/>
+			<ImageCollection
+				cities={[
+					...Object.entries(props.data.files).map(([city, files]) => ({
+						...getLocalceName(lang, city),
+						images: files.map((f) => "/" + join(baseImagePath, city, f)),
+					})),
+				]}
+				lang={props.state.language}
+			/>
+		</>
 	);
 }

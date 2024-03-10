@@ -19,7 +19,7 @@ import * as $projects_tanuki_layout from "./routes/projects/tanuki/_layout.tsx";
 import * as $projects_tanuki_index from "./routes/projects/tanuki/index.tsx";
 import * as $projects_tanuki_privacy from "./routes/projects/tanuki/privacy.tsx";
 import * as $projects_tanuki_support from "./routes/projects/tanuki/support.tsx";
-import * as $Parallex from "./islands/Parallex.tsx";
+import * as $ScrollEffect from "./islands/ScrollEffect.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -43,7 +43,7 @@ const manifest = {
 		"./routes/projects/tanuki/support.tsx": $projects_tanuki_support,
 	},
 	islands: {
-		"./islands/Parallex.tsx": $Parallex,
+		"./islands/ScrollEffect.tsx": $ScrollEffect,
 	},
 	baseUrl: import.meta.url,
 } satisfies Manifest;
