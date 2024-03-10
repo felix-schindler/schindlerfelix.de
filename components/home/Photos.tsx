@@ -15,6 +15,12 @@ export default function Photos({ lang }: { lang: AllowedLanguage }) {
 					imgPath="shanghai-thumb.avif"
 				/>
 				<PrettyLink
+					name={translations[lang].korea}
+					englishName={translations.en.korea}
+					href="/photos/korea"
+					imgPath="korea-thumb.avif"
+				/>
+				<PrettyLink
 					name={translations[lang].germany}
 					englishName={translations.en.germany}
 					href="/photos/germany"

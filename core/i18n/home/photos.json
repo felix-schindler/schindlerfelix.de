@@ -2,16 +2,19 @@
 	"en": {
 		"heading": "Photos",
 		"germany": "Germany",
-		"china": "China"
+		"china": "China",
+		"korea": "Korea"
 	},
 	"de": {
 		"heading": "Fotos",
 		"germany": "Deutschland",
-		"china": "China"
+		"china": "China",
+		"korea": "Korea"
 	},
 	"zh": {
 		"heading": "照片",
 		"germany": "德国",
-		"china": "中国"
+		"china": "中国",
+		"korea": "韩国"
 	}
 }
