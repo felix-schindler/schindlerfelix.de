@@ -13,12 +13,13 @@ import * as $index from "./routes/index.tsx";
 import * as $legal from "./routes/legal.tsx";
 import * as $photos_china from "./routes/photos/china.tsx";
 import * as $photos_germany from "./routes/photos/germany.tsx";
+import * as $photos_korea from "./routes/photos/korea.tsx";
 import * as $projects_index from "./routes/projects/index.tsx";
 import * as $projects_tanuki_layout from "./routes/projects/tanuki/_layout.tsx";
 import * as $projects_tanuki_index from "./routes/projects/tanuki/index.tsx";
 import * as $projects_tanuki_privacy from "./routes/projects/tanuki/privacy.tsx";
 import * as $projects_tanuki_support from "./routes/projects/tanuki/support.tsx";
-import * as $Parallex from "./islands/Parallex.tsx";
+import * as $ScrollEffect from "./islands/ScrollEffect.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -34,6 +35,7 @@ const manifest = {
 		"./routes/legal.tsx": $legal,
 		"./routes/photos/china.tsx": $photos_china,
 		"./routes/photos/germany.tsx": $photos_germany,
+		"./routes/photos/korea.tsx": $photos_korea,
 		"./routes/projects/index.tsx": $projects_index,
 		"./routes/projects/tanuki/_layout.tsx": $projects_tanuki_layout,
 		"./routes/projects/tanuki/index.tsx": $projects_tanuki_index,
@@ -41,7 +43,7 @@ const manifest = {
 		"./routes/projects/tanuki/support.tsx": $projects_tanuki_support,
 	},
 	islands: {
-		"./islands/Parallex.tsx": $Parallex,
+		"./islands/ScrollEffect.tsx": $ScrollEffect,
 	},
 	baseUrl: import.meta.url,
 } satisfies Manifest;

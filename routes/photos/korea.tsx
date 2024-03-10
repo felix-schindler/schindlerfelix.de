@@ -5,41 +5,54 @@ import Parallax from "@/components/photos/Parallex.tsx";
 import ScrollEffect from "@/islands/ScrollEffect.tsx";
 
 import type { Handlers, PageProps } from "$fresh/server.ts";
-import type { State } from "@/core/types.ts";
+import type { AllowedLanguage, State } from "@/core/types.ts";
 
-const baseImagePath = join("img", "photos", "china");
+const baseImagePath = join("img", "photos", "korea");
 
-function getEnglishName(placeName: string): { name: string; english?: string } {
+function getLocalceName(
+	lang: AllowedLanguage,
+	placeName: string,
+): { name: string; translation?: string } {
 	const name = placeName.split(" ")[1];
-	let english = undefined;
+	let translation = undefined;
 
-	switch (name) {
-		case "西安":
-			english = "Xi'an";
-			break;
-		case "终南山":
-			english = "Zhongnan Mountain";
-			break;
-		case "上海":
-			english = "Shanghai";
-			break;
-		case "朱家角镇":
-			english = "Zhujiajiao Town";
-			break;
-		case "东方绿舟":
-			english = "Oriental Land";
-			break;
-		case "青浦区":
-			english = "Qingpu District, Shanghai";
-			break;
-		case "杭州":
-			english = "Hangzhou";
-			break;
-		default:
-			english = undefined;
+	if (lang === "zh") {
+		switch (name) {
+			case "서울":
+				translation = "首尔";
+				break;
+			case "제주도":
+				translation = "济州岛";
+				break;
+			case "인천":
+				translation = "仁川";
+				break;
+			case "속초":
+				translation = "束草";
+				break;
+			default:
+				translation = undefined;
+		}
+	} else {
+		switch (name) {
+			case "서울":
+				translation = "Seoul";
+				break;
+			case "제주도":
+				translation = "Jeju Island";
+				break;
+			case "인천":
+				translation = "Incheon";
+				break;
+			case "속초":
+				translation = "Sokcho";
+				break;
+			default:
+				translation = undefined;
+		}
 	}
 
-	return { name, english };
+	return { name, translation };
 }
 
 type PhotoProps = {
@@ -72,21 +85,24 @@ export const handler: Handlers<PhotoProps, State> = {
 	},
 };
 
-export default function China(props: PageProps<PhotoProps, State>) {
+export default function Korea(props: PageProps<PhotoProps, State>) {
+	const lang = props.state.language;
+
 	return (
 		<>
 			<ScrollEffect />
 			<Parallax
 				country={{
-					name: "China",
-					mask: "/img/photos/china/mask.avif",
+					name: "Korea",
+					mask: "/img/photos/korea/mask.avif",
 					sky: "/img/photos/sky.avif",
+					bottom: "50",
 				}}
 			/>
 			<ImageCollection
 				cities={[
 					...Object.entries(props.data.files).map(([city, files]) => ({
-						...getEnglishName(city),
+						...getLocalceName(lang, city),
 						images: files.map((f) => "/" + join(baseImagePath, city, f)),
 					})),
 				]}
