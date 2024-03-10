@@ -23,6 +23,8 @@ export default function Layout(
 				return "Projects";
 			case "/photos/china":
 				return "China · Photos";
+			case "/photos/korea":
+				return "Korea · Photos";
 			case "/photos/germany":
 				return "Germany · Photos";
 			default:
