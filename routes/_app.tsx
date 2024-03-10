@@ -109,7 +109,7 @@ export default function Layout(
 							</a>
 						</span>{" "}
 						<span class="hidden sm:inline">&middot;</span>{" "}
-						<span class="inline-flex flex-wrap gap-2">
+						<span class="inline-flex flex-wrap justify-center gap-2 sm:justify-normal">
 							{[{
 								name: translations[lang].english,
 								short: "en",
