@@ -1,7 +1,8 @@
 import { join } from "$std/path/join.ts";
 
-import ImageCollection from "@/components/ImageCollection.tsx";
-import Parallax from "@/islands/Parallex.tsx";
+import ImageCollection from "@/components/photos/ImageCollection.tsx";
+import Parallax from "@/components/photos/Parallex.tsx";
+import ScrollEffect from "@/islands/ScrollEffect.tsx";
 
 import type { Handlers, PageProps } from "$fresh/server.ts";
 import type { State } from "@/core/types.ts";
@@ -41,10 +42,11 @@ export const handler: Handlers<PhotoProps, State> = {
 export default function Germany(props: PageProps<PhotoProps, State>) {
 	return (
 		<>
+			<ScrollEffect />
 			<Parallax
 				country={{
 					name: "Germany",
-					mask: "/img/photos/germany/mask-ber.avif",
+					mask: "/img/photos/germany/mask.avif",
 					sky: "/img/photos/sky.avif",
 				}}
 			/>
