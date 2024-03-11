@@ -2,6 +2,7 @@ import { Link } from "@/components/mod.tsx";
 import translations from "@/core/i18n/footer.json" with { type: "json" };
 import type { State } from "@/core/types.ts";
 import type { PageProps } from "$fresh/server.ts";
+import { ButtonLink } from "@/components/mod.tsx";
 
 export default function Layout(
 	props: PageProps<never, State>,
@@ -98,37 +99,19 @@ export default function Layout(
 							name={translations[lang].imprint}
 						/>
 					</p>
-					<p class="flex flex-col sm:flex-row gap-1 items-center justify-center">
-						<span lang="en">
-							Made in{" "}
-							<a
-								href="https://www.thelaend.de/"
-								class="inline-block text-sm py-1 px-1.5 uppercase font-bold bg-black text-yellow-bright select-none transition-transform hover:scale-95 dark:bg-yellow-bright dark:text-black"
-							>
-								The Länd
-							</a>
-						</span>{" "}
-						<span class="hidden sm:inline">&middot;</span>{" "}
-						<span class="inline-flex flex-wrap justify-center gap-2 sm:justify-normal">
-							{[{
-								name: translations[lang].english,
-								short: "en",
-							}, {
-								name: translations[lang].german,
-								short: "de",
-							}, {
-								name: translations[lang].chinese,
-								short: "zh",
-							}].map((language) => (
-								<a
-									lang={language.short}
-									href={`${props.url.pathname}?lang=${language.short}`}
-									class="inline-block py-1 px-2 rounded-lg bg-black text-white dark:bg-white dark:text-black transition-transform hover:scale-95"
-								>
-									{language.name}
-								</a>
-							))}
-						</span>
+					<p tabindex={0} class="inline-flex flex-wrap justify-center gap-2 sm:justify-normal">
+						<ButtonLink
+							name={translations[lang].english}
+							href={`${pathname}?lang=en`}
+						/>
+						<ButtonLink
+							name={translations[lang].german}
+							href={`${pathname}?lang=de`}
+						/>
+						<ButtonLink
+							name={translations[lang].chinese}
+							href={`${pathname}?lang=zh`}
+						/>
 					</p>
 				</footer>
 			</body>
