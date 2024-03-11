@@ -4,8 +4,8 @@ import type { State } from "@/core/types.ts";
 import type { PageProps } from "$fresh/server.ts";
 
 const not_avail = {
-	en: "Sorry, but this legal page is not available in English.",
-	zh: "抱歉，此法律页面不提供中文。",
+	en: "Sorry, but this legal page is not available in English. It's here because it's required by German law.",
+	zh: "抱歉，该法律页面没有中文版本。 之所以放在这里，是因为德国法律要求这样做。",
 } as const;
 
 export default function LegalPage(props: PageProps<never, State>) {
@@ -133,11 +133,14 @@ export default function LegalPage(props: PageProps<never, State>) {
 				<h1 class="text-3xl font-bold">Quellenangaben</h1>
 				<ul>
 					<li>
-						Favicon:{" "}
-						<Link
-							name="China icons created by Freepik - Flaticon"
-							href="https://www.flaticon.com/free-icons/china"
-						/>
+						Sky on photo pages by{" "}
+						<Link name="Oleg Mitiukhin" href="https://unsplash.com/@oleg_mit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" />{" "}
+						on{" "}
+						<Link name="Unsplash" href="https://unsplash.com/photos/white-clouds-and-blue-sky-during-daytime-2gJa-AUtAOc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" />
+					</li>
+					<li>
+						Foreground of banner on China photo page by{" "}
+						<Link name="Elias Ruiz" href="https://eliasruiz.com" />
 					</li>
 				</ul>
 			</div>
