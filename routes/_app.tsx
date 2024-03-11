@@ -99,7 +99,10 @@ export default function Layout(
 							name={translations[lang].imprint}
 						/>
 					</p>
-					<p tabindex={0} class="inline-flex flex-wrap justify-center gap-2 sm:justify-normal">
+					<p
+						tabindex={0}
+						class="inline-flex flex-wrap justify-center gap-2 sm:justify-normal"
+					>
 						<ButtonLink
 							name={translations[lang].english}
 							href={`${pathname}?lang=en`}
