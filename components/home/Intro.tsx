@@ -1,3 +1,4 @@
+import { SiteTitle } from "@/components/mod.tsx";
 import IconGithub from "icons/brand-github.tsx";
 import IconGitlab from "icons/brand-gitlab.tsx";
 import IconLinkedin from "icons/brand-linkedin.tsx";
@@ -9,9 +10,7 @@ import type { AllowedLanguage } from "@/core/types.ts";
 export default function Intro({ lang }: { lang: AllowedLanguage }) {
 	return (
 		<>
-			<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
-				{translations[lang].name}
-			</h1>
+			<SiteTitle name={translations[lang].name} />
 			<div class="sm:flex sm:items-center">
 				<picture class="w-full" alt="Globe marking the region Xi'an, China">
 					<source

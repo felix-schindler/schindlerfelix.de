@@ -3,7 +3,7 @@ import { join } from "$std/path/join.ts";
 import { Head } from "$fresh/runtime.ts";
 import { CSS, render } from "gfm";
 
-import { ButtonLink } from "@/components/mod.tsx";
+import { ButtonLink, SiteTitle } from "@/components/mod.tsx";
 import translations from "@/core/i18n/notes.json" with { type: "json" };
 import type { AllowedLanguage, State } from "@/core/types.ts";
 
@@ -75,9 +75,7 @@ export default function NotesHandler(
 				/>
 			</Head>
 			<div>
-				<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
-					{translations[lang].notes.heading}
-				</h1>
+				<SiteTitle name={translations[lang].notes.heading} />
 				<p class="my-2.5">
 					<ButtonLink
 						name={`← ${translations[lang].back_to_home}`}
