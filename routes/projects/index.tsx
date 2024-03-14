@@ -1,4 +1,4 @@
-import { ButtonLink, Tech } from "@/components/mod.tsx";
+import { ButtonLink, SiteTitle, Tech } from "@/components/mod.tsx";
 import translations from "@/core/i18n/projects/project-list.json" with {
 	type: "json",
 };
@@ -152,9 +152,7 @@ export default function Projects(props: PageProps<never, State>) {
 
 	return (
 		<>
-			<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
-				{translations[lang].heading}
-			</h1>
+			<SiteTitle name={translations[lang].heading} />
 			<p class="my-2.5">
 				<ButtonLink name={`← ${translations[lang].back_to_home}`} href="/" />
 			</p>

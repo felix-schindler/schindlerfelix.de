@@ -1,3 +1,11 @@
+export function SiteTitle({ name }: { name: string }) {
+	return (
+		<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
+			{name}
+		</h1>
+	);
+}
+
 export function Link(
 	{ href, name, secondary, target }: {
 		href: string;
