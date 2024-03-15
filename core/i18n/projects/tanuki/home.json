@@ -6,12 +6,19 @@
 			"disclaimer": "The app in early development and therefore bugs and missing features are expected. Any feature requests or issues can be reported in the GitLab repository.",
 			"open": "It's open source and licensed under GNU AGPLv3. I will reserve the right to make it closed source at any point."
 		},
+		"v2": {
+			"heading": "Version 2.0",
+			"txt": "I've rewritten the app completely from scratch within two weeks. Obviously, there are features missing in comparison to the current version on the App Store, but the app feels much better and more stable already. You can see the pictures here:",
+			"release_date": "It's unclear when it will be released, but I'm aiming for Q3 this year. It will take this long because reimplementing all features with GraphQL instead of the REST API v4 is a lot of work.",
+			"pics": "Click show screenshots"
+		},
 		"links": {
 			"heading": "Links",
 			"gitlab_repo": "GitLab repository",
 			"support_faq": "Support & FAQ",
 			"privacy": "Privacy Statement"
 		},
+		"tech": "Used technologies",
 		"screenshots": "Screenshots"
 	},
 	"de": {
@@ -21,12 +28,19 @@
 			"disclaimer": "Die App befindet sich in der frühen Entwicklung, daher sind Fehler und fehlende Funktionen zu erwarten. Alle Funktionsanfragen oder Probleme können im GitLab-Repository gemeldet werden.",
 			"open": "Die App ist Open Source und unter GNU AGPLv3 lizenziert. Ich behalte mir das Recht vor, es jederzeit in Closed Source umzuwandeln."
 		},
+		"v2": {
+			"heading": "Version 2.0",
+			"txt": "Ich habe die App innerhalb von zwei Wochen komplett neu geschrieben. Natürlich fehlen im Vergleich zur aktuellen Version im App Store Funktionen, aber die App fühlt sich bereits viel besser und stabiler an. Die Bilder kannst du hier sehen:",
+			"release_date": "Es ist unklar, wann es veröffentlicht wird, aber ich strebe das dritte Quartal dieses Jahres an. Es wird so lange dauern, weil das Neuprogrammieren aller Funktionen mit GraphQL anstelle der REST-API v4 viel Arbeit ist.",
+			"pics": "Klicke um Screenshots zu zeigen"
+		},
 		"links": {
 			"heading": "Links",
 			"gitlab_repo": "GitLab-Repository",
 			"support_faq": "Support & FAQ",
 			"privacy": "Datenschutzerklärung"
 		},
+		"tech": "Verwendete Technologien",
 		"screenshots": "Screenshots"
 	},
 	"zh": {
@@ -36,12 +50,19 @@
 			"disclaimer": "它处于早期开发阶段，因此可能会出现错误和缺少的功能。任何功能请求或问题都可以在GitLab存储库中报告。",
 			"open": "它是开源的，根据GNU AGPLv3许可。我保留随时将其变为专有软件的权利。"
 		},
+		"v2": {
+			"heading": "版本2.0",
+			"txt": "我在两周内完全从头开始重写了这个应用。显然，与App Store上的当前版本相比，缺少一些功能，但是应用程序已经感觉到更好和更稳定。你可以在这里看到图片：",
+			"release_date": "不清楚何时发布，但我瞄准今年第三季度。这需要这么长时间，因为使用GraphQL而不是REST API v4重新实现所有功能是很多工作。",
+			"pics": "点击显示截图"
+		},
 		"links": {
 			"heading": "链接",
 			"gitlab_repo": "极狐存储库",
 			"support_faq": "支持和常见问题",
 			"privacy": "隐私声明"
 		},
+		"tech": "使用的技术",
 		"screenshots": "截图"
 	}
 }
