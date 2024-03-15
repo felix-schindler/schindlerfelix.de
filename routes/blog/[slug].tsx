@@ -1,7 +1,7 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { join } from "$std/path/join.ts";
 import { Head } from "$fresh/runtime.ts";
-import { CSS, render } from "gfm";
+import { CSS, render } from "@deno/gfm";
 
 import { ButtonLink, SiteTitle } from "@/components/mod.tsx";
 import translations from "@/core/i18n/notes.json" with { type: "json" };
