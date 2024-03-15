@@ -1,3 +1,4 @@
+import { Title } from "@/components/mod.tsx";
 import translations from "@/core/i18n/projects/tanuki/privacy.json" with {
 	type: "json",
 };
@@ -16,9 +17,9 @@ export default function TanukiPrivacy(props: PageProps<never, State>) {
 
 	return (
 		<div class="flex flex-col gap-2.5">
-			<h2 class="text-3xl mb-2 font-bold tracking-tight">
+			<Title>
 				{translations[lang].heading}
-			</h2>
+			</Title>
 			<em class="block">
 				{translations[lang].last_updated.replace(
 					"{:original_date}",

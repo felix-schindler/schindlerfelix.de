@@ -1,3 +1,11 @@
+export function Title(
+	{ id, children }: { children: string; id?: string },
+) {
+	return (
+		<h2 id={id} class="text-3xl mb-2 font-bold tracking-tight">{children}</h2>
+	);
+}
+
 export function SiteTitle({ name }: { name: string }) {
 	return (
 		<h1 class="mt-5 text-6xl font-mono font-bold tracking-tighter text-center">
