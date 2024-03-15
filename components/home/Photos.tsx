@@ -1,12 +1,13 @@
+import { Title } from "@/components/mod.tsx";
 import translations from "@/core/i18n/home/photos.json" with { type: "json" };
 import type { AllowedLanguage } from "@/core/types.ts";
 
 export default function Photos({ lang }: { lang: AllowedLanguage }) {
 	return (
 		<div>
-			<h2 id="photos" class="text-3xl mb-2 font-bold tracking-tight">
+			<Title id="photos">
 				{translations[lang].heading}
-			</h2>
+			</Title>
 			<div class="grid grid-cols-default gap-2">
 				<PrettyLink
 					name={translations[lang].china}

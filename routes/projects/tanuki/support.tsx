@@ -1,3 +1,4 @@
+import { Title } from "@/components/mod.tsx";
 import translations from "@/core/i18n/projects/tanuki/support.json" with {
 	type: "json",
 };
@@ -11,9 +12,7 @@ export default function TanukiSupport(props: PageProps<never, State>) {
 	return (
 		<div class="flex flex-col gap-5">
 			<div>
-				<h2 class="text-3xl mb-2 font-bold tracking-tight">
-					{translations[lang].support}
-				</h2>
+				<Title>{translations[lang].support}</Title>
 				<form
 					class="flex flex-col gap-2 items-end"
 					action="mailto:contact-project+felix-schindler-gitlab-ios-33025310-issue-@incoming.gitlab.com"
@@ -41,9 +40,7 @@ export default function TanukiSupport(props: PageProps<never, State>) {
 				</form>
 			</div>
 			<div>
-				<h2 id="faq" class="text-3xl mb-2 font-bold tracking-tight">
-					{translations[lang].faq}
-				</h2>
+				<Title id="faq">{translations[lang].faq}</Title>
 				<div class="grid grid-cols-default gap-2">
 					{translations[lang].questions.map((question) => (
 						<div class="py-1 px-2 rounded-md bg-gray-200 dark:bg-gray-800">

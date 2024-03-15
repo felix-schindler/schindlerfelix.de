@@ -1,4 +1,4 @@
-import { ButtonLink } from "@/components/mod.tsx";
+import { ButtonLink, Title } from "@/components/mod.tsx";
 
 import translations from "@/core/i18n/home/about.json" with { type: "json" };
 import type { AllowedLanguage } from "@/core/types.ts";
@@ -6,9 +6,7 @@ import type { AllowedLanguage } from "@/core/types.ts";
 export default function About({ lang }: { lang: AllowedLanguage }) {
 	return (
 		<div>
-			<h2 class="text-3xl mb-2 font-bold tracking-tight">
-				{translations[lang].heading}
-			</h2>
+			<Title>{translations[lang].heading}</Title>
 			<p>{translations[lang].txt._1.replace("{:age}", getAge().toString())}</p>
 			<p>
 				{translations[lang].txt._2}{" "}

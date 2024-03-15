@@ -40,7 +40,7 @@ export default function TanukiLayout(props: PageProps<never, State>) {
 						href={`https://apps.apple.com/${countryCode}/app/tanuki-for-gitlab/id6446419487`}
 						class="inline-block transition-transform duration-200 hover:scale-90"
 					>
-						<picture alt="Download on AppStore">
+						<picture alt="Download on the App Store">
 							<source
 								srcset={`/img/app_store.svg?dark=true&lang=${lang}`}
 								media="(prefers-color-scheme: dark)"
