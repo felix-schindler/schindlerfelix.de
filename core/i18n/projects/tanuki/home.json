@@ -1,7 +1,7 @@
 {
 	"en": {
 		"tldr": {
-			"heading": "TLDR;",
+			"heading": "TL;DR",
 			"pricing": "Available for {:price} on the App Store",
 			"disclaimer": "The app in early development and therefore bugs and missing features are expected. Any feature requests or issues can be reported in the GitLab repository.",
 			"open": "It's open source and licensed under GNU AGPLv3. I will reserve the right to make it closed source at any point."
