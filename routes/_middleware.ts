@@ -1,5 +1,5 @@
 import { FreshContext } from "$fresh/server.ts";
-import { getCookies, setCookie } from "$std/http/cookie.ts";
+import { getCookies, setCookie } from "@std/http/cookie";
 
 import { isAllowedLanguage } from "@/core/i18n/mod.ts";
 import type { AllowedLanguage, State } from "@/core/types.ts";
