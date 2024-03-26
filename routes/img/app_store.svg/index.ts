@@ -1,6 +1,6 @@
 import { Handlers } from "$fresh/server.ts";
 import { isAllowedLanguage } from "@/core/i18n/mod.ts";
-import { join } from "$std/path/join.ts";
+import { join } from "@std/path";
 
 export const handler: Handlers = {
 	async GET(_req, ctx) {

@@ -1,4 +1,4 @@
-import { join } from "$std/path/join.ts";
+import { join } from "@std/path";
 
 import ImageCollection from "@/components/photos/ImageCollection.tsx";
 import Parallax from "@/components/photos/Parallex.tsx";
