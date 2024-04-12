@@ -25,6 +25,11 @@
 					"path": "linux"
 				},
 				{
+					"title": "GNOME",
+					"description": "Links to GNOME things",
+					"path": "gnome"
+				},
+				{
 					"title": "Caddy Web Server",
 					"description": "Setup for some of my favorite tech stacks",
 					"path": "caddy"
@@ -58,6 +63,11 @@
 					"path": "linux"
 				},
 				{
+					"title": "GNOME",
+					"description": "Links zu GNOME-Dingen",
+					"path": "gnome"
+				},
+				{
 					"title": "Caddy Web Server",
 					"description": "Setup für einige meiner Lieblingstechnologiestacks",
 					"path": "caddy"
@@ -89,6 +99,11 @@
 					"title": "Linux",
 					"description": "你需要开始的所有命令",
 					"path": "linux"
+				},
+				{
+					"title": "GNOME",
+					"description": "GNOME 事物的链接",
+					"path": "gnome"
 				},
 				{
 					"title": "Caddy Web 服务器",

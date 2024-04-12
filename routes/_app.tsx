@@ -1,8 +1,7 @@
-import { Link } from "@/components/mod.tsx";
 import translations from "@/core/i18n/footer.json" with { type: "json" };
 import type { State } from "@/core/types.ts";
 import type { PageProps } from "$fresh/server.ts";
-import { ButtonLink } from "@/components/mod.tsx";
+import { ButtonLink, Link } from "@/components/mod.tsx";
 
 export default function Layout(
 	props: PageProps<never, State>,
