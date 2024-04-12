@@ -39,7 +39,7 @@ export const handler: Handlers<BlogProps, State> = {
 	},
 };
 
-export default function NotesHandler(
+export default function Notes(
 	props: PageProps<BlogProps, State>,
 ) {
 	const lang = props.data.lang;
