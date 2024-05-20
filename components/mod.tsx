@@ -28,7 +28,7 @@ export function Link(
 			target={target ? target : ""}
 			class={`underline ${
 				!secondary &&
-				"text-blue-500 hover:text-indigo-500 active:text-violet-500 visited:text-purple-500"
+				"text-blue-500 hover:text-indigo-500 active:text-violet-500 visited:text-sky-500"
 			}`}
 		>
 			{name}
