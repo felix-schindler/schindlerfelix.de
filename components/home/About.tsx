@@ -1,4 +1,4 @@
-import { ButtonLink, Title } from "@/components/mod.tsx";
+import { ButtonLink, Link, Title } from "@/components/mod.tsx";
 
 import translations from "@/core/i18n/home/about.json" with { type: "json" };
 import type { AllowedLanguage } from "@/core/types.ts";
@@ -13,6 +13,12 @@ export default function About({ lang }: { lang: AllowedLanguage }) {
 				<ButtonLink
 					name={`→ ${translations[lang].txt.project_list}`}
 					href="/projects"
+				/>
+			</p>
+			<p>
+				<Link
+					name={`→ ${translations[lang].txt.brother}`}
+					href="https://www.schindlerflorian.de"
 				/>
 			</p>
 		</div>
