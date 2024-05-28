@@ -1,0 +1,30 @@
+{
+	"deno": {
+		"enable": true
+	},
+	"languages": {
+		"TypeScript": {
+			"language_servers": [
+				"deno",
+				"!typescript-language-server",
+				"!eslint",
+				"..."
+			]
+		},
+		"TSX": {
+			"language_servers": [
+				"deno",
+				"!typescript-language-server",
+				"!eslint",
+				"..."
+			]
+		}
+	},
+	"format_on_save": "on",
+	"formatter": {
+		"external": {
+			"command": "deno",
+			"arguments": ["fmt"]
+		}
+	}
+}
