@@ -24,9 +24,9 @@
 		"preact": "https://esm.sh/preact@10.19.6",
 		"preact/": "https://esm.sh/preact@10.19.6/",
 		"prism/": "https://esm.sh/prismjs@1.29.0/components/",
-		"tailwindcss": "npm:tailwindcss@3.4.1",
-		"tailwindcss/": "npm:/tailwindcss@3.4.1/",
-		"tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js"
+		"tailwindcss": "npm:tailwindcss@3.4.3",
+		"tailwindcss/": "npm:/tailwindcss@3.4.3/",
+		"tailwindcss/plugin": "npm:/tailwindcss@3.4.3/plugin.js"
 	},
 	"compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
 	"nodeModulesDir": true
