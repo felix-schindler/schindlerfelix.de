@@ -15,8 +15,6 @@ export default function Layout(
 		}
 
 		switch (path) {
-			case "/":
-				return "Home";
 			case "/legal":
 				return "Legal";
 			case "/projects":
