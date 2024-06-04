@@ -24,7 +24,7 @@
 	"formatter": {
 		"external": {
 			"command": "deno",
-			"arguments": ["fmt"]
+			"arguments": ["fmt", "-"]
 		}
 	}
 }
