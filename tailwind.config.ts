@@ -5,6 +5,29 @@ export default {
 		"{routes,islands,components}/**/*.{ts,tsx}",
 	],
 	theme: {
+		fontFamily: {
+			"sans": [
+				"GitLab Sans",
+				"ui-sans-serif",
+				"system-ui",
+				"sans-serif",
+				"Apple Color Emoji",
+				"Segoe UI Emoji",
+				"Segoe UI Symbol",
+				"Noto Color Emoji",
+			],
+			"mono": [
+				"DM Mono",
+				"ui-monospace",
+				"SFMono-Regular",
+				"Menlo",
+				"Monaco",
+				"Consolas",
+				"Liberation Mono",
+				"Courier New",
+				"monospace",
+			],
+		},
 		extend: {
 			gridTemplateRows: {
 				"a1a": "auto 1fr auto",
