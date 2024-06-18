@@ -176,7 +176,7 @@ export const handler: Handlers = {
 		const isDark = searchParams.has("dark");
 		let lang = searchParams.get("lang") ?? "en";
 		if (!isAllowedLanguage(lang)) lang = "en";
-		const region = regions[lang as AllowedLanguage].xian;
+		const region = regions[lang as AllowedLanguage].shanghai;
 
 		// Generate SVG
 		const svg = render(region, isDark).replace(
