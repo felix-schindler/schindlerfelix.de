@@ -2,16 +2,16 @@
 	"en": {
 		"name": "Felix Schindler",
 		"study": "studying <b>Computer Science</b> as a German-Chinese double degree at <b>Stuttgart Media University</b> and <b>Xi'an University of Technology</b>",
-		"based": "currently based in <b>Xi'an, China</b>"
+		"based": "currently based in <b>Shanghai, China</b>"
 	},
 	"de": {
 		"name": "Felix Schindler",
 		"study": "<b>Medieninformatik</b> Student als deutsch-chinesischer Doppelabschluss an der <b>Hochschule der Medien</b> und der <b>Technischen Universität Xi'an</b>",
-		"based": "derzeit wohnend in <b>Xi'an, China</b>"
+		"based": "derzeit wohnend in <b>Shanghai, China</b>"
 	},
 	"zh": {
 		"name": "辛飞利",
 		"study": "<b>斯图加特媒体大学</b>和<b>西安理工大学</b>数字媒体德中双学位",
-		"based": "目前住在<b>西安</b>"
+		"based": "目前住在<b>上海</b>"
 	}
 }
