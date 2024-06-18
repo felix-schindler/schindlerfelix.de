@@ -87,7 +87,7 @@ export default function Notes(
 					data-color-mode="auto"
 					data-light-theme="light"
 					data-dark-theme="dark"
-					class="markdown-body"
+					class="markdown-body !font-sans"
 					dangerouslySetInnerHTML={{ __html: props.data.body }}
 				/>
 			</div>
