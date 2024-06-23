@@ -28,7 +28,7 @@ export function Link(
 			target={target ? target : ""}
 			class={`underline ${
 				!secondary &&
-				"text-blue-500 hover:text-indigo-500 active:text-violet-500 visited:text-sky-500"
+				"text-blue-600 hover:text-indigo-600 active:text-violet-600 visited:text-sky-600 dark:text-blue-400 dark:hover:text-indigo-400 dark:active:text-violet-400 dark:visited:text-sky-400"
 			}`}
 		>
 			{name}
@@ -63,6 +63,7 @@ export function Tech(
 							? encodeURIComponent(name.toLowerCase())
 							: name.toLowerCase()
 					}.svg`}
+					alt="Logo of the technology"
 				/>
 			))}
 			{name}
