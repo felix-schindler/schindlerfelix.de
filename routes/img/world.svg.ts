@@ -60,7 +60,7 @@ const regions: Record<
 			multiply: 0.6,
 		},
 		shanghai: {
-			name: "上海（Shanghai）",
+			name: "上海（Schanghai）",
 			coords: [121.4737, 31.2304],
 			multiply: 0.7,
 		},
