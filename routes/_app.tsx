@@ -99,8 +99,8 @@ export default function Layout(
 				</main>
 				<footer class="p-4 text-center">
 					<p class="mb-1">
-						&copy; <a href="/signin">Felix Schindler</a>{" "}
-						2019-{new Date().getUTCFullYear()} &middot;{" "}
+						&copy; Felix Schindler 2019-{new Date().getUTCFullYear()} &middot;
+						{" "}
 						<Link
 							href="/legal"
 							name={translations[lang].imprint}
