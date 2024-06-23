@@ -17,7 +17,10 @@ export default function Intro({ lang }: { lang: AllowedLanguage }) {
 						srcset={`/img/world.svg?dark=true&lang=${lang}`}
 						media="(prefers-color-scheme: dark)"
 					/>
-					<img src={`/img/world.svg?lang=${lang}`} />
+					<img
+						src={`/img/world.svg?lang=${lang}`}
+						alt={translations[lang].globe_alt}
+					/>
 				</picture>
 
 				<div class="text-center text-lg">
@@ -72,6 +75,7 @@ function SocialLink(
 			href={socials[type].href}
 			class={"flex items-center justify-center w-12 h-12 rounded-md transition-transform duration-200 hover:scale-90" +
 				` bg-${socials[type].color} text-white`}
+			aria-label={type}
 		>
 			{socials[type].icon}
 		</a>
