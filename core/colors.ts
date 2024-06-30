@@ -1,4 +1,4 @@
-// : Record<string, Record<number, string>>
+/** @var Record<string, Record<number, string>> */
 export const tw = {
 	red: {
 		500: "rgb(239, 68, 68)",
