@@ -1,15 +1,13 @@
 {
 	"lock": false,
+	"nodeModulesDir": true,
 	"tasks": {
-		"check": "DENO_FUTURE=1 deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+		"ok": "DENO_FUTURE=1 deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
 		"dev": "DENO_FUTURE=1 deno run -A --watch=static/,routes/ dev.ts",
 		"build": "DENO_FUTURE=1 deno run -A dev.ts build",
-		"start": "DENO_FUTURE=1 deno run -A main.ts",
-		"update": "DENO_FUTURE=1 deno run -A -r jsr:@fresh/update ."
+		"update": "DENO_FUTURE=1 deno run -A -r jsr:@fresh/update .",
+		"preview": "DENO_FUTURE=1 deno run -A main.ts"
 	},
-	"lint": { "rules": { "tags": ["fresh", "recommended"] } },
-	"exclude": ["**/_fresh/*"],
-	"fmt": { "useTabs": true },
 	"imports": {
 		"@/": "./",
 		"@deno/gfm": "jsr:@deno/gfm@^0.8.2",
@@ -40,5 +38,8 @@
 			"html",
 			"head"
 		]
-	}
+	},
+	"fmt": { "useTabs": true },
+	"lint": { "rules": { "tags": ["fresh", "recommended"] } },
+	"exclude": ["**/_fresh/*"]
 }

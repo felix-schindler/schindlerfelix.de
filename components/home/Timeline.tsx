@@ -106,11 +106,11 @@ export default function Timeline({ lang }: { lang: AllowedLanguage }) {
 				{translations[lang].education.heading}
 			</h3>
 			<div class="flex flex-wrap sm:flex-nowrap">
-				<ol class="sm:mt-24 relative border-e border-gray-200 dark:border-gray-700">
+				<ol class="sm:mt-20 relative border-e border-gray-200 dark:border-gray-700 contrast-more:border-gray-700 contrast-more:dark:border-gray-200">
 					{education.map((item) => (
 						<li class="text-end mb-5 sm:mb-10 me-4">
-							<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -end-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
-							<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+							<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -end-1.5 border border-white dark:border-gray-900 dark:bg-gray-700  contrast-more:border-gray-700 contrast-more:dark:border-gray-200 contrast-more:bg-gray-700 contrast-more:dark:bg-gray-200" />
+							<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 contrast-more:text-gray-700 contrast-more:dark:text-gray-300">
 								{fmt_month(item.from)} - {item.until === "now"
 									? translations[lang].now
 									: fmt_month(item.until)}
@@ -128,11 +128,11 @@ export default function Timeline({ lang }: { lang: AllowedLanguage }) {
 				<h3 class="block sm:hidden text-3xl mb-2 font-bold tracking-tight">
 					{translations[lang].jobs.heading}
 				</h3>
-				<ol class="relative border-s border-gray-200 dark:border-gray-700">
+				<ol class="relative border-s border-gray-200 dark:border-gray-700 contrast-more:border-gray-700 contrast-more:dark:border-gray-200">
 					{work.map((item) => (
 						<li class="mb-5 sm:mb-10 ms-4">
-							<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
-							<time class="mb-1 text-sm font-normal leading-none text-gray-500">
+							<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700  contrast-more:border-gray-700 contrast-more:dark:border-gray-200 contrast-more:bg-gray-700 contrast-more:dark:bg-gray-200" />
+							<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 contrast-more:text-gray-700 contrast-more:dark:text-gray-300">
 								{fmt_month(item.from)} - {item.until === "now"
 									? translations[lang].now
 									: fmt_month(item.until)}

@@ -1,12 +1,13 @@
-import { feature } from "https://esm.sh/topojson-client@3.1.0";
-import { geoSatellite } from "https://esm.sh/d3-geo-projection@4.0.0";
-import { geoPath } from "https://esm.sh/d3-geo@3.1.0";
+import type { Handlers } from "$fresh/server.ts";
 
-import { tw } from "@/core/colors.ts";
+import { feature } from "topojson-client";
+import { geoSatellite } from "d3-geo-projection";
+import { geoPath } from "d3-geo";
+
+import { pb, tw } from "@/core/mod.ts";
 import topology from "@/core/land-110m.json" with { type: "json" };
 import { isAllowedLanguage } from "@/core/i18n/mod.ts";
-import type { AllowedLanguage } from "@/core/types.ts";
-import { Handlers } from "fresh/compat";
+import type { State } from "@/core/types.ts";
 
 const land = feature(topology, topology.objects.land);
 
@@ -25,71 +26,12 @@ const projection = geoSatellite()
 
 const path = geoPath(projection);
 
-type Region = {
-	name: string;
-	coords: [number, number];
-	multiply: number; // 0.6 for latin; 0.65 for mixed; 1 for chinese characters
-};
-
-const regions: Record<
-	AllowedLanguage,
-	Record<"stuttgart" | "xian" | "shanghai", Region>
-> = {
-	en: {
-		stuttgart: {
-			name: "Stuttgart",
-			coords: [9.1770, 48.7823],
-			multiply: 0.6,
-		},
-		shanghai: {
-			name: "上海（Shanghai）",
-			coords: [121.4737, 31.2304],
-			multiply: 0.7,
-		},
-		xian: {
-			name: "西安（Xi'an） ",
-			coords: [108.9402, 34.3416],
-			multiply: 0.65,
-		},
-	},
-	de: {
-		stuttgart: {
-			name: "Stuttgart",
-			coords: [9.1770, 48.7823],
-			multiply: 0.6,
-		},
-		shanghai: {
-			name: "上海（Shanghai）",
-			coords: [121.4737, 31.2304],
-			multiply: 0.7,
-		},
-		xian: {
-			name: "西安（Xi'an） ",
-			coords: [108.9402, 34.3416],
-			multiply: 0.65,
-		},
-	},
-	zh: {
-		stuttgart: {
-			name: "斯图加特",
-			coords: [9.1770, 48.7823],
-			multiply: 1,
-		},
-		shanghai: {
-			name: "上海",
-			coords: [121.4737, 31.2304],
-			multiply: 1,
-		},
-		xian: {
-			name: "西安",
-			coords: [108.9402, 34.3416],
-			multiply: 1,
-		},
-	},
-} as const;
-
-function render(region: Region, isDark: boolean) {
-	const coords = region.coords;
+function render(
+	name: string,
+	coords: [number, number],
+	multiply: number,
+	isDark: boolean,
+) {
 	projection.rotate([-coords[0] - 30, -coords[1] * (30 / 90), 0]);
 	const dot = projection(coords);
 
@@ -149,7 +91,7 @@ function render(region: Region, isDark: boolean) {
       <g transform="translate(${dot[0]},${dot[1]})">
         <circle r="15" class="dot"/>
         <rect x="40" y="-32.5" width="${
-				font_size * region.multiply * region.name.length + 40
+				font_size * multiply * name.length + 40
 			}" height="60" rx="10" class="highlight" />
         <polygon points="25,0 40,-10 40,10" class="highlight" />
         <text
@@ -159,7 +101,7 @@ function render(region: Region, isDark: boolean) {
           alignment-baseline="middle"
           dominant-baseline="middle"
           style="font-family: 'Courier', 'Courier New'; font-size: ${font_size}px; text-transform: uppercase; font-weight: bold"
-        >${region.name}</text>
+        >${name}</text>
       </g>`
 			: ""
 	}
@@ -167,18 +109,46 @@ function render(region: Region, isDark: boolean) {
   `;
 }
 
-export const handler: Handlers = {
-	GET(ctx) {
+export const handler: Handlers<never, State> = {
+	async GET(_req, ctx) {
 		const searchParams = ctx.url.searchParams;
 
 		// Get values from params
+		const loc = searchParams.get("loc");
+
+		if (loc === null) {
+			return new Response(undefined, { status: 400 });
+		}
+
 		const isDark = searchParams.has("dark");
-		let lang = searchParams.get("lang") ?? "en";
+		let lang = searchParams.get("lang");
 		if (!isAllowedLanguage(lang)) lang = "en";
-		const region = regions[lang as AllowedLanguage].xian;
+
+		const location = await pb.collection("locations").getOne(loc);
+
+		let name = "";
+		let multiply = 0.6;
+
+		switch (lang) {
+			case "en":
+				name = location.name_en;
+				break;
+			case "de":
+				name = location.name_de;
+				break;
+			case "zh":
+				name = location.name_zh;
+				multiply = 1;
+				break;
+		}
 
 		// Generate SVG
-		const svg = render(region, isDark).replace(
+		const svg = render(
+			name,
+			[location.lat, location.lon],
+			multiply,
+			isDark,
+		).replace(
 			/\d\.\d+/g,
 			(match) => match.slice(0, 4),
 		);

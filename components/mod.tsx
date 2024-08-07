@@ -28,7 +28,7 @@ export function Link(
 			target={target ? target : ""}
 			class={`underline ${
 				!secondary &&
-				"text-blue-500 hover:text-indigo-500 active:text-violet-500 visited:text-sky-500"
+				"text-blue-600 hover:text-indigo-600 active:text-violet-600 visited:text-sky-600 dark:text-blue-400 dark:hover:text-indigo-400 dark:active:text-violet-400 dark:visited:text-sky-400"
 			}`}
 		>
 			{name}
@@ -54,8 +54,8 @@ export function Tech(
 	{ name, icon }: { name: string; icon?: false | string },
 ) {
 	return (
-		<span class="inline-flex items-center gap-1 bg-gray-250 rounded-full px-3 py-1 text-sm font-semibold select-none cursor-default text-gray-700 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-200">
-			{icon === false ? <></> : (icon ? <span>{icon}</span> : (
+		<span class="inline-flex items-center gap-1 bg-gray-250 rounded-full px-3 py-1 text-sm font-semibold select-none cursor-default text-gray-700 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-200 contrast-more:!bg-inherit contrast-more:outline contrast-more:outline-1">
+			{icon === false ? null : (icon ? <span>{icon}</span> : (
 				<img
 					class="h-5 w-5"
 					src={`/img/tech/${
@@ -63,6 +63,7 @@ export function Tech(
 							? encodeURIComponent(name.toLowerCase())
 							: name.toLowerCase()
 					}.svg`}
+					alt="Logo of the technology"
 				/>
 			))}
 			{name}
