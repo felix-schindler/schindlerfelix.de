@@ -1,4 +1,5 @@
 import { join } from "@std/path";
+import { Head } from "$fresh/runtime.ts";
 
 import ImageCollection from "@/components/photos/ImageCollection.tsx";
 import Parallax from "@/components/photos/Parallex.tsx";
@@ -42,6 +43,15 @@ export const handler: RouteHandler<PhotoProps, State> = {
 export default function Germany(props: PageProps<PhotoProps, State>) {
 	return (
 		<>
+			<Head>
+				<meta property="og:title" content="Felix Schindler" />
+				<meta property="og:url" content="https://www.schindlerfelix.de/" />
+				<meta
+					property="og:image"
+					content="https://www.schindlerfelix.de/img/photos/berlin-thumb.avif"
+				/>
+				<meta property="og:type" content="website" />
+			</Head>
 			<ScrollEffect />
 			<Parallax
 				country={{

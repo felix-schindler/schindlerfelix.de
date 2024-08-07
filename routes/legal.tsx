@@ -24,11 +24,14 @@ export default function LegalPage(props: PageProps<never, State>) {
 				</div>
 				<h1 class="mb-2 text-3xl font-bold tracking-tight">Impressum</h1>
 				<h2 class="text-2xl">Verantwortlich für den Inhalt</h2>
-				<Link
-					href="https://www.schindlerfelix.de"
-					name="👨🏻‍💻 Felix Schindler"
-					secondary
-				/>
+				<p class="flex gap-1">
+					<span>👨🏻‍💻</span>
+					<Link
+						href="/"
+						name="Felix Schindler"
+						secondary
+					/>
+				</p>
 				<h2 class="text-xl">Adresse</h2>
 				<address>
 					Kreuzstraße
@@ -38,16 +41,28 @@ export default function LegalPage(props: PageProps<never, State>) {
 					Deutschland
 				</address>
 				<h2 class="text-xl">Kontakt</h2>
-				<Link
-					href="mailto:webmaster@schindlerfelix.de"
-					name="📧 webmaster@schindlerfelix.de"
-					secondary
-				/>
-				<Link
-					href="https://signal.me/#eu/N9BzUA8QKxRd4Vq4xd0NDUdqqxZPRm-eqw8YX9uJTfC9MxkvHXFEHJq3lAAqYEKF"
-					name="📱 Signal"
-					secondary
-				/>
+				<p class="flex gap-1">
+					📧
+					<Link
+						href="mailto:webmaster@schindlerfelix.de"
+						name="webmaster@schindlerfelix.de"
+						secondary
+					/>
+				</p>
+				<p class="flex flex-wrap gap-1">
+					<span>📱</span>
+					<Link
+						href="https://signal.me/#eu/N9BzUA8QKxRd4Vq4xd0NDUdqqxZPRm-eqw8YX9uJTfC9MxkvHXFEHJq3lAAqYEKF"
+						name="Signal"
+						secondary
+					/>
+					<span>&middot;</span>
+					<Link
+						href="imessage://webmaster@schindlerfelix.de"
+						name="iMessage"
+						secondary
+					/>
+				</p>
 			</div>
 			<div class="flex flex-col gap-2">
 				<h1 class="mb-2 text-3xl font-bold tracking-tight">Datenschutz</h1>

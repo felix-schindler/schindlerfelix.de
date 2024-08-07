@@ -37,12 +37,23 @@ export default function Layout(
 
 				{/* SEO 🤖 */}
 				<title>{getTitle(pathname)}</title>
+				<meta
+					name="description"
+					content="Felix Schindler's portfolio showcasing expertise in digital technology, web development, software engineering, and international collaboration. Discover projects, insights, and more."
+				/>
+				<meta
+					name="keywords"
+					content="Felix, Schindler, Felix Schindler, digital technology, web development, software engineering, international collaboration"
+				/>
 				<meta name="author" content="Felix Schindler" />
+				<link rel="canonical" href="https://www.schindlerfelix.de/" />
+				<meta name="robots" content="index, follow" />
 
 				{/* Look and feel ✨ */}
 				<link rel="stylesheet" href="/styles.css" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="manifest" href="/pwa/manifest.json" />
+				<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 				<meta name="color-scheme" content="light dark" />
 				<meta
@@ -88,8 +99,8 @@ export default function Layout(
 				</main>
 				<footer class="p-4 text-center">
 					<p class="mb-1">
-						&copy; <a href="/signin">Felix Schindler</a>{" "}
-						2019-{new Date().getUTCFullYear()} &middot;{" "}
+						&copy; Felix Schindler 2019-{new Date().getUTCFullYear()} &middot;
+						{" "}
 						<Link
 							href="/legal"
 							name={translations[lang].imprint}

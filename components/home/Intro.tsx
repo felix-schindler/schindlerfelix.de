@@ -14,10 +14,13 @@ export default function Intro({ lang }: { lang: AllowedLanguage }) {
 			<div class="sm:flex sm:items-center">
 				<picture class="w-full" alt="Globe marking the region Xi'an, China">
 					<source
-						srcset={`/img/world.svg?dark=true&lang=${lang}`}
+						srcset={`/img/world.svg?dark=true&lang=${lang}&loc=mtvsyhelishb0ut`}
 						media="(prefers-color-scheme: dark)"
 					/>
-					<img src={`/img/world.svg?lang=${lang}`} />
+					<img
+						src={`/img/world.svg?lang=${lang}&loc=mtvsyhelishb0ut`}
+						alt={translations[lang].globe_alt}
+					/>
 				</picture>
 
 				<div class="text-center text-lg">
@@ -72,6 +75,7 @@ function SocialLink(
 			href={socials[type].href}
 			class={"flex items-center justify-center w-12 h-12 rounded-md transition-transform duration-200 hover:scale-90" +
 				` bg-${socials[type].color} text-white`}
+			aria-label={type}
 		>
 			{socials[type].icon}
 		</a>
