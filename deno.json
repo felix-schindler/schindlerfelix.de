@@ -15,29 +15,22 @@
 		"@preact/signals": "npm:@preact/signals@^1.2.3",
 		"@std/http": "jsr:@std/http@^0.224.4",
 		"@std/path": "jsr:@std/path@^0.225.2",
-		"fresh": "jsr:@fresh/core@^2.0.0-alpha.16",
+		"d3-geo": "npm:d3-geo@^3.1.1",
+		"d3-geo-projection": "npm:d3-geo-projection@^4.0.0",
+		"fresh": "jsr:@fresh/core@^2.0.0-alpha.19",
 		"icons/": "https://deno.land/x/tabler_icons_tsx@0.0.6/tsx/",
-		"preact": "npm:preact@^10.22.0",
+		"pocketbase": "npm:pocketbase@^0.21.4",
+		"preact": "npm:preact@^10.22.1",
 		"prism": "npm:prism@^4.1.2",
 		"tailwindcss": "npm:tailwindcss@3.4.3",
-		"tailwindcss/plugin": "npm:tailwindcss@3.4.3/plugin.js"
+		"tailwindcss/plugin": "npm:tailwindcss@3.4.3/plugin.js",
+		"topojson-client": "npm:topojson-client@^3.1.0"
 	},
 	"compilerOptions": {
-		"lib": [
-			"dom",
-			"dom.asynciterable",
-			"deno.ns"
-		],
+		"lib": ["dom", "dom.asynciterable", "deno.ns"],
 		"jsx": "precompile",
 		"jsxImportSource": "preact",
-		"jsxPrecompileSkipElements": [
-			"a",
-			"img",
-			"source",
-			"body",
-			"html",
-			"head"
-		]
+		"jsxPrecompileSkipElements": ["a", "img", "source", "body", "html", "head"]
 	},
 	"fmt": { "useTabs": true },
 	"lint": { "rules": { "tags": ["fresh", "recommended"] } },

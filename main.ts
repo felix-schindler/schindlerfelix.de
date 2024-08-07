@@ -4,8 +4,6 @@ import { State } from "@/utils.ts";
 export const app = new App<State>();
 app.use(staticFiles());
 
-app.get("/api/:joke", () => new Response("Hello World"));
-
 await fsRoutes(app, {
 	dir: "./",
 	loadIsland: (path) => import(`./islands/${path}`),

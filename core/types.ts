@@ -6,10 +6,6 @@ export type AllowedLanguage = "en" | "de" | "zh";
 type RecordID = string;
 type DateString = string;
 
-export type State = {
-	language: AllowedLanguage;
-};
-
 type BaseFields = {
 	id: RecordID;
 	updated: DateString;
