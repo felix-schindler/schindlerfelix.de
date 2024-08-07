@@ -43,7 +43,7 @@ export async function handler(
 		});
 		return res;
 	} else {
-		const customLangCookie = getCookies(req.headers).lang;
+		const customLangCookie = getCookies(ctx.req.headers).lang;
 		if (customLangCookie !== undefined && isAllowedLanguage(customLangCookie)) {
 			ctx.state.language = customLangCookie;
 		} else {

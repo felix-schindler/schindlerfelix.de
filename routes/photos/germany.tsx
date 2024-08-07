@@ -1,49 +1,21 @@
 import { join } from "@std/path";
-import { Head } from "$fresh/runtime.ts";
 
+import { loadFiles } from "@/core/mod.ts";
 import ImageCollection from "@/components/photos/ImageCollection.tsx";
 import Parallax from "@/components/photos/Parallex.tsx";
 import ScrollEffect from "@/islands/ScrollEffect.tsx";
 
-import type { PageProps, RouteHandler } from "fresh";
+import type { PageProps } from "fresh";
 import type { State } from "@/utils.ts";
 
 const baseImagePath = join("img", "photos", "germany");
 
-type PhotoProps = {
-	files: Record<string, Array<string>>;
-};
+export default async function Germany(props: PageProps<never, State>) {
+	const files = await loadFiles(baseImagePath);
 
-export const handler: RouteHandler<PhotoProps, State> = {
-	async GET(ctx) {
-		const files: Record<string, Array<string>> = {};
-		const baseDirEntries = Deno.readDir(
-			join(Deno.cwd(), "static", baseImagePath),
-		);
-		const directories = (await Array.fromAsync(baseDirEntries))
-			.filter((e) => e.isDirectory)
-			.map((e) => e.name)
-			.toSorted();
-
-		for (const city of directories) {
-			const imageFiles = await Array.fromAsync(
-				Deno.readDir(join(Deno.cwd(), "static", baseImagePath, city)),
-			);
-
-			files[city] = imageFiles
-				.filter((f) => f.isFile && f.name.endsWith(".avif"))
-				.map((f) => f.name)
-				.toSorted();
-		}
-
-		return await ctx.render({ files });
-	},
-};
-
-export default function Germany(props: PageProps<PhotoProps, State>) {
 	return (
 		<>
-			<Head>
+			<head>
 				<meta property="og:title" content="Felix Schindler" />
 				<meta property="og:url" content="https://www.schindlerfelix.de/" />
 				<meta
@@ -51,7 +23,7 @@ export default function Germany(props: PageProps<PhotoProps, State>) {
 					content="https://www.schindlerfelix.de/img/photos/berlin-thumb.avif"
 				/>
 				<meta property="og:type" content="website" />
-			</Head>
+			</head>
 			<ScrollEffect />
 			<Parallax
 				country={{
@@ -62,9 +34,9 @@ export default function Germany(props: PageProps<PhotoProps, State>) {
 			/>
 			<ImageCollection
 				cities={[
-					...Object.entries(props.data.files).map(([city, files]) => ({
+					...Object.entries(files).map(([city, _files]) => ({
 						name: city.charAt(0).toUpperCase() + city.slice(1),
-						images: files.map((f) => "/" + join(baseImagePath, city, f)),
+						images: _files.map((f) => "/" + join(baseImagePath, city, f)),
 					})),
 				]}
 				lang={props.state.language}

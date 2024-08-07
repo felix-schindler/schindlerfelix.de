@@ -1,4 +1,4 @@
-import type { Handlers } from "$fresh/server.ts";
+import type { RouteHandler } from "fresh";
 
 import { feature } from "topojson-client";
 import { geoSatellite } from "d3-geo-projection";
@@ -109,8 +109,8 @@ function render(
   `;
 }
 
-export const handler: Handlers<never, State> = {
-	async GET(_req, ctx) {
+export const handler: RouteHandler<never, State> = {
+	async GET(ctx) {
 		const searchParams = ctx.url.searchParams;
 
 		// Get values from params

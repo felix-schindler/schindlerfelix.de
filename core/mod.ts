@@ -22,3 +22,31 @@ export const tw = {
 		700: "rgb(4, 120, 87)",
 	},
 } as const;
+
+export async function loadFiles(
+	baseImagePath: string,
+): Promise<Record<string, Array<string>>> {
+	const { join } = await import("@std/path");
+
+	const files: Record<string, Array<string>> = {};
+	const baseDirEntries = Deno.readDir(
+		join(Deno.cwd(), "static", baseImagePath),
+	);
+	const directories = (await Array.fromAsync(baseDirEntries))
+		.filter((e) => e.isDirectory)
+		.map((e) => e.name)
+		.toSorted();
+
+	for (const city of directories) {
+		const imageFiles = await Array.fromAsync(
+			Deno.readDir(join(Deno.cwd(), "static", baseImagePath, city)),
+		);
+
+		files[city] = imageFiles
+			.filter((f) => f.isFile && f.name.endsWith(".avif"))
+			.map((f) => f.name)
+			.toSorted();
+	}
+
+	return files;
+}
