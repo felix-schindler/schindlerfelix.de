@@ -8,7 +8,6 @@ import { pb, tw } from "@/core/mod.ts";
 import topology from "@/core/land-110m.json" with { type: "json" };
 import { isAllowedLanguage } from "@/core/i18n/mod.ts";
 import type { State } from "@/core/types.ts";
-import { AllowedLanguage } from "@/core/types.ts";
 
 const land = feature(topology, topology.objects.land);
 
@@ -17,11 +16,6 @@ const distance = 8;
 const w = 1000;
 const h = 1000;
 const rad_to_deg = 180 / Math.PI;
-const multiply: Record<AllowedLanguage, number> = {
-	"de": 0.6,
-	"en": 0.6,
-	"zh": 1,
-} as const;
 
 const projection = geoSatellite()
 	.distance(distance)
@@ -129,11 +123,12 @@ export const handler: Handlers<never, State> = {
 		const isDark = searchParams.has("dark");
 		let lang = searchParams.get("lang");
 		if (!isAllowedLanguage(lang)) lang = "en";
-		lang as AllowedLanguage; // TODO: This shouldn't be needed
 
 		const location = await pb.collection("locations").getOne(loc);
 
 		let name = "";
+		let multiply = 0.6;
+
 		switch (lang) {
 			case "en":
 				name = location.name_en;
@@ -143,6 +138,7 @@ export const handler: Handlers<never, State> = {
 				break;
 			case "zh":
 				name = location.name_zh;
+				multiply = 1;
 				break;
 		}
 
@@ -150,7 +146,7 @@ export const handler: Handlers<never, State> = {
 		const svg = render(
 			name,
 			[location.lat, location.lon],
-			multiply[lang],
+			multiply,
 			isDark,
 		).replace(
 			/\d\.\d+/g,
