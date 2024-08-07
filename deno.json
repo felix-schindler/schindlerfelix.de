@@ -8,7 +8,8 @@
 		"dev": "deno run -A --watch=static/,routes/ dev.ts",
 		"build": "deno run -A dev.ts build",
 		"start": "deno run -A main.ts",
-		"update": "deno run -Ar https://fresh.deno.dev/update ."
+		"update": "deno run -Ar https://fresh.deno.dev/update .",
+		"preview": "deno run -A main.ts"
 	},
 	"imports": {
 		"$fresh/": "https://deno.land/x/fresh@1.6.8/",
@@ -30,22 +31,8 @@
 		"tailwindcss/plugin": "npm:/tailwindcss@3.4.3/plugin.js",
 		"topojson-client": "npm:topojson-client@^3.1.0"
 	},
-	"compilerOptions": {
-		"jsx": "react-jsx",
-		"jsxImportSource": "preact"
-	},
-	"fmt": {
-		"useTabs": true
-	},
-	"lint": {
-		"rules": {
-			"tags": [
-				"fresh",
-				"recommended"
-			]
-		}
-	},
-	"exclude": [
-		"**/_fresh/*"
-	]
+	"compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+	"fmt": { "useTabs": true },
+	"lint": { "rules": { "tags": ["fresh", "recommended"] } },
+	"exclude": ["**/_fresh/*"]
 }
