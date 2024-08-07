@@ -1,3 +1,10 @@
+import PocketBase from "pocketbase";
+import type { TypedPocketBase } from "./types.ts";
+
+// THE PocketBase instance
+export const pb = new PocketBase("https://pb.schindlerfelix.de")
+	.autoCancellation(false) as TypedPocketBase;
+
 /** @var Record<string, Record<number, string>> */
 export const tw = {
 	red: {

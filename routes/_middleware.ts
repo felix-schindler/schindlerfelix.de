@@ -15,9 +15,9 @@ export async function handler(
 	if (hasFileExt) {
 		const res = await ctx.next();
 
-		if (res.ok) {
+		if (res.ok && !res.headers.has("cache-control")) {
 			// Add cache header for 15 days
-			res.headers.set("Cache-Control", "public, max-age=1296000, immutable");
+			res.headers.set("cache-control", "public, max-age=1296000, immutable");
 		}
 
 		return res;
