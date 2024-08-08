@@ -4,7 +4,7 @@
 	"tasks": {
 		"ok": "DENO_FUTURE=1 deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
 		"dev": "DENO_FUTURE=1 deno run -A --watch=static/,routes/ dev.ts",
-		"build": "DENO_FUTURE=1 deno run -A dev.ts build",
+		"build": "deno run -A dev.ts build",
 		"update": "DENO_FUTURE=1 deno run -A -r jsr:@fresh/update .",
 		"preview": "DENO_FUTURE=1 deno run -A main.ts"
 	},
@@ -13,8 +13,9 @@
 		"@deno/gfm": "jsr:@deno/gfm@^0.8.2",
 		"@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
 		"@preact/signals": "npm:@preact/signals@^1.2.3",
-		"@std/http": "jsr:@std/http@^0.224.4",
-		"@std/path": "jsr:@std/path@^0.225.2",
+		"@std/fs": "jsr:@std/fs@^1.0.0",
+		"@std/http": "jsr:@std/http@^1.0.0",
+		"@std/path": "jsr:@std/path@^1.0.0",
 		"d3-geo": "npm:d3-geo@^3.1.1",
 		"d3-geo-projection": "npm:d3-geo-projection@^4.0.0",
 		"fresh": "jsr:@fresh/core@^2.0.0-alpha.19",

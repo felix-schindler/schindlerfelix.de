@@ -7,7 +7,7 @@ import { geoPath } from "d3-geo";
 import { pb, tw } from "@/core/mod.ts";
 import topology from "@/core/land-110m.json" with { type: "json" };
 import { isAllowedLanguage } from "@/core/i18n/mod.ts";
-import type { State } from "@/core/types.ts";
+import type { State } from "@/utils.ts";
 
 const land = feature(topology, topology.objects.land);
 

@@ -7,7 +7,7 @@ import {
 	Timeline,
 } from "@/components/home/mod.tsx";
 import type { PageProps } from "fresh";
-import type { State } from "@/core/types.ts";
+import { State } from "@/utils.ts";
 
 export default function Home(props: PageProps<never, State>) {
 	const language = props.state.language;
