@@ -20,7 +20,7 @@ import * as $projects_tanuki_index from "./routes/projects/tanuki/index.tsx";
 import * as $projects_tanuki_privacy from "./routes/projects/tanuki/privacy.tsx";
 import * as $projects_tanuki_support from "./routes/projects/tanuki/support.tsx";
 import * as $ScrollEffect from "./islands/ScrollEffect.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
 	routes: {
