@@ -1,4 +1,4 @@
-import { isAllowedLanguage } from "@/core/i18n/mod.ts";
+import { isAllowedLanguage } from "@/core/types.ts";
 import { join } from "@std/path";
 import { Handlers } from "fresh/compat";
 
