@@ -1,7 +1,14 @@
 import type PocketBase from "pocketbase";
 import type { RecordService } from "pocketbase";
 
-export type AllowedLanguage = "en" | "de" | "zh";
+const ALLOWED_LANGUAGES = ["en", "de", "zh"] as const;
+export type AllowedLanguage = typeof ALLOWED_LANGUAGES[number];
+
+export function isAllowedLanguage(
+	lang: string | null,
+): lang is AllowedLanguage {
+	return ALLOWED_LANGUAGES.includes(lang as AllowedLanguage);
+}
 
 type RecordID = string;
 type DateString = string;

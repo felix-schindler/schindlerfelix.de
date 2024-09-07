@@ -1,7 +1,7 @@
 import { getCookies, setCookie } from "@std/http/cookie";
 import type { FreshContext } from "fresh";
 
-import { isAllowedLanguage } from "@/core/i18n/mod.ts";
+import { isAllowedLanguage } from "@/core/types.ts";
 import type { State } from "@/utils.ts";
 
 export async function handler(
