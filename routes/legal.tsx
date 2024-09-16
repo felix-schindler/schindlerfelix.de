@@ -71,22 +71,6 @@ export default function LegalPage(props: PageProps<never, State>) {
 					{" "}
 					<code>www.schindlerfelix.de</code>.
 				</p>
-				<h2 class="text-2xl">Hoster</h2>
-				<p>
-					<p>
-						Die Webseite wird gehostet von Deno Deploy, einem Service von Deno
-						Land Inc.
-					</p>
-					<address>
-						Deno Land Inc.
-						<br />
-						251 Little Falls Dr
-						<br />
-						Wilmington DE 19808-1674
-						<br />
-						USA
-					</address>
-				</p>
 				<h2 class="text-2xl">Erfasste Daten</h2>
 				<p>
 					Es werden keinerlei personenbezogene Daten erfasst. Es werden keine
@@ -140,7 +124,7 @@ export default function LegalPage(props: PageProps<never, State>) {
 				</p>
 				<p>
 					Stand:{" "}
-					{new Date("2024-02-01T13:00:43.494Z").toLocaleDateString(lang, {
+					{new Date("2024-09-16T13:53:38.243Z").toLocaleDateString(lang, {
 						year: "numeric",
 						month: "long",
 						day: "numeric",
@@ -150,19 +134,19 @@ export default function LegalPage(props: PageProps<never, State>) {
 				<h1 class="text-3xl font-bold">Quellenangaben</h1>
 				<ul>
 					<li>
-						Sky on photo pages by{" "}
+						Himmel-Hintergrundbild auf Fotoseiten von{" "}
 						<Link
 							name="Oleg Mitiukhin"
 							href="https://unsplash.com/@oleg_mit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 						/>{" "}
-						on{" "}
+						auf{" "}
 						<Link
 							name="Unsplash"
 							href="https://unsplash.com/photos/white-clouds-and-blue-sky-during-daytime-2gJa-AUtAOc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 						/>
 					</li>
 					<li>
-						Foreground of banner on China photo page by{" "}
+						Vordergrund des China Banners auf der China-Fotoseite von{" "}
 						<Link name="Elias Ruiz" href="https://eliasruiz.com" />
 					</li>
 				</ul>
