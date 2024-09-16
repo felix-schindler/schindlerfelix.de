@@ -53,6 +53,10 @@ export default {
 			maxWidth: {
 				"50-calc": "calc(50% - 10px)",
 			},
+			backgroundImage: {
+				"instagram":
+					"linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);",
+			},
 		},
 	},
 } satisfies Config;
