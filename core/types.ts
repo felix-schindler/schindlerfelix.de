@@ -25,15 +25,10 @@ export type Location = BaseFields & {
 	name_zh: string;
 	lat: number;
 	lon: number;
-};
-
-type Region = BaseFields & {
-	name_en: string;
-	name_de: string;
-	name_zh: string;
+	category: "region" | "city" | "small";
+	parent: RecordID;
 };
 
 export interface TypedPocketBase extends PocketBase {
-	collection(idOrName: "regions"): RecordService<Region>;
 	collection(idOrName: "locations"): RecordService<Location>;
 }
