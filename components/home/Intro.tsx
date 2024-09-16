@@ -31,8 +31,7 @@ export default function Intro({ lang }: { lang: AllowedLanguage }) {
 					/>
 
 					<div class="flex flex-wrap justify-center gap-1 mt-3">
-						{/* This needs to be done because otherwise Tailwind won't know which colors to include in the css */}
-						<span class="hidden text-white text-black bg-white bg-black bg-orange-500 bg-blue-500 bg-gradient-to-br from-pink-500 to-purple-500" />
+						<span class="hidden text-white text-black bg-white bg-black bg-orange-500 bg-blue-500 bg-instagram" />
 						<SocialLink type="github" />
 						<SocialLink type="gitlab" />
 						<SocialLink type="linkedin" />
@@ -63,7 +62,7 @@ const socials = {
 	instagram: {
 		href: "https://instagram.com/vhwjpzf1z0fi73a",
 		icon: <IconInstagram size={28} />,
-		color: "gradient-to-br from-pink-500 to-purple-500",
+		color: "instagram",
 	},
 } as const;
 
