@@ -1,40 +1,37 @@
-import { join } from "@std/path";
-import { exists } from "@std/fs";
-import { CSS, render } from "@deno/gfm";
+import { CSS } from "@deno/gfm";
 import type { PageProps } from "fresh";
 
+import { pb } from "@/core/mod.ts";
 import { ButtonLink, SiteTitle } from "@/components/mod.tsx";
-import translations from "@/core/i18n/notes.json" with { type: "json" };
+import { back_to_home } from "@/core/i18n/mod.ts";
 import type { State } from "@/utils.ts";
 
-// Additional syntax highlighting
-// import "prism/prism-bash?no-check";
-// import "prism/prism-nginx?no-check";
+const heading = {
+	"en": "Notes",
+	"de": "Notizen",
+	"zh": "笔记",
+} as const;
 
 export default async function Notes(
 	props: PageProps<never, State>,
 ) {
-	// Encode the slug to prevent directory traversal
 	const slug = encodeURIComponent(props.params.slug);
 	const lang = props.state.language;
-	const filePath = join(Deno.cwd(), "routes", "blog", lang, `${slug}.md`);
+	const note = (await pb.collection("notes").getFirstListItem(`slug='${slug}'`, {
+		expand: lang,
+	})).expand[lang];
 
-	if (!await exists(filePath)) {
-		// TODO: This should return a 404 page
-		throw new Error("Doesn't exist");
+	if (note === undefined) {
+		throw new Error(`Note with '${slug}' not found`);
 	}
 
-	const markdown = await Deno.readTextFile(filePath);
-	const title = markdown.split("\n")[0].split("# ")[1];
-	const body = render(markdown, {
-		baseUrl: "https://www.schindlerfelix.de",
-	});
+	const body = note.content;
 
 	return (
 		<>
 			<head>
 				<title>
-					{title} &middot; {translations[lang].notes.heading}
+					{note.title} &middot; {heading[lang]}
 				</title>
 				<style dangerouslySetInnerHTML={{ __html: CSS }} />
 				<style
@@ -61,10 +58,10 @@ export default async function Notes(
 				/>
 			</head>
 			<div>
-				<SiteTitle name={translations[lang].notes.heading} />
+				<SiteTitle name={heading[lang]} />
 				<p class="my-2.5">
 					<ButtonLink
-						name={`← ${translations[lang].back_to_home}`}
+						name={`← ${back_to_home[lang]}`}
 						href="/#notes"
 					/>
 				</p>
@@ -74,7 +71,9 @@ export default async function Notes(
 					data-light-theme="light"
 					data-dark-theme="dark"
 					class="markdown-body !font-sans"
-					dangerouslySetInnerHTML={{ __html: body }}
+					dangerouslySetInnerHTML={{
+						__html: body,
+					}}
 				/>
 			</div>
 		</>

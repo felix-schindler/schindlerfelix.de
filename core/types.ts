@@ -29,6 +29,25 @@ export type Location = BaseFields & {
 	parent: RecordID;
 };
 
+export type NoteContent = BaseFields & {
+	title: string;
+	description: string;
+	content: string;
+};
+
+export type Note = BaseFields & {
+	slug: string;
+	de: RecordID;
+	en: RecordID;
+	zh: RecordID;
+	expand: {
+		de: NoteContent | undefined;
+		en: NoteContent | undefined;
+		zh: NoteContent | undefined;
+	};
+};
+
 export interface TypedPocketBase extends PocketBase {
 	collection(idOrName: "locations"): RecordService<Location>;
+	collection(idOrName: "notes"): RecordService<Note>;
 }
