@@ -6,7 +6,7 @@
 		"dev": "DENO_FUTURE=1 deno run -A --watch=static/,routes/ dev.ts",
 		"build": "deno run -A dev.ts build",
 		"update": "DENO_FUTURE=1 deno run -A -r jsr:@fresh/update .",
-		"preview": "DENO_FUTURE=1 deno run -A main.ts"
+		"start": "DENO_FUTURE=1 deno run -A main.ts"
 	},
 	"imports": {
 		"@/": "./",
