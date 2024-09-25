@@ -19,17 +19,22 @@ const notesHeading = {
 export default async function Home(props: PageProps<never, State>) {
 	const language = props.state.language;
 
-	const notes = (await pb.collection("notes").getFullList({
-		expand: language,
-		fields: "slug,expand",
-	}))
-		.map((note) => {
-			console.log(note);
-			return {
-				slug: note.slug,
-				...note.expand[language]!,
-			};
-		});
+	const [locations, rawNotes] = await Promise.all([
+		pb.collection("locations").getFullList({
+			filter: "parent=null",
+		}),
+		pb.collection("notes").getFullList({
+			expand: language,
+			fields: "slug,expand",
+		}),
+	]);
+
+	const notes = rawNotes.map((note) => {
+		return {
+			slug: note.slug,
+			...note.expand[language]!,
+		};
+	});
 
 	return (
 		<>
@@ -47,7 +52,7 @@ export default async function Home(props: PageProps<never, State>) {
 				<About lang={language} />
 				<Languages lang={language} />
 				<Timeline lang={language} />
-				<Photos lang={language} />
+				<Photos locations={locations} lang={language} />
 				<Notes
 					heading={notesHeading[language]}
 					notes={notes}

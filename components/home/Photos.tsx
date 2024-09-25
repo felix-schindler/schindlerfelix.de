@@ -1,32 +1,32 @@
+import { pb } from "@/core/mod.ts";
 import { Title } from "@/components/mod.tsx";
-import translations from "@/core/i18n/home/photos.json" with { type: "json" };
-import type { AllowedLanguage } from "@/core/types.ts";
+import type { AllowedLanguage, Location } from "@/core/types.ts";
 
-export default function Photos({ lang }: { lang: AllowedLanguage }) {
+const headings = {
+	"en": "Photos",
+	"de": "Fotos",
+	"zh": "照片",
+} as const;
+
+export default function Photos(
+	{ locations, lang }: { locations: Location[]; lang: AllowedLanguage },
+) {
 	return (
 		<div>
 			<Title id="photos">
-				{translations[lang].heading}
+				{headings[lang]}
 			</Title>
 			<div class="grid grid-cols-default gap-2">
-				<PrettyLink
-					name={translations[lang].china}
-					englishName={translations.en.china}
-					href="/photos/china"
-					imgPath="shanghai-thumb.avif"
-				/>
-				<PrettyLink
-					name={translations[lang].korea}
-					englishName={translations.en.korea}
-					href="/photos/korea"
-					imgPath="korea-thumb.avif"
-				/>
-				<PrettyLink
-					name={translations[lang].germany}
-					englishName={translations.en.germany}
-					href="/photos/germany"
-					imgPath="berlin-thumb.avif"
-				/>
+				{locations.map((loc) => {
+					return (
+						<PrettyLink
+							name={loc[`name_${lang}`]}
+							englishName={loc.name_en}
+							href={`/photos/${loc.id}`}
+							imgPath={pb.getFileUrl(loc, loc.pictures[0])}
+						/>
+					);
+				})}
 			</div>
 		</div>
 	);
@@ -45,7 +45,7 @@ function PrettyLink({ name, englishName, href, imgPath }: {
 			px-4 py-3 h-64 rounded-xl
 			bg-no-repeat bg-cover bg-center
 			transition-transform hover:scale-95"
-			style={`background-image: url('/img/photos/${imgPath}');`}
+			style={`background-image: url(${imgPath});`}
 		>
 			<h3
 				class="text-xl font-bold"
