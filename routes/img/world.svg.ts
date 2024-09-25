@@ -1,4 +1,4 @@
-import type { Handlers } from "$fresh/server.ts";
+import type { RouteHandler } from "fresh";
 
 import { feature } from "topojson-client";
 import { geoSatellite } from "d3-geo-projection";
@@ -6,8 +6,8 @@ import { geoPath } from "d3-geo";
 
 import { pb, tw } from "@/core/mod.ts";
 import topology from "@/core/land-110m.json" with { type: "json" };
-import { isAllowedLanguage } from "@/core/i18n/mod.ts";
-import type { State } from "@/core/types.ts";
+import { isAllowedLanguage } from "@/core/types.ts";
+import type { State } from "@/utils.ts";
 
 const land = feature(topology, topology.objects.land);
 
@@ -109,8 +109,8 @@ function render(
   `;
 }
 
-export const handler: Handlers<never, State> = {
-	async GET(_req, ctx) {
+export const handler: RouteHandler<never, State> = {
+	async GET(ctx) {
 		const searchParams = ctx.url.searchParams;
 
 		// Get values from params

@@ -1,54 +1,38 @@
-import { Handlers, PageProps } from "$fresh/server.ts";
-import { join } from "@std/path";
-import { Head } from "$fresh/runtime.ts";
-import { CSS, render } from "@deno/gfm";
+import { CSS } from "@deno/gfm";
+import type { PageProps } from "fresh";
 
+import { pb } from "@/core/mod.ts";
 import { ButtonLink, SiteTitle } from "@/components/mod.tsx";
-import translations from "@/core/i18n/notes.json" with { type: "json" };
-import type { AllowedLanguage, State } from "@/core/types.ts";
+import { back_to_home } from "@/core/i18n/mod.ts";
+import type { State } from "@/utils.ts";
 
-// Additional syntax highlighting
-import "prism/prism-bash?no-check";
-import "prism/prism-nginx?no-check";
+const heading = {
+	"en": "Notes",
+	"de": "Notizen",
+	"zh": "笔记",
+} as const;
 
-type BlogProps = {
-	lang: AllowedLanguage;
-	title: string;
-	body: string;
-};
-
-export const handler: Handlers<BlogProps, State> = {
-	async GET(_req, ctx) {
-		// Encode the slug to prevent directory traversal
-		const slug = encodeURIComponent(ctx.params.slug);
-		const lang = ctx.state.language;
-
-		try {
-			const markdown = await Deno.readTextFile(
-				join(Deno.cwd(), "routes", "blog", lang, `${slug}.md`),
-			);
-			const title = markdown.split("\n")[0].split("# ")[1];
-			const body = render(markdown, {
-				baseUrl: "https://www.schindlerfelix.de",
-			});
-
-			return await ctx.render({ lang, title, body });
-		} catch {
-			return await ctx.renderNotFound();
-		}
-	},
-};
-
-export default function Notes(
-	props: PageProps<BlogProps, State>,
+export default async function Notes(
+	props: PageProps<never, State>,
 ) {
-	const lang = props.data.lang;
+	const slug = encodeURIComponent(props.params.slug);
+	const lang = props.state.language;
+	const note =
+		(await pb.collection("notes").getFirstListItem(`slug='${slug}'`, {
+			expand: lang,
+		})).expand[lang];
+
+	if (note === undefined) {
+		throw new Error(`Note with '${slug}' not found`);
+	}
+
+	const body = note.content;
 
 	return (
 		<>
-			<Head>
+			<head>
 				<title>
-					{props.data.title} &middot; {translations[lang].notes.heading}
+					{note.title} &middot; {heading[lang]}
 				</title>
 				<style dangerouslySetInnerHTML={{ __html: CSS }} />
 				<style
@@ -73,12 +57,12 @@ export default function Notes(
 				`,
 					}}
 				/>
-			</Head>
+			</head>
 			<div>
-				<SiteTitle name={translations[lang].notes.heading} />
+				<SiteTitle name={heading[lang]} />
 				<p class="my-2.5">
 					<ButtonLink
-						name={`← ${translations[lang].back_to_home}`}
+						name={`← ${back_to_home[lang]}`}
 						href="/#notes"
 					/>
 				</p>
@@ -88,7 +72,9 @@ export default function Notes(
 					data-light-theme="light"
 					data-dark-theme="dark"
 					class="markdown-body !font-sans"
-					dangerouslySetInnerHTML={{ __html: props.data.body }}
+					dangerouslySetInnerHTML={{
+						__html: body,
+					}}
 				/>
 			</div>
 		</>
