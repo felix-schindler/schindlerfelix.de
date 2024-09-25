@@ -9,6 +9,9 @@ WORKDIR /app
 # Copy all files to the working directory
 COPY . .
 
+# Log version
+RUN deno --version
+
 # Run checks
 RUN deno task ok
 
