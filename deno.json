@@ -2,36 +2,44 @@
 	"lock": false,
 	"nodeModulesDir": true,
 	"tasks": {
-		"ok": "deno fmt --check && deno lint && deno check **/*.ts **/*.tsx",
-		"cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
-		"manifest": "deno task cli manifest $(pwd)",
-		"dev": "deno run -A --watch=static/,routes/ dev.ts",
+		"ok": "DENO_FUTURE=1 deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+		"dev": "DENO_FUTURE=1 deno run -A --watch=static/,routes/ dev.ts",
 		"build": "deno run -A dev.ts build",
-		"start": "deno run -A main.ts",
-		"update": "deno run -Ar https://fresh.deno.dev/update .",
-		"preview": "deno run -A main.ts"
+		"update": "DENO_FUTURE=1 deno run -A -r jsr:@fresh/update .",
+		"preview": "DENO_FUTURE=1 deno run -A main.ts"
 	},
 	"imports": {
-		"$fresh/": "https://deno.land/x/fresh@1.7.1/",
 		"@/": "./",
-		"@deno/gfm": "jsr:@deno/gfm@^0.8.2",
-		"@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
-		"@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
-		"@std/http/cookie": "jsr:@std/http@^0.224.5/cookie",
-		"@std/path": "jsr:@std/path@^0.225.2",
+		"@deno/gfm": "jsr:@deno/gfm@^0.9.0",
+		"@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
+		"@std/http": "jsr:@std/http@^1.0.7",
+		"@std/path": "jsr:@std/path@^1.0.6",
 		"d3-geo": "npm:d3-geo@^3.1.1",
 		"d3-geo-projection": "npm:d3-geo-projection@^4.0.0",
+		"fresh": "jsr:@fresh/core@^2.0.0-alpha.20",
 		"icons/": "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/",
-		"pocketbase": "npm:pocketbase@^0.21.3",
-		"preact": "https://esm.sh/preact@10.23.2",
-		"preact/": "https://esm.sh/preact@10.23.2/",
-		"prism/": "https://esm.sh/prismjs@1.29.0/components/",
-		"tailwindcss": "npm:tailwindcss@3.4.3",
-		"tailwindcss/": "npm:/tailwindcss@3.4.3/",
-		"tailwindcss/plugin": "npm:/tailwindcss@3.4.3/plugin.js",
+		"pocketbase": "npm:pocketbase@^0.21.5",
+		"preact": "npm:preact@^10.23.2",
+		"tailwindcss": "npm:tailwindcss@3.4.11",
 		"topojson-client": "npm:topojson-client@^3.1.0"
 	},
-	"compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+	"compilerOptions": {
+		"lib": [
+			"dom",
+			"dom.asynciterable",
+			"deno.ns"
+		],
+		"jsx": "precompile",
+		"jsxImportSource": "preact",
+		"jsxPrecompileSkipElements": [
+			"a",
+			"img",
+			"source",
+			"body",
+			"html",
+			"head"
+		]
+	},
 	"fmt": { "useTabs": true },
 	"lint": { "rules": { "tags": ["fresh", "recommended"] } },
 	"exclude": ["**/_fresh/*"]

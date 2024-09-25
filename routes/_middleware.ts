@@ -1,11 +1,10 @@
 import { getCookies, setCookie } from "@std/http/cookie";
-import type { FreshContext } from "$fresh/server.ts";
+import type { FreshContext } from "fresh";
 
-import { isAllowedLanguage } from "@/core/i18n/mod.ts";
-import type { State } from "@/core/types.ts";
+import { isAllowedLanguage } from "@/core/types.ts";
+import type { State } from "@/utils.ts";
 
 export async function handler(
-	req: Request,
 	ctx: FreshContext<State>,
 ): Promise<Response> {
 	// Handle static files:
@@ -44,12 +43,12 @@ export async function handler(
 		});
 		return res;
 	} else {
-		const customLangCookie = getCookies(req.headers).lang;
+		const customLangCookie = getCookies(ctx.req.headers).lang;
 		if (customLangCookie !== undefined && isAllowedLanguage(customLangCookie)) {
 			ctx.state.language = customLangCookie;
 		} else {
 			// Get language from request
-			const languages = req.headers.get("accept-language");
+			const languages = ctx.req.headers.get("accept-language");
 			const langMatch = languages?.match(/([a-zA-Z]{2})(?:-[a-zA-Z]{2})?/);
 			if (langMatch && isAllowedLanguage(langMatch[1])) {
 				ctx.state.language = langMatch[1];
