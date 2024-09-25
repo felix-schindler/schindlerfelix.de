@@ -5,16 +5,17 @@ import ScrollEffect from "@/islands/ScrollEffect.tsx";
 
 import type { PageProps } from "fresh";
 import type { State } from "@/utils.ts";
-import type { Location } from "@/core/types.ts";
 
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+function capitalizeFirstLetter(string: string): string {
+	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export default async function Photos(props: PageProps<never, State>) {
 	const idOrSlug = encodeURIComponent(props.params.idOrSlug);
 
-	const parent = await pb.collection("locations").getFirstListItem(`id='${idOrSlug}' || name_en='${capitalizeFirstLetter(idOrSlug)}'`);
+	const parent = await pb.collection("locations").getFirstListItem(
+		`id='${idOrSlug}' || name_en='${capitalizeFirstLetter(idOrSlug)}'`,
+	);
 	const locations = await pb.collection("locations").getFullList({
 		filter: `parent='${parent.id}'`,
 	});
@@ -39,12 +40,14 @@ export default async function Photos(props: PageProps<never, State>) {
 				}}
 			/>
 			<ImageCollection
-				cities={locations.map(loc => {
+				cities={locations.map((loc) => {
 					return {
 						name: loc.locale_name,
-						translation: loc.locale_name !== loc[`name_${props.state.language}`] ? loc[`name_${props.state.language}`] : undefined,
-						images: loc.pictures.map(pic => pb.getFileUrl(loc, pic)),
-					}
+						translation: loc.locale_name !== loc[`name_${props.state.language}`]
+							? loc[`name_${props.state.language}`]
+							: undefined,
+						images: loc.pictures.map((pic) => pb.getFileUrl(loc, pic)),
+					};
 				})}
 				lang={props.state.language}
 			/>
