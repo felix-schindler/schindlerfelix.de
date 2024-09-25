@@ -26,14 +26,14 @@ export default async function Photos(props: PageProps<never, State>) {
 				<meta property="og:url" content="https://www.schindlerfelix.de/" />
 				<meta
 					property="og:image"
-					content="https://www.schindlerfelix.de/img/photos/berlin-thumb.avif"
+					content={pb.getFileUrl(parent, parent.pictures[0])}
 				/>
 				<meta property="og:type" content="website" />
 			</head>
 			<ScrollEffect />
 			<Parallax
 				country={{
-					name: parent[`name_${props.state.language}`],
+					name: parent.name_en,
 					mask: `/img/photos/${parent.name_en.toLowerCase()}-mask.avif`,
 					sky: "/img/photos/sky.avif",
 				}}
