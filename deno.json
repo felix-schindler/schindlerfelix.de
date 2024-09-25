@@ -1,6 +1,6 @@
 {
 	"lock": false,
-	"nodeModulesDir": "auto",
+	"nodeModulesDir": true,
 	"tasks": {
 		"ok": "DENO_FUTURE=1 deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
 		"dev": "DENO_FUTURE=1 deno run -A --watch=static/,routes/ dev.ts",
@@ -43,5 +43,5 @@
 	},
 	"fmt": { "useTabs": true },
 	"lint": { "rules": { "tags": ["fresh", "recommended"] } },
-	"exclude": ["**/_fresh/*", "**/static/*", "docker-compose.yaml"]
+	"exclude": ["**/_fresh/*", "docker-compose.yaml"]
 }
