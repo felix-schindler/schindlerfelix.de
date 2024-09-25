@@ -1,4 +1,4 @@
-import { ButtonLink, Link } from "@/components/mod.tsx";
+import { ButtonLink, Link, SiteTitle } from "@/components/mod.tsx";
 import { back_to_home } from "@/core/i18n/mod.ts";
 import type { State } from "@/utils.ts";
 import type { PageProps } from "fresh";
@@ -10,11 +10,18 @@ const not_avail = {
 		"抱歉，该法律页面没有中文版本。 之所以放在这里，是因为德国法律要求这样做。",
 } as const;
 
+const heading = {
+	de: "Rechtliches",
+	en: "Legal",
+	zh: "合法的",
+} as const;
+
 export default function LegalPage(props: PageProps<never, State>) {
 	const lang = props.state.language;
 
 	return (
 		<>
+			<SiteTitle name={heading[lang]} />
 			<div class="mb-5 flex flex-col gap-2" lang="de">
 				<div lang={lang}>
 					<p>
