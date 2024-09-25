@@ -17,9 +17,10 @@ export default async function Notes(
 ) {
 	const slug = encodeURIComponent(props.params.slug);
 	const lang = props.state.language;
-	const note = (await pb.collection("notes").getFirstListItem(`slug='${slug}'`, {
-		expand: lang,
-	})).expand[lang];
+	const note =
+		(await pb.collection("notes").getFirstListItem(`slug='${slug}'`, {
+			expand: lang,
+		})).expand[lang];
 
 	if (note === undefined) {
 		throw new Error(`Note with '${slug}' not found`);

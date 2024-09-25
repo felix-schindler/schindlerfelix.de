@@ -23,10 +23,12 @@ export type Location = BaseFields & {
 	name_en: string;
 	name_de: string;
 	name_zh: string;
+	locale_name?: string;
 	lat: number;
 	lon: number;
 	category: "region" | "city" | "small";
 	parent: RecordID;
+	pictures: string[];
 };
 
 export type NoteContent = BaseFields & {
