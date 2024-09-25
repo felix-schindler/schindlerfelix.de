@@ -1,6 +1,6 @@
 {
 	"lock": false,
-	"nodeModulesDir": true,
+	"nodeModulesDir": "auto",
 	"tasks": {
 		"ok": "DENO_FUTURE=1 deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
 		"dev": "DENO_FUTURE=1 deno run -A --watch=static/,routes/ dev.ts",
