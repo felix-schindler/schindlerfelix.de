@@ -1,5 +1,7 @@
 FROM denoland/deno:1.46.3
 
+RUN apt-get -y update; apt-get -y install curl
+
 # The port that your application listens to.
 EXPOSE 8000
 
