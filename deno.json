@@ -42,5 +42,5 @@
 	},
 	"fmt": { "useTabs": true },
 	"lint": { "rules": { "tags": ["fresh", "recommended"] } },
-	"exclude": ["**/_fresh/*", "docker-compose.yaml"]
+	"exclude": ["**/_fresh/*", "**/static/*", "docker-compose.yaml"]
 }
