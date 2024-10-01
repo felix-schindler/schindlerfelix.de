@@ -1,15 +1,22 @@
 import { Title } from "@/components/mod.tsx";
+import type { AllowedLanguage } from "@/core/types.ts";
+
+const heading = {
+	"en": "Notes",
+	"de": "Notizen",
+	"zh": "笔记",
+} as const;
 
 export default function Notes(
-	{ heading, notes }: {
-		heading: string;
+	{ lang, notes }: {
+		lang: AllowedLanguage;
 		notes: Array<{ slug: string; title: string; description: string }>;
 	},
 ) {
 	return (
 		<div>
 			<Title id="notes">
-				{heading}
+				{heading[lang]}
 			</Title>
 			<div class="grid grid-cols-default gap-2">
 				{notes.map((note) => (
