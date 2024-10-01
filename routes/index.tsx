@@ -10,12 +10,6 @@ import type { PageProps } from "fresh";
 import { State } from "@/utils.ts";
 import { pb } from "@/core/mod.ts";
 
-const notesHeading = {
-	"en": "Notes",
-	"de": "Notizen",
-	"zh": "笔记",
-} as const;
-
 export default async function Home(props: PageProps<never, State>) {
 	const language = props.state.language;
 
@@ -54,7 +48,7 @@ export default async function Home(props: PageProps<never, State>) {
 				<Timeline lang={language} />
 				<Photos locations={locations} lang={language} />
 				<Notes
-					heading={notesHeading[language]}
+					lang={language}
 					notes={notes}
 				/>
 			</div>

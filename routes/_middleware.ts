@@ -10,8 +10,7 @@ export async function handler(
 	// Handle static files:
 	// - ignore from i18n
 	// - add cache header
-	const hasFileExt = ctx.url.pathname.includes(".");
-	if (hasFileExt) {
+	if (ctx.url.pathname.includes(".")) {
 		const res = await ctx.next();
 
 		if (res.ok && !res.headers.has("cache-control")) {
