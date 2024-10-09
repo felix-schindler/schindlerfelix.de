@@ -1,6 +1,6 @@
 FROM denoland/deno:alpine
 
-RUN apt-get -y update; apt-get -y install curl
+RUN apk add curl
 
 # The port that your application listens to.
 EXPOSE 8000
