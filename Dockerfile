@@ -1,4 +1,4 @@
-FROM denoland/deno:1.46.3
+FROM denoland/deno-alpine
 
 RUN apt-get -y update; apt-get -y install curl
 
