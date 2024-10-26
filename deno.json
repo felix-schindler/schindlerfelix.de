@@ -1,5 +1,4 @@
 {
-	"lock": false,
 	"nodeModulesDir": "auto",
 	"tasks": {
 		"ok": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
@@ -17,10 +16,10 @@
 		"@std/path": "jsr:@std/path@^1.0.6",
 		"d3-geo": "npm:d3-geo@^3.1.1",
 		"d3-geo-projection": "npm:d3-geo-projection@^4.0.0",
-		"fresh": "jsr:@fresh/core@^2.0.0-alpha.22",
+		"fresh": "jsr:@fresh/core@^2.0.0-alpha.23",
 		"icons/": "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/",
 		"pocketbase": "npm:pocketbase@^0.21.5",
-		"preact": "npm:preact@^10.24.2",
+		"preact": "npm:preact@^10.24.3",
 		"tailwindcss": "npm:tailwindcss@3.4.11",
 		"topojson-client": "npm:topojson-client@^3.1.0"
 	},
