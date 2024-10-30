@@ -1,59 +1,23 @@
 {
 	"en": {
-		"education": {
-			"heading": "Education",
-			"xut": "Xi'an University of Technology",
-			"hdm": "Stuttgart Media University",
-			"major": "Computer Science as a German-Chinese double degree",
-			"fachhochschulreife": "University entrance qualification"
+		"headings": {
+			"edu": "Education",
+			"jobs": "Jobs"
 		},
-		"jobs": {
-			"heading": "Jobs",
-			"software_dev": "Software Developer",
-			"heidelberg": "Heidelberg Graphic Equipment Shanghai Co., Ltd.",
-			"intern": "student intern",
-			"web_dev": "Web Developer",
-			"paperboy": "Paperboy"
-		},
-		"connect": " and ",
 		"now": "now"
 	},
 	"de": {
-		"education": {
-			"heading": "Bildung",
-			"xut": "Technische Universität Xi'an",
-			"hdm": "Hochschule der Medien",
-			"major": "Deutsch-Chinesischer doppelter Abschluss in Medieninformatik",
-			"fachhochschulreife": "Fachhochschulreife"
+		"headings": {
+			"edu": "Bildung",
+			"jobs": "Jobs"
 		},
-		"jobs": {
-			"heading": "Jobs",
-			"software_dev": "Software-Entwickler",
-			"heidelberg": "Heidelberger Druckmaschinen AG Schanghai",
-			"intern": "studentischer Praktikant",
-			"web_dev": "Web-Entwickler",
-			"paperboy": "Zusteller"
-		},
-		"connect": " und ",
 		"now": "jetzt"
 	},
 	"zh": {
-		"education": {
-			"heading": "教育",
-			"xut": "西安理工大学",
-			"hdm": "斯图加特媒体大学",
-			"major": "德中双学位数字媒体学",
-			"fachhochschulreife": "德国高中毕业证书"
+		"headings": {
+			"edu": "教育",
+			"jobs": "工作"
 		},
-		"jobs": {
-			"heading": "工作",
-			"software_dev": "软件开发人员",
-			"heidelberg": "海德堡印刷设备（上海）有限公司",
-			"intern": "学生实习生",
-			"web_dev": "Web开发人员",
-			"paperboy": "报童"
-		},
-		"connect": "和",
 		"now": "正在"
 	}
 }

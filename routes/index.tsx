@@ -13,7 +13,7 @@ import { pb } from "@/core/mod.ts";
 export default async function Home(props: PageProps<never, State>) {
 	const language = props.state.language;
 
-	const [locations, rawNotes] = await Promise.all([
+	const [locations, rawNotes, rawExperiences] = await Promise.all([
 		pb.collection("locations").getFullList({
 			filter: "parent=null",
 		}),
@@ -21,7 +21,21 @@ export default async function Home(props: PageProps<never, State>) {
 			expand: language,
 			fields: "slug,expand",
 		}),
+		pb.collection("experience").getFullList({
+			expand: language,
+			sort: "-from",
+		}),
 	]);
+
+	const experiences = rawExperiences.map((e) => {
+		return {
+			type: e.type,
+			from: new Date(e.from),
+			until: e.until ? new Date(e.until) : undefined,
+			technologies: e.technologies,
+			...e.expand[language]!,
+		};
+	});
 
 	const notes = rawNotes.map((note) => {
 		return {
@@ -45,7 +59,11 @@ export default async function Home(props: PageProps<never, State>) {
 				<Intro lang={language} />
 				<About lang={language} />
 				<Languages lang={language} />
-				<Timeline lang={language} />
+				<Timeline
+					edu={experiences.filter((e) => e.type === "edu")}
+					work={experiences.filter((e) => e.type === "work")}
+					lang={language}
+				/>
 				<Photos locations={locations} lang={language} />
 				<Notes
 					lang={language}
