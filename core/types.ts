@@ -49,7 +49,42 @@ export type Note = BaseFields & {
 	};
 };
 
+type ExperienceType = "work" | "edu";
+
+export type ExperienceContent = BaseFields & {
+	title: string;
+	description: string;
+};
+
+export type Experience = BaseFields & {
+	type: ExperienceType;
+	from: DateString;
+	until: DateString;
+	technologies: string[];
+	de: RecordID;
+	en: RecordID;
+	zh: RecordID;
+	expand: {
+		de: ExperienceContent | undefined;
+		en: ExperienceContent | undefined;
+		zh: ExperienceContent | undefined;
+	};
+};
+
+export type ExperienceMerged = {
+	id: string;
+	updated: string;
+	created: string;
+	title: string;
+	description: string;
+	type: ExperienceType;
+	from: Date;
+	until: Date | undefined;
+	technologies: string[];
+};
+
 export interface TypedPocketBase extends PocketBase {
 	collection(idOrName: "locations"): RecordService<Location>;
 	collection(idOrName: "notes"): RecordService<Note>;
+	collection(idOrName: "experience"): RecordService<Experience>;
 }
