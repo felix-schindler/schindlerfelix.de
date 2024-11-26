@@ -23,7 +23,7 @@ export default function Photos(
 							name={loc[`name_${lang}`]}
 							englishName={loc.name_en}
 							href={`/photos/${loc.id}`}
-							imgPath={pb.getFileUrl(loc, loc.pictures[0])}
+							imgPath={pb.files.getURL(loc, loc.pictures[0])}
 						/>
 					);
 				})}
