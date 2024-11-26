@@ -6,7 +6,7 @@ import translations from "@/core/i18n/projects/project-list.json" with {
 
 import type { PageProps } from "fresh";
 import type { State } from "@/utils.ts";
-import { MergedProject } from "@/core/types.ts";
+import { AllowedLanguage, MergedProject } from "@/core/types.ts";
 
 type Project = {
 	title: string;
@@ -45,10 +45,10 @@ export default async function Projects(props: PageProps<never, State>) {
 										href={project.link}
 										class="block h-full transition-transform hover:scale-95"
 									>
-										<Project project={project} />
+										<Project lang={lang} project={project} />
 									</a>
 								)
-								: <Project project={project} />}
+								: <Project lang={lang} project={project} />}
 						</li>
 					))}
 				</ul>
@@ -57,7 +57,9 @@ export default async function Projects(props: PageProps<never, State>) {
 	);
 }
 
-function Project({ project }: { project: MergedProject }) {
+function Project(
+	{ lang, project }: { lang: AllowedLanguage; project: MergedProject },
+) {
 	return (
 		<div class="h-full bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-3 space-y-3">
 			<div class="flex flex-wrap items-center justify-between gap-1">
@@ -65,7 +67,7 @@ function Project({ project }: { project: MergedProject }) {
 					{project.title}
 				</h3>
 				<span class="inline-block bg-gray-250 dark:bg-gray-700 px-1 py-0.5 rounded text-xs">
-					{project.type}
+					{translations[lang][project.type]}
 				</span>
 			</div>
 			<p>{project.description}</p>
