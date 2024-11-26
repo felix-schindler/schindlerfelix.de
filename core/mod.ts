@@ -1,5 +1,5 @@
 import PocketBase from "pocketbase";
-import type { TypedPocketBase } from "./types.ts";
+import type { TypedPocketBase } from "@/core/types.ts";
 
 // THE PocketBase instance
 export const pb = new PocketBase("https://pb.schindlerfelix.de")

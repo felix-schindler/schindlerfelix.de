@@ -12,7 +12,7 @@ export default function Intro({ lang }: { lang: AllowedLanguage }) {
 		<>
 			<SiteTitle name={translations[lang].name} />
 			<div class="sm:flex sm:items-center">
-				<picture class="w-full" alt="Globe marking the region Xi'an, China">
+				<picture class="w-full">
 					<source
 						srcset={`/img/world.svg?dark=true&lang=${lang}&loc=mtvsyhelishb0ut`}
 						media="(prefers-color-scheme: dark)"

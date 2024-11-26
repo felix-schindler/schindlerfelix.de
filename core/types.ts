@@ -83,8 +83,36 @@ export type ExperienceMerged = {
 	technologies: string[];
 };
 
+export type Project = BaseFields & {
+	type: "work" | "university" | "personal" | "school";
+	technologies: string[];
+	link?: string;
+	de: RecordID;
+	en: RecordID;
+	zh: RecordID;
+	expand: {
+		de: ProjectContent | undefined;
+		en: ProjectContent | undefined;
+		zh: ProjectContent | undefined;
+	};
+};
+
+type ProjectContent = BaseFields & {
+	title: string;
+	description: string;
+};
+
+export type MergedProject = BaseFields & {
+	type: "work" | "university" | "personal" | "school";
+	technologies: string[];
+	link?: string;
+	title: string;
+	description: string;
+};
+
 export interface TypedPocketBase extends PocketBase {
 	collection(idOrName: "locations"): RecordService<Location>;
 	collection(idOrName: "notes"): RecordService<Note>;
 	collection(idOrName: "experience"): RecordService<Experience>;
+	collection(idOrName: "projects"): RecordService<Project>;
 }

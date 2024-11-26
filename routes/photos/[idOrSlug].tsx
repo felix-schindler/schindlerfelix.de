@@ -27,7 +27,7 @@ export default async function Photos(props: PageProps<never, State>) {
 				<meta property="og:url" content="https://www.schindlerfelix.de/" />
 				<meta
 					property="og:image"
-					content={pb.getFileUrl(parent, parent.pictures[0])}
+					content={pb.files.getURL(parent, parent.pictures[0])}
 				/>
 				<meta property="og:type" content="website" />
 			</head>
@@ -46,7 +46,7 @@ export default async function Photos(props: PageProps<never, State>) {
 						translation: loc.locale_name !== loc[`name_${props.state.language}`]
 							? loc[`name_${props.state.language}`]
 							: undefined,
-						images: loc.pictures.map((pic) => pb.getFileUrl(loc, pic)),
+						images: loc.pictures.map((pic) => pb.files.getURL(loc, pic)),
 					};
 				})}
 				lang={props.state.language}
