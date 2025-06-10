@@ -30,6 +30,11 @@
 		"jsxPrecompileSkipElements": ["a", "img", "source", "body", "html", "head"]
 	},
 	"fmt": { "useTabs": true },
-	"lint": { "rules": { "tags": ["fresh", "recommended"] } },
+	"lint": {
+		"rules": {
+			"tags": ["fresh", "recommended"],
+			"exclude": ["react-no-danger"]
+		}
+	},
 	"exclude": ["**/_fresh/*", "docker-compose.yaml"]
 }
