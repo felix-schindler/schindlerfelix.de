@@ -55,7 +55,7 @@ export default function Timeline(
 							<p class="mb-1 text-gray-700 dark:text-gray-300">
 								{item.description}
 							</p>
-							<p>{item.technologies?.map((t) => <Tech name={t} />)}</p>
+							<p>{item.technologies?.map((t) => <Tech key={t} name={t} />)}</p>
 						</li>
 					))}
 				</ol>
@@ -77,7 +77,7 @@ export default function Timeline(
 							<p class="mb-1 text-gray-700 dark:text-gray-300">
 								{item.description}
 							</p>
-							{item.technologies?.map((t) => <Tech name={t} />)}
+							{item.technologies?.map((t) => <Tech key={t} name={t} />)}
 						</li>
 					))}
 				</ol>

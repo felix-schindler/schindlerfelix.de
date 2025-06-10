@@ -45,7 +45,9 @@ export default function TanukiSupport(props: PageProps<never, State>) {
 					{translations[lang].questions.map((question) => (
 						<div class="py-1 px-2 rounded-md bg-gray-200 dark:bg-gray-800">
 							<h3 class="text-xl font-bold mb-2">{question.title}</h3>
-							{question.answers.map((answer) => <p class="mb-1">{answer}</p>)}
+							{question.answers.map((answer) => (
+								<p key={answer} class="mb-1">{answer}</p>
+							))}
 						</div>
 					))}
 				</div>
