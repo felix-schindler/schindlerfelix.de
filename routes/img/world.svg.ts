@@ -145,7 +145,7 @@ export const handler: RouteHandler<never, State> = {
 		// Generate SVG
 		const svg = render(
 			name,
-			[location.lat, location.lon],
+			[location.geo.lon, location.geo.lat],
 			multiply,
 			isDark,
 		).replace(
