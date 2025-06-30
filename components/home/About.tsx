@@ -29,7 +29,7 @@ function getAge(): number {
 	const now = new Date();
 	const age = now.getFullYear() - 2002;
 
-	if (now.getMonth() < 6) {
+	if (now.getMonth() < 5) {
 		return age - 1;
 	}
 
