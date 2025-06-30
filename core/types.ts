@@ -24,8 +24,10 @@ export type Location = BaseFields & {
 	name_de: string;
 	name_zh: string;
 	locale_name?: string;
-	lat: number;
-	lon: number;
+	geo: {
+		lat: number;
+		lon: number;
+	};
 	category: "region" | "city" | "small";
 	parent: RecordID;
 	pictures: string[];

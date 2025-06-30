@@ -14,11 +14,11 @@ export default function Intro({ lang }: { lang: AllowedLanguage }) {
 			<div class="sm:flex sm:items-center">
 				<picture class="w-full">
 					<source
-						srcset={`/img/world.svg?dark=true&lang=${lang}&loc=mtvsyhelishb0ut`}
+						srcset={`/img/world.svg?dark=true&lang=${lang}&loc=8qdfhzi3issciog`}
 						media="(prefers-color-scheme: dark)"
 					/>
 					<img
-						src={`/img/world.svg?lang=${lang}&loc=mtvsyhelishb0ut`}
+						src={`/img/world.svg?lang=${lang}&loc=8qdfhzi3issciog`}
 						alt={translations[lang].globe_alt}
 					/>
 				</picture>
