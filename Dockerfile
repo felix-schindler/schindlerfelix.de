@@ -1,6 +1,4 @@
-FROM denoland/deno:alpine
-
-RUN apk add curl gcompat
+FROM denoland/deno:latest
 
 # The port that your application listens to.
 EXPOSE 8000
