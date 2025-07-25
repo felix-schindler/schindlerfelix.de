@@ -14,6 +14,9 @@ COPY . .
 # Log version
 RUN deno --version
 
+# Install dependencies
+RUN deno install
+
 # Run checks
 RUN deno task ok
 
