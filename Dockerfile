@@ -15,7 +15,7 @@ COPY . .
 RUN deno --version
 
 # Install dependencies
-RUN deno install
+RUN deno install --allow-scripts
 
 # Run checks
 RUN deno task ok
