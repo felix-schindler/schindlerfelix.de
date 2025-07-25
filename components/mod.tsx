@@ -54,7 +54,7 @@ export function Tech(
 	{ name, icon }: { name: string; icon?: false | string },
 ) {
 	return (
-		<span class="inline-flex items-center gap-1 bg-gray-250 rounded-full px-3 py-1 text-sm font-semibold select-none cursor-default text-gray-700 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-200 contrast-more:!bg-inherit contrast-more:outline contrast-more:outline-1">
+		<span class="inline-flex items-center gap-1 bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold select-none cursor-default text-gray-700 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-200 contrast-more:!bg-inherit contrast-more:outline contrast-more:outline-1">
 			{icon === false ? null : (icon ? <span>{icon}</span> : (
 				<img
 					class="h-5 w-5"

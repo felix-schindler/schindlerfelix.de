@@ -66,7 +66,7 @@ function Project(
 				<h3 class="text-xl font-bold">
 					{project.title}
 				</h3>
-				<span class="inline-block bg-gray-250 dark:bg-gray-700 px-1 py-0.5 rounded text-xs">
+				<span class="inline-block bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded text-xs">
 					{translations[lang][project.type]}
 				</span>
 			</div>
