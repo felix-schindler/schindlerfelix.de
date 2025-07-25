@@ -15,7 +15,7 @@ COPY . .
 RUN deno --version
 
 # Install dependencies
-RUN deno install --allow-scripts
+RUN deno install --allow-scripts=npm:@tailwindcss/oxide
 
 # Run checks
 RUN deno task ok
