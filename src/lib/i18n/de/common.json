@@ -1,0 +1,13 @@
+{
+	"theme": {
+		"current": "Aktuelles Design",
+		"light": "Hell",
+		"dark": "Dunkel",
+		"system": "System"
+	},
+	"current_lang": "Aktuelle Sprache",
+	"name": "Felix",
+	"en": "🇬🇧 English",
+	"de": "🇩🇪 Deutsch",
+	"zh": "🇨🇳 简体中文"
+}

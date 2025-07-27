@@ -11,3 +11,4 @@ This is the 8th iteration of my personal website. Before it was:
 6. Deno Blog
 7. SvelteKit v2
 8. Fresh
+9. SvelteKit v3
