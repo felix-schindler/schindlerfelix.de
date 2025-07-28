@@ -118,6 +118,9 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+	h2 {
+		@apply mt-4 mb-2 text-3xl font-semibold tracking-tight first:mt-0;
+	}
 }
 
 @layer utilities {
@@ -139,11 +142,22 @@
 		}
 	}
 
+	@keyframes gradient {
+		to {
+			background-position: 200% center;
+		}
+	}
+
 	.animate-marquee {
 		animation: marquee var(--duration) linear infinite;
 	}
 
 	.animate-marquee-vertical {
 		animation: marquee-vertical var(--duration) linear infinite;
+	}
+
+	.animate-gradient {
+		background-size: 200% 200%;
+		animation: gradient 8s linear infinite;
 	}
 }

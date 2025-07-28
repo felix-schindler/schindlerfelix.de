@@ -1,6 +1,7 @@
 <script lang="ts">
 	import LangSwitcher from '$lib/components/custom/lang-switcher.svelte';
 	import ModeSwitcher from '$lib/components/custom/mode-switcher.svelte';
+	import AnimatedGradientText from '$lib/components/magic/animated-gradient-text.svelte';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import { ModeWatcher } from 'mode-watcher';
 	import '../app.css';
@@ -10,9 +11,12 @@
 </script>
 
 <div>
-	<header class="flex flex-wrap items-center gap-2 p-4">
-		<ModeSwitcher />
-		<LangSwitcher currentLang={data.currentLang} />
+	<header class="flex flex-wrap items-center justify-between gap-2 p-4">
+		<div class="flex flex-wrap items-center gap-2">
+			<ModeSwitcher />
+			<LangSwitcher currentLang={data.lang} />
+		</div>
+		<AnimatedGradientText href="/projects/tanuki">Tanuki for GitLab</AnimatedGradientText>
 	</header>
 	<main class="px-4 md:p-0">
 		{@render children()}

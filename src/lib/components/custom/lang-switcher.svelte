@@ -11,7 +11,7 @@
 
 	async function updateLang(lang: string) {
 		initialUrl.searchParams.set('lang', lang);
-		await goto(initialUrl, { replaceState: true });
+		await goto(initialUrl, { invalidateAll: true });
 	}
 </script>
 

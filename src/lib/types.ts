@@ -59,7 +59,7 @@ export type ExperienceContent = BaseFields & {
 export type Experience = BaseFields & {
 	type: ExperienceType;
 	from: DateString;
-	until: DateString;
+	until: DateString | null;
 	technologies: string[];
 	de: RecordID;
 	en: RecordID;
