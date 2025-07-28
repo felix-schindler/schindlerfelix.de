@@ -43,7 +43,7 @@
 			theta: 0.25,
 			dark: 1,
 			diffuse: 0.4, // 1.2
-			mapSamples: 24000,
+			mapSamples: 20000,
 			mapBrightness: 2, // 6
 			baseColor: [0.3, 0.3, 0.3],
 			markerColor: [251 / 255, 100 / 255, 21 / 255],
@@ -75,7 +75,7 @@
 					theta: 0.25,
 					dark: 1,
 					diffuse: 0.4, // 1.2
-					mapSamples: 24000,
+					mapSamples: 20000,
 					mapBrightness: 2, // 6
 					baseColor: [0.3, 0.3, 0.3],
 					markerColor: [251 / 255, 100 / 255, 21 / 255],
@@ -137,7 +137,6 @@
 		}}
 		onmousemove={(e) => {
 			if (pointerInteracting !== null) {
-				console.log('working');
 				const delta = e.clientX - pointerInteracting;
 				pointerInteractionMovement = delta;
 				x.set(delta / 200);
