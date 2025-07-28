@@ -6,5 +6,8 @@
 	"languages": {
 		"title": "Sprachen",
 		"description": "die ich am besten beherrsche"
-	}
+	},
+	"experiences": "Erfahrungen",
+	"notes": "Notizen",
+	"error": "Fehler beim Laden der Einträge"
 }

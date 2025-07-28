@@ -6,5 +6,8 @@
 	"languages": {
 		"title": "Languages",
 		"description": "which I'm most fluent in"
-	}
+	},
+	"experiences": "Experiences",
+	"notes": "Notes",
+	"error": "Error occured while loading records"
 }

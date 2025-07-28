@@ -7,6 +7,7 @@
 	import Dock from '$lib/components/magic/dock.svelte';
 	import Globe from '$lib/components/magic/globe.svelte';
 	import { Button } from '$lib/components/ui/button';
+	import * as Card from '$lib/components/ui/card';
 	import * as Tooltip from '$lib/components/ui/tooltip';
 	import { t } from '$lib/i18n';
 	import {
@@ -20,6 +21,13 @@
 	} from '@lucide/svelte';
 
 	const { data } = $props();
+
+	let dateFormatter = $derived(
+		new Intl.DateTimeFormat(data.lang, {
+			month: 'long',
+			year: 'numeric'
+		})
+	);
 
 	const features: BentoCardProps[] = [
 		{
@@ -36,9 +44,9 @@
 			description: 'home.technologies.description',
 			class: 'col-span-3 lg:col-span-2'
 		}
-	];
+	] as const;
 
-	let navs = [
+	const navs = [
 		{ label: 'GitHub', icon: Github, href: 'https://github.com/felix-schindler' },
 		{ label: 'GitLab', icon: Gitlab, href: 'https://gitlab.com/felix-schindler' },
 		{
@@ -48,7 +56,7 @@
 		},
 		{ label: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/vhwjpzf1z0fi73a' },
 		{ label: 'Mail', icon: Mail, href: 'mailto:webmaster@schindlerfelix.de' }
-	];
+	] as const;
 </script>
 
 <div class="my-32">
@@ -57,7 +65,7 @@
 			class="relative flex h-fit w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pt-8 pb-40 md:pb-60 md:shadow-xl"
 		>
 			<span
-				class="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent select-none dark:from-white dark:to-slate-900/10"
+				class="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre text-transparent select-none dark:from-white dark:to-slate-900/10"
 			>
 				{$t('common.name')}
 			</span>
@@ -90,11 +98,75 @@
 	</Dock>
 </div>
 
-<div class="mx-auto flex w-full items-center justify-center md:max-w-[90%] lg:max-w-[80%]">
+<div class="mx-auto w-full md:max-w-[90%] lg:max-w-[80%]">
 	<BentoGrid>
 		<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
 		{#each features as item (item.name)}
 			<BentoCard {...item} />
 		{/each}
 	</BentoGrid>
+
+	{#await data.experiences}
+		<p>Loading</p>
+	{:then experiences}
+		<h2>{$t('home.experiences')}</h2>
+		<div class="flex flex-wrap gap-4">
+			{#each experiences.work as e (e.id)}
+				<Card.Root>
+					<Card.Content>
+						<Card.Description>
+							{#if e.until}
+								<p>{dateFormatter.formatRange(Date.parse(e.from), Date.parse(e.until))}</p>
+							{:else}
+								<p>{dateFormatter.format(Date.parse(e.from))}</p>
+							{/if}
+						</Card.Description>
+						<Card.Title>{e.expand[data.lang]?.title}</Card.Title>
+						<p>{e.expand[data.lang]?.description}</p>
+					</Card.Content>
+				</Card.Root>
+			{/each}
+		</div>
+		<div class="mt-4 flex flex-wrap gap-4">
+			{#each experiences.edu as e (e.id)}
+				<Card.Root>
+					<Card.Content>
+						<Card.Description>
+							{#if e.until}
+								<p>{dateFormatter.formatRange(Date.parse(e.from), Date.parse(e.until))}</p>
+							{:else}
+								<p>{dateFormatter.format(Date.parse(e.from))}</p>
+							{/if}
+						</Card.Description>
+						<Card.Title>{e.expand[data.lang]?.title}</Card.Title>
+						<p>{e.expand[data.lang]?.description}</p>
+					</Card.Content>
+				</Card.Root>
+			{/each}
+		</div>
+	{:catch e}
+		<p>{$t('home.error')} {String(e)}</p>
+	{/await}
+
+	{#await data.notes}
+		<p>Loading</p>
+	{:then notes}
+		<h2>{$t('home.notes')}</h2>
+		<div class="grid-cols-default grid gap-2">
+			{#each notes as n (n.id)}
+				<a class="group block" href="/notes/{n.slug}">
+					<Card.Root class="h-full transition-all  group-hover:border-foreground">
+						<Card.Header>
+							<Card.Title>{n.expand[data.lang]?.title}</Card.Title>
+						</Card.Header>
+						<Card.Content>
+							<p>{n.expand[data.lang]?.description}</p>
+						</Card.Content>
+					</Card.Root>
+				</a>
+			{/each}
+		</div>
+	{:catch e}
+		<p>{$t('home.error')} {String(e)}</p>
+	{/await}
 </div>

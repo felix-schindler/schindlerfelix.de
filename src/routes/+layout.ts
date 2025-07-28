@@ -1,17 +1,9 @@
 import { loadTranslations } from '$lib/i18n';
-import { isAllowedLanguage, type AllowedLanguage } from '$lib/types';
-import type { Load } from '@sveltejs/kit';
+import type { LayoutLoad } from './$types';
 
-export const load: Load = async ({ url }) => {
-	let initLocale = url.searchParams.get('lang'); // get from cookie, user session, ...
+export const load: LayoutLoad = async ({ url, data }) => {
+	await loadTranslations(data.lang, url.pathname); // keep this just before the `return`
 
-	if (!isAllowedLanguage(initLocale)) {
-		initLocale = 'en';
-	}
-
-	await loadTranslations(initLocale, url.pathname); // keep this just before the `return`
-
-	return {
-		currentLang: initLocale as AllowedLanguage
-	};
+	// Don't ask me why. After returning the same object on the +layout.server we need to return it here again
+	return data;
 };
