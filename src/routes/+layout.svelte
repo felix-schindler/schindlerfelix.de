@@ -11,7 +11,7 @@
 </script>
 
 <div>
-	<header class="flex flex-wrap items-center justify-between gap-2 p-4">
+	<header class="flex flex-col flex-wrap items-center justify-between gap-2 p-4 sm:flex-row">
 		<div class="flex flex-wrap items-center gap-2">
 			<ModeSwitcher />
 			<LangSwitcher currentLang={data.lang} />
