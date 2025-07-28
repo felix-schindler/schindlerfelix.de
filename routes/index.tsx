@@ -15,7 +15,7 @@ export default async function Home(props: PageProps<never, State>) {
 
 	const [locations, rawNotes, rawExperiences] = await Promise.all([
 		pb.collection("locations").getFullList({
-			filter: "parent=null",
+			filter: "parent=null && pictures:length!=0",
 		}),
 		pb.collection("notes").getFullList({
 			expand: language,
@@ -23,7 +23,7 @@ export default async function Home(props: PageProps<never, State>) {
 		}),
 		pb.collection("experience").getFullList({
 			expand: language,
-			sort: "-from",
+			sort: "-from,-until",
 		}),
 	]);
 
