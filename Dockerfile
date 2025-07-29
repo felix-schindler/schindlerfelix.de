@@ -1,25 +1,17 @@
-FROM denoland/deno:latest
-
-# The port that your application listens to.
-EXPOSE 8000
-
-# Set the working directory inside the container (could be any directory)
+FROM node:lts-alpine AS builder
 WORKDIR /app
-
-# Copy all files to the working directory
+COPY package*.json .
+RUN npm ci
 COPY . .
+RUN npm run check
+RUN npm run build
+RUN npm prune --production
 
-# Log version
-RUN deno --version
-
-# Install dependencies
-RUN deno install --allow-scripts=npm:@tailwindcss/oxide
-
-# Run checks
-RUN deno task ok
-
-# Install dependencies
-RUN deno task build
-
-# Start app
-CMD ["task", "start"]
+FROM node:lts-alpine
+WORKDIR /app
+COPY --from=builder /app/build build/
+COPY --from=builder /app/node_modules node_modules/
+COPY package.json .
+EXPOSE 3000
+ENV NODE_ENV=production
+CMD [ "node", "build" ]
