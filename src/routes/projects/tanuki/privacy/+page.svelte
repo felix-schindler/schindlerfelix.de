@@ -16,6 +16,7 @@
 	<p>
 		<em class="block">
 			{$t('tanuki.last_updated', {
+				// @ts-expect-error This works
 				date: dateFmt.format(LAST_UPDATED.original),
 				t_date: dateFmt.format(LAST_UPDATED.translations)
 			})}
