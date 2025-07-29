@@ -31,24 +31,24 @@
 				<img
 					alt="Download on the App Store"
 					class="h-12"
-					src={`/img/app_store.svg?lang=${data.lang}`}
+					src={`/img/app_store/${data.lang}_black.svg`}
 				/>
 			{:else if userPrefersMode.current === 'dark'}
 				<img
 					alt="Download on the App Store"
 					class="h-12"
-					src={`/img/app_store.svg?dark=true&lang=${data.lang}`}
+					src={`/img/app_store/${data.lang}_white.svg`}
 				/>
 			{:else}
 				<picture>
 					<source
-						srcset={`/img/app_store.svg?dark=true&lang=${data.lang}`}
+						srcset={`/img/app_store/${data.lang}_white.svg`}
 						media="(prefers-color-scheme: dark)"
 					/>
 					<img
 						alt="Download on the App Store"
 						class="h-12"
-						src={`/img/app_store.svg?lang=${data.lang}`}
+						src={`/img/app_store/${data.lang}_black.svg`}
 					/>
 				</picture>
 			{/if}
