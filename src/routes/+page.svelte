@@ -99,7 +99,7 @@
 	</Dock>
 </div>
 
-<div class="mx-auto w-full md:max-w-[90%] lg:max-w-[80%]">
+<div class="mx-auto w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] 2xl:max-w-[60%]">
 	<BentoGrid>
 		<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
 		{#each features as item (item.name)}
