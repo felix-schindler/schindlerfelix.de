@@ -43,7 +43,7 @@
 <Carousel.Root>
 	<Carousel.Content class="-ml-1">
 		{#each imgsv2 as img (img)}
-			<Carousel.Item class="pl-1 md:basis-1/2 lg:basis-1/3">
+			<Carousel.Item class="pl-1 md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
 				<div class="p-1">
 					<Card.Root
 						class="aspect-[9/20] bg-cover bg-center bg-no-repeat"
@@ -61,7 +61,7 @@
 <Carousel.Root>
 	<Carousel.Content class="-ml-1">
 		{#each imgs as img (img)}
-			<Carousel.Item class="pl-1 md:basis-1/2 lg:basis-1/3">
+			<Carousel.Item class="pl-1 sm:basis-1/2 md:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
 				<div class="p-1">
 					<Card.Root
 						class="aspect-[9/20] bg-cover bg-center bg-no-repeat"
