@@ -21,7 +21,9 @@
 	<main class="px-4 md:p-0">
 		{@render children()}
 	</main>
-	<footer class="p-4"></footer>
+	<footer class="mt-10 p-4 text-center">
+		&copy; Felix Schindler 2019-{new Date().getUTCFullYear()}
+	</footer>
 </div>
 
 <Toaster richColors position="bottom-center" />

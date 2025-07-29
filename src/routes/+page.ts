@@ -1,18 +1,13 @@
-import PocketBase from 'pocketbase';
+import { pb } from '$lib';
 import type { PageLoad } from './$types';
-import type { TypedPocketBase } from '$lib/types';
 
 export const load: PageLoad = ({ data, fetch }) => {
-	const pb = new PocketBase('https://pb.schindlerfelix.de').autoCancellation(
-		false
-	) as TypedPocketBase;
-
 	const locs = pb
 		.collection('locations')
 		.getFullList({ fetch })
 		.catch(() => {
 			console.warn('Fetch error ignored');
-			return Promise.resolve([]);
+			return [];
 		});
 
 	const experiences = pb
@@ -20,7 +15,7 @@ export const load: PageLoad = ({ data, fetch }) => {
 		.getFullList({ expand: data.lang, sort: '-type,-from,-until', fetch })
 		.catch(() => {
 			console.warn('Fetch error ignored');
-			return Promise.resolve([]);
+			return [];
 		})
 		.then((data) => {
 			return {
@@ -34,7 +29,7 @@ export const load: PageLoad = ({ data, fetch }) => {
 		.getFullList({ expand: data.lang, fields: 'id,slug,expand', fetch })
 		.catch(() => {
 			console.warn('Fetch error ignored');
-			return Promise.resolve([]);
+			return [];
 		});
 
 	return { locs, experiences, notes };

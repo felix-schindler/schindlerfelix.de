@@ -90,7 +90,7 @@
 	] as const;
 </script>
 
-<Marquee pauseOnHover repeat={2}>
+<Marquee pauseOnHover>
 	{#each technologies as t, index (index)}
 		<Card.Root>
 			<Card.Content>
@@ -99,7 +99,7 @@
 		</Card.Root>
 	{/each}
 </Marquee>
-<Marquee pauseOnHover repeat={2} reverse>
+<Marquee pauseOnHover reverse>
 	{#each more as t, index (index)}
 		<Card.Root>
 			<Card.Content>
