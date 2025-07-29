@@ -1,0 +1,14 @@
+{
+	"theme": {
+		"current": "Current theme",
+		"light": "Light",
+		"dark": "Dark",
+		"system": "System"
+	},
+	"current_lang": "Current language",
+	"name": "Felix",
+	"en": "🇬🇧 English",
+	"de": "🇩🇪 Deutsch",
+	"zh": "🇨🇳 简体中文",
+	"notes": "Notes"
+}

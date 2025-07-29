@@ -1,0 +1,14 @@
+{
+	"links": "Links",
+	"gitlab_repo": "GitLab repository",
+	"privacy": "Privacy statement",
+	"last_updated": "Last updated: {{date}}; Translations last updated: {{t_date}}",
+	"txt_1": "This app does not collect any data for itself. All the data collected is managed by the GitLab instance you configured yourself.",
+	"txt_2": "To read more about the Terms and Privacy Policy you accepted when registering, go to the path \"/-/users/terms\" on your chosen GitLab instance.",
+	"txt_3": "When using \"gitlab.com\" for example, the link would be \"https://gitlab.com/-/users/terms\".",
+	"support": "Support",
+	"subject": "Subject",
+	"message": "Message",
+	"send": "Send",
+	"cancel": "Cancel"
+}
