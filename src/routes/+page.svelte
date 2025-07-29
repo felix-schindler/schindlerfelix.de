@@ -111,7 +111,7 @@
 		<p>Loading</p>
 	{:then experiences}
 		<h2>{$t('home.experiences')}</h2>
-		<div class="grid-cols-default mt-4 grid gap-4">
+		<div class="grid-cols-default grid gap-4">
 			{#each experiences.work as e (e.id)}
 				<Card.Root class="w-full">
 					<Card.Header>
@@ -137,7 +137,8 @@
 				</Card.Root>
 			{/each}
 		</div>
-		<div class="grid-cols-default mt-4 grid gap-4">
+		<h2>{$t('home.edu')}</h2>
+		<div class="grid-cols-default grid gap-4">
 			{#each experiences.edu as e (e.id)}
 				<Card.Root class="w-full">
 					<Card.Header>
