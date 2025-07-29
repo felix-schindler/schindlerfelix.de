@@ -7,6 +7,7 @@
 		"title": "Sprachen",
 		"description": "die ich am besten beherrsche"
 	},
-	"experiences": "Erfahrungen",
+	"experiences": "Berufserfahrung",
+	"edu": "Ausbildung",
 	"error": "Fehler beim Laden der Einträge"
 }

@@ -7,6 +7,7 @@
 		"title": "Languages",
 		"description": "which I'm most fluent in"
 	},
-	"experiences": "Experiences",
+	"experiences": "Professional experience",
+	"edu": "Education",
 	"error": "Error occured while loading records"
 }
