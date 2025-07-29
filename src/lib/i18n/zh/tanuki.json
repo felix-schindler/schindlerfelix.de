@@ -1,0 +1,14 @@
+{
+	"links": "链接",
+	"gitlab_repo": "极狐存储库",
+	"privacy": "隐私声明",
+	"last_updated": "最后更新：{{date}}；翻译最后更新：{{t_date}}",
+	"txt_1": "此应用程序不会收集任何数据。所有收集的数据都由您自己配置的 GitLab 实例管理。",
+	"txt_2": "要了解有关注册时接受的条款和隐私政策的更多信息，请转到您选择的 GitLab 实例上的路径 \"/-/users/terms\"。",
+	"txt_3": "例如，当使用 \"gitlab.com\" 时，链接将是 \"https://gitlab.com/-/users/terms\"。",
+	"support": "支持",
+	"subject": "主题",
+	"message": "消息",
+	"send": "发送",
+	"cancel": "取消"
+}

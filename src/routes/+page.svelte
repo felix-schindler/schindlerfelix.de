@@ -6,6 +6,7 @@
 	import DockIcon from '$lib/components/magic/dock-icon.svelte';
 	import Dock from '$lib/components/magic/dock.svelte';
 	import Globe from '$lib/components/magic/globe.svelte';
+	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
 	import * as Tooltip from '$lib/components/ui/tooltip';
@@ -110,10 +111,10 @@
 		<p>Loading</p>
 	{:then experiences}
 		<h2>{$t('home.experiences')}</h2>
-		<div class="flex flex-wrap gap-4">
+		<div class="grid-cols-default mt-4 grid gap-4">
 			{#each experiences.work as e (e.id)}
-				<Card.Root>
-					<Card.Content>
+				<Card.Root class="w-full">
+					<Card.Header>
 						<Card.Description>
 							{#if e.until}
 								<p>{dateFormatter.formatRange(Date.parse(e.from), Date.parse(e.until))}</p>
@@ -122,15 +123,24 @@
 							{/if}
 						</Card.Description>
 						<Card.Title>{e.expand[data.lang]?.title}</Card.Title>
+					</Card.Header>
+					<Card.Content>
 						<p>{e.expand[data.lang]?.description}</p>
+						{#if e.technologies}
+							<div class="flex flex-wrap gap-1">
+								{#each e.technologies as t (t)}
+									<Badge variant="secondary">{t}</Badge>
+								{/each}
+							</div>
+						{/if}
 					</Card.Content>
 				</Card.Root>
 			{/each}
 		</div>
-		<div class="mt-4 flex flex-wrap gap-4">
+		<div class="grid-cols-default mt-4 grid gap-4">
 			{#each experiences.edu as e (e.id)}
-				<Card.Root>
-					<Card.Content>
+				<Card.Root class="w-full">
+					<Card.Header>
 						<Card.Description>
 							{#if e.until}
 								<p>{dateFormatter.formatRange(Date.parse(e.from), Date.parse(e.until))}</p>
@@ -139,7 +149,16 @@
 							{/if}
 						</Card.Description>
 						<Card.Title>{e.expand[data.lang]?.title}</Card.Title>
+					</Card.Header>
+					<Card.Content>
 						<p>{e.expand[data.lang]?.description}</p>
+						{#if e.technologies}
+							<div class="flex flex-wrap gap-1">
+								{#each e.technologies as t (t)}
+									<Badge variant="secondary">{t}</Badge>
+								{/each}
+							</div>
+						{/if}
 					</Card.Content>
 				</Card.Root>
 			{/each}
@@ -151,7 +170,7 @@
 	{#await data.notes}
 		<p>Loading</p>
 	{:then notes}
-		<h2>{$t('home.notes')}</h2>
+		<h2>{$t('common.notes')}</h2>
 		<div class="grid-cols-default grid gap-2">
 			{#each notes as n (n.id)}
 				<a class="group block" href="/notes/{n.slug}">

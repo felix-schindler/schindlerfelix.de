@@ -60,7 +60,7 @@ export type Experience = BaseFields & {
 	type: ExperienceType;
 	from: DateString;
 	until: DateString | null;
-	technologies: string[];
+	technologies: string[] | null;
 	de: RecordID;
 	en: RecordID;
 	zh: RecordID;

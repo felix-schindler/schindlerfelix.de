@@ -5,7 +5,7 @@
 	import { t } from '$lib/i18n';
 </script>
 
-<Marquee pauseOnHover repeat={2}>
+<Marquee pauseOnHover>
 	{#each ALLOWED_LANGUAGES as l, index (index)}
 		<Card.Root>
 			<Card.Content>
