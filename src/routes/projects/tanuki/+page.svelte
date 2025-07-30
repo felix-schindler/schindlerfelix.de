@@ -25,7 +25,7 @@
 
 <div class="text-center sm:text-left">
 	<h2>Links</h2>
-	<div class="flex flex-wrap gap-2">
+	<div class="space-y-2 space-x-1">
 		<Button href="https://gitlab.com/felix-schindler/gitlab-ios" variant="outline">
 			<Gitlab />
 			{$t('tanuki.gitlab_repo')}
