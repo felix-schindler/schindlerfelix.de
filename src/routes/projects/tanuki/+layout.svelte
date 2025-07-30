@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from '$lib/i18n/index.js';
 	import { userPrefersMode } from 'mode-watcher';
 
 	const { data, children } = $props();
@@ -16,13 +17,19 @@
 </script>
 
 <div class="mb-10">
-	<h1
-		class="flex scroll-m-20 items-center justify-center gap-4 text-4xl font-extrabold tracking-tight lg:text-5xl"
-	>
-		<img src="/img/tanuki.png" alt="Tanuki app icon" class="h-16 w-16 rounded-sm align-bottom" />
-		Tanuki for GitLab
-	</h1>
-	<p class="my-2.5 flex items-center justify-center gap-2">
+	<div class="text-center">
+		<img
+			src="/img/tanuki.png"
+			alt="Tanuki app icon"
+			class="mx-auto h-16 w-16 rounded-sm align-bottom shadow-2xl shadow-foreground"
+		/>
+		<h1 class="mt-2 font-bold">Tanuki for GitLab</h1>
+		<div class="my-8 text-center">
+			<p class="text-7xl font-bold">{$t('tanuki.title')}</p>
+			<p class="text-muted-foreground">{$t('tanuki.subtitle')}</p>
+		</div>
+	</div>
+	<p class="my-4 flex items-center justify-center gap-2">
 		<a
 			href={`https://apps.apple.com/${countryCode}/app/tanuki-for-gitlab/id6446419487`}
 			class="inline-block transition-transform duration-200 hover:scale-95"
