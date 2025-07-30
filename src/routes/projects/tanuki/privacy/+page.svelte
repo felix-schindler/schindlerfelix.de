@@ -3,16 +3,15 @@
 
 	const { data } = $props();
 
+	const dateFmt = new Intl.DateTimeFormat(data.lang, { dateStyle: 'long' });
 	const LAST_UPDATED = {
 		original: new Date('2023-03-18'),
 		translations: new Date('2024-02-10')
 	};
-
-	const dateFmt = new Intl.DateTimeFormat(data.lang, { dateStyle: 'long' });
 </script>
 
-<h2>Privacy statement</h2>
-<div class="space-y-2">
+<div class="mx-auto max-w-3xl space-y-2 break-words hyphens-auto">
+	<h2>{$t('tanuki.privacy')}</h2>
 	<p>
 		<em class="block">
 			{$t('tanuki.last_updated', {
