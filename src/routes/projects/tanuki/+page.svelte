@@ -46,7 +46,7 @@
 			<Carousel.Item class="pl-1 md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
 				<div class="p-1">
 					<Card.Root
-						class="aspect-[9/20] bg-cover bg-center bg-no-repeat"
+						class="aspect-[9/19.5] bg-cover bg-center bg-no-repeat"
 						style="background-image: url(/img/tanuki/v2/{img})"
 					/>
 				</div>
@@ -64,7 +64,7 @@
 			<Carousel.Item class="pl-1 sm:basis-1/2 md:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
 				<div class="p-1">
 					<Card.Root
-						class="aspect-[9/20] bg-cover bg-center bg-no-repeat"
+						class="aspect-[9/19.5] bg-cover bg-center bg-no-repeat"
 						style="background-image: url(/img/tanuki/{img})"
 					/>
 				</div>

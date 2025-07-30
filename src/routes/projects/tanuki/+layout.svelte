@@ -16,7 +16,7 @@
 	});
 </script>
 
-<div class="mb-10">
+<div class="my-10">
 	<div class="text-center">
 		<img
 			src="/img/tanuki.png"
