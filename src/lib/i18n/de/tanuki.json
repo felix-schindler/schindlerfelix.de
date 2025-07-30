@@ -3,7 +3,7 @@
 	"subtitle": "für Apple-Plattformen (iOS und mehr)",
 	"links": "Links",
 	"gitlab_repo": "GitLab-Repository",
-	"privacy": "Privacy statement",
+	"privacy": "Datenschutzinformationen",
 	"last_updated": "Zuletzt aktualisiert: {{date}}; Übersetzungen zuletzt aktualisiert: {{t_date}}",
 	"txt_1": "Diese App sammelt keine Daten für sich selbst. Alle gesammelten Daten werden von der GitLab-Instanz verwaltet, die Sie selbst konfiguriert haben.",
 	"txt_2": "Um mehr über die Nutzungsbedingungen und die Datenschutzrichtlinie zu erfahren, die Sie bei der Registrierung akzeptiert haben, gehen Sie zum Pfad \"/-/users/terms\" auf Ihrer gewählten GitLab-Instanz.",
