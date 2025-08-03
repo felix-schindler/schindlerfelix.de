@@ -16,20 +16,20 @@
 	});
 </script>
 
-<div class="my-10">
-	<div class="text-center">
+<div class="my-12 flex flex-col gap-4 sm:gap-8 md:gap-12">
+	<div class="flex items-center justify-center gap-4 sm:flex-col sm:gap-2">
 		<img
 			src="/img/tanuki.png"
 			alt="Tanuki app icon"
-			class="mx-auto h-16 w-16 rounded-sm align-bottom shadow-2xl shadow-foreground"
+			class="size-12 rounded-sm align-bottom shadow-2xl shadow-neutral-500 sm:size-16 dark:shadow-neutral-400"
 		/>
-		<h1 class="mt-2 font-bold">Tanuki for GitLab</h1>
-		<div class="my-8 text-center">
-			<p class="text-4xl font-bold sm:text-5xl md:text-7xl">{$t('tanuki.title')}</p>
-			<p class="text-muted-foreground">{$t('tanuki.subtitle')}</p>
-		</div>
+		<h1 class="font-semibold">Tanuki for GitLab</h1>
 	</div>
-	<p class="my-4 flex items-center justify-center gap-2">
+	<div class="text-center">
+		<p class="text-4xl font-bold sm:text-5xl md:text-7xl">{$t('tanuki.title')}</p>
+		<p class="text-muted-foreground">{$t('tanuki.subtitle')}</p>
+	</div>
+	<p class="flex items-center justify-center gap-2">
 		<a
 			href={`https://apps.apple.com/${countryCode}/app/tanuki-for-gitlab/id6446419487`}
 			class="inline-block transition-transform duration-200 hover:scale-95"
