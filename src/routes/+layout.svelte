@@ -10,7 +10,7 @@
 	let { children, data } = $props();
 </script>
 
-<div>
+<div lang={data.lang}>
 	<header class="flex flex-col flex-wrap items-center justify-between gap-2 p-4 sm:flex-row">
 		<div class="flex flex-wrap items-center gap-2">
 			<ModeSwitcher />
@@ -24,7 +24,7 @@
 	<footer class="mt-10 p-4 text-center">
 		&copy; Felix Schindler 2019-{new Date().getUTCFullYear()}
 	</footer>
-</div>
 
-<Toaster richColors position="bottom-center" />
-<ModeWatcher />
+	<Toaster richColors position="bottom-center" />
+	<ModeWatcher />
+</div>
