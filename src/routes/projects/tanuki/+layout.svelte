@@ -25,7 +25,7 @@
 		/>
 		<h1 class="mt-2 font-bold">Tanuki for GitLab</h1>
 		<div class="my-8 text-center">
-			<p class="text-7xl font-bold">{$t('tanuki.title')}</p>
+			<p class="text-4xl font-bold sm:text-5xl md:text-7xl">{$t('tanuki.title')}</p>
 			<p class="text-muted-foreground">{$t('tanuki.subtitle')}</p>
 		</div>
 	</div>
