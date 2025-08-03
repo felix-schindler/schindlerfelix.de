@@ -63,14 +63,14 @@
 <div class="my-32">
 	<div class="flex w-full items-center justify-center">
 		<div
-			class="relative flex h-fit w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pt-8 pb-40 md:pb-60 md:shadow-xl"
+			class="relative flex h-fit w-full max-w-xl items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pt-8 pb-40 md:pb-60 md:shadow-xl"
 		>
 			<span
 				class="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre text-transparent select-none dark:from-white dark:to-slate-900/10"
 			>
 				{$t('common.name')}
 			</span>
-			<Globe class="top-16" locations={data.locs} />
+			<Globe class="top-12" locations={data.locs} />
 			<div
 				class="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]"
 			></div>
