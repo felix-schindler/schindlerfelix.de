@@ -31,7 +31,7 @@
 <style>
 	:global {
 		.markdown-body {
-			--color-canvas-default: transparent !important;
+			--bgColor-default: transparent !important;
 		}
 
 		.markdown-body ul {
