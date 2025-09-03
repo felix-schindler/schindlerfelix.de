@@ -123,17 +123,15 @@
 							{/if}
 						</Card.Description>
 						<Card.Title>{e.expand[data.lang]?.title}</Card.Title>
-					</Card.Header>
-					<Card.Content>
 						<p>{e.expand[data.lang]?.description}</p>
-						{#if e.technologies}
-							<div class="flex flex-wrap gap-1">
-								{#each e.technologies as t (t)}
-									<Badge variant="secondary">{t}</Badge>
-								{/each}
-							</div>
-						{/if}
-					</Card.Content>
+					</Card.Header>
+					{#if e.technologies}
+						<Card.Footer class="flex-wrap gap-1">
+							{#each e.technologies as t (t)}
+								<Badge variant="secondary">{t}</Badge>
+							{/each}
+						</Card.Footer>
+					{/if}
 				</Card.Root>
 			{/each}
 		</div>
@@ -150,17 +148,15 @@
 							{/if}
 						</Card.Description>
 						<Card.Title>{e.expand[data.lang]?.title}</Card.Title>
-					</Card.Header>
-					<Card.Content>
 						<p>{e.expand[data.lang]?.description}</p>
-						{#if e.technologies}
-							<div class="flex flex-wrap gap-1">
-								{#each e.technologies as t (t)}
-									<Badge variant="secondary">{t}</Badge>
-								{/each}
-							</div>
-						{/if}
-					</Card.Content>
+					</Card.Header>
+					{#if e.technologies}
+						<Card.Footer class="flex-wrap gap-1">
+							{#each e.technologies as t (t)}
+								<Badge variant="secondary">{t}</Badge>
+							{/each}
+						</Card.Footer>
+					{/if}
 				</Card.Root>
 			{/each}
 		</div>
