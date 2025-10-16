@@ -7,10 +7,11 @@
 	import { goto } from '$app/navigation';
 
 	const { currentLang }: { currentLang: AllowedLanguage } = $props();
-	const initialUrl = page.url;
+	const initialUrl = $derived(page.url);
 
 	async function updateLang(lang: string) {
 		initialUrl.searchParams.set('lang', lang);
+		// eslint-disable-next-line svelte/no-navigation-without-resolve
 		await goto(initialUrl, { invalidateAll: true });
 	}
 </script>
