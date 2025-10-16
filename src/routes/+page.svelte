@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Languages from '$lib/components/custom/languages.svelte';
 	import Technologies from '$lib/components/custom/technologies.svelte';
 	import BentoCard, { type BentoCardProps } from '$lib/components/magic/bento-card.svelte';
@@ -170,7 +171,7 @@
 		<h2>{$t('common.notes')}</h2>
 		<div class="grid-cols-default grid gap-2">
 			{#each notes as n (n.id)}
-				<a class="group block" href="/notes/{n.slug}">
+				<a class="group block" href={resolve('/notes/[id]', { id: n.slug })}>
 					<Card.Root class="h-full transition-all  group-hover:border-foreground">
 						<Card.Header>
 							<Card.Title>{n.expand[data.lang]?.title}</Card.Title>
