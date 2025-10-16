@@ -1,8 +1,10 @@
 import { isAllowedLanguage, type AllowedLanguage } from '$lib/types';
-import type { Handle } from '@sveltejs/kit';
+import { redirect, type Handle } from '@sveltejs/kit';
 
 export const handle: Handle = async ({ event, resolve }) => {
-	if (!event.url.pathname.includes('.')) {
+	if (event.url.pathname === '/projects/tanuki/support') {
+		redirect(303, '/projects/tanuki/feedback');
+	} else if (!event.url.pathname.includes('.')) {
 		const newLang = event.url.searchParams.get('lang');
 
 		// Set new language (if valid)

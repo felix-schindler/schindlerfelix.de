@@ -110,9 +110,15 @@ export type MergedProject = BaseFields & {
 	description: string;
 };
 
+type TanukiFeedback = BaseFields & {
+	from?: string;
+	text: string;
+};
+
 export interface TypedPocketBase extends PocketBase {
 	collection(idOrName: 'locations'): RecordService<Location>;
 	collection(idOrName: 'notes'): RecordService<Note>;
 	collection(idOrName: 'experience'): RecordService<Experience>;
 	collection(idOrName: 'projects'): RecordService<Project>;
+	collection(idOrName: 'tanuki_feedback'): RecordService<TanukiFeedback>;
 }
