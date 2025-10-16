@@ -38,19 +38,19 @@ const config: Config = {
 		{
 			locale: 'en',
 			key: 'tanuki',
-			routes: ['/projects/tanuki', '/projects/tanuki/support', '/projects/tanuki/privacy'],
+			routes: ['/projects/tanuki', '/projects/tanuki/feedback', '/projects/tanuki/privacy'],
 			loader: async () => (await import('./en/tanuki.json')).default
 		},
 		{
 			locale: 'de',
 			key: 'tanuki',
-			routes: ['/projects/tanuki', '/projects/tanuki/support', '/projects/tanuki/privacy'],
+			routes: ['/projects/tanuki', '/projects/tanuki/feedback', '/projects/tanuki/privacy'],
 			loader: async () => (await import('./de/tanuki.json')).default
 		},
 		{
 			locale: 'zh',
 			key: 'tanuki',
-			routes: ['/projects/tanuki', '/projects/tanuki/support', '/projects/tanuki/privacy'],
+			routes: ['/projects/tanuki', '/projects/tanuki/feedback', '/projects/tanuki/privacy'],
 			loader: async () => (await import('./zh/tanuki.json')).default
 		}
 	]

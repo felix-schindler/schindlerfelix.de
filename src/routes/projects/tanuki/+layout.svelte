@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { Button } from '$lib/components/ui/button';
 	import { t } from '$lib/i18n/index.js';
+	import { FileText, Gitlab, House, MessageCircleHeart } from '@lucide/svelte';
 	import { userPrefersMode } from 'mode-watcher';
 
 	const { data, children } = $props();
@@ -61,6 +63,24 @@
 			{/if}
 		</a>
 	</p>
+	<div class="flex flex-wrap justify-center gap-2">
+		<Button href="/projects/tanuki" variant="outline">
+			<House />
+			{$t('tanuki.start')}
+		</Button>
+		<Button href="/projects/tanuki/feedback" variant="outline">
+			<MessageCircleHeart />
+			{$t('tanuki.feedback')}
+		</Button>
+		<Button href="/projects/tanuki/privacy" variant="outline">
+			<FileText />
+			{$t('tanuki.privacy')}
+		</Button>
+		<Button href="https://gitlab.com/felix-schindler/gitlab-ios" target="_blank" variant="outline">
+			<Gitlab />
+			{$t('tanuki.gitlab_repo')} &nearr;
+		</Button>
+	</div>
 </div>
 
 <div class="mx-auto w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] 2xl:max-w-[60%]">
