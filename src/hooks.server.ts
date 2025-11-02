@@ -13,12 +13,22 @@ export const handle: Handle = async ({ event, resolve }) => {
 		}
 
 		// Load and validate current language
-		let currentLang = event.cookies.get('lang');
-		if (!currentLang || !isAllowedLanguage(currentLang)) {
+		let currentLang: AllowedLanguage | undefined;
+		const cookieLang = event.cookies.get('lang');
+		if (!cookieLang || !isAllowedLanguage(cookieLang)) {
+			// Get language from request
+			const languages = event.request.headers.get('accept-language');
+			const langMatch = languages?.match(/([a-zA-Z]{2})(?:-[a-zA-Z]{2})?/);
+			if (langMatch && isAllowedLanguage(langMatch[1])) {
+				currentLang = langMatch[1];
+			}
+		}
+
+		if (!currentLang) {
 			currentLang = 'en';
 		}
 
-		event.locals.lang = currentLang as AllowedLanguage;
+		event.locals.lang = currentLang;
 	}
 
 	return resolve(event);
