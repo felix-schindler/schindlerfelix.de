@@ -3,11 +3,13 @@
 	import * as Carousel from '$lib/components/ui/carousel';
 
 	const imgs = [
-		'home.avif',
-		'project.avif',
-		'issues.avif',
-		'mr.avif',
-		'group-expanded.avif'
+		'home.png',
+		'project.png',
+		'issues.png',
+		'mr.png',
+		'group.png',
+		'code.png',
+		'diff.png'
 	] as const;
 </script>
 
