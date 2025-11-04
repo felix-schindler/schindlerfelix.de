@@ -11,7 +11,6 @@ app.use(async (ctx) => {
 	// Handle "static" files: ignore i18n; add cache header
 	if (ctx.url.pathname.includes(".")) {
 		const res = await ctx.next();
-		console.log(ctx.url.pathname);
 
 		if (res.ok && !res.headers.has("cache-control")) {
 			// Add cache header for 15 days
