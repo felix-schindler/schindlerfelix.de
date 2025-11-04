@@ -35,7 +35,7 @@
     "npm:@preact/signals@^2.2.1": "2.3.2_preact@10.27.2",
     "npm:@preact/signals@^2.3.2": "2.3.2_preact@10.27.2",
     "npm:@prefresh/vite@^2.4.8": "2.4.11_preact@10.27.2_vite@7.1.12__@types+node@22.15.15__picomatch@4.0.3_@types+node@22.15.15",
-    "npm:@tailwindcss/vite@^4.1.12": "4.1.16_vite@7.1.12__@types+node@22.15.15__picomatch@4.0.3_@types+node@22.15.15",
+    "npm:@tailwindcss/vite@^4.1.16": "4.1.16_vite@7.1.12__@types+node@22.15.15__picomatch@4.0.3_@types+node@22.15.15",
     "npm:@types/d3-geo@^3.1.0": "3.1.0",
     "npm:@types/node@*": "22.15.15",
     "npm:d3-geo-projection@4": "4.0.0",
@@ -48,9 +48,9 @@
     "npm:preact@^10.27.0": "10.27.2",
     "npm:preact@^10.27.2": "10.27.2",
     "npm:rollup@^4.50.0": "4.52.5",
-    "npm:tailwindcss@^4.1.10": "4.1.16",
+    "npm:tailwindcss@^4.1.16": "4.1.16",
     "npm:topojson-client@^3.1.0": "3.1.0",
-    "npm:vite@^7.1.3": "7.1.12_@types+node@22.15.15_picomatch@4.0.3",
+    "npm:vite@^7.1.12": "7.1.12_@types+node@22.15.15_picomatch@4.0.3",
     "npm:vite@^7.1.4": "7.1.12_@types+node@22.15.15_picomatch@4.0.3"
   },
   "jsr": {
@@ -1181,15 +1181,15 @@
       "jsr:@std/http@^1.0.21",
       "jsr:@std/path@^1.1.2",
       "npm:@preact/signals@^2.3.2",
-      "npm:@tailwindcss/vite@^4.1.12",
+      "npm:@tailwindcss/vite@^4.1.16",
       "npm:@types/d3-geo@^3.1.0",
       "npm:d3-geo-projection@4",
       "npm:d3-geo@^3.1.1",
       "npm:pocketbase@~0.26.3",
       "npm:preact@^10.27.2",
-      "npm:tailwindcss@^4.1.10",
+      "npm:tailwindcss@^4.1.16",
       "npm:topojson-client@^3.1.0",
-      "npm:vite@^7.1.3"
+      "npm:vite@^7.1.12"
     ]
   }
 }
