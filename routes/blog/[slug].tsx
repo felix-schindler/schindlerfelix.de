@@ -1,4 +1,3 @@
-import { CSS } from "@deno/gfm";
 import type { PageProps } from "fresh";
 
 import { pb } from "@/core/mod.ts";
@@ -34,7 +33,7 @@ export default async function Notes(
 				<title>
 					{note.title} &middot; {heading[lang]}
 				</title>
-				<style dangerouslySetInnerHTML={{ __html: CSS }} />
+				<link rel="stylesheet" href="/github-markdown.css" />
 				<style
 					dangerouslySetInnerHTML={{
 						__html: `
