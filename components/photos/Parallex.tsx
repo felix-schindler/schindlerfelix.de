@@ -14,7 +14,7 @@ export default function Parallax({ country }: ParallaxProps) {
 	return (
 		<div class="relative h-screen" lang="en">
 			<div
-				class="absolute bg-no-repeat bottom-0 h-full w-full bg-pos-85-100 bg-size-300 md:bg-bottom md:bg-size-100"
+				class="absolute bg-no-repeat bottom-0 h-full w-full bg-pos-85-100 bg-size-[300%] md:bg-bottom md:bg-size-[100%]"
 				style={{
 					backgroundImage: `url('${country.mask}')`,
 					zIndex: 3,
