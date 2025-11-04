@@ -1,34 +1,59 @@
 {
 	"$schema": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json",
-	"nodeModulesDir": "auto",
+	"nodeModulesDir": "manual",
 	"tasks": {
-		"ok": "deno fmt --check . && deno lint . && deno check",
-		"dev": "deno run -A --watch=static/,routes/ dev.ts",
-		"build": "deno run -A dev.ts build",
-		"update": "deno run -A -r jsr:@fresh/update .",
-		"start": "deno serve -A _fresh/server.js"
+		"check": "deno fmt --check . && deno lint . && deno check",
+		"dev": "vite",
+		"build": "vite build",
+		"start": "deno serve -A _fresh/server.js",
+		"update": "deno run -A -r jsr:@fresh/update ."
 	},
 	"imports": {
 		"@/": "./",
 		"@deno/gfm": "jsr:@deno/gfm@^0.11.0",
-		"@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.9",
-		"@preact/signals": "npm:@preact/signals@^2.2.1",
-		"@std/http": "jsr:@std/http@^1.0.20",
-		"@std/path": "jsr:@std/path@^1.0.8",
+		"@std/http": "jsr:@std/http@^1.0.21",
+		"@std/path": "jsr:@std/path@^1.1.2",
 		"d3-geo": "npm:d3-geo@^3.1.1",
 		"d3-geo-projection": "npm:d3-geo-projection@^4.0.0",
-		"fresh": "jsr:@fresh/core@^2.0.0-alpha.46",
+		"fresh": "jsr:@fresh/core@^2.1.4",
 		"icons/": "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/",
-		"pocketbase": "npm:pocketbase@^0.26.2",
-		"preact": "npm:preact@^10.26.9",
-		"tailwindcss": "npm:tailwindcss@^4.1.11",
-		"topojson-client": "npm:topojson-client@^3.1.0"
+		"pocketbase": "npm:pocketbase@^0.26.3",
+		"preact": "npm:preact@^10.27.2",
+		"@preact/signals": "npm:@preact/signals@^2.3.2",
+		"@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.0.7",
+		"topojson-client": "npm:topojson-client@^3.1.0",
+		"vite": "npm:vite@^7.1.3",
+		"tailwindcss": "npm:tailwindcss@^4.1.10",
+		"@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.12"
 	},
 	"compilerOptions": {
-		"lib": ["dom", "dom.asynciterable", "deno.ns"],
+		"lib": [
+			"dom",
+			"dom.asynciterable",
+			"dom.iterable",
+			"deno.ns"
+		],
 		"jsx": "precompile",
 		"jsxImportSource": "preact",
-		"jsxPrecompileSkipElements": ["a", "img", "source", "body", "html", "head"]
+		"jsxPrecompileSkipElements": [
+			"a",
+			"img",
+			"source",
+			"body",
+			"html",
+			"head",
+			"title",
+			"meta",
+			"script",
+			"link",
+			"style",
+			"base",
+			"noscript",
+			"template"
+		],
+		"types": [
+			"vite/client"
+		]
 	},
 	"fmt": { "useTabs": true },
 	"lint": {
