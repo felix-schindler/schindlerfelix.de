@@ -50,7 +50,6 @@ export default function Layout(
 				<meta name="robots" content="index, follow" />
 
 				{/* Look and feel ✨ */}
-				<link rel="stylesheet" href="/styles.css" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="manifest" href="/pwa/manifest.json" />
 				<meta http-equiv="X-UA-Compatible" content="ie=edge" />
