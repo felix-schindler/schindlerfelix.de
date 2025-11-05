@@ -90,8 +90,8 @@
 		background-position: 85% 100%;
 	}
 
-	.max-w-50-calc {
-		max-width: calc(50% - 10px);
+	img.landscape {
+		grid-column: span 2;
 	}
 
 	.bg-instagram {

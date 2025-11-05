@@ -17,7 +17,7 @@ export default async function Photos(props: PageProps<never, State>) {
 		`id='${idOrSlug}' || name_en='${capitalizeFirstLetter(idOrSlug)}'`,
 	);
 	const locations = await pb.collection("locations").getFullList({
-		filter: `parent='${parent.id}'`,
+		filter: `parent='${parent.id}' && pictures:length > 0`,
 	});
 
 	return (
