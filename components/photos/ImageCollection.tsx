@@ -14,7 +14,7 @@ type ImageCollectionProps = {
 
 export default function ImageCollection(props: ImageCollectionProps) {
 	return (
-		<div class="mx-auto px-2.5 md:px-0 md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg">
+		<div class="px-2.5 md:px-5">
 			<p class="mt-2.5">
 				<ButtonLink name={`← ${back_to_home[props.lang]}`} href="/#photos" />
 			</p>
@@ -34,11 +34,11 @@ export default function ImageCollection(props: ImageCollectionProps) {
 							{city.translation}
 						</p>
 					)}
-					<div class="flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-2.5">
+					<div class="gallery-grid grid grid-cols-default grid-flow-dense gap-2">
 						{city.images.map((src) => (
 							<img
 								src={src}
-								class="h-full w-auto sm:max-w-50-calc"
+								class="w-full h-full object-cover object-center rounded overflow-hidden"
 								alt=""
 								loading="lazy"
 							/>
