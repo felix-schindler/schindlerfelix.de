@@ -63,7 +63,7 @@
 
 		locations
 			.then((ls) => {
-				// Destroy old glboe
+				// Destroy old globe
 				globe?.destroy();
 
 				// Create new globe with markers
