@@ -15,7 +15,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 		// Load and validate current language
 		let currentLang: AllowedLanguage | undefined;
 		const cookieLang = event.cookies.get('lang');
-		if (!cookieLang || !isAllowedLanguage(cookieLang)) {
+		if (cookieLang && isAllowedLanguage(cookieLang)) {
+			currentLang = cookieLang;
+		} else {
 			// Get language from request
 			const languages = event.request.headers.get('accept-language');
 			const langMatch = languages?.match(/([a-zA-Z]{2})(?:-[a-zA-Z]{2})?/);
