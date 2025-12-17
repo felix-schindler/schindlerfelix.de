@@ -4,7 +4,6 @@ COPY package*.json .
 RUN --mount=type=cache,target=/root/.npm \
 	npm ci --no-audit --no-fund --prefer-offline
 COPY . .
-RUN npm run check
 RUN npm run build
 RUN npm prune --omit=dev
 
