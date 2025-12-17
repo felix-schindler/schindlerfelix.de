@@ -52,9 +52,5 @@
 		"pocketbase": "^0.26.5",
 		"svelte-motion": "^0.12.2",
 		"sveltekit-i18n": "^2.4.2"
-	},
-	"engines": {
-		"node": ">=24.0.0",
-		"npm": ">=11.0.0"
 	}
 }
