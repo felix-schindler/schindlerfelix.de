@@ -115,10 +115,17 @@ type TanukiFeedback = BaseFields & {
 	text: string;
 };
 
+export type Skill = BaseFields & {
+	category1: string;
+	category2: string;
+	things: string[];
+};
+
 export interface TypedPocketBase extends PocketBase {
 	collection(idOrName: 'locations'): RecordService<Location>;
 	collection(idOrName: 'notes'): RecordService<Note>;
 	collection(idOrName: 'experience'): RecordService<Experience>;
 	collection(idOrName: 'projects'): RecordService<Project>;
+	collection(idOrName: 'skills'): RecordService<Skill>;
 	collection(idOrName: 'tanuki_feedback'): RecordService<TanukiFeedback>;
 }

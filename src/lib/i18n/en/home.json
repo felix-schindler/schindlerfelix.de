@@ -1,12 +1,5 @@
 {
-	"technologies": {
-		"title": "Technologies",
-		"description": "which I'm most fluent in"
-	},
-	"languages": {
-		"title": "Languages",
-		"description": "which I'm most fluent in"
-	},
+	"skills": "Skills",
 	"experiences": "Professional experience",
 	"edu": "Education",
 	"error": "Error occured while loading records"
