@@ -13,7 +13,7 @@ export const load: PageLoad = ({ data, fetch }) => {
 
 	const skills = pb
 		.collection('skills')
-		.getFullList({ fetch, sort: 'category1' })
+		.getFullList({ fetch, sort: 'sort,category2' })
 		.then((items) => {
 			const grouped = items.reduce(
 				(acc, item) => {
