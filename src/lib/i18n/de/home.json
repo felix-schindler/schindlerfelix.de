@@ -1,12 +1,5 @@
 {
-	"technologies": {
-		"title": "Technologien",
-		"description": "die ich am besten beherrsche"
-	},
-	"languages": {
-		"title": "Sprachen",
-		"description": "die ich am besten beherrsche"
-	},
+	"skills": "Kenntnisse",
 	"experiences": "Berufserfahrung",
 	"edu": "Ausbildung",
 	"error": "Fehler beim Laden der Einträge"

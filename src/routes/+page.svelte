@@ -1,26 +1,16 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import Languages from '$lib/components/custom/languages.svelte';
-	import Technologies from '$lib/components/custom/technologies.svelte';
-	import BentoCard, { type BentoCardProps } from '$lib/components/magic/bento-card.svelte';
-	import BentoGrid from '$lib/components/magic/bento-grid.svelte';
 	import DockIcon from '$lib/components/magic/dock-icon.svelte';
 	import Dock from '$lib/components/magic/dock.svelte';
 	import Globe from '$lib/components/magic/globe.svelte';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
+	import { Label } from '$lib/components/ui/label';
+	import { Skeleton } from '$lib/components/ui/skeleton';
 	import * as Tooltip from '$lib/components/ui/tooltip';
 	import { t } from '$lib/i18n';
-	import {
-		CodeXml,
-		Github,
-		Gitlab,
-		Instagram,
-		Linkedin,
-		Mail,
-		MessageCircle
-	} from '@lucide/svelte';
+	import { Github, Gitlab, Instagram, Linkedin, Mail } from '@lucide/svelte';
 
 	const { data } = $props();
 
@@ -30,23 +20,12 @@
 			year: 'numeric'
 		})
 	);
-
-	const features: BentoCardProps[] = [
-		{
-			Icon: MessageCircle,
-			Background: Languages,
-			name: 'home.languages.title',
-			description: 'home.languages.description',
-			class: 'col-span-3 lg:col-span-1'
-		},
-		{
-			Icon: CodeXml,
-			Background: Technologies,
-			name: 'home.technologies.title',
-			description: 'home.technologies.description',
-			class: 'col-span-3 lg:col-span-2'
-		}
-	] as const;
+	let listAnd = $derived(
+		new Intl.ListFormat(data.lang, {
+			style: 'long',
+			type: 'conjunction'
+		})
+	);
 
 	const navs = [
 		{ label: 'GitHub', icon: Github, href: 'https://github.com/felix-schindler' },
@@ -61,13 +40,13 @@
 	] as const;
 </script>
 
-<div class="my-32">
+<div class="mt-32">
 	<div class="flex w-full items-center justify-center">
 		<div
 			class="relative flex h-fit w-full max-w-xl items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pt-8 pb-40 md:pb-60 md:shadow-xl"
 		>
 			<span
-				class="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre text-transparent select-none dark:from-white dark:to-slate-900/10"
+				class="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre text-transparent select-none dark:from-white dark:to-slate-900/10"
 			>
 				{$t('common.name')}
 			</span>
@@ -101,17 +80,72 @@
 </div>
 
 <div class="mx-auto w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] 2xl:max-w-[60%]">
-	<BentoGrid>
-		<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
-		{#each features as item (item.name)}
-			<BentoCard {...item} />
-		{/each}
-	</BentoGrid>
+	<h2>{$t('home.skills')}</h2>
+	<div class="grid-cols-default grid gap-4">
+		{#await data.skills}
+			<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
+			{#each Array.from({ length: 4 }) as _, i (i)}
+				<Card.Root>
+					<Card.Header>
+						<Skeleton class="h-6 w-1/2" />
+					</Card.Header>
+					<Card.Content class="flex flex-col gap-2">
+						<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
+						{#each Array.from({ length: 4 }) as _, i (i)}
+							<div>
+								<Skeleton class="mb-0.5 h-2 w-1/4" />
+								<Skeleton class="h-4 w-2/3" />
+							</div>
+						{/each}
+					</Card.Content>
+				</Card.Root>
+			{/each}
+		{:then skills}
+			{#each skills as [topic, items] (topic)}
+				<Card.Root>
+					<Card.Header>
+						<Card.Title>{topic}</Card.Title>
+					</Card.Header>
+					<Card.Content class="flex flex-col gap-2">
+						{#each items as s (s.id)}
+							<div>
+								<Label class="text-xs text-muted-foreground">
+									{s.category2}
+								</Label>
+								<p class="text-sm text-foreground/90">
+									{listAnd.format(s.things)}
+								</p>
+							</div>
+						{/each}
+					</Card.Content>
+				</Card.Root>
+			{/each}
+		{/await}
+	</div>
 
+	<h2>{$t('home.experiences')}</h2>
 	{#await data.experiences}
-		<p>Loading</p>
+		<div class="grid-cols-default grid gap-4">
+			<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
+			{#each Array.from({ length: 4 }) as _, i (i)}
+				<Card.Root>
+					<Card.Header>
+						<Skeleton class="h-3 w-1/3" />
+						<Skeleton class="h-6 w-5/6" />
+					</Card.Header>
+					<Card.Content>
+						<Skeleton class="h-4 w-1/2" />
+					</Card.Content>
+					<Card.Footer class="flex-wrap gap-1">
+						<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
+						{#each Array.from({ length: 4 }) as _, i (i)}
+							<Skeleton class="h-4 w-1/5" />
+						{/each}
+					</Card.Footer>
+				</Card.Root>
+			{/each}
+		</div>
 	{:then experiences}
-		<h2>{$t('home.experiences')}</h2>
 		<div class="grid-cols-default grid gap-4">
 			{#each experiences.work as e (e.id)}
 				<Card.Root class="w-full">
@@ -165,11 +199,23 @@
 		<p>{$t('home.error')} {String(e)}</p>
 	{/await}
 
-	{#await data.notes}
-		<p>Loading</p>
-	{:then notes}
-		<h2>{$t('common.notes')}</h2>
-		<div class="grid-cols-default grid gap-2">
+	<h2>{$t('common.notes')}</h2>
+	<div class="grid-cols-default grid gap-2">
+		{#await data.notes}
+			<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
+			{#each Array.from({ length: 6 }) as _, i (i)}
+				<Card.Root>
+					<Card.Header>
+						<Skeleton class="h-6 w-1/2" />
+					</Card.Header>
+					<Card.Content>
+						<Skeleton class="mb-1 h-4" />
+						<Skeleton class="mb-1 h-4" />
+						<Skeleton class="h-4 w-1/2" />
+					</Card.Content>
+				</Card.Root>
+			{/each}
+		{:then notes}
 			{#each notes as n (n.id)}
 				<a class="group block" href={resolve('/notes/[id]', { id: n.slug })}>
 					<Card.Root class="h-full transition-all  group-hover:border-foreground">
@@ -182,8 +228,8 @@
 					</Card.Root>
 				</a>
 			{/each}
-		</div>
-	{:catch e}
-		<p>{$t('home.error')} {String(e)}</p>
-	{/await}
+		{:catch e}
+			<p>{$t('home.error')} {String(e)}</p>
+		{/await}
+	</div>
 </div>

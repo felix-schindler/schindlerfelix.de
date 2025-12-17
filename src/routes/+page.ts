@@ -1,10 +1,34 @@
 import { pb } from '$lib';
+import type { Skill } from '$lib/types';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = ({ data, fetch }) => {
 	const locs = pb
 		.collection('locations')
 		.getFullList({ fetch })
+		.catch(() => {
+			console.warn('Fetch error ignored');
+			return [];
+		});
+
+	const skills = pb
+		.collection('skills')
+		.getFullList({ fetch, sort: 'category1' })
+		.then((items) => {
+			const grouped = items.reduce(
+				(acc, item) => {
+					const key = item.category1;
+					if (!acc[key]) {
+						acc[key] = [];
+					}
+					acc[key].push(item);
+					return acc;
+				},
+				{} as Record<string, Skill[]>
+			);
+
+			return Object.entries(grouped);
+		})
 		.catch(() => {
 			console.warn('Fetch error ignored');
 			return [];
@@ -32,5 +56,5 @@ export const load: PageLoad = ({ data, fetch }) => {
 			return [];
 		});
 
-	return { locs, experiences, notes };
+	return { locs, skills, experiences, notes };
 };
