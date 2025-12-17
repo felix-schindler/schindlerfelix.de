@@ -148,7 +148,7 @@
 	{:then experiences}
 		<div class="grid-cols-default grid gap-4">
 			{#each experiences.work as e (e.id)}
-				<Card.Root class="w-full">
+				<Card.Root class="w-full {!e.until ? 'border-foreground' : ''}">
 					<Card.Header>
 						<Card.Description>
 							{#if e.until}
@@ -173,7 +173,7 @@
 		<h2>{$t('home.edu')}</h2>
 		<div class="grid-cols-default grid gap-4">
 			{#each experiences.edu as e (e.id)}
-				<Card.Root class="w-full">
+				<Card.Root class="w-full {!e.until ? 'border-foreground' : ''}">
 					<Card.Header>
 						<Card.Description>
 							{#if e.until}
