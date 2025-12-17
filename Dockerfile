@@ -1,0 +1,18 @@
+FROM node:lts-alpine AS builder
+WORKDIR /app
+COPY package*.json .
+RUN --mount=type=cache,target=/root/.npm \
+	npm ci --no-audit --no-fund --prefer-offline
+COPY . .
+RUN npm run check
+RUN npm run build
+RUN npm prune --omit=dev
+
+FROM node:lts-alpine
+WORKDIR /app
+COPY --from=builder /app/build build/
+COPY --from=builder /app/node_modules node_modules/
+COPY package.json .
+EXPOSE 3000
+ENV NODE_ENV=production
+CMD ["node", "build"]
