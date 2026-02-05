@@ -1,6 +1,12 @@
 import { pb } from '$lib';
-import type { Skill } from '$lib/types';
+import type { Localized, Skill } from '$lib/types';
 import type { PageLoad } from './$types';
+
+type ExpandedSkill = Skill & {
+	expand: {
+		category: Localized;
+	};
+};
 
 export const load: PageLoad = ({ data, fetch }) => {
 	const locs = pb
@@ -13,11 +19,11 @@ export const load: PageLoad = ({ data, fetch }) => {
 
 	const skills = pb
 		.collection('skills')
-		.getFullList({ fetch, sort: 'sort,category2' })
+		.getFullList<ExpandedSkill>({ fetch, sort: 'sort', expand: 'category' })
 		.then((items) => {
 			const grouped = items.reduce(
 				(acc, item) => {
-					const key = item.category1;
+					const key = item.expand.category[`name_${data.lang}`];
 					if (!acc[key]) {
 						acc[key] = [];
 					}
