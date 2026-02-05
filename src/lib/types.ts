@@ -17,19 +17,23 @@ type BaseFields = {
 	created: DateString;
 };
 
-export type Location = BaseFields & {
+export type Localized = {
 	name_en: string;
 	name_de: string;
 	name_zh: string;
-	locale_name?: string;
-	geo: {
-		lat: number;
-		lon: number;
-	};
-	category: 'region' | 'city' | 'small';
-	parent: RecordID;
-	pictures: string[];
 };
+
+export type Location = BaseFields &
+	Localized & {
+		locale_name?: string;
+		geo: {
+			lat: number;
+			lon: number;
+		};
+		category: 'region' | 'city' | 'small';
+		parent: RecordID;
+		pictures: string[];
+	};
 
 export type NoteContent = BaseFields & {
 	title: string;
