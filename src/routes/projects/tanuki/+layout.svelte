@@ -5,17 +5,6 @@
 	import { userPrefersMode } from 'mode-watcher';
 
 	const { data, children } = $props();
-
-	let countryCode = $derived.by(() => {
-		switch (data.lang) {
-			case 'de':
-				return 'de';
-			case 'en':
-				return 'us';
-			case 'zh':
-				return 'cn';
-		}
-	});
 </script>
 
 <div class="my-12 flex flex-col gap-4 sm:gap-8 md:gap-12">
@@ -33,7 +22,7 @@
 	</div>
 	<p class="flex items-center justify-center gap-2">
 		<a
-			href={`https://apps.apple.com/${countryCode}/app/tanuki-for-gitlab/id6446419487`}
+			href="https://apps.apple.com/app/id6446419487"
 			class="inline-block transition-transform duration-200 hover:scale-95"
 		>
 			{#if userPrefersMode.current === 'light'}
