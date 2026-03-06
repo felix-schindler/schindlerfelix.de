@@ -3,7 +3,6 @@
 	import DockIcon from '$lib/components/magic/dock-icon.svelte';
 	import Dock from '$lib/components/magic/dock.svelte';
 	import Globe from '$lib/components/magic/globe.svelte';
-	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
 	import { Label } from '$lib/components/ui/label';
@@ -11,15 +10,10 @@
 	import * as Tooltip from '$lib/components/ui/tooltip';
 	import { t } from '$lib/i18n';
 	import { Github, Gitlab, Instagram, Linkedin, Mail } from '@lucide/svelte';
+	import ExperienceCard from './ExperienceCard.svelte';
 
 	const { data } = $props();
 
-	let dateFormatter = $derived(
-		new Intl.DateTimeFormat(data.lang, {
-			month: 'long',
-			year: 'numeric'
-		})
-	);
 	let listAnd = $derived(
 		new Intl.ListFormat(data.lang, {
 			style: 'long',
@@ -148,51 +142,13 @@
 	{:then experiences}
 		<div class="grid-cols-default grid gap-4">
 			{#each experiences.work as e (e.id)}
-				<Card.Root class="w-full {!e.until ? 'border-foreground' : ''}">
-					<Card.Header>
-						<Card.Description>
-							{#if e.until}
-								<p>{dateFormatter.formatRange(Date.parse(e.from), Date.parse(e.until))}</p>
-							{:else}
-								<p>{dateFormatter.format(Date.parse(e.from))}</p>
-							{/if}
-						</Card.Description>
-						<Card.Title>{e.expand[data.lang]?.title}</Card.Title>
-						<p>{e.expand[data.lang]?.description}</p>
-					</Card.Header>
-					{#if e.technologies}
-						<Card.Footer class="flex-wrap gap-1">
-							{#each e.technologies as t (t)}
-								<Badge variant="secondary">{t}</Badge>
-							{/each}
-						</Card.Footer>
-					{/if}
-				</Card.Root>
+				<ExperienceCard lang={data.lang} {e} />
 			{/each}
 		</div>
 		<h2>{$t('home.edu')}</h2>
 		<div class="grid-cols-default grid gap-4">
 			{#each experiences.edu as e (e.id)}
-				<Card.Root class="w-full {!e.until ? 'border-foreground' : ''}">
-					<Card.Header>
-						<Card.Description>
-							{#if e.until}
-								<p>{dateFormatter.formatRange(Date.parse(e.from), Date.parse(e.until))}</p>
-							{:else}
-								<p>{dateFormatter.format(Date.parse(e.from))}</p>
-							{/if}
-						</Card.Description>
-						<Card.Title>{e.expand[data.lang]?.title}</Card.Title>
-						<p>{e.expand[data.lang]?.description}</p>
-					</Card.Header>
-					{#if e.technologies}
-						<Card.Footer class="flex-wrap gap-1">
-							{#each e.technologies as t (t)}
-								<Badge variant="secondary">{t}</Badge>
-							{/each}
-						</Card.Footer>
-					{/if}
-				</Card.Root>
+				<ExperienceCard lang={data.lang} {e} />
 			{/each}
 		</div>
 	{:catch e}
