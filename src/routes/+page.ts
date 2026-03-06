@@ -1,5 +1,5 @@
 import { pb } from '$lib';
-import type { Localized, Skill } from '$lib/types';
+import type { Experience, Localized, Skill } from '$lib/types';
 import type { PageLoad } from './$types';
 
 type ExpandedSkill = Skill & {
@@ -7,6 +7,14 @@ type ExpandedSkill = Skill & {
 		category: Localized;
 	};
 };
+
+function sortExp(a: Experience, b: Experience): number {
+	if (!a.until && !b.until) return 0;
+	if (!a.until) return -1;
+	if (!b.until) return 1;
+
+	return new Date(b.until).getTime() - new Date(a.until).getTime();
+}
 
 export const load: PageLoad = ({ data, fetch }) => {
 	const locs = pb
@@ -49,8 +57,8 @@ export const load: PageLoad = ({ data, fetch }) => {
 		})
 		.then((data) => {
 			return {
-				work: data.filter((d) => d.type === 'work'),
-				edu: data.filter((d) => d.type === 'edu')
+				work: data.filter((d) => d.type === 'work').sort(sortExp),
+				edu: data.filter((d) => d.type === 'edu').sort(sortExp)
 			};
 		});
 
