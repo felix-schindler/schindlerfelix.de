@@ -90,10 +90,10 @@
 	});
 </script>
 
-<main class={cn('absolute inset-0 mx-auto aspect-square w-full max-w-[600px]', className)}>
+<main class={cn('absolute inset-0 mx-auto aspect-square w-full max-w-150', className)}>
 	<canvas
 		bind:this={canvas}
-		class="h-full w-full cursor-grab [contain:layout_paint_size] active:cursor-grabbing"
+		class="h-full w-full cursor-grab contain-[layout_paint_size] active:cursor-grabbing"
 		onpointerdown={(e) => {
 			pointerInteracting = e.clientX - pointerInteractionMovement;
 		}}
