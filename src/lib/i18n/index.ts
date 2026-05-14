@@ -52,6 +52,24 @@ const config: Config = {
 			key: 'tanuki',
 			routes: ['/projects/tanuki', '/projects/tanuki/feedback', '/projects/tanuki/privacy'],
 			loader: async () => (await import('./zh/tanuki.json')).default
+		},
+		{
+			locale: 'en',
+			key: 'cup',
+			routes: ['/projects/cup', '/projects/cup/feedback', '/projects/cup/privacy'],
+			loader: async () => (await import('./en/cup.json')).default
+		},
+		{
+			locale: 'de',
+			key: 'cup',
+			routes: ['/projects/cup', '/projects/cup/feedback', '/projects/cup/privacy'],
+			loader: async () => (await import('./de/cup.json')).default
+		},
+		{
+			locale: 'zh',
+			key: 'cup',
+			routes: ['/projects/cup', '/projects/cup/feedback', '/projects/cup/privacy'],
+			loader: async () => (await import('./zh/cup.json')).default
 		}
 	]
 };

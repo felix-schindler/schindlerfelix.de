@@ -1,0 +1,19 @@
+{
+	"title": "Cup für Gitea",
+	"subtitle": "Nativer Gitea Client für iOS",
+	"links": "Links",
+	"repo": "GitHub-Repository",
+	"start": "Start",
+	"privacy": "Datenschutzinformationen",
+	"last_updated": "Zuletzt aktualisiert: {{date}}",
+	"txt_1": "Diese App sammelt keine Daten für sich selbst. Alle gesammelten Daten werden von der Gitea-Instanz verwaltet, die Sie selbst konfiguriert haben.",
+	"txt_2": "Um mehr über die Nutzungsbedingungen und die Datenschutzrichtlinie zu erfahren, die Sie bei der Registrierung akzeptiert haben, schauen sie auf der Webseite oder kontaktieren Sie ihren Instanz-Administrator.",
+	"feedback": "Feedback",
+	"txt_4": "Wenn das Feedback-Formular in der App oder im Web verwendet wird, werden die IP-Adresse und der User-Agent für 30 Tage in Logdateien gespeichert.",
+	"txt_5": "Der Inhalt des Feedbacks (optionale E-Mail-Adresse und Freitext) wird gespeichert, bis die Anfrage bearbeitet wurde oder keine Relevanz mehr hat.",
+	"email": "E-Mail-Adresse (optional)",
+	"read_legal": "Ich habe die Datenschutzinformationen gelesen und akzeptiere diese",
+	"message": "Nachricht",
+	"send": "Senden",
+	"cancel": "Abbrechen"
+}
