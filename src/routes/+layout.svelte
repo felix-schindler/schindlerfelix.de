@@ -16,7 +16,10 @@
 			<ModeSwitcher />
 			<LangSwitcher currentLang={data.lang} />
 		</div>
-		<AnimatedGradientText href="/projects/tanuki">Tanuki for GitLab</AnimatedGradientText>
+		<div>
+			<AnimatedGradientText href="/projects/tanuki">Tanuki for GitLab</AnimatedGradientText>
+			<AnimatedGradientText href="/projects/cup">Cup for Gitea</AnimatedGradientText>
+		</div>
 	</header>
 	<main class="px-4 md:p-0">
 		{@render children()}
