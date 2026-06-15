@@ -8,7 +8,12 @@
 	--base-text-weight-medium: 500;
 	--base-text-weight-semibold: 600;
 	--fontStack-monospace:
-		ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
+		ui-monospace,
+		SFMono-Regular,
+		SF Mono,
+		Menlo,
+		Consolas,
+		Liberation Mono,
 		monospace;
 	--fgColor-accent: Highlight;
 }

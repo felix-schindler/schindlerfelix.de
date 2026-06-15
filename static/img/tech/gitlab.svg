@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="70 70 220 220">
 	<defs>
-		<style>
-		.cls-2 {
+		<style>.cls-2 {
 			fill: #fc6d26;
-		}
-		</style>
+		}</style>
 	</defs>
 	<g id="LOGO">
 		<path
