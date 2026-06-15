@@ -10,29 +10,24 @@
 	},
 	"imports": {
 		"@/": "./",
-		"@std/http": "jsr:@std/http@^1.0.21",
-		"@std/path": "jsr:@std/path@^1.1.2",
+		"@std/http": "jsr:@std/http@^1.1.1",
+		"@std/path": "jsr:@std/path@^1.1.5",
 		"@types/d3-geo": "npm:@types/d3-geo@^3.1.0",
 		"d3-geo": "npm:d3-geo@^3.1.1",
 		"d3-geo-projection": "npm:d3-geo-projection@^4.0.0",
-		"fresh": "jsr:@fresh/core@^2.1.4",
+		"fresh": "jsr:@fresh/core@^2.3.3",
 		"icons/": "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/",
-		"pocketbase": "npm:pocketbase@^0.26.3",
-		"preact": "npm:preact@^10.27.2",
-		"@preact/signals": "npm:@preact/signals@^2.3.2",
-		"@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.0.7",
+		"pocketbase": "npm:pocketbase@^0.27.0",
+		"preact": "npm:preact@^10.29.2",
+		"@preact/signals": "npm:@preact/signals@^2.9.1",
+		"@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.1.2",
 		"topojson-client": "npm:topojson-client@^3.1.0",
-		"vite": "npm:vite@^7.1.12",
-		"tailwindcss": "npm:tailwindcss@^4.1.16",
-		"@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.16"
+		"vite": "npm:vite@^7.3.5",
+		"tailwindcss": "npm:tailwindcss@^4.3.1",
+		"@tailwindcss/vite": "npm:@tailwindcss/vite@^4.3.1"
 	},
 	"compilerOptions": {
-		"lib": [
-			"dom",
-			"dom.asynciterable",
-			"dom.iterable",
-			"deno.ns"
-		],
+		"lib": ["dom", "dom.asynciterable", "dom.iterable", "deno.ns"],
 		"jsx": "precompile",
 		"jsxImportSource": "preact",
 		"jsxPrecompileSkipElements": [
@@ -51,9 +46,7 @@
 			"noscript",
 			"template"
 		],
-		"types": [
-			"vite/client"
-		]
+		"types": ["vite/client"]
 	},
 	"fmt": { "useTabs": true },
 	"lint": {
