@@ -14,9 +14,6 @@
 			alt="Tanuki app icon"
 			class="size-12 rounded-sm align-bottom shadow-2xl shadow-neutral-500 sm:size-16 dark:shadow-neutral-400"
 		/>
-		<h1 class="font-semibold">Tanuki for GitLab</h1>
-	</div>
-	<div class="text-center">
 		<p class="text-4xl font-bold sm:text-5xl md:text-7xl">{$t('tanuki.title')}</p>
 		<p class="text-muted-foreground">{$t('tanuki.subtitle')}</p>
 	</div>
@@ -53,7 +50,7 @@
 		</a>
 	</p>
 	<div class="flex flex-wrap justify-center gap-2">
-		<Button href="/projects/tanuki" variant="outline">
+		<Button href="/" variant="outline">
 			<House />
 			{$t('tanuki.start')}
 		</Button>
