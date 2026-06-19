@@ -2,20 +2,24 @@
 	import { Button } from '$lib/components/ui/button';
 	import { t } from '$lib/i18n/index.js';
 	import { FileText, Github, House, MessageCircleHeart } from '@lucide/svelte';
-	// import { userPrefersMode } from 'mode-watcher';
+	import { userPrefersMode } from 'mode-watcher';
 
-	// const { data, children } = $props();
-	const { children } = $props();
+	const { data, children } = $props();
 </script>
 
 <div class="my-12 flex flex-col gap-4 sm:gap-8 md:gap-12">
-	<div class="text-center">
+	<div class="flex items-center justify-center gap-4 sm:flex-col sm:gap-2">
+		<img
+			src="/img/cup/icon.png"
+			alt="Cup app icon"
+			class="size-12 rounded-sm align-bottom shadow-2xl shadow-neutral-500 sm:size-16 dark:shadow-neutral-400"
+		/>
 		<p class="text-4xl font-bold sm:text-5xl md:text-7xl">{$t('cup.title')}</p>
 		<p class="text-muted-foreground">{$t('cup.subtitle')}</p>
 	</div>
-	<!-- <p class="flex items-center justify-center gap-2">
+	<p class="flex items-center justify-center gap-2">
 		<a
-			href="https://apps.apple.com/app/id6446419487"
+			href="https://apps.apple.com/app/id6768708389"
 			class="inline-block transition-transform duration-200 hover:scale-95"
 		>
 			{#if userPrefersMode.current === 'light'}
@@ -44,9 +48,9 @@
 				</picture>
 			{/if}
 		</a>
-	</p> -->
+	</p>
 	<div class="flex flex-wrap justify-center gap-2">
-		<Button href="/projects/cup" variant="outline">
+		<Button href="/" variant="outline">
 			<House />
 			{$t('cup.start')}
 		</Button>
