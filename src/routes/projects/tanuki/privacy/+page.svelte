@@ -11,8 +11,8 @@
 	};
 </script>
 
-<div class="mx-auto max-w-3xl space-y-2 break-words hyphens-auto sm:font-serif">
-	<h1 class="mb-2 text-center text-4xl font-semibold tracking-tight">
+<div class="mx-auto max-w-3xl space-y-2 wrap-break-words hyphens-auto">
+	<h1 class="mb-2 text-center text-4xl font-heading font-semibold tracking-tight">
 		{$t('tanuki.privacy')}
 	</h1>
 	<h2>App</h2>
