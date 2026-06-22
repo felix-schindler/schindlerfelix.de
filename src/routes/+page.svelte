@@ -9,7 +9,7 @@
 	import { Skeleton } from '$lib/components/ui/skeleton';
 	import * as Tooltip from '$lib/components/ui/tooltip';
 	import { t } from '$lib/i18n';
-	import { Github, Gitlab, Instagram, Linkedin, Mail } from '@lucide/svelte';
+	import { Github, Gitlab, Linkedin, Mail } from '@lucide/svelte';
 	import ExperienceCard from './ExperienceCard.svelte';
 
 	const { data } = $props();
@@ -29,7 +29,6 @@
 			icon: Linkedin,
 			href: 'https://www.linkedin.com/in/felix-schindler-vhwjpzf1z0fi73a/'
 		},
-		{ label: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/vhwjpzf1z0fi73a' },
 		{ label: 'Mail', icon: Mail, href: 'mailto:webmaster@schindlerfelix.de' }
 	] as const;
 </script>
