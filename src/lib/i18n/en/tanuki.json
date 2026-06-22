@@ -4,7 +4,7 @@
 	"links": "Links",
 	"gitlab_repo": "GitLab repository",
 	"start": "Home",
-	"privacy": "Privacy statement",
+	"privacy": "Privacy information",
 	"last_updated": "Last updated: {{date}}; Translations last updated: {{t_date}}",
 	"txt_1": "This app does not collect any data for itself. All the data collected is managed by the GitLab instance you configured yourself.",
 	"txt_2": "To read more about the Terms and Privacy Policy you accepted when registering, go to the path \"/-/users/terms\" on your chosen GitLab instance.",
