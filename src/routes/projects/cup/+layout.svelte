@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { t } from '$lib/i18n/index.js';
-	import { FileText, Github, House, MessageCircleHeart } from '@lucide/svelte';
+	import { FileText, Github, House, MessageCircleHeart, MoveUpRight } from '@lucide/svelte';
 	import { userPrefersMode } from 'mode-watcher';
 
 	const { data, children } = $props();
 </script>
 
 <div class="my-12 flex flex-col gap-4 sm:gap-8 md:gap-12">
-	<div class="flex items-center justify-center gap-4 sm:flex-col sm:gap-2">
+	<div class="flex flex-col items-center justify-center sm:gap-2">
 		<img
 			src="/img/cup/icon.png"
 			alt="Cup app icon"
@@ -68,7 +68,8 @@
 			variant="outline"
 		>
 			<Github />
-			{$t('cup.repo')} &nearr;
+			{$t('cup.repo')}
+			<MoveUpRight />
 		</Button>
 	</div>
 </div>
