@@ -1,0 +1,12 @@
+{
+	"page_title": "Privacy",
+	"general": "General",
+	"last_updated": "Last updated: July 8, 2026",
+	"general_p1": "This website does not collect personal data or use any tracking. A minimal amount of local storage and a cookie are used solely to remember your theme preference and language selection.",
+	"general_p2": "The site is hosted behind Cloudflare's CDN. Cloudflare may process your IP address and request metadata for security and performance purposes under their",
+	"cloudflare_link": "privacy policy",
+	"contact": "Contact",
+	"contact_p1": "If you contact me via email, the content of your message and your email address will be stored only as long as necessary to process your request.",
+	"rights": "Your rights",
+	"rights_p1": "You have the right to access, rectify, or delete your personal data. To exercise these rights, please contact me at"
+}

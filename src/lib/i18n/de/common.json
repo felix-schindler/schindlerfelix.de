@@ -10,5 +10,9 @@
 	"en": "🇬🇧 English",
 	"de": "🇩🇪 Deutsch",
 	"zh": "🇨🇳 简体中文",
-	"notes": "Notizen"
+	"notes": "Notizen",
+	"skip_link": "Zum Hauptinhalt springen",
+	"privacy": "Datenschutz",
+	"nav_site": "Seitensteuerung",
+	"nav_projects": "Projektnavigation"
 }
