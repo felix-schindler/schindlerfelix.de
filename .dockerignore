@@ -3,4 +3,5 @@ Dockerfile
 README.md
 node_modules
 build
+.deno-deploy
 package
