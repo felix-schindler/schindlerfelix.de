@@ -14,7 +14,7 @@
 			alt="Cup app icon"
 			class="size-12 rounded-sm align-bottom shadow-2xl shadow-neutral-500 sm:size-16 dark:shadow-neutral-400"
 		/>
-		<p class="text-4xl font-heading font-bold sm:text-5xl md:text-7xl">{$t('cup.title')}</p>
+		<h1 class="text-4xl font-bold sm:text-5xl md:text-7xl">{$t('cup.title')}</h1>
 		<p class="text-muted-foreground">{$t('cup.subtitle')}</p>
 	</div>
 	<p class="flex items-center justify-center gap-2">
