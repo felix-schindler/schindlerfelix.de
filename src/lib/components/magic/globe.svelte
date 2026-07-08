@@ -28,6 +28,7 @@
 
 	// Keep phi outside so rotation persists across re-renders
 	let phi = 300;
+	const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 	const x = new Spring(0, {
 		stiffness: 0.04,
@@ -66,7 +67,7 @@
 			devicePixelRatio: 2,
 			width: width * 2,
 			height: width * 2,
-			phi: phi,
+			phi: reducedMotion.matches ? 0 : phi,
 			theta: 0.25,
 			dark: 1,
 			diffuse: 0.4,
@@ -77,6 +78,7 @@
 			glowColor: [1, 1, 1],
 			markers: markers, // Reactive: updates when promise resolves
 			onRender: (state) => {
+				if (reducedMotion.matches) return;
 				if (!pointerInteracting) {
 					phi -= 0.0005;
 				}
