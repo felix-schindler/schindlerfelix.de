@@ -132,4 +132,5 @@ export interface TypedPocketBase extends PocketBase {
 	collection(idOrName: 'projects'): RecordService<Project>;
 	collection(idOrName: 'skills'): RecordService<Skill>;
 	collection(idOrName: 'tanuki_feedback'): RecordService<TanukiFeedback>;
+	collection(idOrName: 'cup_feedback'): RecordService<TanukiFeedback>;
 }
