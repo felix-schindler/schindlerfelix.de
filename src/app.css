@@ -129,11 +129,42 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+	h1 {
+		@apply font-heading;
+	}
 	h2 {
 		@apply mt-4 mb-2 font-heading text-3xl font-semibold tracking-tight first:mt-0;
 	}
 	html {
 		@apply font-sans;
+	}
+
+	.skip-link {
+		position: absolute;
+		inset-inline-start: 1rem;
+		inset-block-start: -3rem;
+		background: #000;
+		color: #fff;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		z-index: 1000;
+		transition: inset-block-start 0.15s;
+	}
+
+	.skip-link:focus {
+		inset-block-start: 1rem;
+		text-decoration: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
 	}
 }
 
