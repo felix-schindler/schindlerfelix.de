@@ -1,17 +1,16 @@
-FROM node:lts-alpine AS builder
+FROM denoland/deno:alpine AS builder
 WORKDIR /app
-COPY package*.json .
-RUN --mount=type=cache,target=/root/.npm \
-	npm ci --no-audit --no-fund --prefer-offline
+ENV DENO_DIR=/deno-dir
+COPY package.json deno.lock ./
+RUN --mount=type=cache,target=/deno-dir \
+	deno install --frozen
 COPY . .
-RUN npm run build
-RUN npm prune --omit=dev
+RUN --mount=type=cache,target=/deno-dir \
+	deno task build
 
-FROM node:lts-alpine
+FROM denoland/deno:alpine
 WORKDIR /app
-COPY --from=builder /app/build build/
-COPY --from=builder /app/node_modules node_modules/
-COPY package.json .
+COPY --from=builder /app/.deno-deploy .deno-deploy/
 EXPOSE 3000
 ENV NODE_ENV=production
-CMD ["node", "build"]
+CMD ["deno", "run", "--allow-net", "--allow-read", "--allow-env", ".deno-deploy/server.ts"]
