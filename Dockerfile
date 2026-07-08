@@ -1,4 +1,4 @@
-FROM denoland/deno:alpine AS builder
+FROM denoland/deno:latest
 WORKDIR /app
 ENV DENO_DIR=/deno-dir
 COPY package.json deno.lock ./
@@ -8,9 +8,6 @@ COPY . .
 RUN --mount=type=cache,target=/deno-dir \
 	deno task build
 
-FROM denoland/deno:alpine
-WORKDIR /app
-COPY --from=builder /app/.deno-deploy .deno-deploy/
-EXPOSE 3000
+EXPOSE 8000
 ENV NODE_ENV=production
 CMD ["deno", "run", "--allow-net", "--allow-read", "--allow-env", ".deno-deploy/server.ts"]
