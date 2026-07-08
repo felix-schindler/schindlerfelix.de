@@ -2,7 +2,7 @@
 	import * as Card from '$lib/components/ui/card';
 	import * as Carousel from '$lib/components/ui/carousel';
 
-	const imgs = ['home.png', 'repo.png', 'issue.png', 'releases.png', 'actions.png'] as const;
+	const imgs = ['home.avif', 'repo.avif', 'issue.avif', 'releases.avif', 'actions.avif'] as const;
 </script>
 
 <div class="text-center sm:text-left">
