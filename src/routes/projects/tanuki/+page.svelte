@@ -9,7 +9,7 @@
 		'mr.avif',
 		'group.avif',
 		'code.avif',
-		'diff.avifg'
+		'diff.avif'
 	] as const;
 </script>
 
