@@ -3,7 +3,6 @@
 	"subtitle": "Nativer GitLab-Client für Apple-Plattformen",
 	"links": "Links",
 	"gitlab_repo": "GitLab-Repository",
-	"start": "Start",
 	"privacy": "Datenschutzinformationen",
 	"last_updated": "Zuletzt aktualisiert: {{date}}; Übersetzungen zuletzt aktualisiert: {{t_date}}",
 	"txt_1": "Diese App sammelt keine Daten für sich selbst. Alle gesammelten Daten werden von der GitLab-Instanz verwaltet, die Sie selbst konfiguriert haben.",

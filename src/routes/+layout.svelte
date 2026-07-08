@@ -5,6 +5,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import { t } from '$lib/i18n';
+	import { House } from '@lucide/svelte';
 	import { ModeWatcher } from 'mode-watcher';
 	import '../app.css';
 
@@ -24,6 +25,9 @@
 			<LangSwitcher currentLang={data.lang} />
 		</nav>
 		<nav aria-label={$t('common.nav_projects')} class="flex flex-wrap items-center gap-2">
+			<Button href="/" variant="ghost" size="icon" aria-label={$t('common.home')}>
+				<House />
+			</Button>
 			<AnimatedGradientText href="/projects/tanuki">Tanuki for GitLab</AnimatedGradientText>
 			<AnimatedGradientText href="/projects/cup">Cup for Gitea</AnimatedGradientText>
 		</nav>

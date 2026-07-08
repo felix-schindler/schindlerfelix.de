@@ -3,7 +3,6 @@
 	"subtitle": "原生极狐客户端；适用于苹果平台",
 	"links": "链接",
 	"gitlab_repo": "极狐存储库",
-	"start": "首页",
 	"privacy": "隐私信息",
 	"last_updated": "最后更新：{{date}}；翻译最后更新：{{t_date}}",
 	"txt_1": "此应用程序不会收集任何数据。所有收集的数据都由您自己配置的 GitLab 实例管理。",
