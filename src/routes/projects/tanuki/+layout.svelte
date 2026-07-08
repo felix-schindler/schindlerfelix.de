@@ -50,10 +50,6 @@
 		</a>
 	</p>
 	<div class="flex flex-wrap justify-center gap-2">
-		<Button href="/" variant="outline">
-			<House />
-			{$t('tanuki.start')}
-		</Button>
 		<Button href="/projects/tanuki/feedback" variant="outline">
 			<MessageCircleHeart />
 			{$t('tanuki.feedback')}

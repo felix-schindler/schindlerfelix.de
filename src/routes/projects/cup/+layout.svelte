@@ -50,10 +50,6 @@
 		</a>
 	</p>
 	<div class="flex flex-wrap justify-center gap-2">
-		<Button href="/" variant="outline">
-			<House />
-			{$t('cup.start')}
-		</Button>
 		<Button href="/projects/cup/feedback" variant="outline">
 			<MessageCircleHeart />
 			{$t('cup.feedback')}

@@ -3,7 +3,6 @@
 	"subtitle": "iOS 原生 Gitea 客户端",
 	"links": "链接",
 	"repo": "GitHub 仓库",
-	"start": "首页",
 	"privacy": "隐私信息",
 	"last_updated": "最后更新：{{date}}",
 	"txt_1": "本应用不会自行收集任何数据。所有收集的数据均由你自己配置的 Gitea 实例管理。",
