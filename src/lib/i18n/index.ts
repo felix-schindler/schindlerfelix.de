@@ -70,6 +70,24 @@ const config: Config = {
 			key: 'cup',
 			routes: ['/projects/cup', '/projects/cup/feedback', '/projects/cup/privacy'],
 			loader: async () => (await import('./zh/cup.json')).default
+		},
+		{
+			locale: 'en',
+			key: 'privacy',
+			routes: ['/privacy'],
+			loader: async () => (await import('./en/privacy.json')).default
+		},
+		{
+			locale: 'de',
+			key: 'privacy',
+			routes: ['/privacy'],
+			loader: async () => (await import('./de/privacy.json')).default
+		},
+		{
+			locale: 'zh',
+			key: 'privacy',
+			routes: ['/privacy'],
+			loader: async () => (await import('./zh/privacy.json')).default
 		}
 	]
 };
