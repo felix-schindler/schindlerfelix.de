@@ -3,7 +3,6 @@
 	"subtitle": "Native Gitea client for iOS",
 	"links": "Links",
 	"repo": "GitHub repository",
-	"start": "Home",
 	"privacy": "Privacy information",
 	"last_updated": "Last updated: {{date}}",
 	"txt_1": "This app does not collect any data for itself. All collected data is managed by the Gitea instance you configured yourself.",
