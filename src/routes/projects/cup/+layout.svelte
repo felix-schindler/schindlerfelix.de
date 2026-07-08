@@ -10,7 +10,7 @@
 <div class="my-12 flex flex-col gap-4 sm:gap-8 md:gap-12">
 	<div class="flex flex-col items-center justify-center sm:gap-2">
 		<img
-			src="/img/cup/icon.png"
+			src="/img/cup/icon.avif"
 			alt="Cup app icon"
 			class="size-12 rounded-sm align-bottom shadow-2xl shadow-neutral-500 sm:size-16 dark:shadow-neutral-400"
 		/>
