@@ -12,7 +12,9 @@
 		{#if note === null}
 			<p>Error</p>
 		{:else}
-			<p class="mb-10 scroll-m-20 text-center text-4xl font-extrabold tracking-tight lg:text-5xl">
+			<p
+				class="mb-10 scroll-m-20 text-center text-4xl font-heading font-extrabold tracking-tight lg:text-5xl"
+			>
 				{$t('common.notes')}
 			</p>
 			<article
