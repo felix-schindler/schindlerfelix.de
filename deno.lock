@@ -7,7 +7,7 @@
     "npm:@fontsource-variable/ibm-plex-sans@^5.2.8": "5.2.8",
     "npm:@fontsource-variable/space-grotesk@^5.2.10": "5.2.10",
     "npm:@internationalized/date@^3.12.2": "3.12.2",
-    "npm:@lucide/svelte@0.577": "0.577.0_svelte@5.56.4",
+    "npm:@lucide/svelte@1": "1.23.0_svelte@5.56.4",
     "npm:@sveltejs/kit@^2.66.0": "2.69.1_@sveltejs+vite-plugin-svelte@7.2.0__svelte@5.56.4__vite@8.1.3___@types+node@26.1.0__@types+node@26.1.0_svelte@5.56.4_typescript@6.0.3_vite@8.1.3__@types+node@26.1.0_@types+node@26.1.0",
     "npm:@sveltejs/vite-plugin-svelte@^7.2.0": "7.2.0_svelte@5.56.4_vite@8.1.3__@types+node@26.1.0_@types+node@26.1.0",
     "npm:@tailwindcss/vite@^4.3.2": "4.3.2_vite@8.1.3__@types+node@26.1.0",
@@ -200,8 +200,8 @@
         "@jridgewell/sourcemap-codec"
       ]
     },
-    "@lucide/svelte@0.577.0_svelte@5.56.4": {
-      "integrity": "sha512-0P6mkySd2MapIEgq08tADPmcN4DHndC/02PWwaLkOerXlx5Sv9aT4BxyXLIY+eccr0g/nEyCYiJesqS61YdBZQ==",
+    "@lucide/svelte@1.23.0_svelte@5.56.4": {
+      "integrity": "sha512-3LQbKXx9vId6Nx4E2Nu2qwgJfdmr5+CVeVJbxe5cy+HcnCRd9QVVtZXqvgBYAV1OJrPmQAf9/3gJWLCpASC/Ng==",
       "dependencies": [
         "svelte"
       ]
@@ -1594,7 +1594,7 @@
         "npm:@fontsource-variable/ibm-plex-sans@^5.2.8",
         "npm:@fontsource-variable/space-grotesk@^5.2.10",
         "npm:@internationalized/date@^3.12.2",
-        "npm:@lucide/svelte@0.577",
+        "npm:@lucide/svelte@1",
         "npm:@sveltejs/kit@^2.66.0",
         "npm:@sveltejs/vite-plugin-svelte@^7.2.0",
         "npm:@tailwindcss/vite@^4.3.2",

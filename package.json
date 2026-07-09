@@ -17,7 +17,7 @@
 		"@fontsource-variable/ibm-plex-sans": "^5.2.8",
 		"@fontsource-variable/space-grotesk": "^5.2.10",
 		"@internationalized/date": "^3.12.2",
-		"@lucide/svelte": "^0.577.0",
+		"@lucide/svelte": "^1.0.0",
 		"@sveltejs/kit": "^2.66.0",
 		"bits-ui": "^2.18.1",
 		"clsx": "^2.1.1",
