@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { t } from '$lib/i18n/index.js';
-	import { FileText, Github, House, MessageCircleHeart, MoveUpRight } from '@lucide/svelte';
+	import { FileText, Github, MessageCircleHeart, MoveUpRight } from '@lucide/svelte';
 	import { userPrefersMode } from 'mode-watcher';
 
 	const { data, children } = $props();
