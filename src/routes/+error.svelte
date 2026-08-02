@@ -8,7 +8,7 @@
 </svelte:head>
 
 <div class="mx-auto mt-32 max-w-xl space-y-6 px-4 text-center">
-	<h1 class="text-8xl font-heading font-semibold tracking-tighter">{page.status}</h1>
+	<h1 class="font-heading text-8xl font-semibold tracking-tighter">{page.status}</h1>
 	{#if page.error?.message}
 		<p class="text-lg text-muted-foreground">{page.error.message}</p>
 	{/if}
