@@ -1,29 +1,23 @@
 <script lang="ts">
-	import { ALLOWED_LANGUAGES, type AllowedLanguage } from '$lib/types';
 	import { buttonVariants } from '$lib/components/ui/button';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import { t } from '$lib/i18n';
-	import { page } from '$app/state';
-	import { goto } from '$app/navigation';
+	import { getLocale, locales, setLocale } from '$lib/paraglide/runtime';
 
-	const { currentLang }: { currentLang: AllowedLanguage } = $props();
-	const initialUrl = $derived(page.url);
-
-	async function updateLang(lang: string) {
-		initialUrl.searchParams.set('lang', lang);
-		// eslint-disable-next-line svelte/no-navigation-without-resolve
-		await goto(initialUrl, { invalidateAll: true });
-	}
+	const langNames: Record<string, string> = {
+		en: '🇬🇧 English',
+		de: '🇩🇪 Deutsch',
+		zh: '🇨🇳 简体中文'
+	};
 </script>
 
 <DropdownMenu.Root>
 	<DropdownMenu.Trigger class={buttonVariants({ variant: 'outline' })}>
-		<span class="sr-only">{$t('common.current_lang')}</span>
-		{$t(`common.${currentLang}`)}
+		<span class="sr-only">{langNames[getLocale()]}</span>
+		{langNames[getLocale()]}
 	</DropdownMenu.Trigger>
 	<DropdownMenu.Content>
-		{#each ALLOWED_LANGUAGES as lang (lang)}
-			<DropdownMenu.Item onclick={() => updateLang(lang)}>{$t(`common.${lang}`)}</DropdownMenu.Item>
+		{#each locales as lang (lang)}
+			<DropdownMenu.Item onclick={() => setLocale(lang)}>{langNames[lang]}</DropdownMenu.Item>
 		{/each}
 	</DropdownMenu.Content>
 </DropdownMenu.Root>

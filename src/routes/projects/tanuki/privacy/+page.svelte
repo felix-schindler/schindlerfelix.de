@@ -1,5 +1,5 @@
 <script>
-	import { t } from '$lib/i18n';
+	import { m } from '$lib/paraglide/messages';
 
 	const { data } = $props();
 
@@ -11,33 +11,31 @@
 	};
 </script>
 
-<div class="mx-auto max-w-3xl space-y-2 wrap-break-words hyphens-auto">
-	<h1 class="mb-2 text-center text-4xl font-heading font-semibold tracking-tight">
-		{$t('tanuki.privacy')}
+<div class="wrap-break-words mx-auto max-w-3xl space-y-2 hyphens-auto">
+	<h1 class="mb-2 text-center font-heading text-4xl font-semibold tracking-tight">
+		{m.tanuki_privacy()}
 	</h1>
 	<h2>App</h2>
 	<p>
 		<em class="block">
-			{$t('tanuki.last_updated', {
-				// @ts-expect-error This works
+			{m.tanuki_last_updated({
 				date: dateFmt.format(LAST_UPDATED.original),
 				t_date: dateFmt.format(LAST_UPDATED.translations)
 			})}
 		</em>
 	</p>
-	<p>{$t('tanuki.txt_1')}</p>
-	<p>{$t('tanuki.txt_2')}</p>
-	<p>{$t('tanuki.txt_3')}</p>
+	<p>{m.tanuki_txt_1()}</p>
+	<p>{m.tanuki_txt_2()}</p>
+	<p>{m.tanuki_txt_3()}</p>
 	<h2>Feedback</h2>
 	<p>
 		<em class="block">
-			{$t('tanuki.last_updated', {
-				// @ts-expect-error This works
+			{m.tanuki_last_updated({
 				date: dateFmt.format(LAST_UPDATED.feedback),
 				t_date: dateFmt.format(LAST_UPDATED.feedback)
 			})}
 		</em>
 	</p>
-	<p>{$t('tanuki.txt_4')}</p>
-	<p>{$t('tanuki.txt_5')}</p>
+	<p>{m.tanuki_txt_4()}</p>
+	<p>{m.tanuki_txt_5()}</p>
 </div>

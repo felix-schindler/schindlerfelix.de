@@ -1,37 +1,19 @@
-import { isAllowedLanguage, type AllowedLanguage } from '$lib/types';
+import { getTextDirection } from '$lib/paraglide/runtime';
+import { paraglideMiddleware } from '$lib/paraglide/server';
 import { redirect, type Handle } from '@sveltejs/kit';
 
-export const handle: Handle = async ({ event, resolve }) => {
+export const handle: Handle = ({ event, resolve }) => {
 	if (event.url.pathname === '/projects/tanuki/support') {
 		redirect(303, '/projects/tanuki/feedback');
-	} else if (!event.url.pathname.includes('.')) {
-		const newLang = event.url.searchParams.get('lang');
-
-		// Set new language (if valid)
-		if (newLang && isAllowedLanguage(newLang)) {
-			event.cookies.set('lang', newLang, { path: '/' });
-		}
-
-		// Load and validate current language
-		let currentLang: AllowedLanguage | undefined;
-		const cookieLang = event.cookies.get('lang');
-		if (cookieLang && isAllowedLanguage(cookieLang)) {
-			currentLang = cookieLang;
-		} else {
-			// Get language from request
-			const languages = event.request.headers.get('accept-language');
-			const langMatch = languages?.match(/([a-zA-Z]{2})(?:-[a-zA-Z]{2})?/);
-			if (langMatch && isAllowedLanguage(langMatch[1])) {
-				currentLang = langMatch[1];
-			}
-		}
-
-		if (!currentLang) {
-			currentLang = 'en';
-		}
-
-		event.locals.lang = currentLang;
 	}
 
-	return resolve(event);
+	return paraglideMiddleware(event.request, ({ request, locale }) => {
+		event.request = request;
+		event.locals.lang = locale;
+
+		return resolve(event, {
+			transformPageChunk: ({ html }) =>
+				html.replace('%lang%', locale).replace('%dir%', getTextDirection(locale))
+		});
+	});
 };

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t } from '$lib/i18n';
+	import { m } from '$lib/paraglide/messages';
 	import 'github-markdown-css/github-markdown.css';
 
 	const { data } = $props();
@@ -13,9 +13,9 @@
 			<p>Error</p>
 		{:else}
 			<p
-				class="mb-10 scroll-m-20 text-center text-4xl font-heading font-extrabold tracking-tight lg:text-5xl"
+				class="mb-10 scroll-m-20 text-center font-heading text-4xl font-extrabold tracking-tight lg:text-5xl"
 			>
-				{$t('common.notes')}
+				{m.common_notes()}
 			</p>
 			<article
 				data-color-mode="auto"

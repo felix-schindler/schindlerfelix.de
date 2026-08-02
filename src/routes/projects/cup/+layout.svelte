@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import { t } from '$lib/i18n/index.js';
+	import { m } from '$lib/paraglide/messages';
 	import { FileText, Github, MessageCircleHeart, MoveUpRight } from '@lucide/svelte';
 	import { userPrefersMode } from 'mode-watcher';
 
@@ -14,8 +14,8 @@
 			alt="Cup app icon"
 			class="size-12 rounded-sm align-bottom shadow-2xl shadow-neutral-500 sm:size-16 dark:shadow-neutral-400"
 		/>
-		<h1 class="text-4xl font-bold sm:text-5xl md:text-7xl">{$t('cup.title')}</h1>
-		<p class="text-muted-foreground">{$t('cup.subtitle')}</p>
+		<h1 class="text-4xl font-bold sm:text-5xl md:text-7xl">{m.cup_title()}</h1>
+		<p class="text-muted-foreground">{m.cup_subtitle()}</p>
 	</div>
 	<p class="flex items-center justify-center gap-2">
 		<a
@@ -52,11 +52,11 @@
 	<div class="flex flex-wrap justify-center gap-2">
 		<Button href="/projects/cup/feedback" variant="outline">
 			<MessageCircleHeart />
-			{$t('cup.feedback')}
+			{m.cup_feedback()}
 		</Button>
 		<Button href="/projects/cup/privacy" variant="outline">
 			<FileText />
-			{$t('cup.privacy')}
+			{m.cup_privacy()}
 		</Button>
 		<Button
 			href="https://github.com/felix-schindler/cup-for-gitea"
@@ -64,7 +64,7 @@
 			variant="outline"
 		>
 			<Github />
-			{$t('cup.repo')}
+			{m.cup_repo()}
 			<MoveUpRight />
 		</Button>
 	</div>

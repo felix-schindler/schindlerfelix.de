@@ -6,7 +6,7 @@
 	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';
 	import { Textarea } from '$lib/components/ui/textarea';
-	import { t } from '$lib/i18n';
+	import { m } from '$lib/paraglide/messages';
 	import { Send, Trash } from '@lucide/svelte';
 	import { toast } from 'svelte-sonner';
 
@@ -42,13 +42,13 @@
 	<Card.Root class="mx-auto max-w-3xl">
 		<Card.Header>
 			<Card.Title>
-				<h2 class="mb-0">{$t('cup.feedback')}</h2>
+				<h2 class="mb-0">{m.cup_feedback()}</h2>
 			</Card.Title>
 		</Card.Header>
 		<Card.Content class="space-y-2">
-			<Input placeholder={$t('cup.email')} name="email" type="email" bind:value={from} />
+			<Input placeholder={m.cup_email()} name="email" type="email" bind:value={from} />
 			<Textarea
-				placeholder={$t('cup.message')}
+				placeholder={m.cup_message()}
 				name="text"
 				bind:value={text}
 				class="min-h-32"
@@ -61,12 +61,12 @@
 					name="read_legal"
 					bind:checked={accepted}
 				/>
-				<Label class="cursor-pointer" for="read_legal">{$t('cup.read_legal')}</Label>
+				<Label class="cursor-pointer" for="read_legal">{m.cup_read_legal()}</Label>
 			</div>
 		</Card.Content>
 		<Card.Footer class="space-x-1">
-			<Button type="submit"><Send /> {$t('cup.send')}</Button>
-			<Button type="reset" variant="secondary"><Trash /> {$t('cup.cancel')}</Button>
+			<Button type="submit"><Send /> {m.cup_send()}</Button>
+			<Button type="reset" variant="secondary"><Trash /> {m.cup_cancel()}</Button>
 		</Card.Footer>
 	</Card.Root>
 </form>

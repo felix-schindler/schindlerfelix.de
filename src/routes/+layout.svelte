@@ -4,7 +4,7 @@
 	import AnimatedGradientText from '$lib/components/magic/animated-gradient-text.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { Toaster } from '$lib/components/ui/sonner';
-	import { t } from '$lib/i18n';
+	import { m } from '$lib/paraglide/messages';
 	import { House } from '@lucide/svelte';
 	import { ModeWatcher } from 'mode-watcher';
 	import '../app.css';
@@ -16,16 +16,16 @@
 	});
 </script>
 
-<a class="skip-link" href="#main-content">{$t('common.skip_link')}</a>
+<a class="skip-link" href="#main-content">{m.common_skip_link()}</a>
 
 <div>
 	<header class="flex flex-col flex-wrap items-center justify-between gap-2 p-4 sm:flex-row">
-		<nav aria-label={$t('common.nav_site')} class="flex flex-wrap items-center gap-2">
+		<nav aria-label={m.common_nav_site()} class="flex flex-wrap items-center gap-2">
 			<ModeSwitcher />
-			<LangSwitcher currentLang={data.lang} />
+			<LangSwitcher />
 		</nav>
-		<nav aria-label={$t('common.nav_projects')} class="flex flex-wrap items-center gap-2">
-			<Button href="/" variant="ghost" size="icon" aria-label={$t('common.home')}>
+		<nav aria-label={m.common_nav_projects()} class="flex flex-wrap items-center gap-2">
+			<Button href="/" variant="ghost" size="icon" aria-label={m.common_home()}>
 				<House />
 			</Button>
 			<AnimatedGradientText href="/projects/tanuki">Tanuki for GitLab</AnimatedGradientText>
@@ -37,7 +37,7 @@
 	</main>
 	<footer class="mt-10 p-4 text-center">
 		&copy; Felix Schindler 2019-{new Date().getUTCFullYear()} &middot;
-		<Button href="/privacy" variant="link" class="p-0 text-base">{$t('common.privacy')}</Button>
+		<Button href="/privacy" variant="link" class="p-0 text-base">{m.common_privacy()}</Button>
 	</footer>
 
 	<Toaster richColors position="bottom-center" />

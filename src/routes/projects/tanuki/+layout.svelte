@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import { t } from '$lib/i18n/index.js';
+	import { m } from '$lib/paraglide/messages';
 	import { FileText, Gitlab, MessageCircleHeart, MoveUpRight } from '@lucide/svelte';
 	import { userPrefersMode } from 'mode-watcher';
 
@@ -14,8 +14,8 @@
 			alt="Tanuki app icon"
 			class="size-12 rounded-sm align-bottom shadow-2xl shadow-neutral-500 sm:size-16 dark:shadow-neutral-400"
 		/>
-		<h1 class="text-4xl font-bold sm:text-5xl md:text-7xl">{$t('tanuki.title')}</h1>
-		<p class="text-muted-foreground">{$t('tanuki.subtitle')}</p>
+		<h1 class="text-4xl font-bold sm:text-5xl md:text-7xl">{m.tanuki_title()}</h1>
+		<p class="text-muted-foreground">{m.tanuki_subtitle()}</p>
 	</div>
 	<p class="flex items-center justify-center gap-2">
 		<a
@@ -52,15 +52,15 @@
 	<div class="flex flex-wrap justify-center gap-2">
 		<Button href="/projects/tanuki/feedback" variant="outline">
 			<MessageCircleHeart />
-			{$t('tanuki.feedback')}
+			{m.tanuki_feedback()}
 		</Button>
 		<Button href="/projects/tanuki/privacy" variant="outline">
 			<FileText />
-			{$t('tanuki.privacy')}
+			{m.tanuki_privacy()}
 		</Button>
 		<Button href="https://gitlab.com/felix-schindler/gitlab-ios" target="_blank" variant="outline">
 			<Gitlab />
-			{$t('tanuki.gitlab_repo')}
+			{m.tanuki_gitlab_repo()}
 			<MoveUpRight />
 		</Button>
 	</div>

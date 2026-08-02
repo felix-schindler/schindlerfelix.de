@@ -8,7 +8,7 @@
 	import { Label } from '$lib/components/ui/label';
 	import { Skeleton } from '$lib/components/ui/skeleton';
 	import * as Tooltip from '$lib/components/ui/tooltip';
-	import { t } from '$lib/i18n';
+	import { m } from '$lib/paraglide/messages';
 	import { Github, Gitlab, Linkedin, Mail } from '@lucide/svelte';
 	import ExperienceCard from './ExperienceCard.svelte';
 
@@ -39,9 +39,9 @@
 			class="relative flex h-fit w-full max-w-xl items-center justify-center overflow-hidden rounded-2xl border bg-background px-40 pt-8 pb-40 md:pb-60 md:shadow-xl"
 		>
 			<h1
-				class="tracking-tighter pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre text-transparent select-none dark:from-white dark:to-slate-900/10"
+				class="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold tracking-tighter whitespace-pre text-transparent select-none dark:from-white dark:to-slate-900/10"
 			>
-				{$t('common.name')}
+				{m.common_name()}
 			</h1>
 			<Globe class="top-16 sm:top-12" locations={data.locs} />
 			<div
@@ -73,7 +73,7 @@
 </div>
 
 <div class="mx-auto w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] 2xl:max-w-[60%]">
-	<h2>{$t('home.skills')}</h2>
+	<h2>{m.home_skills()}</h2>
 	<div class="grid-cols-default grid gap-4">
 		{#await data.skills}
 			<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
@@ -116,7 +116,7 @@
 		{/await}
 	</div>
 
-	<h2>{$t('home.experiences')}</h2>
+	<h2>{m.home_experiences()}</h2>
 	{#await data.experiences}
 		<div class="grid-cols-default grid gap-4">
 			<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
@@ -144,17 +144,17 @@
 				<ExperienceCard lang={data.lang} {e} />
 			{/each}
 		</div>
-		<h2>{$t('home.edu')}</h2>
+		<h2>{m.home_edu()}</h2>
 		<div class="grid-cols-default grid gap-4">
 			{#each experiences.edu as e (e.id)}
 				<ExperienceCard lang={data.lang} {e} />
 			{/each}
 		</div>
 	{:catch e}
-		<p>{$t('home.error')} {String(e)}</p>
+		<p>{m.home_error()} {String(e)}</p>
 	{/await}
 
-	<h2>{$t('common.notes')}</h2>
+	<h2>{m.common_notes()}</h2>
 	<div class="grid-cols-default grid gap-4">
 		{#await data.notes}
 			<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
@@ -184,7 +184,7 @@
 				</a>
 			{/each}
 		{:catch e}
-			<p>{$t('home.error')} {String(e)}</p>
+			<p>{m.home_error()} {String(e)}</p>
 		{/await}
 	</div>
 </div>
