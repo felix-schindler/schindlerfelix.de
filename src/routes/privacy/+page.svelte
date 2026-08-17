@@ -17,8 +17,8 @@
 		<p>{m.privacy_general_p1()}</p>
 		<p>
 			{m.privacy_general_p2()}
-			<a href="https://www.cloudflare.com/privacypolicy/" class="underline hover:no-underline">
-				{m.privacy_cloudflare_link()}
+			<a href="https://docs.deno.com/deploy/privacy_policy/" class="underline hover:no-underline">
+				{m.privacy_host_link()}
 			</a>.
 		</p>
 	</div>
