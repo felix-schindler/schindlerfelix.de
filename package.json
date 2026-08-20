@@ -25,7 +25,7 @@
 		"embla-carousel-svelte": "^8.6.0",
 		"github-markdown-css": "^5.9.0",
 		"mode-watcher": "^1.1.0",
-		"pocketbase": "^0.27.3",
+		"pocketbase": "^0.28.0",
 		"svelte": "^5.56.9",
 		"svelte-motion": "^0.12.2",
 		"svelte-sonner": "^1.2.1",
